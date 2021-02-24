@@ -1,0 +1,26 @@
+{
+  "name": "iot",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "start": "gitbook serve",
+    "build": "gitbook build",
+    "book": "gitbook pdf"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/0d3ng/IoT.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "gitbook": "git+https://github.com/dhanifudin/gitbook.git",
+    "gitbook-cli": "^2.3.2"
+  },
+  "bugs": {
+    "url": "https://github.com/0d3ng/IoT/issues"
+  },
+  "homepage": "https://github.com/0d3ng/IoT#readme"
+}
