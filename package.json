@@ -10,7 +10,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/0d3ng/IoT.git"
+    "url": "git+https://github.com/pag36/iot-2021.git"
   },
   "keywords": [],
   "author": "",
@@ -20,7 +20,7 @@
     "gitbook-cli": "^2.3.2"
   },
   "bugs": {
-    "url": "https://github.com/0d3ng/IoT/issues"
+    "url": "https://github.com/pag36/iot-2021/issues"
   },
-  "homepage": "https://github.com/0d3ng/IoT#readme"
+  "homepage": "https://github.com/pag36/iot-2021#readme"
 }
