@@ -109,7 +109,12 @@ dihubungkan pada kaki yang lainnya(kaki untuk warna merah, hijau, ataupun biru).
 mengkategorikan LED tersebut.
 
 Mengetahui jenis LED RGB yang digunakan(_annode_ ataupun _cathode_) sangat penting, karena berpengaruh terhadap pemasangan
-di microcontroller ataupun Raspberry yang digunakan. 
+di microcontroller ataupun Raspberry yang digunakan.
+
+### Cara Mencoba LED Menggunakan Multimeter
+Untuk mengetahui apakah LED berfungsi dengan baik bisa menggunakan multimeter, untuk lebih jelasnya dapat dilihat pada gambar di bawah ini
+
+![Tes LED](images/multi.gif)
 
 ## Praktikum
 
@@ -148,7 +153,7 @@ Hardware Preparation:
 | D7            | Blue                               |
 | Vin/3V3       | Tegangan		 	                 |
     
-2. Selanjutnya tuliskan kode program berikut pada IDE Arduino
+2. Selanjutnya tuliskan kode program berikut pada Visual Studio Code
 
     ```cpp
    #include <Arduino.h>
@@ -258,8 +263,12 @@ untuk komponen yang dibutuhkan dan rangkaian masih menggunakan komponen pada pro
 jeda waktu 1 detik
 
 ## Video Pendukung
+<iframe width="791" height="494" src="https://www.youtube.com/embed/tUYOdKRTmW4" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen=""></iframe>
 
 ## Tugas
-+ Buatlah sebuah skematik miniatur pengatur lampu lalu lintas memanfaatkan dari LED Anda miliki.
-+ Buatlah kode sederahan untuk menjalankan miniatur pengatur lampu lalu lintas tersebut
++ Kembangkan praktikum ke-2(SOS) sehingga ada 3 LED yang digunakan yaitu merah, hijau dan biru. LED hijau menggunakan LED RGB, sedangkan untuk LED biru dan LED merah menggunakan LED yang terdapat padad ESP8266. Buatlah skematik(gambar pengkabelannya) dan kode programnya!
 + Kumpulkan laporan dan tugas di LMS
+
+### Hasil Tugas yang Diharapkan
+
+![Hasil Tugas](images/tugas1.gif)
