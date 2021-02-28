@@ -135,9 +135,18 @@ Hardware Preparation:
     ![](images/04-12.png)
     
     Dengan resistor
+
+    > Resistor digunakan untuk menyeimbangkan arus yang akan dialirkan ke LED, sehingga ketika menggunakan resistor LED 
+    >tidak rusak atau putus karena kelebihan arus
     
-    >Resistor digunakan untuk menyeimbangkan arus yang akan dialirkan ke LED, sehingga ketika menggunakan resistor LED tidak 
-    rusak atau putus karena kelebihan arus
+    Dari gambar di atas dapat dilihat pengkabelan seperti pada tabel di bawah ini
+    
+| ESP8266 Amica | LED RGB                   	     |
+|---------------|------------------------------------|
+| D5            | Red                                |
+| D6            | Green                              |
+| D7            | Blue                               |
+| Vin/3V3       | Tegangan		 	                 |
     
 2. Selanjutnya tuliskan kode program berikut pada IDE Arduino
 
