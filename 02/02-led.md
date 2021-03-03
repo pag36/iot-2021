@@ -1,7 +1,7 @@
 # LED
 
 ## Topik Bahasan
-LED
+Implementasi program Running LED
 
 ## Kemampuan Akhir yang Direncanakan
 - Mahasiswa mampu menjelaskan cara kerja digitalWrite
