@@ -61,6 +61,8 @@ Contoh source code untuk membaca data intensitas cahaya.
 
 Setelah source code diupload, buka serial monitor pada PlatformIO untuk melihat hasil pembacaan data intensitas cahaya di sekitar sensor.
 
+> Normalnya ketika program Anda dijalankan maka akan menampilkan nilai 0-1024, semakin rendah nilai dari pembacaan sensor berarti semakin gelap cahaya yang terdapat di sekitar Anda dan sebaliknya. Ketika hasil pembacaan sensor nilainya tidak seperti yang disebutkan, silakan kalibrasi sensor tersebut dengan cara memutar baut kecil yang terdapat di sensor menggunakan obeng kecil sambil mengamati keluaran yang ada di serial monitor.
+
 ## Tugas
 1. Buatlah rangkaian menggunakan fritzing tentang simulasi lampu yang otomatis menyala dengan lampu LED sebagai gambaran dari sebuah rumah. 1 LED mewakili 1 ruangan dalam rumah. Sehingga ketika waktu sore datang atau ketika mendung dan hujan, lampu otomatis nyala. Begitu pula ketika pagi datang, lampu otomatis mati.
 2. Buatlah sebuah rangkaian untuk LED, sensor cahaya dan sensor suhu menggunakan fritzing, kemudian buatlah program dengan skenario sebagai berikut
