@@ -67,3 +67,4 @@ Setelah source code diupload, buka serial monitor pada PlatformIO untuk melihat 
     + Ketika cahaya redup dan suhu kategori dingin maka LED warna biru akan berkedip-kedip.
     + Ketika cahaya terang dan suhu tergolong tinggi, LED merah akan menyala.
     > Ketika tidak memiliki LED RGB, silakan memanfaatkan LED build in adalah LED bawaan esp8266, biasanya berwarna biru atau merah
+3. Upload hasilnya berupa file video menggunakan youtube atau google drive dan sisipkan linknya pada laporan Anda. Ketika menggunakan google drive, urlnya dilakukan shorten agar lebih mudah dibaca menggunakan tool seperti [bit.ly](https://bit.ly), [s.id](https://home.s.id/), atau yang lain.
