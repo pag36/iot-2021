@@ -195,6 +195,8 @@ Hardware Preparation:
    }
     ```
    
+      >Untuk nilai ```HIGH dan LOW``` silakan disesuaikan dengan jenis LED yang digunakan, karena nanti akan menyebabkan masing-masing warna LED kurang terang atau jernih. Normalnya warnanya akan jernih, tidak bercampur dengan warna yang lain.
+
 3. Upload Sketch program diatas ke board NodeMCU
 4. Segera setelah proses compile dan upload selesai, LED pada rangkaian project board akan menyala secara berurutan 
 dengan jeda waktu 1 detik
