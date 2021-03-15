@@ -4,7 +4,7 @@
 Implementasi program sensor cahaya LDR
 
 ## Kemampuan Akhir yang Direncanakan
-- Menjelaskan cara kerja sensor DHT11
+- Menjelaskan cara kerja sensor LDR
 - Menjelaskan cara kerja analogRead
 - Menampilkan suhu dan kelembaban dalam satuan derajat dan fahrenheit pada console debugger secara real time
 
