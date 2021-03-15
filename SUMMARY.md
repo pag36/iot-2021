@@ -8,3 +8,4 @@
 * [04. LED](02/02-led.md)
 * [05. DHT11](03/03-dht11.md)
 * [06. LDR](04/04-sensor-cahaya.md)
+* [07. LCD](05/05-lcd.md)
