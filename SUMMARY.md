@@ -7,3 +7,4 @@
 * [03. Instalasi dan Konfigurasi](01/01.installasi-dan-konfigurasi.md)
 * [04. LED](02/02-led.md)
 * [05. DHT11](03/03-dht11.md)
+* [06. LDR](04/04-sensor-cahaya.md)
