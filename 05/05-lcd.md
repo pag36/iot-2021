@@ -7,6 +7,7 @@ Implementasi LCD I2C
 - Mahasiswa mampu menggunakan LCD I2C untuk menampilkan data
 - Mahasiswa mampu untuk mencari alamat I2C pada MCU
 - Mahasiswa mampu menggunakan library yang digunakan untuk kebutuhan LCD I2C
+- Mahasiswa mamapu mengkalibrasi LCD I2C
 
 ## Teori Singkat
 Berbagai jenis LCD bergantung dengan banyaknya karakter yang dapat ditampilkan, misalkan 16x2 ataupun 20x4. 16x2 artinya LCD tersebut mampu menampilkan sebanyak 32 karakter, dengan jumlah barisnya 2 dan jumlah kolomnya adalah 16. LCD merupakan sebuah jenis dari aktuator dan biasanya digunakan sebagai output atau tampilan dari sebuah nilai/data yang telah diolah dari sensor.
@@ -21,8 +22,8 @@ Dari gambar di atas, diperjelas pada tabel di bawah ini
 
 | ESP8266 Amica | LCD I2C                            |
 |---------------|------------------------------------|
-| Vin           | GND                                |
-| GND           | Hijau                              |
+| Vin           | VCC                                |
+| GND           | GND                              |
 | D1            | SCL                                |
 | D2            | SDA                                |
 
@@ -78,6 +79,8 @@ Upload kode di atas, kemudian amati hasilnya pada serial monitor.
 ### Verifikasi Hasil Percobaan
 Hasil dari percobaan di atas seharusnya dapat menghasilkan keluaran seperti ditunjukkan pada gambar di bawah ini
 
+![](images/i2c-address.png)
+
 > Keluaran dari kode di atas akan kita gunakan untuk menginisialisasi LCD yang akan kita gunakan pada praktikum selanjutnya. Setiap nilai alamat I2C bisa berbeda dengan yang lain, tergantung dari pabrik pembuatnya.
 
 ## Praktikum 2 - Menampilkan data pada LCD
@@ -127,6 +130,8 @@ Pada kode di atas terdapat baris perintah `LiquidCrystal_I2C lcd(0x27, 16, 2);`,
 ### Verifikasi Hasil Percobaan
 Hasil dari percobaan di atas seharusnya dapat menghasilkan keluaran seperti ditunjukkan pada gambar di bawah ini
 
+![](images/lcd.gif)
+
 ### Pertanyaan
 1. Jelaskan fungsi dari pemanggilan method `lcd.backlight()`?
 2. Bagimana caranya mengganti tingkat intensitas kecerahan dari LCD Anda?
@@ -134,15 +139,16 @@ Hasil dari percobaan di atas seharusnya dapat menghasilkan keluaran seperti ditu
 
 ## Video Pendukung
 <p>
-<iframe width="798" height="499" src="https://www.youtube.com/embed/84RNgzA-ESo" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+<iframe width="798" height="499" src="https://www.youtube.com/embed/cO1Lc9RE19A" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 </p>
 
 ## Tugas
 Buatlah sebuah aplikasi yang sederhana menggunakan DHT11, LED RGB, dan LCD. Skenarionya adalah sebagai berikut
 1. Buatlah ketiga komponen tersebut di dalam satu rangkaian menggunakan fritzing.
 2. Tampilkan suhu dalam bentuk Fahrenheit dan Celcius, suhu yang ditampilkan adalah suhu di ruangan sekitar Anda.
-3. Ketika suhu normal LED berwarna akan berkedip-kedip, ketika suhu dingin LED berwarna hijau akan berkedip, dan LED berwarna merah akan berkedip ketika suhu tergolong tinggi.
+3. Ketika suhu normal LED berwarna biru akan berkedip-kedip, ketika suhu dingin LED berwarna hijau akan berkedip, dan LED berwarna merah akan berkedip ketika suhu tergolong tinggi.
 4. Tampilkan waktu saat ini juga pada LCD.
 5. Silakan hasilnya diupload ke google drive ataupun youtube, linknya sertakan dalam laporan Anda.
 
 Output yang diharapkan adalah sebagai berikut 
+![](images/output.jpg)
