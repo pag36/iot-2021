@@ -151,4 +151,5 @@ Buatlah sebuah aplikasi yang sederhana menggunakan DHT11, LED RGB, dan LCD. Sken
 5. Silakan hasilnya diupload ke google drive ataupun youtube, linknya sertakan dalam laporan Anda.
 
 Output yang diharapkan adalah sebagai berikut 
+
 ![](images/output.jpg)
