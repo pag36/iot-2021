@@ -9,3 +9,4 @@
 * [05. DHT11](03/03-dht11.md)
 * [06. LDR](04/04-sensor-cahaya.md)
 * [07. LCD](05/05-lcd.md)
+* [08. UTS](06/06-uts.md)
