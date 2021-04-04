@@ -10,3 +10,4 @@
 * [06. LDR](04/04-sensor-cahaya.md)
 * [07. LCD](05/05-lcd.md)
 * [08. UTS](06/06-uts.md)
+* [09. Socket Client](07/07-socket-client.md)
