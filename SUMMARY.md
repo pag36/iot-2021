@@ -11,3 +11,4 @@
 * [07. LCD](05/05-lcd.md)
 * [08. UTS](06/06-uts.md)
 * [09. Socket Client](07/07-socket-client.md)
+* [10. Socket Server](08/08-socket-server.md)
