@@ -128,7 +128,7 @@ Server received data: b'Hai from ESP8266'
 Incoming connection from 114.5.110.7:42955
 ```
 
-> Silakan disesuaikan kode di atas untuk host dan port yang digunakan, ganti kode `TCP_IP = "192.168.43.85"` dan `TCP_PORT = 2004`
+> Silakan disesuaikan kode di atas untuk host dan port yang digunakan, ganti kode `TCP_IP = "0.0.0.0"` dan `TCP_PORT = 9000`, kedua konfigurasi tersebut disesuaikan dengan ip atau port yang dibuka pada laptop/komputer ataupun instance AWS Anda.
 
 Setelah berhasil menjalankan socket sever, selanjutnya perlu dibuat socket client yang berjalan di controller atau ESP8266 Amica atau Lolita yang Anda miliki. Buatlah kode berikut
 
@@ -237,8 +237,11 @@ Silakan upload program tersebut ke controller Anda dan amati outputnya pada seri
 ## Video Pendukung
 
 <p>
-<iframe width="933" height="583" src="https://www.youtube.com/embed/Q2r7uWvuXZ4" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+<iframe width="933" height="583" src="https://www.youtube.com/embed/14j9ihm_svQ" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 </p>
+<p><iframe width="933" height="583" src="https://www.youtube.com/embed/Q2r7uWvuXZ4" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe></p>
+<p><iframe width="933" height="583" src="https://www.youtube.com/embed/kk56HEsUQCU" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe></p>
+<p><iframe width="933" height="583" src="https://www.youtube.com/embed/MsoaFrAurlo" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe></p>
 
 ## Tugas
 
