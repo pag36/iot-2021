@@ -1,22 +1,26 @@
 # Socket Server
 
 # Topik Bahasan
+
 Socket Server
 
 ## Kemampuan Akhir yang Direncanakan
+
 - Mahasiswa mampu memahami protokol komunikasi socket client TCP/IP
-- Mahasiswa mampu membuat program komunikasi antara MCU sebagai server socket dan komputer sebagai client socket menggunakan bahasa 
+- Mahasiswa mampu membuat program komunikasi antara MCU sebagai server socket dan komputer sebagai client socket menggunakan bahasa
   pemrograman Python.
-- Mahasiswa mampu membuat program untuk mendengarkan client (listening) dan menerima data sensor dari MCU ke komputer secara real-time 
+- Mahasiswa mampu membuat program untuk mendengarkan client (listening) dan menerima data sensor dari MCU ke komputer secara real-time
   dengan protokol komunikasi socket TCP/IP
 
 ## Teori Singkat
-Untuk program socket server sudah dibuat pada pertemuan [sebelumnya](/07/07-socket-client.md), tetapi pada kode socket 
+
+Untuk program socket server sudah dibuat pada pertemuan [sebelumnya](/07/07-socket-client.md), tetapi pada kode socket
 tersebut masing sederhana yaitu hanya menerima data dari socket client yang dikirimkan.
 
 Untuk kode socket server akan dibuat agar fungsi-fungsi didalamnya lebih banyak lagi, agar tidak hanya bisa menerima data dari client.
 
 ## Praktikum
+
 Masih menggunakan kode socket server yang sebelumnya, ubahlah kode pada fungsi `run` menjadi seperti di bawah ini.
 
 ```python
@@ -30,6 +34,7 @@ def run(self):
                 break
             sleep(0.25)
 ```
+
 Dengan mengubah program tersebut, socket server yang akan kita buat mampu menerima input dari keyboard sehingga dapat dimanfaatkan untuk memasukan perintah pada controller atau ESP8266 yang kita miliki.
 
 ```cpp
@@ -93,6 +98,7 @@ void loop()
   delay(250);
 }
 ```
+
 Kode tersebut mirip dengan kode pada pertemuan sebelumnya, yang perlu dimodifkasi adalah bagian di bawah ini
 
 ```cpp
@@ -103,14 +109,20 @@ if (line.equalsIgnoreCase("led-on"))
       pinMode(BUILTIN_LED, LOW);
     }
 ```
-Fungsi kode di atas digunakan untuk membaca setiap data dari socket server, ketika data tersebut `led-on` berarti akan 
+
+Fungsi kode di atas digunakan untuk membaca setiap data dari socket server, ketika data tersebut `led-on` berarti akan
 menghidupkan LED bawaan esp8266.
 
+> Silakan tambahkan pengecekan ketika tidak terhubung ke server maka akan reconnect atau mencoba terhubung kembali ke server pada fungsi `loop()`.
+
+## Video Pendukung
+
 ## Tugas
-Terdapat sebuah dusun di desa tertentu yang sudah menerapkan IoT, contoh penerapan tersebut di gang-gang ketika sudah 
-beranjak malam lampu yang terdapat pada gang tersebut akan menyala. Pada dusun tersebut juga terdapat kebun rumah kaca, 
-dimana suhu dan kelembaban sangat diperhatikan untuk menjaga produktivitas sayur-sayur di dalam kebun. Semua sensor yang 
-terdapat pada dusun tersebut juga dapat dimonitoring dan semua lampu yang terdapat pada gang-gang dapat dinyalakan melalui server.
+
+Terdapat sebuah dusun di desa tertentu yang sudah menerapkan IoT, contoh penerapan tersebut di gang-gang ketika sudah
+beranjak malam lampu yang terdapat pada gang tersebut akan menyala. Pada dusun tersebut juga terdapat kebun rumah kaca,
+dimana suhu dan kelembaban sangat diperhatikan untuk menjaga produktivitas sayur-sayur di dalam kebun. Semua sensor yang
+terdapat pada dusun tersebut juga dapat dipantau dan semua lampu yang terdapat pada gang-gang dapat dinyalakan melalui server, ketika posisi malam maka akan mengirimkan data ke server dan server memerintahkan lampu untuk menyala. Lampu yang digunakan bisa menggunakan LED.
 
 Dari kasus di atas, buat program untuk kebutuhan tersebut baik dari sisi controller (ESP8266) dan dari sisi server. Seperti
 biasa untuk output dokumentasikan berupa link video google drive ataupun youtube, selanjutnya sisipkan link tersebut pada
