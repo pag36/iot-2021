@@ -99,6 +99,8 @@ for t in threads:
     t.join()
 ```
 
+> Jika sudah memiliki dan membuat instance EC2 di AWS, silakan upload kode file tersebut di atas agar kita coba langsung jalankan di cloud. Tetapi misalkan memang belum memiliki, silaan dicoba pada lokal komputer Anda. Sebaiknya memang dicoba terlebih dahulu di lokal komputer sebelum upload di cloud.
+
 Setelah program tersebut dijalankan, socket server siap menerima komunikasi dari socket client. Untuk mencobanya bisa menggunakan perintah telnet, caranya adalah sebagai berikut
 
 ```
