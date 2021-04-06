@@ -101,6 +101,17 @@ for t in threads:
 
 > Jika sudah memiliki dan membuat instance EC2 di AWS, silakan upload kode file tersebut di atas agar kita coba langsung jalankan di cloud. Tetapi misalkan memang belum memiliki, silaan dicoba pada lokal komputer Anda. Sebaiknya memang dicoba terlebih dahulu di lokal komputer sebelum upload di cloud.
 
+> Sebelum menjalankan dicek terlebih dahulu file tersebut, apakah sudah executable atau belum. Atau coba langsung dijalankan, tetapi kalau misalkan tidak bisa dijalankan kemungkinan file tersebut belum executable sehingga perlu dilakukan mode executable. Coba cek menggunakan perintah `ls -lh`, sehingga outputnya kurang lebih seperti di bawah ini
+
+```
+-rwxr-xr-x@  1 od3ng  staff   1.2K Apr  6 11:10 server.py
+drwxr-xr-x  10 od3ng  staff   340B Apr  5 14:56 vs-client
+```
+
+Jika dilihat output dari file `server.py` tersebut sudah mode executable, dibuktikan untuk modenya `-rwxr-xr-x` yang artinya semua level user bisa menggunakan. Jika masih tidak bisa menjalankan, silakan ketika perintah `chmod +x server.py` yang dimana file `server.py` adalah program Anda.
+
+> Catatan: Biasanya mode di atas, digunakan untuk sistem operasi jenis UNIX seperti Linux ataupun Mac OS
+
 Setelah program tersebut dijalankan, socket server siap menerima komunikasi dari socket client. Untuk mencobanya bisa menggunakan perintah telnet, caranya adalah sebagai berikut
 
 ```
@@ -138,10 +149,10 @@ Setelah berhasil menjalankan socket sever, selanjutnya perlu dibuat socket clien
 
 #define LED D4
 
-const char *ssid = "***";
-const char *password = "***";
-const uint16_t port = 2004;
-const char *host = "192.168.43.85";
+const char *ssid = "****"; // nama SSID untuk koneksi Anda
+const char *password = "****"; // password akses point WIFI Anda
+const uint16_t port = ****; // diganti dengan port serve Anda
+const char *host = "****";//diganti dengan host server Anda, bisa ip ataupun domain
 
 void connect_wifi()
 {
@@ -219,10 +230,10 @@ OK
 ```
 
 ```cpp
-const char *ssid = "***";
-const char *password = "***";
-const uint16_t port = 2004;
-const char *host = "192.168.43.85";
+const char *ssid = "****";
+const char *password = "****";
+const uint16_t port = ****;
+const char *host = "****";
 ```
 
 Keterangan:
