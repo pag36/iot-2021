@@ -221,7 +221,12 @@ node tersebut dengan node `movie request`. Hasil akhirnya adalah sebagai berikut
    
    ![](images/12.png)
    
+#### Pertanyaaan
+1. Tambahkan kembali `node function` dan `node debug`, yang masing-masing fungsinya adalah untuk memfilter dimana movie
+yang akan tampil hanya movie dengan tahun > 2000 dan untuk menampilkan data filter tersebut.
 
+2. Flow dan output pada debug dapat dilihat seperti berikut ini
+   ![](images/13.png)
 
 ## Video Pendukung
 
