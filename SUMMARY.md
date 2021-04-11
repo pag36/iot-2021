@@ -12,3 +12,4 @@
 - [08. UTS](06/06-uts.md)
 - [09. Socket Client](07/07-socket-client.md)
 - [10. Socket Server](08/08-socket-server.md)
+- [11. Installasi IoT Platform](09/09-installasi-iot-platform.md)
