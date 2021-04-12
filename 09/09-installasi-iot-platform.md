@@ -231,3 +231,12 @@ yang akan tampil hanya movie dengan tahun > 2000 dan untuk menampilkan data filt
 ## Video Pendukung
 
 ## Tugas
+Buatlah sebuah flow yang digunakan untuk menentukan sebuah kondisi temperatur dingin, normal, dan panas. Terdapat 3 node
+inject masing-masing sebagai berikut;
++ Ketika inject pertama diklik akan muncul di panel debug menampilkan dingin, lewatkan nilai 5 pada node inject pertama. 
++ Ketika inject kedua diklik akan muncul di panel debug menampilkan normal, lewatkan nilai 25 pada node inject kedua. 
++ Ketika inject ketiga diklik akan muncul di panel debug menampilkan panas, lewatkan nilai 50 pada node inject ketiga.
+
+Perhatian keluaran pada panel debug di bawah ini, itu output yang diharapkan.
+
+![](images/14.png)
