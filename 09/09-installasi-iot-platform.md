@@ -110,6 +110,21 @@ ditunjukkan pada gambar di bawah ini. Misalkan akses ke `http://ec2-3-90-163-77.
     
     ![](images/04.png)
 
+> Ketika instance dimatikan atau direstart maka Node-Red harus dinyalan kembali, berikut ini adalah perintah yang digunakan 
+> agar Node-Red tetap berjalan ketika instance restart.
+> 
+
+```shell
+sudo npm install -g --unsafe-perm pm2
+pm2 start `which node-red` -- -v
+pm2 save
+pm2 startup
+sudo env PATH=$PATH:/usr/bin /usr/local/lib/node_modules/pm2/bin/pm2 startup systemd -u ubuntu --hp /home/ubuntu
+```
+
+Silakan restart instance Anda, seharusnya Node-Red sudah berjalan dan tidak perlu menjalankan kembali. `pm2` adalah modul
+manajemen aplikasi yang berjalan pada nodejs.
+
 ### 2. Menambahkan Keamanan pada Node-Red
 Ketika sudah berhasil install Node-RED, kita langsung bisa mengakses halaman editor yang mana terdapat semua flow atau alur
 dari project yang telah kita buat. Hal ini tentunya tidak akan dilakukan ketika project yang telah di-deploy, sehingga
@@ -229,6 +244,9 @@ yang akan tampil hanya movie dengan tahun > 2000 dan untuk menampilkan data filt
    ![](images/13.png)
 
 ## Video Pendukung
+<p>
+<iframe width="933" height="583" src="https://www.youtube.com/embed/10WsBy_Kf_c" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+</p>
 
 ## Tugas
 Buatlah sebuah flow yang digunakan untuk menentukan sebuah kondisi temperatur dingin, normal, dan panas. Terdapat 3 node
