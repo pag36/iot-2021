@@ -108,3 +108,7 @@ Dalam keadaan hidup
 
 ## Tugas
 
+Hasilnya adalah sebagai berikut
+
+![](images/tugas.gif)
+
