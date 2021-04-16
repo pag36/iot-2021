@@ -14,3 +14,4 @@
 - [10. Socket Server](08/08-socket-server.md)
 - [11. Installasi IoT Platform](09/09-installasi-iot-platform.md)
 - [12. Manajemen IoT Dashboard](10/10-manjemen-iot-dashboard.md)
+- [13. Konfigurasi Smart Device](11/11-konfigurasi-smart-device.md)
