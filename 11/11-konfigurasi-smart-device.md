@@ -204,5 +204,18 @@ Node-RED.
 ## Video Pendukung
 
 ## Tugas
+Masih lanjutan dengan tugas, tambahkan sensor LDR dan LED RGB pada ESP8266. Ketentuannya adalah sebagai berikut
+1. Tab Home terdiri dari group Control, Monitoring, dan Cahaya.
+   - `Group Control` memiliki 3 `node switch` dan 3 `text statis`, fungsi dari group ini adalah untuk menghidupkan dan mematikan
+   led RGB.
+   - `Group Monitoring` 2 `node chart` untuk menampilkan suhu dan kelembaban.
+   - `Group Cahaya` terdiri dari `text` dan `gauge`, text untuk menampilkan kategori terang, redup, dan gelap. Sedangkan `node gauge`
+   untuk menampilkan nilai sensor LDR.
+2. Tab Contact
+Pada tab ini digunakan untuk menampilkan data kelas, NIM, dan Nama. **Silakan diisi dengan nama Anda masing-masing**.
+   
+Hasil yang diharapkan adalah sebagai berikut
+
+![](images/tugas.gif)
 
 
