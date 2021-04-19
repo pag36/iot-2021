@@ -12,4 +12,8 @@
 - [08. UTS](06/06-uts.md)
 - [09. Socket Client](07/07-socket-client.md)
 - [10. Socket Server](08/08-socket-server.md)
-<!-- - [11. Installasi IoT Platform](09/09-installasi-iot-platform.md) -->
+- [11. Installasi IoT Platform](09/09-installasi-iot-platform.md)
+
+[comment]: <> (- [12. Manajemen IoT Dashboard]&#40;10/10-manjemen-iot-dashboard.md&#41;)
+
+[comment]: <> (- [13. Konfigurasi Smart Device]&#40;11/11-konfigurasi-smart-device.md&#41;)
