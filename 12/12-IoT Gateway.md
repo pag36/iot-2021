@@ -29,10 +29,10 @@ Seperti biasanya kita akan menyiapkan instance, EC2 untuk kebutuhan di atas. Lan
    
    ```shell
    #!/bin/bash
-   sudo apt update
-   sudo apt install apache2 php libapache2-mod-php -y
-   sudo apt install php-json php7.4-mysql php-xml php-intl php-curl -y
-   sudo apt install composer -y
+   apt update
+   apt install apache2 php libapache2-mod-php -y
+   apt install php-json php7.4-mysql php-xml php-intl php-curl -y
+   apt install composer -y
    ```
    Dengan menggunakan script di atas, kita tidak perlu repot-repot menjalankan satu persatu ketika instance berhasil dibuat
 karena sudah dijalankan ketika proses pembuatan instance.
@@ -43,32 +43,78 @@ karena sudah dijalankan ketika proses pembuatan instance.
 
 2. Silakan tambahkan port http yaitu 80 pada langkah `6. Configure Security Group`. Port tersebut digunakan untuk akses
 web server atau web yang akan kita buat.
-```shell
-composer create-project codeigniter4/appstarter iot-jti --no-dev
-sudo chown -Rv www-data iot-jti/writable
-sudo mv iot-jti/ /var/www/html/
 
-sudo cp /etc/apache2/sites-available/000-default.conf /etc/apache2/sites-available/iot-jti.conf
-sudo nano /etc/apache2/sites-available/iot-jti.conf
-DocumentRoot /var/www/html -> DocumentRoot /var/www/html/iot-jti/public
-sudo a2ensite iot-jti.conf
-sudo a2dissite 000-default.conf
-sudo systemctl restart apache2
+3. Setelah instance berhasil dijalankan, kemudian silakan buka browser Anda kemudian ketik/paste domain(alamat) dari instance
+tersebut. Misalkan domain saya adalah `http://ec2-54-227-120-124.compute-1.amazonaws.com/` seharusnya akan muncul tampilan
+   seperti pada gambar berikut
+   
+   ![](images/02.png)
 
-cd /var/www/html/iot-jti
-mv env .env
-nano .env
-CI_ENVIRONMENT = development
-```
+4. Untuk memudahkan proses pengembangan aplikasi web, kita akan mencoba menggunakan framework codeigniter4. Silakan masuk
+ke EC2 yang telah dibuat sebelumnya, bisa menggunakan putty atau perintah ssh. Jalankan beberapa baris perintah di bawah ini
+   
+   ```shell
+   composer create-project codeigniter4/appstarter iot-jti --no-dev
+   sudo chown -Rv www-data iot-jti/writable
+   sudo mv iot-jti/ /var/www/html/
+   ```
+   Langkah installasi codeigniter menggunakan perintah `composer` agar lebih gampang karena akan download di repository,
+langkah yang lain bisa secara manual dengan mengunjungi website codeigniter dan download.
+   
+5. Ketika akses instance melalui browser yang ditampilkan masih halaman index dari apache, kita akan mencoba untuk mengubah 
+halaman tersebut menjadi halaman codeigniter. Sebelumnya kita harus membuat konfigurasi untuk website kita, ketik beberapa 
+   perintah di bawah ini
 
+   ```shell
+   sudo cp /etc/apache2/sites-available/000-default.conf /etc/apache2/sites-available/iot-jti.conf
+   sudo nano /etc/apache2/sites-available/iot-jti.conf
+   sudo a2ensite iot-jti.conf
+   sudo a2dissite 000-default.conf
+   sudo systemctl restart apache2
+   ```   
+   >Ketika menjalankan perintah `sudo nano /etc/apache2/sites-available/iot-jti.conf` silakan dicari `DocumentRoot /var/www/html`
+   > kemudian diganti menjadi `DocumentRoot /var/www/html/iot-jti/public`, hanya mengganti path-nya saja. CTRL+O kemudian 
+   > enter untuk menyimpan perubahan dan CTRL+x untuk keluar editor nano.
 
+6. Buka browser atau kembali browser, kemudian ketik alamat ip atau dns instance. Misalkan `http://ec2-54-227-120-124.compute-1.amazonaws.com/`
+seharusnya akan menampilkan halaman seperti pada gambar berikut
+   
+   ![](images/03.png)
 
+7. Untuk mempermudah proses coding, aktifkan mode debug codeigniter menggunakan perintah di bawah ini
+   
+   ```shell
+      cd /var/www/html/iot-jti
+      mv env .env
+      nano .env
+   ```
+   > Silakan dicari pada bagian `# CI_ENVIRONMENT = production` diubah menjadi  `CI_ENVIRONMENT = development`, tekan 
+   > CTRL+O kemudian enter untuk menyimpan perubahan dan CTRL+x untuk keluar editor nano.
 
-### Verifikasi Hasil Percobaan
+8. Buka kembali browser, ketik alamat ip atau dns seharusnya akan menampilkan seperti pada gambar berikut pada bagian bawah
+halaman codeigniter.
+   
+   ![](images/04.png)
+
+>Codeignier sudah berhasil terpasang pada instance atau server, selanjutnya adalah membuat kode sesuai dengan kebutuhan.
+> Skenario yang bisa dilakukan adalah untuk mengedit atau mengubah kode yang terdapat di codeigniter yaitu bisa menggunakan
+> repository, misalkan git. Upload semua satu project codeigniter ke repository yang di server, kemudian bisa di-clone ke 
+> komputer lokal atau laptop untuk melaukan editing. Ketika selesai edit, push ke repository dan di server atau instance 
+> harus melakukan pull.
+> 
+> Skenario yang lain, download project codeigniter di server pindah ke laptop/lokal komputer. Bisa menggunakan WinSCP atau tool
+> yang lain. Ketika ada perubahan di lokal, maka harus upload perubahan tersebut yang ada di server.
+> 
+> Jujur lebih menyarankan skenario yang pertama untuk menghindari terjadi konflik, terlebih lagi ketika pengembangannya sudah
+> lebih dari satu orang.
 
 #### Pertanyaan
+1. Jelaskan fungsi perintah-perintah yang dimasukan ke dalam `User Data` ketika membuat sebuah instance EC2?
+2. Fungi dari perintah `sudo a2dissite 000-default.conf`?
 
 ### 2. Konfigurasi Message Broker
+Untuk praktikum sebelumnya kita memanfaatkan message broker yang sudah ada, dalam praktikum yang kedua mencoba bagaimana
+caranya konfigurasi message broker sendiri.
 
 
 ### Verifikasi Hasil Percobaan
