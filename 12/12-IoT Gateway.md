@@ -114,12 +114,100 @@ halaman codeigniter.
 
 ### 2. Konfigurasi Message Broker
 Untuk praktikum sebelumnya kita memanfaatkan message broker yang sudah ada, dalam praktikum yang kedua mencoba bagaimana
-caranya konfigurasi message broker sendiri.
+caranya konfigurasi message broker untuk aplikasi yang akan kita bangun. Silakan mengikuti langkah-langkah di bawah ini
+1. Buatlah sebuah instance baru, kemudian untuk langkah `3. Configure Instance` pada bagian `User Data` tambahkan baris perintah
+   sebagai berikut
+   ```shell
+   #!/bin/bash
+   apt-add-repository ppa:mosquitto-dev/mosquitto-ppa -y
+   apt-get update
+   apt-get install mosquitto mosquitto-clients -y
+   ```
+   Baris di atas digunakan untuk melakukan installasi mosquitto sebagai message broker sekaligus install mosquitto client
+untuk melaukan pengujian publish dan subscribe. Atau dapat melihat pada gambar berikut
+   ![](images/06.png)
+   
+2. Tambahkan 2 port yang perlu dibuka selain port 22 untuk ssh, misalkan port 1883 dan 8089 pada langkah `6. Configure Security
+   Group`. Perhatikan gambar di bawah ini
+   ![](images/05.png)
+   
+3. Ketika instance sudah jalan, silakan remote menggunakan putty atau tool yang lain. Kemudian jalankan perintah di bawah ini
+untuk mengecek apakah installasi mosquitto sudah berhasil.
+   ```shell
+   ubuntu@ip-172-31-16-8:~$ telnet localhost 1883
+   Trying 127.0.0.1...
+   Connected to localhost.
+   Escape character is '^]'.
+   ^]
+   
+   telnet> Connection closed.
+   ```
+   Perintah di atas menandakan bahwa proses installasi mosquitto telah berhasil, kemudian silakan dicoba untuk melakukan
+publish dan subscribe message. Buka windows baru lagi atau duplicate session, selanjutkan lakukan perintah seperti pada
+   gambar berikut
+   ![](images/07.png)
+   
+   Terlihat bahwa proses subscribe dan publish berhasil dilakukan pada localhost. Parameter `-t` menandakan nama topiknya,
+   `-m` berarti messagenya yang akan dikirimkan. Kemudian misalkan untuk mencoba pada host atau 
+   server yang lain tambahkan parameter `-h` diikuti nama host atau ip. Misalkan `mosquitto_sub -h broker.sinaungoding.com -t test`,
+   dan untuk melakukan subscribe `mosquitto_pub -h broker.sinaungoding.com -t test -m "mqtt test"`.
 
+#### Menambahkan Password MQTT
+Agar lebih aman terhadap pihak-pihak yang tidak bertanggungjawab, perlu ditambahkan keamanan ketika akan menggunakan
+message broker yang telah kita install, salah satunya yaitu menambahkan authentifikasi berupa user dan password ketika 
+ingin melakukan subscribe ataupun publish message.
 
+Ikuti langkah-langkah di bawah ini untuk melakukan konfigurasinya
+1. Buatlah sebuah user `jti` dengan perintah di bawah ini. User `jti` hanya contoh, silakan diganti dengan yang lain jika
+diperlukan
+   ```shell
+   ubuntu@ip-172-31-16-8:~$ sudo mosquitto_passwd -c /etc/mosquitto/passwd jti
+   Password:
+   Reenter password:
+   ```
+   
+2. Buatlah file konfigurasi yang menginfokan bahwa untuk publish tidak dizinkan tanpa password. Ketik perintah di bawah ini
+   ```shell
+   sudo nano /etc/mosquitto/conf.d/jti.conf
+   ```
+   Akan muncul editor nano, selanjutnya tambahkan dua baris perintah berikut
+   ```shell
+   listener 8089
+   protocol websockets
+   
+   listener 1883
+   #protocol websockets
+   
+   per_listener_settings true
+   allow_anonymous false
+   password_file /etc/mosquitto/passwd
+   log_timestamp_format %Y-%m-%dT%H:%M:%S
+   ```
+   Tekan CTRL+O untuk menyimpan konfigurasi file dan CTRL+X untuk keluar dari editor nano.
+
+3. Silakan restart mosquitto untuk memberikan perubahan dan coba lakukan publish atau subscribe sebuah message, kira-kira
+perintahnya adalah sebagai berikut
+   ```shell
+   sudo systemctl restart mosquitto
+   ```
 ### Verifikasi Hasil Percobaan
+Silakan dicoba untuk publish message menggunakan perintah berikut
+```shell
+buntu@ip-172-31-16-8:~$ mosquitto_pub -h localhost -t "test" -m "hello world"
+Connection error: Connection Refused: not authorised.
+Error: The connection was refused.
+```
+Dari keluaran di atas terlihat bahwa terjadi error karena ketika publish message tidak menggunakan user dan password.
+Kemudian ketika ditambahkan username dan password seperti perintah berikut
+```shell
+ubuntu@ip-172-31-16-8:~$ mosquitto_pub -h localhost -t "test" -m "hello world" -u jti -P 1234
+```
+Ketika tidak menampilkan pesan berarti berhasil publish message.
 
 #### Pertanyaan
+1. Apakah fungsi dari baris perintah `protocol websockets` pada file konfig mosquitto?
+2. Silakan ganti menjadi `false` pada `per_listener_settings true`, restart mosquitto. Apakah yang akan terjadi atau pengaruhnya apa?
+3. Buatlah user yang lain, kemudian lakukan subscribe dan publish message!
 
 ### 3. Menghubungkan Smart Device Aplikasi Web
 
