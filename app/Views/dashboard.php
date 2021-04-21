@@ -1,53 +1,134 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
 
 <head>
-    <!-- Required meta tags -->
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JTI IoT</title>
+    <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.8.2/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/paho-mqtt/1.0.1/mqttws31.min.js" type="text/javascript"></script>
+    <script type="text/javascript">
+        var MQTTbroker = 'broker.sinaungoding.com';
+        var MQTTport = 8089;
+        var MQTTsubTopic = 'room/suhu'; //works with wildcard # and + topics dynamically now
+        var chart; // global variuable for chart
+        var dataTopics = new Array();
+        //mqtt broker
+        var client = new Paho.MQTT.Client(MQTTbroker, MQTTport, "jti_" + parseInt(Math.random() * 100, 10));
+        client.onMessageArrived = onMessageArrived;
+        client.onConnectionLost = onConnectionLost;
 
-    <!-- Bootstrap CSS -->
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-eOJMYsd53ii+scO/bJGFsiCZc+5NDVN2yr8+0RDqr0Ql0h+rP48ckxlpbzKgwra6" crossorigin="anonymous">
+        //mqtt connecton options including the mqtt broker subscriptions
+        var options = {
+            timeout: 3,
+            useSSL: false,
+            onSuccess: function() {
+                console.log("mqtt connected");
+                // Connection succeeded; subscribe to our topics
+                client.subscribe(MQTTsubTopic, {
+                    qos: 1
+                });
+            },
+            onFailure: function(message) {
+                console.log("Connection failed, ERROR: " + message.errorMessage);
+                //window.setTimeout(location.reload(),20000); //wait 20seconds before trying to connect again.
+            }
+        };
+        //can be used to reconnect on connection lost
+        function onConnectionLost(responseObject) {
+            console.log("connection lost: " + responseObject.errorMessage);
+            //window.setTimeout(location.reload(),20000); //wait 20seconds before trying to connect again.
+        };
+        //what is done when a message arrives from the broker
+        function onMessageArrived(message) {
+            console.log(message.destinationName, '', message.payloadString);
+            //check if it is a new topic, if not add it to the array
+            if (dataTopics.indexOf(message.destinationName) < 0) {
 
-    <title>Hello, world!</title>
+                dataTopics.push(message.destinationName); //add new topic to array
+                var y = dataTopics.indexOf(message.destinationName); //get the index no
+
+                //create new data series for the chart
+                var newseries = {
+                    id: y,
+                    name: message.destinationName,
+                    data: []
+                };
+                chart.addSeries(newseries); //add the series
+            };
+
+            var y = dataTopics.indexOf(message.destinationName); //get the index no of the topic from the array
+            var myEpoch = new Date().getTime(); //get current epoch time
+            var thenum = message.payloadString.replace(/^\D+/g, ''); //remove any text spaces from the message
+            var plotMqtt = [myEpoch, Number(thenum)]; //create the array
+            if (isNumber(thenum)) { //check if it is a real number and not text
+                console.log('is a propper number, will send to chart.')
+                plot(plotMqtt, y); //send it to the plot function
+            };
+        };
+        //check if a real number
+        function isNumber(n) {
+            return !isNaN(parseFloat(n)) && isFinite(n);
+        };
+        //function that is called once the document has loaded
+        function init() {
+            //i find i have to set this to false if i have trouble with timezones.
+            Highcharts.setOptions({
+                global: {
+                    useUTC: false
+                }
+            });
+            // Connect to MQTT broker
+            client.connect(options);
+        };
+        //this adds the plots to the chart
+        function plot(point, chartno) {
+            console.log(point);
+
+            var series = chart.series[0],
+                shift = series.data.length > 20; // shift if the series is
+            // longer than 20
+            // add the point
+            chart.series[chartno].addPoint(point, true, shift);
+        };
+        //settings for the chart
+        $(document).ready(function() {
+            chart = new Highcharts.Chart({
+                chart: {
+                    renderTo: 'container',
+                    defaultSeriesType: 'spline'
+                },
+                title: {
+                    text: 'Dashboard IoT JTI - Suhu Live Websockets'
+                },
+                subtitle: {
+                    text: 'broker: ' + MQTTbroker + ' | port: ' + MQTTport + ' | topic : ' + MQTTsubTopic
+                },
+                xAxis: {
+                    type: 'datetime',
+                    tickPixelInterval: 150,
+                    maxZoom: 20 * 1000
+                },
+                yAxis: {
+                    minPadding: 0.2,
+                    maxPadding: 0.2,
+                    title: {
+                        text: 'Value',
+                        margin: 80
+                    }
+                },
+                series: []
+            });
+        });
+    </script>
+    <script src="http://code.highcharts.com/stock/highstock.js"></script>
+    <script src="http://code.highcharts.com/stock/modules/exporting.js"></script>
 </head>
 
-<body>
-    <nav class="navbar navbar-expand-lg navbar-light bg-light">
-        <div class="container">
-            <div class="container-fluid">
-                <a class="navbar-brand" href="#">JTI IOT</a>
-                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-                    <span class="navbar-toggler-icon"></span>
-                </button>
-                <div class="collapse navbar-collapse" id="navbarNav">
-                    <ul class="navbar-nav">
-                        <li class="nav-item">
-                            <a class="nav-link active" aria-current="page" href="#">Home</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="#">About</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="#">Contact</a>
-                        </li>
-                    </ul>
-                </div>
-            </div>
-        </div>
-
-    </nav>
-
-    <!-- Optional JavaScript; choose one of the two! -->
-
-    <!-- Option 1: Bootstrap Bundle with Popper -->
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta3/dist/js/bootstrap.bundle.min.js" integrity="sha384-JEW9xMcG8R+pH31jmWH6WWP0WintQrMb4s7ZOdauHnUtxwoG2vI5DkLtS3qm9Ekf" crossorigin="anonymous"></script>
-
-    <!-- Option 2: Separate Popper and Bootstrap JS -->
-    <!--
-    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.1/dist/umd/popper.min.js" integrity="sha384-SR1sx49pcuLnqZUnnPwx6FCym0wLsk5JZuNx2bPPENzswTNFaQU1RDvt3wT4gWFG" crossorigin="anonymous"></script>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta3/dist/js/bootstrap.min.js" integrity="sha384-j0CNLUeiqtyaRmlzUHCPZ+Gy5fQu0dQ6eZ/xAww941Ai1SxSY+0EQqNXNE6DZiVc" crossorigin="anonymous"></script>
-    -->
+<body onload="init();">
+    <!--Start the javascript ball rolling and connect to the mqtt broker-->
+    <div id="container" style="height: 500px; min-width: 500px"></div><!-- this the placeholder for the chart-->
 </body>
 
 </html>
