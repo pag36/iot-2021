@@ -210,6 +210,268 @@ Ketika tidak menampilkan pesan berarti berhasil publish message.
 3. Buatlah user yang lain, kemudian lakukan subscribe dan publish message!
 
 ### 3. Menghubungkan Smart Device Aplikasi Web
+Setelah menyiapkan webserver untuk aplikasi web dan message broker untuk mengirimkan data sensor ataupun aktuator, selanjutnya
+perlu disiapkan Node-MCU dengan kode program jobsheet sebelumnya dan tentunya akan kita tambahkan halaman dashboad untuk
+menampilkan data sensor dari Node-MCU. Adapun langkah-langkahnya adalah sebagai berikut
+1. Tambahkan kode program pada Node-MCU, dibutuhkan DHT11. Kode programnya adalah sebagai berikut
+   ```c++
+   #include <Arduino.h>
+   #include <ESP8266WiFi.h>
+   #include <PubSubClient.h>
+   #include <SimpleDHT.h>
+   
+   const char *ssid = "****";//silakan disesuaikan sendiri
+   const char *password = "****";//silakan disesuaikan sendiri
+   
+   const char *mqtt_server = "****";
+   
+   WiFiClient espClient;
+   PubSubClient client(espClient);
+   
+   SimpleDHT11 dht11(D7);
+   
+   long now = millis();
+   long lastMeasure = 0;
+   
+   void setup_wifi()
+   {
+     delay(10);
+     Serial.println();
+     Serial.print("Connecting to ");
+     Serial.println(ssid);
+     WiFi.begin(ssid, password);
+     while (WiFi.status() != WL_CONNECTED)
+     {
+       delay(500);
+       Serial.print(".");
+     }
+     Serial.println("");
+     Serial.print("WiFi connected - ESP IP address: ");
+     Serial.println(WiFi.localIP());
+   }
+   
+   void reconnect()
+   {
+     while (!client.connected())
+     {
+       Serial.print("Attempting MQTT connection...");
+       if (client.connect("ESP8266Client"))
+       {
+         Serial.println("connected");
+       }
+       else
+       {
+         Serial.print("failed, rc=");
+         Serial.print(client.state());
+         Serial.println(" try again in 5 seconds");
+         delay(5000);
+       }
+     }
+   }
+   
+   void setup()
+   {
+     Serial.begin(115200);
+     Serial.println("Mqtt Node-RED");
+     setup_wifi();
+     client.setServer(mqtt_server, 1883);
+   }
+   
+   void loop()
+   {
+     if (!client.connected())
+     {
+       reconnect();
+     }
+     if (!client.loop())
+     {
+       client.connect("ESP8266Client");
+     }
+     now = millis();
+     if (now - lastMeasure > 5000)
+     {
+       lastMeasure = now;
+       int err = SimpleDHTErrSuccess;
+   
+       byte temperature = 0;
+       byte humidity = 0;
+       if ((err = dht11.read(&temperature, &humidity, NULL)) != SimpleDHTErrSuccess)
+       {
+         Serial.print("Pembacaan DHT11 gagal, err=");
+         Serial.println(err);
+         delay(1000);
+         return;
+       }
+       static char temperatureTemp[7];
+       dtostrf(temperature, 4, 2, temperatureTemp);
+       Serial.println(temperatureTemp);
+   
+       client.publish("room/suhu", temperatureTemp);
+     }
+   }
+   ```
+   Beberapa yang perlu disesuaikan adalah terkait dengan `ssid` dan `password`, kemudian `port` dan `server` untuk message broker,
+silakan menggunakan message broker yang telah dikonfigurasi sebelumnya. Untuk port, yang perlu disesuaikan adalah
+   `client.setServer(mqtt_server, 1883);`
+   
+2. Buatlah sebuah halaman baru `dashboard.php` pada project codeigniter, di folder `app/Views`. Sehingga strukturnya menjadi
+sebagai berikut
+   
+   ![](images/08.png)
+   
+   Isi dari file php tersebut adalah sebagai berikut
+   ```php
+   <!DOCTYPE html>
+   <html lang="en">
+   
+   <head>
+       <meta charset="UTF-8">
+       <meta http-equiv="X-UA-Compatible" content="IE=edge">
+       <meta name="viewport" content="width=device-width, initial-scale=1.0">
+       <title>JTI IoT</title>
+       <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.8.2/jquery.min.js"></script>
+       <script src="https://cdnjs.cloudflare.com/ajax/libs/paho-mqtt/1.0.1/mqttws31.min.js" type="text/javascript"></script>
+       <script type="text/javascript">
+           var MQTTbroker = '****';//servernya disesuaikan
+           var MQTTport = ****; //sesuaikan port websockets messsage broker,
+           var MQTTsubTopic = '****'; //topiknya perlu disesuaikan
+           var chart; // global variuable for chart
+           var dataTopics = new Array();
+           //mqtt broker
+           var client = new Paho.MQTT.Client(MQTTbroker, MQTTport, "jti_" + parseInt(Math.random() * 100, 10));
+           client.onMessageArrived = onMessageArrived;
+           client.onConnectionLost = onConnectionLost;
+   
+           //mqtt connecton options including the mqtt broker subscriptions
+           var options = {
+               timeout: 3,
+               useSSL: false,
+               onSuccess: function() {
+                   console.log("mqtt connected");
+                   // Connection succeeded; subscribe to our topics
+                   client.subscribe(MQTTsubTopic, {
+                       qos: 1
+                   });
+               },
+               onFailure: function(message) {
+                   console.log("Connection failed, ERROR: " + message.errorMessage);
+                   //window.setTimeout(location.reload(),20000); //wait 20seconds before trying to connect again.
+               }
+           };
+           //can be used to reconnect on connection lost
+           function onConnectionLost(responseObject) {
+               console.log("connection lost: " + responseObject.errorMessage);
+               //window.setTimeout(location.reload(),20000); //wait 20seconds before trying to connect again.
+           };
+           //what is done when a message arrives from the broker
+           function onMessageArrived(message) {
+               console.log(message.destinationName, '', message.payloadString);
+               //check if it is a new topic, if not add it to the array
+               if (dataTopics.indexOf(message.destinationName) < 0) {
+   
+                   dataTopics.push(message.destinationName); //add new topic to array
+                   var y = dataTopics.indexOf(message.destinationName); //get the index no
+   
+                   //create new data series for the chart
+                   var newseries = {
+                       id: y,
+                       name: message.destinationName,
+                       data: []
+                   };
+                   chart.addSeries(newseries); //add the series
+               };
+   
+               var y = dataTopics.indexOf(message.destinationName); //get the index no of the topic from the array
+               var myEpoch = new Date().getTime(); //get current epoch time
+               var thenum = message.payloadString.replace(/^\D+/g, ''); //remove any text spaces from the message
+               var plotMqtt = [myEpoch, Number(thenum)]; //create the array
+               if (isNumber(thenum)) { //check if it is a real number and not text
+                   console.log('is a propper number, will send to chart.')
+                   plot(plotMqtt, y); //send it to the plot function
+               };
+           };
+           //check if a real number
+           function isNumber(n) {
+               return !isNaN(parseFloat(n)) && isFinite(n);
+           };
+           //function that is called once the document has loaded
+           function init() {
+               //i find i have to set this to false if i have trouble with timezones.
+               Highcharts.setOptions({
+                   global: {
+                       useUTC: false
+                   }
+               });
+               // Connect to MQTT broker
+               client.connect(options);
+           };
+           //this adds the plots to the chart
+           function plot(point, chartno) {
+               console.log(point);
+   
+               var series = chart.series[0],
+                   shift = series.data.length > 20; // shift if the series is
+               // longer than 20
+               // add the point
+               chart.series[chartno].addPoint(point, true, shift);
+           };
+           //settings for the chart
+           $(document).ready(function() {
+               chart = new Highcharts.Chart({
+                   chart: {
+                       renderTo: 'container',
+                       defaultSeriesType: 'spline'
+                   },
+                   title: {
+                       text: 'Dashboard IoT JTI - Suhu Live Websockets'
+                   },
+                   subtitle: {
+                       text: 'broker: ' + MQTTbroker + ' | port: ' + MQTTport + ' | topic : ' + MQTTsubTopic
+                   },
+                   xAxis: {
+                       type: 'datetime',
+                       tickPixelInterval: 150,
+                       maxZoom: 20 * 1000
+                   },
+                   yAxis: {
+                       minPadding: 0.2,
+                       maxPadding: 0.2,
+                       title: {
+                           text: 'Value',
+                           margin: 80
+                       }
+                   },
+                   series: []
+               });
+           });
+       </script>
+       <script src="http://code.highcharts.com/stock/highstock.js"></script>
+       <script src="http://code.highcharts.com/stock/modules/exporting.js"></script>
+   </head>
+   
+   <body onload="init();">
+       <!--Start the javascript ball rolling and connect to the mqtt broker-->
+       <div id="container" style="height: 500px; min-width: 500px"></div><!-- this the placeholder for the chart-->
+   </body>
+   
+   </html>
+   ```
+   Code di atas digunakan untuk menampilkan suhu yang dikirimkan oleh Node-MCU, karena aplikasi web berjalan di atas browser
+sehingga protokol yang digunakan tidak menggunakan http biasanya untuk komunikasi antara aplikasi dengan server broker. 
+   Yang diguankan adalah protokol websocket, komunikasi tersebut di-hanlde oleh javascript dengan bantuan library `pahomqtt`.
+   
+   Perlu disesuikan port, server, dan topik dari kode di atas agar bisa menampilkan data, silakan disesuaikan dengan
+konfigurasi yang telah Anda lakukan sebelumnya.
+   
+3. Upload kode tersebut ke server, bisa menggunakan WinSCP atau ketika sudah menggunakan repository berarti perlu `push` ke 
+repo selanjutnya yang di server perlu dilakukan `pull`. Selanjutnya buka browser Anda dan ketik alamat aplikasi web yang 
+   ada di instance EC2, seharusnya menampilkan halaman seperti berikut
+   ![](images/09.png)   
+   
+#### Pertanyaan
+1. Berapa lama sekali pengiriman data sensor DHT dari Node-MCU ke server broker? Silakan diubah menjadi lebih cepat!
+2. Fungsi baris perintah `dtostrf(temperature, 4, 2, temperatureTemp);` digunakan untuk apa? Jelaskan!
+3. Modifikasi bentuk chart pada halaman `dashboard.php` dalam bentuk yang lain, misalkan chart bar ataupun gauge!
 
 ## Video Pendukung
 
