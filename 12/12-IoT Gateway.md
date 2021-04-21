@@ -463,7 +463,24 @@ sehingga protokol yang digunakan tidak menggunakan http biasanya untuk komunikas
    Perlu disesuikan port, server, dan topik dari kode di atas agar bisa menampilkan data, silakan disesuaikan dengan
 konfigurasi yang telah Anda lakukan sebelumnya.
    
-3. Upload kode tersebut ke server, bisa menggunakan WinSCP atau ketika sudah menggunakan repository berarti perlu `push` ke 
+3. Ubah juga pada file `Home.php` yang terdapat di folder `app/Controllers` menjadi berikut ini
+
+   ```php
+   <?php
+   
+   namespace App\Controllers;
+   
+   class Home extends BaseController
+   {
+       public function index()
+       {
+           return view('dashboard');
+       }
+   }
+   ```
+   Dengan mengubah controller pada fungsi `index()` sehingga ketika mengakses halaman utama, akan diarahkan ke halaman `dashboard.php`.
+
+4. Upload kode tersebut ke server, bisa menggunakan WinSCP atau ketika sudah menggunakan repository berarti perlu `push` ke 
 repo selanjutnya yang di server perlu dilakukan `pull`. Selanjutnya buka browser Anda dan ketik alamat aplikasi web yang 
    ada di instance EC2, seharusnya menampilkan halaman seperti berikut
    ![](images/09.png)   
