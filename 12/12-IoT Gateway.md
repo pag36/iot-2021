@@ -483,6 +483,7 @@ konfigurasi yang telah Anda lakukan sebelumnya.
 4. Upload kode tersebut ke server, bisa menggunakan WinSCP atau ketika sudah menggunakan repository berarti perlu `push` ke 
 repo selanjutnya yang di server perlu dilakukan `pull`. Selanjutnya buka browser Anda dan ketik alamat aplikasi web yang 
    ada di instance EC2, seharusnya menampilkan halaman seperti berikut
+   
    ![](images/09.png)   
    
 #### Pertanyaan
