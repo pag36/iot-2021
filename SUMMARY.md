@@ -15,3 +15,4 @@
 - [11. Installasi IoT Platform](09/09-installasi-iot-platform.md)
 - [12. Manajemen IoT Dashboard](10/10-manjemen-iot-dashboard.md)
 - [13. Konfigurasi Smart Device](11/11-konfigurasi-smart-device.md)
+- [14. Message Broker](12/12-iot-gateway.md)
