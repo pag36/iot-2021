@@ -277,7 +277,7 @@ menampilkan data sensor dari Node-MCU. Adapun langkah-langkahnya adalah sebagai 
      while (!client.connected())
      {
        Serial.print("Attempting MQTT connection...");
-       if (client.connect("ESP8266Client"))
+       if (client.connect("ESP8266Client"))//tambahkan parameter untuk username dan password mqtt misalkan ada
        {
          Serial.println("connected");
        }
@@ -366,6 +366,8 @@ sebagai berikut
    
            //mqtt connecton options including the mqtt broker subscriptions
            var options = {
+               userName: "****",//silakan disikan username dan password yang didaftarkan mqtt
+               password: "****",
                timeout: 3,
                useSSL: false,
                onSuccess: function() {
