@@ -516,5 +516,12 @@ repo selanjutnya yang di server perlu dilakukan `pull`. Selanjutnya buka browser
 ## Video Pendukung
 
 ## Tugas
+Buatlah sebuah tampilan website yang fungsi utama adalah untuk menampilkan sensor cahaya, suhu, dan kelembaban. Kemudian
+Dapat juga menghidupkan masing-masing LED RGB, website tersebut harus telah teruplod di EC2(lampirkan alamatnya pada
+laporan praktikum) dan videokan hasilnya.
+> Untuk tampilan grafik bisa menggunakan referensi dari _highcharts.com_
+> 
+Sebagai contoh bisa melihat tampilan seperti berikut ini
 
+![](images/tugas.gif)
 
