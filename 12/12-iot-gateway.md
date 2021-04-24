@@ -515,6 +515,10 @@ repo selanjutnya yang di server perlu dilakukan `pull`. Selanjutnya buka browser
 
 ## Video Pendukung
 
+<p>
+<iframe width="790" height="494" src="https://www.youtube.com/embed/fKsZBicqzQ8" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+</p>
+
 ## Tugas
 Buatlah sebuah tampilan website yang fungsi utama adalah untuk menampilkan sensor cahaya, suhu, dan kelembaban. Kemudian
 Dapat juga menghidupkan masing-masing LED RGB, website tersebut harus telah teruplod di EC2(lampirkan alamatnya pada
