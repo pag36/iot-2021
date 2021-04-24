@@ -45,4 +45,11 @@ class Pages extends BaseController
         ];
         return view('pages/sensor', $data);
     }
+    public function aktuator()
+    {
+        $data = [
+            'title' => 'Aktuator | Polinema'
+        ];
+        return view('pages/aktuator', $data);
+    }
 }

@@ -13,29 +13,27 @@
 
 <body>
 
-    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+    <nav class="navbar navbar-expand-lg navbar-dark bg-primary">
         <div class="container">
-            <div class="container-fluid">
-                <a class="navbar-brand" href="#">Polinema Monitoring System</a>
-                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-                    <span class="navbar-toggler-icon"></span>
-                </button>
-                <div class="collapse navbar-collapse" id="navbarNav">
-                    <ul class="navbar-nav">
-                        <li class="nav-item">
-                            <a class="nav-link active" aria-current="page" href="/">Home</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="/pages/sensor">Sensor</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="/pages/about">About</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="/pages/contact">Contact</a>
-                        </li>
-                    </ul>
-                </div>
+            <a class="navbar-brand" href="#">Polinema Monitoring System</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto ">
+                    <li class="nav-item">
+                        <a class="nav-link active" aria-current="page" href="/">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="/pages/aktuator">Aktuator</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="/pages/about">About</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="/pages/contact">Contact</a>
+                    </li>
+                </ul>
             </div>
         </div>
     </nav>
@@ -55,6 +53,23 @@
     -->
 
     <?= $this->renderSection('script'); ?>
+
+    <!-- halman footer -->
+    <div class="pb-5">
+        <div class="pb-2">&nbsp;
+        </div>
+    </div>
+
+    <footer class="page-footer font-small bg-info fixed-bottom">
+
+        <!-- Copyright -->
+        <div class="footer-copyright text-center py-3 text-white">
+            <span>Copyright © <?php echo $title . " " . Date('Y') ?></span>
+        </div>
+        <!-- Copyright -->
+
+    </footer>
+
 </body>
 
 </html>

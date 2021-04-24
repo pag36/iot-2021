@@ -84,8 +84,8 @@
         //     // console.log('is a propper number, will send to chart.')
         //     plot(plotMqtt, 0, message.destinationName); //send it to the plot function
         // };
-
         if (message.destinationName == 'room/lamp') {
+            var myEpoch = new Date().toLocaleString();
             var point,
                 inc, series;
             point = chartLamp.series[0].points[0];
@@ -93,11 +93,11 @@
             // update series
             var value = Number(inc);
             if (value > 0 && value <= 341) {
-                series = 'Gelap';
+                series = 'Gelap ' + myEpoch;
             } else if (value > 341 && value <= 682) {
-                series = 'Redup';
+                series = 'Redup ' + myEpoch;
             } else {
-                series = 'Terang';
+                series = 'Terang ' + myEpoch;
             }
             chartLamp.series[0].name = series;
             chartLamp.series[0].isDirty = true; // force update tooltips
