@@ -25,15 +25,19 @@ Walaupun beberapa protokol yang dapat disupport oleh Node-RED, akan tetapi pada 
 digunakan MQTT. Untuk menggunakan protokol MQTT, pada Node-RED dashboard ketika melakukan installasi sudah termasuk di dalamnya.
 Ikut langkah-langkah di bawah ini untuk mulai praktikum
 1. Silakan seret `node inject` ke worksheet, kemudian ubahlah nilai properties seperti pada gambar berikut
-![](images/01.png)
+   
+   ![](images/01.png)
    
 2. Seret juga `node function` ke worksheet, sesuaikan propertiesnya seperti pada gambar berikut
-![](images/02.png)
+   
+   ![](images/02.png)
    
 3. Jangan lupa seret juga `node mqtt out` pada kategori network, tambahkan server broker agar bisa publish data dengan 
    cara klik `icon pensil`. Konfigurasinya adalah sebagai berikut 
 adalah sebagai berikut
-![](images/03.png)
+   
+   ![](images/03.png)
+   
    > Pada bagian `Name` isikan `Mqtt Server AWS`, `Server` diisikan `broker.sinaungoding.com` dan `port` isikan `1883`.
    > 
    Untuk `node mqtt out` kira-kira seperti berikut
@@ -41,6 +45,7 @@ adalah sebagai berikut
     ![](images/04.png)
 
     Perhatian gambar berikut untuk flow lengkapnya, setelah semua node dihubungkan.
+   
     ![](images/05.png)
    
 4. Tambahkan `node mqtt in` ke worksheet, sesuaikan konfigurasi sebagai berikut
@@ -50,14 +55,17 @@ Pada bagian `Server, Topic dan Qos` disamakan dengan `node mqtt out` sedangkan `
    
 5. Tambahkan node terakhir yaitu `node debug`, sementara untuk kongifigurasinya tidak perlu disesuaikan. Hubungkan kedua
 node tersebut sehingga menjadi sebagai berikut
+   
    ![](images/07.png)
    
-Sehingga flow lengkap dari langkah awal sampai akhir adalah sebagai berikut
-    ![](images/08.png)
+   Sehingga flow lengkap dari langkah awal sampai akhir adalah sebagai berikut
+
+   ![](images/08.png)
 
 ### Verifikasi Hasil Percobaan
 Setelah dilakukan deploy, kemudian klik `tab debug atau icon kutu` seharusnya adalah sebagai berikut. Adapun untuk nilainya
 pasti berbeda
+
 ![](images/09.png)
 
 #### Pertanyaan
@@ -70,15 +78,19 @@ Pada praktikum kali ini akan dibuat sebuah dashboard untuk menampilkan suhu yang
 protokol MQTT. Langkah awal kita perlu menyiapkan Node-RED selanjutnya kita buat kode di sisi ESP-8266.
 1. Silakan buat flow baru dengan cara `klik tombol plus(+)`, tambahkan terlebih dahulu `node mqtt in` ke worksheet dengan
 konfigurasi sebagai berikut
+   
     ![](images/10.png)
+   
    > Konfigurasi mirip dengan yang sebelumnya, tetapi yang membedakan adalah pada bagian `Name` yang diisikan dengan `esp-temp`
    > 
 2. Buatlah dashboard dengan tab Site dengan title `Node-RED Dashboard` dengan layout adalah sebagai berikut
 
     ![](images/11.png)
+   
 3. Tambahkan `node chart` dan sesuaikan konfigurasinya menjadi sebagai berikut
 
     ![](images/12.png)
+
 Jangan lupa pada bagian `Name` diisikan dengan `room-temp`.
    
 4. Hubungkan kedua node tersebut dan Deploy, tampilan dashboard secara utuh menjadi demikian
@@ -189,10 +201,13 @@ Upload kode di atas ke ESP8266 Anda dan amati hasilnya.
 
 ### Verifikasi Hasil Percobaan
 Hasil percobaan tersebut dapat dilihat pada serial monitor dan Node-RED melalui browser, kurang lebih seperti gambar di bawah
+
 ![](images/14.png)
+
 Tampilan serial monitor
 
 ![](images/15.png)
+
 Tampilan Node-RED pada browser
 
 #### Pertanyaan
@@ -202,6 +217,10 @@ Tampilan Node-RED pada browser
 Node-RED.
 
 ## Video Pendukung
+
+<p>
+<iframe width="768" height="480" src="https://www.youtube.com/embed/d3bqyYUlypU" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+</p>
 
 ## Tugas
 Masih lanjutan dengan tugas, tambahkan sensor LDR dan LED RGB pada ESP8266. Ketentuannya adalah sebagai berikut
