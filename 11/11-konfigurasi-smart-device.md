@@ -216,11 +216,13 @@ Tampilan Node-RED pada browser
 3. Tambah `node chart` agar dapat menampilkan nilai kelembaban, `node chart` masih dalam satu group yaitu Room  pada dashboard
 Node-RED.
 
-## Video Pendukung
+[comment]: <> (## Video Pendukung)
 
-<p>
-<iframe width="768" height="480" src="https://www.youtube.com/embed/d3bqyYUlypU" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-</p>
+[comment]: <> (<p>)
+
+[comment]: <> (<iframe width="768" height="480" src="https://www.youtube.com/embed/d3bqyYUlypU" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>)
+
+[comment]: <> (</p>)
 
 ## Tugas
 Masih lanjutan dengan tugas, tambahkan sensor LDR dan LED RGB pada ESP8266. Ketentuannya adalah sebagai berikut

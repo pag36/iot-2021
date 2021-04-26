@@ -117,11 +117,13 @@ menghidupkan LED bawaan esp8266.
 
 > Silakan tambahkan pengecekan ketika tidak terhubung ke server maka akan reconnect atau mencoba terhubung kembali ke server pada fungsi `loop()`.
 
-## Video Pendukung
+[comment]: <> (## Video Pendukung)
 
-<p>
-<iframe width="877" height="548" src="https://www.youtube.com/embed/WBk2p4kW5LA" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-</p>
+[comment]: <> (<p>)
+
+[comment]: <> (<iframe width="877" height="548" src="https://www.youtube.com/embed/WBk2p4kW5LA" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>)
+
+[comment]: <> (</p>)
 
 ## Tugas
 

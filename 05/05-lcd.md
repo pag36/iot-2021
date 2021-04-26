@@ -137,10 +137,13 @@ Hasil dari percobaan di atas seharusnya dapat menghasilkan keluaran seperti ditu
 2. Bagimana caranya mengganti tingkat intensitas kecerahan dari LCD Anda?
 3. Silakan modifikasi data yang ditampilkan pada LCD Anda?
 
-## Video Pendukung
-<p>
-<iframe width="798" height="499" src="https://www.youtube.com/embed/cO1Lc9RE19A" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-</p>
+[comment]: <> (## Video Pendukung)
+
+[comment]: <> (<p>)
+
+[comment]: <> (<iframe width="798" height="499" src="https://www.youtube.com/embed/cO1Lc9RE19A" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>)
+
+[comment]: <> (</p>)
 
 ## Tugas
 Buatlah sebuah aplikasi yang sederhana menggunakan DHT11, LED RGB, dan LCD. Skenarionya adalah sebagai berikut

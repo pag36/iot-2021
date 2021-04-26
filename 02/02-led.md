@@ -264,8 +264,9 @@ untuk komponen yang dibutuhkan dan rangkaian masih menggunakan komponen pada pro
 4. Segera setelah proses compile dan upload selesai, LED pada rangkaian project board akan menyala secara berurutan dengan 
 jeda waktu 1 detik
 
-## Video Pendukung
-<iframe width="791" height="494" src="https://www.youtube.com/embed/tUYOdKRTmW4" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen=""></iframe>
+[comment]: <> (## Video Pendukung)
+
+[comment]: <> (<iframe width="791" height="494" src="https://www.youtube.com/embed/tUYOdKRTmW4" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen=""></iframe>)
 
 ## Tugas
 + Kembangkan praktikum ke-2(SOS) sehingga ada 3 LED yang digunakan yaitu merah, hijau dan biru. LED hijau menggunakan LED RGB, sedangkan untuk LED biru dan LED merah menggunakan LED yang terdapat padad ESP8266. Buatlah skematik(gambar pengkabelannya) dan kode programnya!

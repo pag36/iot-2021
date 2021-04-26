@@ -243,10 +243,13 @@ yang akan tampil hanya movie dengan tahun > 2000 dan untuk menampilkan data filt
 2. Flow dan output pada debug dapat dilihat seperti berikut ini
    ![](images/13.png)
 
-## Video Pendukung
-<p>
-<iframe width="933" height="583" src="https://www.youtube.com/embed/10WsBy_Kf_c" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-</p>
+[comment]: <> (## Video Pendukung)
+
+[comment]: <> (<p>)
+
+[comment]: <> (<iframe width="933" height="583" src="https://www.youtube.com/embed/10WsBy_Kf_c" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>)
+
+[comment]: <> (</p>)
 
 ## Tugas
 Buatlah sebuah flow yang digunakan untuk menentukan sebuah kondisi temperatur dingin, normal, dan panas. Terdapat 3 node

@@ -121,11 +121,13 @@ Dalam keadaan mati
 Dalam keadaan hidup
 ![](images/15.png)
 
-## Video Pendukung
+[comment]: <> (## Video Pendukung)
 
-<p>
-<iframe width="790" height="494" src="https://www.youtube.com/embed/3A4RbbbzrFE" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-</p>
+[comment]: <> (<p>)
+
+[comment]: <> (<iframe width="790" height="494" src="https://www.youtube.com/embed/3A4RbbbzrFE" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>)
+
+[comment]: <> (</p>)
 
 ## Tugas
 

@@ -515,11 +515,13 @@ repo selanjutnya yang di server perlu dilakukan `pull`. Selanjutnya buka browser
 2. Fungsi baris perintah `dtostrf(temperature, 4, 2, temperatureTemp);` digunakan untuk apa? Jelaskan!
 3. Modifikasi bentuk chart pada halaman `dashboard.php` dalam bentuk yang lain, misalkan chart bar ataupun gauge!
 
-## Video Pendukung
+[comment]: <> (## Video Pendukung)
 
-<p>
-<iframe width="790" height="494" src="https://www.youtube.com/embed/fKsZBicqzQ8" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-</p>
+[comment]: <> (<p>)
+
+[comment]: <> (<iframe width="790" height="494" src="https://www.youtube.com/embed/fKsZBicqzQ8" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>)
+
+[comment]: <> (</p>)
 
 ## Tugas
 Buatlah sebuah tampilan website yang fungsi utama adalah untuk menampilkan sensor cahaya, suhu, dan kelembaban. Kemudian
