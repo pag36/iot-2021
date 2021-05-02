@@ -1,0 +1,574 @@
+
+<!DOCTYPE HTML>
+<html lang="id" >
+    <head>
+        <meta charset="UTF-8">
+        <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+        <title>07. LCD · GitBook</title>
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="description" content="">
+        <meta name="generator" content="GitBook 3.2.3">
+        
+        
+        
+    
+    <link rel="stylesheet" href="../gitbook/style.css">
+
+    
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-highlight/website.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-search/search.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-fontsettings/website.css">
+                
+            
+        
+
+    
+
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+
+        
+    
+    
+    <meta name="HandheldFriendly" content="true"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <link rel="apple-touch-icon-precomposed" sizes="152x152" href="../gitbook/images/apple-touch-icon-precomposed-152.png">
+    <link rel="shortcut icon" href="../gitbook/images/favicon.ico" type="image/x-icon">
+
+    
+    <link rel="next" href="../06/06-uts.html" />
+    
+    
+    <link rel="prev" href="../04/04-sensor-cahaya.html" />
+    
+
+    </head>
+    <body>
+        
+<div class="book">
+    <div class="book-summary">
+        
+            
+<div id="book-search-input" role="search">
+    <input type="text" placeholder="Ketik untuk mencari" />
+</div>
+
+            
+                <nav role="navigation">
+                
+
+
+<ul class="summary">
+    
+    
+
+    
+
+    
+        
+        
+    
+        <li class="chapter " data-level="1.1" data-path="../">
+            
+                <a href="../">
+            
+                    
+                    Pendahuluan
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2" data-path="../00/kontrak.html">
+            
+                <a href="../00/kontrak.html">
+            
+                    
+                    Kontrak Kuliah
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3" data-path="../0a/0a.pertemuan1.html">
+            
+                <a href="../0a/0a.pertemuan1.html">
+            
+                    
+                    01. Memahami Konsep dan arsitektur IoT
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4" data-path="../0b/0b.pertemuan2.html">
+            
+                <a href="../0b/0b.pertemuan2.html">
+            
+                    
+                    02. Microcontroller
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5" data-path="../01/01.installasi-dan-konfigurasi.html">
+            
+                <a href="../01/01.installasi-dan-konfigurasi.html">
+            
+                    
+                    03. Instalasi dan Konfigurasi
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6" data-path="../02/02-led.html">
+            
+                <a href="../02/02-led.html">
+            
+                    
+                    04. LED
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.7" data-path="../03/03-dht11.html">
+            
+                <a href="../03/03-dht11.html">
+            
+                    
+                    05. DHT11
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.8" data-path="../04/04-sensor-cahaya.html">
+            
+                <a href="../04/04-sensor-cahaya.html">
+            
+                    
+                    06. LDR
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter active" data-level="1.9" data-path="05-lcd.html">
+            
+                <a href="05-lcd.html">
+            
+                    
+                    07. LCD
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.10" data-path="../06/06-uts.html">
+            
+                <a href="../06/06-uts.html">
+            
+                    
+                    08. UTS
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.11" data-path="../07/07-socket-client.html">
+            
+                <a href="../07/07-socket-client.html">
+            
+                    
+                    09. Socket Client
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.12" data-path="../08/08-socket-server.html">
+            
+                <a href="../08/08-socket-server.html">
+            
+                    
+                    10. Socket Server
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.13" data-path="../09/09-installasi-iot-platform.html">
+            
+                <a href="../09/09-installasi-iot-platform.html">
+            
+                    
+                    11. Installasi IoT Platform
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.14" data-path="../10/10-manjemen-iot-dashboard.html">
+            
+                <a href="../10/10-manjemen-iot-dashboard.html">
+            
+                    
+                    12. Manajemen IoT Dashboard
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.15" data-path="../11/11-konfigurasi-smart-device.html">
+            
+                <a href="../11/11-konfigurasi-smart-device.html">
+            
+                    
+                    13. Konfigurasi Smart Device
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+    
+
+    <li class="divider"></li>
+
+    <li>
+        <a href="https://www.gitbook.com" target="blank" class="gitbook-link">
+            Dipublikasikan dengan GitBook
+        </a>
+    </li>
+</ul>
+
+
+                </nav>
+            
+        
+    </div>
+
+    <div class="book-body">
+        
+            <div class="body-inner">
+                
+                    
+
+<div class="book-header" role="navigation">
+    
+
+    <!-- Title -->
+    <h1>
+        <i class="fa fa-circle-o-notch fa-spin"></i>
+        <a href=".." >07. LCD</a>
+    </h1>
+</div>
+
+
+
+
+                    <div class="page-wrapper" tabindex="-1" role="main">
+                        <div class="page-inner">
+                            
+<div id="book-search-results">
+    <div class="search-noresults">
+    
+                                <section class="normal markdown-section">
+                                
+                                <h1 id="lcd">LCD</h1>
+<h2 id="topik-bahasan">Topik Bahasan</h2>
+<p>Implementasi LCD I2C</p>
+<h2 id="kemampuan-akhir-yang-direncanakan">Kemampuan Akhir yang Direncanakan</h2>
+<ul>
+<li>Mahasiswa mampu menggunakan LCD I2C untuk menampilkan data</li>
+<li>Mahasiswa mampu untuk mencari alamat I2C pada MCU</li>
+<li>Mahasiswa mampu menggunakan library yang digunakan untuk kebutuhan LCD I2C</li>
+<li>Mahasiswa mamapu mengkalibrasi LCD I2C</li>
+</ul>
+<h2 id="teori-singkat">Teori Singkat</h2>
+<p>Berbagai jenis LCD bergantung dengan banyaknya karakter yang dapat ditampilkan, misalkan 16x2 ataupun 20x4. 16x2 artinya LCD tersebut mampu menampilkan sebanyak 32 karakter, dengan jumlah barisnya 2 dan jumlah kolomnya adalah 16. LCD merupakan sebuah jenis dari aktuator dan biasanya digunakan sebagai output atau tampilan dari sebuah nilai/data yang telah diolah dari sensor.</p>
+<p>Biasanya untuk memudahkan dalam wiring kita membutuhkan modul i2c, fungsi modul tersebut agar menyederhanakan jumlah kabel yang digunakan. Berikut ini adalah tampilan fritzing yang sapat dapat diterapkan.</p>
+<p><img src="images/esp8266-lcd-i2c.png" alt=""></p>
+<blockquote>
+<p>Versi fritzing dapat diunduh di <a href="images/esp8266-lcd-i2c.fzz">sini</a></p>
+</blockquote>
+<p>Dari gambar di atas, diperjelas pada tabel di bawah ini</p>
+<table>
+<thead>
+<tr>
+<th>ESP8266 Amica</th>
+<th>LCD I2C</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Vin</td>
+<td>VCC</td>
+</tr>
+<tr>
+<td>GND</td>
+<td>GND</td>
+</tr>
+<tr>
+<td>D1</td>
+<td>SCL</td>
+</tr>
+<tr>
+<td>D2</td>
+<td>SDA</td>
+</tr>
+</tbody>
+</table>
+<h2 id="praktikum-1---mencari-alamat-i2c">Praktikum 1 - Mencari alamat I2C</h2>
+<p>Untuk dapat menggunakan LCD yang menggunakan I2C, sebelumnya harus mencari terlebih dahulu lokasi dari I2C tersebut. I2C defaultnya terdapat di <code>0x27</code>, akan tetapi hal tersebut bisa berbeda bergantung dari manufacture atau vendor. Buatlah kode di bawah ini untuk mendapatkan alamat I2C pada LCD. </p>
+<p>Adapun langkah-langkahnya adalah sebagai berikut;</p>
+<ol>
+<li>Buat project menggunakan visual studio code dengan PlatformIO dengan nama <code>vs-i2c-address</code></li>
+<li>Tentukan board yang digunakan, dengan mengetik <code>esp8266</code> kemudian pilih yang <code>Espressif ESP8266 EFSP-12E</code></li>
+<li>Untuk lokasi penyimpanan project disesuaikan dengan kebutuhan Anda.</li>
+<li>Tunggu beberapa saat sampai dibuat struktur project oleh Visual Studio Code. Kemudian tambahkankan beberapa konfigurasi pada file <code>platform.ini</code>. Tambahkan kode <code>monitor_speed = 115200</code> untuk mengkonfigurasi serial console terkait baudrate.</li>
+<li><p>Tambahkan potongan kode pada fungsi <code>setup()</code> seperti berikut ini</p>
+<pre><code class="lang-c++"> Serial.begin(<span class="hljs-number">115200</span>);
+ Serial.println(<span class="hljs-string">&quot;\nI2C Scanner&quot;</span>);
+</code></pre>
+</li>
+<li>Pada fungsi <code>loop()</code> tambahkan juga kode seperti berikut<pre><code class="lang-c++">   byte error, address;
+   <span class="hljs-keyword">int</span> nDevices;
+   Serial.println(<span class="hljs-string">&quot;Scanning...&quot;</span>);
+   nDevices = <span class="hljs-number">0</span>;
+   <span class="hljs-keyword">for</span>(address = <span class="hljs-number">1</span>; address &lt; <span class="hljs-number">127</span>; address++ ) {
+     Wire.beginTransmission(address);
+     error = Wire.endTransmission();
+     <span class="hljs-keyword">if</span> (error == <span class="hljs-number">0</span>) {
+       Serial.print(<span class="hljs-string">&quot;I2C ditemukan pada 0x&quot;</span>);
+       <span class="hljs-keyword">if</span> (address&lt;<span class="hljs-number">16</span>) {
+         Serial.print(<span class="hljs-string">&quot;0&quot;</span>);
+       }
+       Serial.println(address,HEX);
+       nDevices++;
+     }
+     <span class="hljs-keyword">else</span> <span class="hljs-keyword">if</span> (error==<span class="hljs-number">4</span>) {
+       Serial.print(<span class="hljs-string">&quot;Unknow error at address 0x&quot;</span>);
+       <span class="hljs-keyword">if</span> (address&lt;<span class="hljs-number">16</span>) {
+         Serial.print(<span class="hljs-string">&quot;0&quot;</span>);
+       }
+       Serial.println(address,HEX);
+     }    
+   }
+   <span class="hljs-keyword">if</span> (nDevices == <span class="hljs-number">0</span>) {
+     Serial.println(<span class="hljs-string">&quot;No I2C devices found\n&quot;</span>);
+   }
+   <span class="hljs-keyword">else</span> {
+     Serial.println(<span class="hljs-string">&quot;done\n&quot;</span>);
+   }
+   delay(<span class="hljs-number">3000</span>);
+</code></pre>
+Upload kode di atas, kemudian amati hasilnya pada serial monitor.</li>
+</ol>
+<h3 id="verifikasi-hasil-percobaan">Verifikasi Hasil Percobaan</h3>
+<p>Hasil dari percobaan di atas seharusnya dapat menghasilkan keluaran seperti ditunjukkan pada gambar di bawah ini</p>
+<p><img src="images/i2c-address.png" alt=""></p>
+<blockquote>
+<p>Keluaran dari kode di atas akan kita gunakan untuk menginisialisasi LCD yang akan kita gunakan pada praktikum selanjutnya. Setiap nilai alamat I2C bisa berbeda dengan yang lain, tergantung dari pabrik pembuatnya.</p>
+</blockquote>
+<h2 id="praktikum-2---menampilkan-data-pada-lcd">Praktikum 2 - Menampilkan data pada LCD</h2>
+<p>Pada praktikum ini kita akan mencoba menggunakan LCD untuk menampilkan sebuah text, hasil praktikum pertama akan kita gunakan pada praktikum ini. Silakan ikuti langkah-langkah berikut ini</p>
+<ol>
+<li>Buat project dengan nama <code>vs-i2c-lcd</code> serta untuk konfigurasi board, penyimpanan project, serta file platform.ini disamakan dengan project sebelumnya pada praktikum pertama.</li>
+<li>Tambahkan library <code>LiquidCrystal_I2C</code> pada project Anda, untuk menambahkan library tersebut bisa melalui <code>platform.ini</code> atau menggunakan wizard/sistem menu pada PlatformIO seperti yang telah diajarkan pada praktikum yang sebelumnya.</li>
+<li><p>Tambahkan 2 baris kode sebelum fungsi <code>setup()</code> agar kita bisa memanfaatkan library yang telah kita tambahkan seperti di bawah ini</p>
+<pre><code class="lang-c++"> <span class="hljs-meta">#<span class="hljs-meta-keyword">include</span> <span class="hljs-meta-string">&lt;LiquidCrystal_I2C.h&gt;</span></span>
+
+ <span class="hljs-function">LiquidCrystal_I2C <span class="hljs-title">lcd</span><span class="hljs-params">(<span class="hljs-number">0x27</span>, <span class="hljs-number">16</span>, <span class="hljs-number">2</span>)</span></span>;
+</code></pre>
+</li>
+<li><p>Tambahkan kode pada fungsi <code>setup()</code> untuk memanggil berapa fungsi sebagai berikut</p>
+<pre><code class="lang-c++">   lcd.init(); <span class="hljs-comment">// initialize the lcd</span>
+   lcd.backlight();
+
+   lcd.home();
+</code></pre>
+</li>
+<li>Buatlah sebuah fungsi <code>scroolText(...)</code>, fungsi ini digunakan untuk melakukan scrolling text yang terdapat pada LCD agar lebih menarik.<pre><code class="lang-c++"> <span class="hljs-function"><span class="hljs-keyword">void</span> <span class="hljs-title">scrollText</span><span class="hljs-params">(<span class="hljs-keyword">int</span> row, String message, <span class="hljs-keyword">int</span> delayTime, <span class="hljs-keyword">int</span> lcdColumns)</span>
+ </span>{
+   <span class="hljs-keyword">for</span> (<span class="hljs-keyword">int</span> i = <span class="hljs-number">0</span>; i &lt; lcdColumns; i++)
+   {
+     message = <span class="hljs-string">&quot; &quot;</span> + message;
+   }
+   message = message + <span class="hljs-string">&quot; &quot;</span>;
+   <span class="hljs-keyword">for</span> (<span class="hljs-keyword">int</span> pos = <span class="hljs-number">0</span>; pos &lt; message.length(); pos++)
+   {
+     lcd.setCursor(<span class="hljs-number">0</span>, row);
+     lcd.print(message.substring(pos, pos + lcdColumns));
+     delay(delayTime);
+   }
+ }
+</code></pre>
+</li>
+<li>Tambahkan beberapa baris perintah pada fungsi <code>loop()</code>, seperti dicontohkan pada baris berikut ini<pre><code class="lang-c++">   lcd.home();
+   lcd.print(<span class="hljs-string">&quot;Polinema&quot;</span>);
+   scrollText(<span class="hljs-number">1</span>, <span class="hljs-string">&quot;Kelas IoT.&quot;</span>, <span class="hljs-number">250</span>, <span class="hljs-number">16</span>);
+</code></pre>
+</li>
+<li>Upload kode di atas selanjutnya perhatikan tampilan LCD Anda masing-masing.</li>
+</ol>
+<p>Pada kode di atas terdapat baris perintah <code>LiquidCrystal_I2C lcd(0x27, 16, 2);</code>, berfungsi untuk menginisialisasi lcd dengan alamat i2c terdapat di <code>0x27</code> menggunakan LCD 16x2.</p>
+<h3 id="verifikasi-hasil-percobaan">Verifikasi Hasil Percobaan</h3>
+<p>Hasil dari percobaan di atas seharusnya dapat menghasilkan keluaran seperti ditunjukkan pada gambar di bawah ini</p>
+<p><img src="images/lcd.gif" alt=""></p>
+<h3 id="pertanyaan">Pertanyaan</h3>
+<ol>
+<li>Jelaskan fungsi dari pemanggilan method <code>lcd.backlight()</code>?</li>
+<li>Bagimana caranya mengganti tingkat intensitas kecerahan dari LCD Anda?</li>
+<li>Silakan modifikasi data yang ditampilkan pada LCD Anda?</li>
+</ol>
+<h2 id="video-pendukung">Video Pendukung</h2>
+<p>
+<iframe width="798" height="499" src="https://www.youtube.com/embed/cO1Lc9RE19A" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+</p>
+
+<h2 id="tugas">Tugas</h2>
+<p>Buatlah sebuah aplikasi yang sederhana menggunakan DHT11, LED RGB, dan LCD. Skenarionya adalah sebagai berikut</p>
+<ol>
+<li>Buatlah ketiga komponen tersebut di dalam satu rangkaian menggunakan fritzing.</li>
+<li>Tampilkan suhu dalam bentuk Fahrenheit dan Celcius, suhu yang ditampilkan adalah suhu di ruangan sekitar Anda.</li>
+<li>Ketika suhu normal LED berwarna biru akan berkedip-kedip, ketika suhu dingin LED berwarna hijau akan berkedip, dan LED berwarna merah akan berkedip ketika suhu tergolong tinggi.</li>
+<li>Tampilkan waktu saat ini juga pada LCD.</li>
+<li>Silakan hasilnya diupload ke google drive ataupun youtube, linknya sertakan dalam laporan Anda.</li>
+</ol>
+<p>Output yang diharapkan adalah sebagai berikut </p>
+<p><img src="images/output.jpg" alt=""></p>
+
+                                
+                                </section>
+                            
+    </div>
+    <div class="search-results">
+        <div class="has-results">
+            
+            <h1 class="search-results-title"><span class='search-results-count'></span> hasil yang cocok "<span class='search-query'></span>"</h1>
+            <ul class="search-results-list"></ul>
+            
+        </div>
+        <div class="no-results">
+            
+            <h1 class="search-results-title">Tidak ada hasil yang cocok "<span class='search-query'></span>"</h1>
+            
+        </div>
+    </div>
+</div>
+
+                        </div>
+                    </div>
+                
+            </div>
+
+            
+                
+                <a href="../04/04-sensor-cahaya.html" class="navigation navigation-prev " aria-label="Previous page: 06. LDR">
+                    <i class="fa fa-angle-left"></i>
+                </a>
+                
+                
+                <a href="../06/06-uts.html" class="navigation navigation-next " aria-label="Next page: 08. UTS">
+                    <i class="fa fa-angle-right"></i>
+                </a>
+                
+            
+        
+    </div>
+
+    <script>
+        var gitbook = gitbook || [];
+        gitbook.push(function() {
+            gitbook.page.hasChanged({"page":{"title":"07. LCD","level":"1.9","depth":1,"next":{"title":"08. UTS","level":"1.10","depth":1,"path":"06/06-uts.md","ref":"06/06-uts.md","articles":[]},"previous":{"title":"06. LDR","level":"1.8","depth":1,"path":"04/04-sensor-cahaya.md","ref":"04/04-sensor-cahaya.md","articles":[]},"dir":"ltr"},"config":{"plugins":[],"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"pluginsConfig":{"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"theme":"default","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"language":"id","gitbook":"*"},"file":{"path":"05/05-lcd.md","mtime":"2021-05-02T23:38:47.809Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2021-05-02T23:39:29.765Z"},"basePath":"..","book":{"language":""}});
+        });
+    </script>
+</div>
+
+        
+    <script src="../gitbook/gitbook.js"></script>
+    <script src="../gitbook/theme.js"></script>
+    
+        
+        <script src="../gitbook/gitbook-plugin-search/search-engine.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-search/search.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-lunr/lunr.min.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-lunr/search-lunr.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-sharing/buttons.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-fontsettings/fontsettings.js"></script>
+        
+    
+
+    </body>
+</html>
+

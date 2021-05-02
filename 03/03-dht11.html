@@ -1,0 +1,686 @@
+
+<!DOCTYPE HTML>
+<html lang="id" >
+    <head>
+        <meta charset="UTF-8">
+        <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+        <title>05. DHT11 · GitBook</title>
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="description" content="">
+        <meta name="generator" content="GitBook 3.2.3">
+        
+        
+        
+    
+    <link rel="stylesheet" href="../gitbook/style.css">
+
+    
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-highlight/website.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-search/search.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-fontsettings/website.css">
+                
+            
+        
+
+    
+
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+
+        
+    
+    
+    <meta name="HandheldFriendly" content="true"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <link rel="apple-touch-icon-precomposed" sizes="152x152" href="../gitbook/images/apple-touch-icon-precomposed-152.png">
+    <link rel="shortcut icon" href="../gitbook/images/favicon.ico" type="image/x-icon">
+
+    
+    <link rel="next" href="../04/04-sensor-cahaya.html" />
+    
+    
+    <link rel="prev" href="../02/02-led.html" />
+    
+
+    </head>
+    <body>
+        
+<div class="book">
+    <div class="book-summary">
+        
+            
+<div id="book-search-input" role="search">
+    <input type="text" placeholder="Ketik untuk mencari" />
+</div>
+
+            
+                <nav role="navigation">
+                
+
+
+<ul class="summary">
+    
+    
+
+    
+
+    
+        
+        
+    
+        <li class="chapter " data-level="1.1" data-path="../">
+            
+                <a href="../">
+            
+                    
+                    Pendahuluan
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2" data-path="../00/kontrak.html">
+            
+                <a href="../00/kontrak.html">
+            
+                    
+                    Kontrak Kuliah
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3" data-path="../0a/0a.pertemuan1.html">
+            
+                <a href="../0a/0a.pertemuan1.html">
+            
+                    
+                    01. Memahami Konsep dan arsitektur IoT
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4" data-path="../0b/0b.pertemuan2.html">
+            
+                <a href="../0b/0b.pertemuan2.html">
+            
+                    
+                    02. Microcontroller
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5" data-path="../01/01.installasi-dan-konfigurasi.html">
+            
+                <a href="../01/01.installasi-dan-konfigurasi.html">
+            
+                    
+                    03. Instalasi dan Konfigurasi
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6" data-path="../02/02-led.html">
+            
+                <a href="../02/02-led.html">
+            
+                    
+                    04. LED
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter active" data-level="1.7" data-path="03-dht11.html">
+            
+                <a href="03-dht11.html">
+            
+                    
+                    05. DHT11
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.8" data-path="../04/04-sensor-cahaya.html">
+            
+                <a href="../04/04-sensor-cahaya.html">
+            
+                    
+                    06. LDR
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.9" data-path="../05/05-lcd.html">
+            
+                <a href="../05/05-lcd.html">
+            
+                    
+                    07. LCD
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.10" data-path="../06/06-uts.html">
+            
+                <a href="../06/06-uts.html">
+            
+                    
+                    08. UTS
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.11" data-path="../07/07-socket-client.html">
+            
+                <a href="../07/07-socket-client.html">
+            
+                    
+                    09. Socket Client
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.12" data-path="../08/08-socket-server.html">
+            
+                <a href="../08/08-socket-server.html">
+            
+                    
+                    10. Socket Server
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.13" data-path="../09/09-installasi-iot-platform.html">
+            
+                <a href="../09/09-installasi-iot-platform.html">
+            
+                    
+                    11. Installasi IoT Platform
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.14" data-path="../10/10-manjemen-iot-dashboard.html">
+            
+                <a href="../10/10-manjemen-iot-dashboard.html">
+            
+                    
+                    12. Manajemen IoT Dashboard
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.15" data-path="../11/11-konfigurasi-smart-device.html">
+            
+                <a href="../11/11-konfigurasi-smart-device.html">
+            
+                    
+                    13. Konfigurasi Smart Device
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+    
+
+    <li class="divider"></li>
+
+    <li>
+        <a href="https://www.gitbook.com" target="blank" class="gitbook-link">
+            Dipublikasikan dengan GitBook
+        </a>
+    </li>
+</ul>
+
+
+                </nav>
+            
+        
+    </div>
+
+    <div class="book-body">
+        
+            <div class="body-inner">
+                
+                    
+
+<div class="book-header" role="navigation">
+    
+
+    <!-- Title -->
+    <h1>
+        <i class="fa fa-circle-o-notch fa-spin"></i>
+        <a href=".." >05. DHT11</a>
+    </h1>
+</div>
+
+
+
+
+                    <div class="page-wrapper" tabindex="-1" role="main">
+                        <div class="page-inner">
+                            
+<div id="book-search-results">
+    <div class="search-noresults">
+    
+                                <section class="normal markdown-section">
+                                
+                                <h1 id="dht11">DHT11</h1>
+<h2 id="topik-bahasan">Topik Bahasan</h2>
+<p>Implementasi program sensor Suhu &amp; Kelembaban DHT11</p>
+<h2 id="kemampuan-akhir-yang-direncanakan">Kemampuan Akhir yang Direncanakan</h2>
+<ul>
+<li>Menjelaskan cara kerja sensor DHT11</li>
+<li>Menjelaskan cara kerja analogRead</li>
+<li>Menampilkan suhu dan kelembaban dalam satuan derajat dan fahrenheit pada console debugger secara real time</li>
+</ul>
+<h2 id="teori-singkat">Teori Singkat</h2>
+<h3 id="sensor-suhu-dan-kelembaban">Sensor Suhu dan Kelembaban</h3>
+<p>Salah satu sensor diantara sensor-sensor yang lain adalah sensor suhu dan kelembaban. Sensor ini digunakan untuk mengambil data suhu pada lingkungan tertentu beserta tingkat kelembabannya. Salah satu sensor tersebut yang banyak digunakan adalah DHT11 karena secara biaya sangat minim serta mudah digunakan.</p>
+<p>Jenis sensor lain yang memiliki fungsi yang sama adalah DHT22, yang membedakan dari tipe ini adalah keakuratan dalam mengambil data suhu dan kelembaban dan juga lama atau jeda dalam pengambilan sampling. DHT22 mengambil sampling setiap 2 detik, sedangkan DHT11 setiap 1 detik. Tentunya DHT22 lebih baik dibandingkan dengan versi terdahulunya, DHT11.</p>
+<p><strong>Spesifikasi sensor DHT11</strong></p>
+<table>
+<thead>
+<tr>
+<th>Nama</th>
+<th>Nilai</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Tegangan</td>
+<td>3,5 V - 5,5 V</td>
+</tr>
+<tr>
+<td>Arus</td>
+<td>0,3 mA</td>
+</tr>
+<tr>
+<td>Jangkauan Suhu</td>
+<td>0 - 50 derajat Celsius</td>
+</tr>
+<tr>
+<td>Jangkauan Kelembaban</td>
+<td>20%-90%</td>
+</tr>
+<tr>
+<td>Akurasi Pengukuran</td>
+<td>+- 2 derajat Celsius (Suhu)</td>
+</tr>
+<tr>
+<td></td>
+<td>5% (Kelembaban)</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Spesifikasi sensor DHT22</strong></p>
+<table>
+<thead>
+<tr>
+<th>Nama</th>
+<th>Nilai</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Tegangan</td>
+<td>3,5 V - 5,5 V</td>
+</tr>
+<tr>
+<td>Arus</td>
+<td>0,3 mA</td>
+</tr>
+<tr>
+<td>Jangkauan Suhu</td>
+<td>-40 - 80 derajat Celsius</td>
+</tr>
+<tr>
+<td>Jangkauan Kelembaban</td>
+<td>0% - 100%</td>
+</tr>
+<tr>
+<td>Akurasi Pengukuran</td>
+<td>+- 0.5 derajat Celsius (Suhu)</td>
+</tr>
+<tr>
+<td></td>
+<td>2 - 5% (Kelembaban)</td>
+</tr>
+</tbody>
+</table>
+<p>Sumber: <a href="https://learn.adafruit.com/dht" target="_blank">https://learn.adafruit.com/dht</a></p>
+<p>Struktur pin pada sensor DHT11 seperti berikut, sebenarnya sama dengan DHT22. Perbedaannya adalah jika DHT22 biasanya penutup menggunakan warna putih.
+<img src="images/dht11.jpg" alt="sensor DHT11"></p>
+<p>Dari gambar di atas terlihat bahwa terdapat 3 kaki yang masing-masing memiliki fungsi dan peran masing-masing adalah sebagai berikut;</p>
+<ol>
+<li><code>VCC</code> digunakan untuk memberikan tegangan pada sensor, pada NODEMCU dihubungkan pada pin Vin atau 3v3.</li>
+<li><code>Data</code> digunakan untuk menghubungkan hasil pembacaan data dari nilai suhu atau kelembaban pada sensor, dihubungkan pin tertentu yang tersedia.</li>
+<li><code>Ground</code> dihubungkan pada pin GND pada NODEMCU.</li>
+</ol>
+<h2 id="praktikum---membaca-data-suhu-dan-kelembaban-udara">Praktikum - Membaca data suhu dan kelembaban udara</h2>
+<p>Pada praktikum pertama, anda akan melakukan percobaan untuk menangkap data suhu dan kelembaban udara dengan sensor DHT11.</p>
+<p>Susunan rangkaian sederhana pada praktikum ini seperti gambar berikut.</p>
+<p><img src="images/esp8266-dht11.png" alt="rangkaian"></p>
+<blockquote>
+<p>Dari gambar di atas terlihat terdapat resistor, jika tidak memiliki resistor diabaikan saja dan dihubungkan langsung ke pin tanpa melalui resistor.</p>
+</blockquote>
+<p><strong>Skematik dari rangkaian di atas</strong></p>
+<table>
+<thead>
+<tr>
+<th>NODEMCU</th>
+<th>DHT11</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>D1</td>
+<td>Data</td>
+</tr>
+<tr>
+<td>Vin</td>
+<td>VCC</td>
+</tr>
+<tr>
+<td>GND</td>
+<td>Ground</td>
+</tr>
+</tbody>
+</table>
+<p>Berikut ini adalah contoh source code untuk membaca suhu dan kelembaban udara menggunakan Visual Studio Code.</p>
+<ol>
+<li>Buat project dengan nama <code>vs-program</code></li>
+<li>Tentukan board yang digunakan, dengan mengetik <code>esp8266</code> kemudian pilih yang <code>Espressif ESP8266 EFSP-12E</code></li>
+<li>Untuk lokasi penyimpanan project disesuaikan dengan kebutuhan Anda.</li>
+<li><p>Tunggu beberapa saat sampai dibuat struktur project oleh Visual Studio Code. Kemudian tambahkankan beberapa konfigurasi pada file <code>platform.ini</code></p>
+<pre><code>lib_deps =
+    adafruit/DHT sensor library@^1.4.1
+    adafruit/Adafruit Unified Sensor @ ^1.1.4
+
+monitor_speed = 115200
+</code></pre></li>
+<li><p>Dapat juga menggunakan pada tombol <code>libraries</code> yang disediakan oleh PlatformIO kemudian akan muncul isian library yang bisa kita cari, terlihat seperti pada gambar di bawah ini</p>
+<p><img src="images/03-01.png" alt="Libraries"></p>
+</li>
+<li><p>Silakan ketik <code>dht</code> sehingga akan muncul banyak varian yang bisa digunakan, silakan pilih yang banyak didownload dan sesuai kebutuhan. Untuk lebih jelasnya perhatikan gambar di bawah ini</p>
+<p><img src="images/03-02.png" alt="Pilih Libraries"></p>
+</li>
+<li><p>Setelah memilih library yang akan kita gunakan, kita dapat memilih cara untuk menambahkan library ke project dengan klik tombol <code>Add to Project</code> dan pilih projek yang akan ditambahkan library tersebut seperti ditunjukkan pada gambar berikut</p>
+<p><img src="images/03-03.png" alt="Add library"></p>
+</li>
+<li><p>Langkah yang lain, kita dapat menambahkan konfigurasi pada file <code>platform.ini</code> dengan property <code>lib_deps</code>. Banyak model yang bisa digunakan misalkan menambahkan link github pada file tersebut atau dengan menyebut nama library diikuti dengan versi library, misalkan seperti di bawah ini:</p>
+<ul>
+<li><code>adafruit/DHT sensor library @ ^1.4.1</code> artinya ketika menggunakan sintaks tersebut berarti library tersebut masih bisa untuk menerima perbaikan fungsi update dari versi yang sebelumnya</li>
+<li><code>adafruit/DHT sensor library @ ~1.4.1</code> adalah hanya menerima perbaikan bug fixing dari versi yang sebelumnya.</li>
+<li><code>adafruit/DHT sensor library @ 1.4.1</code> berarti library yang digunakan adalah versi 1.4.1</li>
+</ul>
+<p>Dokumentasi tersebut di atas dapat dilihat pada gambar di bawah ini ketika</p>
+<p><img src="images/03-04.png" alt="Select Project"></p>
+</li>
+<li><p>Tambahkan baris kode untuk inisialisasi dan menambahkan fungsi sensor seperti di bawah ini</p>
+<pre><code class="lang-c++"><span class="hljs-meta">#<span class="hljs-meta-keyword">include</span> <span class="hljs-meta-string">&lt;Arduino.h&gt;</span></span>
+<span class="hljs-meta">#<span class="hljs-meta-keyword">include</span> <span class="hljs-meta-string">&lt;DHT.h&gt;</span></span>
+
+<span class="hljs-meta">#<span class="hljs-meta-keyword">define</span> DHTTYPE DHT11</span>
+
+<span class="hljs-function">DHT <span class="hljs-title">dht</span><span class="hljs-params">(D7, DHTTYPE)</span></span>;
+</code></pre>
+</li>
+<li><p>Tambahkan kode baris pada fungsi setup() untuk melakukan konfigurasi agar baudrate di serial monitor menjadi 11500.</p>
+<pre><code class="lang-c++">Serial.begin(<span class="hljs-number">115200</span>);
+Serial.println(<span class="hljs-string">&quot;Menggunakan DHT11&quot;</span>);
+</code></pre>
+</li>
+<li><p>Yang terakhir, tambahkan kode untuk menampilkan data hasil pembacaan sensor pada fungsi loop().</p>
+<pre><code class="lang-c++">delay(<span class="hljs-number">2000</span>);
+<span class="hljs-keyword">float</span> h = dht.readHumidity();
+<span class="hljs-keyword">float</span> t = dht.readTemperature();
+<span class="hljs-keyword">float</span> f = dht.readTemperature(<span class="hljs-literal">true</span>);
+
+<span class="hljs-keyword">if</span> (isnan(h) || isnan(t) || isnan(f))
+{
+  Serial.println(<span class="hljs-string">&quot;Failed to read from DHT sensor!&quot;</span>);
+  <span class="hljs-keyword">return</span>;
+}
+
+<span class="hljs-keyword">float</span> hif = dht.computeHeatIndex(f, h);
+<span class="hljs-keyword">float</span> hic = dht.computeHeatIndex(t, h, <span class="hljs-literal">false</span>);
+
+Serial.print(F(<span class="hljs-string">&quot;Humidity: &quot;</span>));
+Serial.print(h);
+Serial.print(F(<span class="hljs-string">&quot;%  Temperature: &quot;</span>));
+Serial.print(t);
+Serial.print(F(<span class="hljs-string">&quot;&#xB0;C &quot;</span>));
+Serial.print(f);
+Serial.print(F(<span class="hljs-string">&quot;&#xB0;F  Heat index: &quot;</span>));
+Serial.print(hic);
+Serial.print(F(<span class="hljs-string">&quot;&#xB0;C &quot;</span>));
+Serial.print(hif);
+Serial.println(F(<span class="hljs-string">&quot;&#xB0;F&quot;</span>));
+</code></pre>
+</li>
+<li><p>Silakan jalankan program di atas dengan upload ke board Anda dan amati hasilnya.</p>
+</li>
+</ol>
+<blockquote>
+<p>Misalkan menggunakan library yang di atas masih belum berhasil, atau sensor suhu akurasinya kurang, ataubahkan tidak stabil silakan menggunakan library <code>winlinvip/SimpleDHT@^1.0.14</code>.</p>
+</blockquote>
+<p>Contoh code menggunakan library <code>winlinvip/SimpleDHT@^1.0.14</code> dapat dilihat pada contoh di bawah ini</p>
+<pre><code class="lang-cpp">    <span class="hljs-meta">#<span class="hljs-meta-keyword">include</span> <span class="hljs-meta-string">&lt;Arduino.h&gt;</span></span>
+    <span class="hljs-meta">#<span class="hljs-meta-keyword">include</span> <span class="hljs-meta-string">&lt;SimpleDHT.h&gt;</span></span>
+
+    <span class="hljs-meta">#<span class="hljs-meta-keyword">define</span> pinDHT 7 <span class="hljs-comment">// SD3 pin signal sensor DHT</span></span>
+
+    byte temperature = <span class="hljs-number">0</span>;
+    byte humidity = <span class="hljs-number">0</span>;
+
+    <span class="hljs-function">SimpleDHT11 <span class="hljs-title">dht11</span><span class="hljs-params">(D7)</span></span>; <span class="hljs-comment">//instan sensor dht11</span>
+
+    <span class="hljs-function"><span class="hljs-keyword">void</span> <span class="hljs-title">KelembabanSuhu</span><span class="hljs-params">()</span>
+    </span>{
+        <span class="hljs-keyword">int</span> err = SimpleDHTErrSuccess;
+
+        <span class="hljs-keyword">if</span> ((err = dht11.read(&amp;temperature, &amp;humidity, <span class="hljs-literal">NULL</span>)) != SimpleDHTErrSuccess)
+        {
+            Serial.print(<span class="hljs-string">&quot;Pembacaan DHT11 gagal, err=&quot;</span>);
+            Serial.println(err);
+            delay(<span class="hljs-number">1000</span>);
+            <span class="hljs-keyword">return</span>;
+        }
+
+        Serial.print(<span class="hljs-string">&quot;Sample OK: &quot;</span>);
+        Serial.print((<span class="hljs-keyword">int</span>)temperature);
+
+        Serial.print(<span class="hljs-string">&quot; *C, &quot;</span>);
+        Serial.print((<span class="hljs-keyword">int</span>)humidity);
+        Serial.println(<span class="hljs-string">&quot; H&quot;</span>);
+
+        delay(<span class="hljs-number">1500</span>);
+    }
+
+    <span class="hljs-function"><span class="hljs-keyword">void</span> <span class="hljs-title">setup</span><span class="hljs-params">()</span>
+    </span>{
+        Serial.begin(<span class="hljs-number">115200</span>);
+        Serial.println(<span class="hljs-string">&quot;Simple DHT&quot;</span>);
+        delay(<span class="hljs-number">1000</span>);
+    }
+
+    <span class="hljs-function"><span class="hljs-keyword">void</span> <span class="hljs-title">loop</span><span class="hljs-params">()</span>
+    </span>{
+        KelembabanSuhu();
+    }
+</code></pre>
+<p>Ketika dijalankan seharusnya seperti berikut ini</p>
+<pre><code class="lang-bash">    Sample OK: 31 *C, 95 H
+    Sample OK: 31 *C, 95 H
+    Sample OK: 31 *C, 95 H
+    Sample OK: 31 *C, 95 H
+    Sample OK: 31 *C, 95 H
+    Sample OK: 31 *C, 95 H
+    Sample OK: 31 *C, 95 H
+    Sample OK: 31 *C, 95 H
+    Sample OK: 31 *C, 95 H
+    Sample OK: 31 *C, 95 H
+    Sample OK: 31 *C, 95 H
+    Sample OK: 31 *C, 95 H
+</code></pre>
+<h2 id="video-pendukung">Video Pendukung</h2>
+<iframe width="897" height="561" src="https://www.youtube.com/embed/pQg1BdpLtrQ" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
+<h2 id="tugas">Tugas</h2>
+<ol>
+<li>Modifikasi baris kode pada bagian praktikum sehingga muncul data suhu dalam satuan Kelvin dan Reaumur!</li>
+<li><p>Buatlah simulasi sebuah alat pembaca suhu dan kelembaban udara di tengah kota dengan memanfaatkan lampu LED sebagai indikator dengan disertai keterangan data suhu dan kelembaban yang ditampilkan pada serial monitor!</p>
+<p>Contoh: Suhu pada sebuah kota dikategorikan dingin, normal, dan panas. Masing-masing kategori memiliki indikator lampu LED yang menyala, salah satunya ketika kategori dingin diwakili oleh LED hijau, normal diwakili oleh LED warna Biru, dan panas diwakili oleh LED warna Merah.</p>
+<blockquote>
+<p>Misalkan tidak memiliki LED RGB, silakan menggunakan LED build in NODEMCU.</p>
+</blockquote>
+</li>
+<li><p>Gambarkan skematik dari simulasi yang Anda buat.</p>
+</li>
+<li>Hasil dari simulasi tersebut silakan upload di youtube dan urlnya disisipkan pada laporan Anda.</li>
+</ol>
+
+                                
+                                </section>
+                            
+    </div>
+    <div class="search-results">
+        <div class="has-results">
+            
+            <h1 class="search-results-title"><span class='search-results-count'></span> hasil yang cocok "<span class='search-query'></span>"</h1>
+            <ul class="search-results-list"></ul>
+            
+        </div>
+        <div class="no-results">
+            
+            <h1 class="search-results-title">Tidak ada hasil yang cocok "<span class='search-query'></span>"</h1>
+            
+        </div>
+    </div>
+</div>
+
+                        </div>
+                    </div>
+                
+            </div>
+
+            
+                
+                <a href="../02/02-led.html" class="navigation navigation-prev " aria-label="Previous page: 04. LED">
+                    <i class="fa fa-angle-left"></i>
+                </a>
+                
+                
+                <a href="../04/04-sensor-cahaya.html" class="navigation navigation-next " aria-label="Next page: 06. LDR">
+                    <i class="fa fa-angle-right"></i>
+                </a>
+                
+            
+        
+    </div>
+
+    <script>
+        var gitbook = gitbook || [];
+        gitbook.push(function() {
+            gitbook.page.hasChanged({"page":{"title":"05. DHT11","level":"1.7","depth":1,"next":{"title":"06. LDR","level":"1.8","depth":1,"path":"04/04-sensor-cahaya.md","ref":"04/04-sensor-cahaya.md","articles":[]},"previous":{"title":"04. LED","level":"1.6","depth":1,"path":"02/02-led.md","ref":"02/02-led.md","articles":[]},"dir":"ltr"},"config":{"plugins":[],"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"pluginsConfig":{"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"theme":"default","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"language":"id","gitbook":"*"},"file":{"path":"03/03-dht11.md","mtime":"2021-05-02T23:38:47.805Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2021-05-02T23:39:29.765Z"},"basePath":"..","book":{"language":""}});
+        });
+    </script>
+</div>
+
+        
+    <script src="../gitbook/gitbook.js"></script>
+    <script src="../gitbook/theme.js"></script>
+    
+        
+        <script src="../gitbook/gitbook-plugin-search/search-engine.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-search/search.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-lunr/lunr.min.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-lunr/search-lunr.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-sharing/buttons.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-fontsettings/fontsettings.js"></script>
+        
+    
+
+    </body>
+</html>
+

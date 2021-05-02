@@ -1,0 +1,651 @@
+
+<!DOCTYPE HTML>
+<html lang="id" >
+    <head>
+        <meta charset="UTF-8">
+        <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+        <title>11. Installasi IoT Platform · GitBook</title>
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="description" content="">
+        <meta name="generator" content="GitBook 3.2.3">
+        
+        
+        
+    
+    <link rel="stylesheet" href="../gitbook/style.css">
+
+    
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-highlight/website.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-search/search.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-fontsettings/website.css">
+                
+            
+        
+
+    
+
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+
+        
+    
+    
+    <meta name="HandheldFriendly" content="true"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <link rel="apple-touch-icon-precomposed" sizes="152x152" href="../gitbook/images/apple-touch-icon-precomposed-152.png">
+    <link rel="shortcut icon" href="../gitbook/images/favicon.ico" type="image/x-icon">
+
+    
+    <link rel="next" href="../10/10-manjemen-iot-dashboard.html" />
+    
+    
+    <link rel="prev" href="../08/08-socket-server.html" />
+    
+
+    </head>
+    <body>
+        
+<div class="book">
+    <div class="book-summary">
+        
+            
+<div id="book-search-input" role="search">
+    <input type="text" placeholder="Ketik untuk mencari" />
+</div>
+
+            
+                <nav role="navigation">
+                
+
+
+<ul class="summary">
+    
+    
+
+    
+
+    
+        
+        
+    
+        <li class="chapter " data-level="1.1" data-path="../">
+            
+                <a href="../">
+            
+                    
+                    Pendahuluan
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2" data-path="../00/kontrak.html">
+            
+                <a href="../00/kontrak.html">
+            
+                    
+                    Kontrak Kuliah
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3" data-path="../0a/0a.pertemuan1.html">
+            
+                <a href="../0a/0a.pertemuan1.html">
+            
+                    
+                    01. Memahami Konsep dan arsitektur IoT
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4" data-path="../0b/0b.pertemuan2.html">
+            
+                <a href="../0b/0b.pertemuan2.html">
+            
+                    
+                    02. Microcontroller
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5" data-path="../01/01.installasi-dan-konfigurasi.html">
+            
+                <a href="../01/01.installasi-dan-konfigurasi.html">
+            
+                    
+                    03. Instalasi dan Konfigurasi
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6" data-path="../02/02-led.html">
+            
+                <a href="../02/02-led.html">
+            
+                    
+                    04. LED
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.7" data-path="../03/03-dht11.html">
+            
+                <a href="../03/03-dht11.html">
+            
+                    
+                    05. DHT11
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.8" data-path="../04/04-sensor-cahaya.html">
+            
+                <a href="../04/04-sensor-cahaya.html">
+            
+                    
+                    06. LDR
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.9" data-path="../05/05-lcd.html">
+            
+                <a href="../05/05-lcd.html">
+            
+                    
+                    07. LCD
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.10" data-path="../06/06-uts.html">
+            
+                <a href="../06/06-uts.html">
+            
+                    
+                    08. UTS
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.11" data-path="../07/07-socket-client.html">
+            
+                <a href="../07/07-socket-client.html">
+            
+                    
+                    09. Socket Client
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.12" data-path="../08/08-socket-server.html">
+            
+                <a href="../08/08-socket-server.html">
+            
+                    
+                    10. Socket Server
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter active" data-level="1.13" data-path="09-installasi-iot-platform.html">
+            
+                <a href="09-installasi-iot-platform.html">
+            
+                    
+                    11. Installasi IoT Platform
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.14" data-path="../10/10-manjemen-iot-dashboard.html">
+            
+                <a href="../10/10-manjemen-iot-dashboard.html">
+            
+                    
+                    12. Manajemen IoT Dashboard
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.15" data-path="../11/11-konfigurasi-smart-device.html">
+            
+                <a href="../11/11-konfigurasi-smart-device.html">
+            
+                    
+                    13. Konfigurasi Smart Device
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+    
+
+    <li class="divider"></li>
+
+    <li>
+        <a href="https://www.gitbook.com" target="blank" class="gitbook-link">
+            Dipublikasikan dengan GitBook
+        </a>
+    </li>
+</ul>
+
+
+                </nav>
+            
+        
+    </div>
+
+    <div class="book-body">
+        
+            <div class="body-inner">
+                
+                    
+
+<div class="book-header" role="navigation">
+    
+
+    <!-- Title -->
+    <h1>
+        <i class="fa fa-circle-o-notch fa-spin"></i>
+        <a href=".." >11. Installasi IoT Platform</a>
+    </h1>
+</div>
+
+
+
+
+                    <div class="page-wrapper" tabindex="-1" role="main">
+                        <div class="page-inner">
+                            
+<div id="book-search-results">
+    <div class="search-noresults">
+    
+                                <section class="normal markdown-section">
+                                
+                                <h1 id="installasi-iot-platform">Installasi IoT Platform</h1>
+<h1 id="topik-bahasan">Topik Bahasan</h1>
+<p>Installasi IoT Platform</p>
+<h2 id="kemampuan-akhir-yang-direncanakan">Kemampuan Akhir yang Direncanakan</h2>
+<ul>
+<li>Mahasiswa mampu melakukan instalasi dan konfigurasi IoT platform, baik secara lokal ataupun di cloud masing-masing.</li>
+<li>Mahasiswa mampu mengamankan atau menambahkan keamanan IoT platform</li>
+<li>Mahasiswa mampu menerapkan IoT platform untuk aplikasi sederhan.</li>
+</ul>
+<h2 id="teori-singkat">Teori Singkat</h2>
+<p>IoT platform merupakan sebuah kumpulan alat bantu baik software ataupun hardware yang sangat mempermudah kita dalam 
+membuat project IoT dalam hal mengumpulkan, memvisualisasikan, dan bahkan sampai dengan menganalisis data dari perangkat 
+IoT kita. Dengan alat bantu tersebut kita bisa lebih fokus terhadap proses bisnis, sehingga proses development akan sangat
+jauh lebih mudah dan cepat. </p>
+<p>Hampir semua raksasa internet ataupun layanan cloud menyediakan IoT Platform, misalkan AWS dengan 
+Amazon AWS IoT Core, Google dengan Google Cloud IoT Core, IBM dengan IBM Watson IoT, Microsoft dengan Microsoft Azure IoT Suite, 
+Blynk IoT Platform, Node-red, dan masih banyak yang lain. Dari beberapa yang telah disebutkan ada yang bersifat free ataupun 
+berbayar, disesuaikan dengan kebutuhan project kita.</p>
+<p>Pada praktikum yang akan kita lakukan adalah menggunakan node-red sebagai IoT Platform. Node-red adalah sebuah alat bantu 
+programming sekaligus dalam proses wiring pada perangkat hardware, API, dan layanan online dengan cara yang menarik.</p>
+<p><img src="images/node-red-icon-2.png" alt="Logo"></p>
+<p>https://nodered.org/about/resources/</p>
+
+<h2 id="praktikum">Praktikum</h2>
+<h3 id="1-install-node-red-aws">1. Install Node-Red AWS</h3>
+<p>Node-red menyediakan sebuah editor berbasis browser sehingga mudah untuk dioperasikan pada waktu merangkai sebuah flow
+dari sebuah node pada pallete dan dapat di-deploy hanya dengan sekali klik. Node-red dibangun pada sebuah Node.js yang
+terkenal dengan ringan untuk dijalankan, konsep <em>event-driven</em>, dan menggunakan model non-blocking. Node-red dapat 
+diinstall dalam sebuah jaringan dengan spesifikasi hardware yang murah seperti raspberry maupun di cloud. Pada praktikum
+kali ini akan diinstall pada sebuah layanan cloud yaitu AWS. </p>
+<blockquote>
+<p>Misalnya belum mendaftar sebagai AWS Educate bisa diganti dengan install di Raspberry Pi atau di komputer local. Tentunya
+ketika install di local dengan sistem operasi windows sangat berbeda dengan langkah yang disajikan pada jobsheet ini, 
+Untuk lebih jelasnya bisa melihat dokumentasinya di <a href="https://nodered.org/docs/getting-started/" target="_blank">https://nodered.org/docs/getting-started/</a></p>
+</blockquote>
+<p>Berikut ini adalah langkah-langkahnya</p>
+<ol>
+<li><p>Silakan login ke akun aws educate, <a href="https://www.awseducate.com/educator/s/" target="_blank">https://www.awseducate.com/educator/s/</a>.
+Jika berhasil akan diarahkan ke halaman AWS educate seperti pada gambar di bawah ini</p>
+<p><img src="images/01.png" alt=""></p>
+</li>
+<li><p>Pilih menu <code>AWS Account - AWS Educate Started Account</code>, selanjutnya muncul halaman seperti ditunjukkan pada gambar berikut</p>
+<p> <img src="images/02.png" alt=""></p>
+</li>
+<li><p>Pilih <code>AWS Console</code> dan muncul halaman <code>AWS Management Console</code> seperti berikut ini</p>
+<p> <img src="images/03.png" alt=""></p>
+</li>
+<li><p>Kemudian silakan pilih <code>EC2</code>, untuk membuat sebuah instance langkahnya seperti pada praktikum tentang socket client. 
+Silakan cek kembali pada pertemuan <a href="07/07-socket-client.md">sebelumnya</a>.</p>
+<blockquote>
+<p>Jangan lupa pada langkah <code>Configure Security Group</code>, buatlah sebuah rule untuk protokol <code>Custom TCP Rule</code> dengan menambahkan
+port 1880. Port tersebut digunakan untuk mengakses node-red yang akan kita install pada EC2.</p>
+</blockquote>
+</li>
+<li><p>Silakan login ke instance yang telah Anda buat, setelah login ketika perintah seperti di bawah ini</p>
+<pre><code class="lang-shell"> ubuntu@ip-172-31-21-64:~$ node --version
+ Command &apos;node&apos; not found, but can be installed with:
+ sudo apt install nodejs
+ ubuntu@ip-172-31-21-64:~$ npm --version
+ Command &apos;npm&apos; not found, but can be installed with:
+ sudo apt install npm
+</code></pre>
+<p>Dari keluaran perintah di atas terlihat bahwa nodejs dan npm belum terinstall, agar node-red bisa berjalan dibutuhkan 
+nodejs. Kemudian npm adalah paket manajement atau library manajemen nodejs yang kelak akan kita gunakan ketika ingin install
+library tertentu.</p>
+</li>
+<li><p>Jalankan perintah seperti di bawah ini untuk install keduanya.</p>
+<pre><code class="lang-shell"> ubuntu@ip-172-31-21-64:~$ sudo apt-get update
+ Hit:1 http://us-east-1.ec2.archive.ubuntu.com/ubuntu focal InRelease
+ Get:2 http://us-east-1.ec2.archive.ubuntu.com/ubuntu focal-updates InRelease [114 kB]
+ Get:3 http://us-east-1.ec2.archive.ubuntu.com/ubuntu focal-backports InRelease [101 kB]
+ Get:4 http://security.ubuntu.com/ubuntu focal-security InRelease [109 kB]
+...
+ubuntu@ip-172-31-21-64:~$ sudo apt-get install -y nodejs build-essential
+ubuntu@ip-172-31-21-64:~$ sudo apt-get install -y npm
+ubuntu@ip-172-31-21-64:~$ sudo npm install -g --unsafe-perm node-red
+</code></pre>
+</li>
+<li><p>Setelah langkah di atas selesai, kemudian jalankan node-red dengan mengetik perintah <code>node-red</code> pada terminal atau putty.
+Untuk lebih jelasnya dapat dilihat pada ilustrasi di bawah ini</p>
+<pre><code class="lang-shell"> ubuntu@ip-172-31-21-64:~$ node-red
+ 10 Apr 14:14:18 - [info]
+
+ Welcome to Node-RED
+ ===================
+
+ 10 Apr 14:14:18 - [info] Node-RED version: v1.3.1
+ 10 Apr 14:14:18 - [info] Node.js  version: v10.19.0
+ 10 Apr 14:14:18 - [info] Linux 5.4.0-1038-aws x64 LE
+ 10 Apr 14:14:18 - [info] Loading palette nodes
+ 10 Apr 14:14:19 - [info] Settings file  : /home/ubuntu/.node-red/settings.js
+ 10 Apr 14:14:19 - [info] Context store  : &apos;default&apos; [module=memory]
+ 10 Apr 14:14:19 - [info] User directory : /home/ubuntu/.node-red
+ 10 Apr 14:14:19 - [warn] Projects disabled : editorTheme.projects.enabled=false
+ 10 Apr 14:14:19 - [info] Flows file     : /home/ubuntu/.node-red/flows_ip-172-31-21-64.json
+ 10 Apr 14:14:19 - [info] Creating new flow file
+ ...
+</code></pre>
+</li>
+<li><p>Silakan akses alamat <code>http://[domain atau ip instance Anda]:1880/</code>, jika berhasil akan muncul tampilan node-red yang
+ditunjukkan pada gambar di bawah ini. Misalkan akses ke <code>http://ec2-3-90-163-77.compute-1.amazonaws.com:1880/</code></p>
+<p> <img src="images/04.png" alt=""></p>
+</li>
+</ol>
+<blockquote>
+<p>Ketika instance dimatikan atau direstart maka Node-Red harus dinyalan kembali, berikut ini adalah perintah yang digunakan 
+agar Node-Red tetap berjalan ketika instance restart.</p>
+</blockquote>
+<pre><code class="lang-shell">sudo npm install -g --unsafe-perm pm2
+pm2 start `which node-red` -- -v
+pm2 save
+pm2 startup
+sudo env PATH=$PATH:/usr/bin /usr/local/lib/node_modules/pm2/bin/pm2 startup systemd -u ubuntu --hp /home/ubuntu
+</code></pre>
+<p>Silakan restart instance Anda, seharusnya Node-Red sudah berjalan dan tidak perlu menjalankan kembali. <code>pm2</code> adalah modul
+manajemen aplikasi yang berjalan pada nodejs.</p>
+<h3 id="2-menambahkan-keamanan-pada-node-red">2. Menambahkan Keamanan pada Node-Red</h3>
+<p>Ketika sudah berhasil install Node-RED, kita langsung bisa mengakses halaman editor yang mana terdapat semua flow atau alur
+dari project yang telah kita buat. Hal ini tentunya tidak akan dilakukan ketika project yang telah di-deploy, sehingga
+dibutuhkan mekanisme untuk membatasi setiap user ketika akan mengakses Node-RED. </p>
+<p>Untuk mengamankan sebagai contoh memberikan
+user password ataupun mengganti protocol https pada halaman Node-RED, berikut ini cara yang dilakukan untuk menambahkan
+user dan password pada Node-RED yang telah kita install.</p>
+<ol>
+<li><p>Silakan edit file <code>settings.js</code>, file tersebut merupakan file konfigurasi Node-RED. Biasanya terletak pada home direktori
+installasi Node-RED. File tersebut terletak di <code>.node-red/settings.js</code></p>
+<pre><code class="lang-shell">ubuntu@ip-172-31-21-64:~$ pwd
+/home/ubuntu
+ubuntu@ip-172-31-21-64:~$ ls -al
+total 36
+drwxr-xr-x 6 ubuntu ubuntu 4096 Apr 10 14:38 .
+drwxr-xr-x 3 root   root   4096 Apr 10 14:00 ..
+-rw-r--r-- 1 ubuntu ubuntu  220 Feb 25  2020 .bash_logout
+-rw-r--r-- 1 ubuntu ubuntu 3771 Feb 25  2020 .bashrc
+drwx------ 2 ubuntu ubuntu 4096 Apr 10 14:01 .cache
+drwxrwxr-x 3 ubuntu ubuntu 4096 Apr 10 14:38 .local
+drwxrwxr-x 4 ubuntu ubuntu 4096 Apr 10 14:45 .node-red
+-rw-r--r-- 1 ubuntu ubuntu  807 Feb 25  2020 .profile
+drwx------ 2 ubuntu ubuntu 4096 Apr 10 14:00 .ssh
+-rw-r--r-- 1 ubuntu ubuntu    0 Apr 10 14:08 .sudo_as_admin_successful
+ubuntu@ip-172-31-21-64:~$ ls -al .node-red/settings.js
+-rw-r--r-- 1 ubuntu ubuntu 15473 Apr 10 14:41 .node-red/settings.js
+</code></pre>
+<p>Buka file <code>settings.js</code> menggunakan editor misalkan menggunakan nano dengan perintah <code>nano .node-red/settings.js</code> atau 
+langsung bisa menggunakan SFTP kemudian buka comment baris berikut ini, setelah dibuka seperti berikut</p>
+<pre><code class="lang-shell">// Securing Node-RED
+ // -----------------
+ // To password protect the Node-RED editor and admin API, the following
+ // property can be used. See http://nodered.org/docs/security.html for details.
+ adminAuth: {
+     type: &quot;credentials&quot;,
+     users: [{
+         username: &quot;admin&quot;,
+         password: &quot;$2b$08$WcJwycUos6FqbUKZsIfGzOqHC4kJQ0GHY7Oz.mR7zaasPtBHuk2gm&quot;,
+         permissions: &quot;*&quot;
+     },{
+     username: &quot;odeng&quot;,
+     password: &quot;$2a$08$5LFz5nVwzCyX/r6rHb4KpuvG16pUwPYHTA/OxBqwTqdNB9a6K/rru&quot;,
+     permissions: &quot;read&quot;
+ }]
+ },
+</code></pre>
+</li>
+<li>Isikan username, password, dan permisi dari setiap user. Hanya terdapat 2 rule yang dapat digunakan yaitu full akses
+dan read. Yang membedakan 2 rule tersebut adalah read tidak bisa digunakan untuk menambahkan library atau pallete ataupun
+mengkonfigurasi node-read. Untuk membuat password silakan menggunakan perintah bawaan dari node-red seperti berikut<pre><code class="lang-shell">ubuntu@ip-172-31-21-64:~$ node-red admin hash-pw
+Password:
+</code></pre>
+Isikan password di atas sesuai dengan keinginan, password tersebut menggunakan algoritma bcrypt sehingga tidak bisa dilakukan
+decrypt. Cara lain yang dapat digunakan membuat password menggunakan perintah<pre><code class="lang-shell">ubuntu@ip-172-31-21-64:~$ node -e &quot;console.log(require(&apos;bcryptjs&apos;).hashSync(process.argv[1], 8));&quot; 1234
+$2a$08$sFcvlvl..OIIku1mzjtmFuoHSs7sOpeZS6bwdWaPpS640.JnxNoX.
+</code></pre>
+Isikan <code>your-password-here</code> sesuai dengan password Anda.<blockquote>
+<p>Ketika terjadi error karena library bcryptjs belum diinstall, silakan diinstall menggunakan perintah <code>npm install bcryptjs --save</code></p>
+</blockquote>
+</li>
+<li>Silakan masuk ke Node-RED, seharusnya akan meminta user dan password seperti gambar berikut ini
+<img src="images/05.png" alt=""></li>
+</ol>
+<h4 id="pertanyaan">Pertanyaan</h4>
+<ol>
+<li>Gantilah port bawaan Node-RED dan buktikan bahwa Node-RED bisa diakses dari public network?</li>
+<li>Buktikan dengan tangkapan layar perbedaan antar permisi untuk user read dan full access?</li>
+</ol>
+<h3 id="3--sample-node-red">3 . Sample Node-Red</h3>
+<p>Pada praktikum yang ini ditunjukkan menggunakan Node-RED untuk request sebuah end point dan menampilkan response dalam
+sebuah mode debug. Silakan mengikuti langkah-langkah di bawah ini</p>
+<ol>
+<li><p>Drag sebuah pallete node <code>inject</code> pada kategori <code>network</code> ke worksheet, perhatikan gambar berikut ini</p>
+<p><img src="images/06.png" alt=""></p>
+</li>
+<li><p>Selanjutnya double klik node <code>inject</code> yang terdapat pada worksheet sehingga menampilkan jendela properties seperti berikut</p>
+<p><img src="images/07.png" alt=""></p>
+<p>Ubah name menjadi <code>make request</code> dan hapus properti <code>msg.payload</code> serta <code>msg.topic</code> menggunakan icon <code>cross</code>, jika sudah jangan lupa
+klik tombol <code>Done</code>.</p>
+</li>
+<li><p>Tambahkan juga node <code>http request</code> pada worksheet, sesuaikan properties pada nilai <code>URL dan name</code>. Isikan <code>URL</code> dengan 
+<code>https://raw.githubusercontent.com/prust/wikipedia-movie-data/master/movies.json</code> dan sedangkan <code>name</code> diisi dengan <code>movie request</code>.
+Untuk lebih jelasnya dapat dilihat pada gambar berikut ini</p>
+<p><img src="images/08.png" alt=""></p>
+</li>
+<li><p>Hubungkan node <code>make reqeust (inject)</code> dan <code>movie request (http request)</code> dengan cara klik dan drag antar ujung node, 
+hasilnya dapat dilihat pada gambar berikut ini</p>
+<p><img src="images/09.png" alt=""></p>
+</li>
+<li><p>Tambahkan node <code>debug</code> yang terdapat pada kategori <code>common</code>, jangan lupa diubah name dengan nama msg. Terakhir hubungkan
+node tersebut dengan node <code>movie request</code>. Hasil akhirnya adalah sebagai berikut</p>
+<p><img src="images/10.png" alt=""></p>
+<p><img src="images/11.png" alt=""></p>
+</li>
+<li><p>Langkah terakhir, silakan klik tombol <code>Deploy</code> yang terletak di pojok kanan atas sampai muncul popup <code>successfully deployed</code>. 
+Jika sudah, klik <code>make request</code> dan amati hasilnya pada bagian <code>debug</code> (klik icon kutu) di jendela sebelah kanan. 
+Untuk lebih jelasnya dapat dilihat pada gambar di bawah ini</p>
+<p><img src="images/12.png" alt=""></p>
+</li>
+</ol>
+<h4 id="pertanyaaan">Pertanyaaan</h4>
+<ol>
+<li><p>Tambahkan kembali <code>node function</code> dan <code>node debug</code>, yang masing-masing fungsinya adalah untuk memfilter dimana movie
+yang akan tampil hanya movie dengan tahun &gt; 2000 dan untuk menampilkan data filter tersebut.</p>
+</li>
+<li><p>Flow dan output pada debug dapat dilihat seperti berikut ini
+<img src="images/13.png" alt=""></p>
+</li>
+</ol>
+<h2 id="video-pendukung">Video Pendukung</h2>
+<p>
+<iframe width="933" height="583" src="https://www.youtube.com/embed/10WsBy_Kf_c" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+</p>
+
+<h2 id="tugas">Tugas</h2>
+<p>Buatlah sebuah flow yang digunakan untuk menentukan sebuah kondisi temperatur dingin, normal, dan panas. Terdapat 3 node
+inject masing-masing sebagai berikut;</p>
+<ul>
+<li>Ketika inject pertama diklik akan muncul di panel debug menampilkan dingin, lewatkan nilai 5 pada node inject pertama. </li>
+<li>Ketika inject kedua diklik akan muncul di panel debug menampilkan normal, lewatkan nilai 25 pada node inject kedua. </li>
+<li>Ketika inject ketiga diklik akan muncul di panel debug menampilkan panas, lewatkan nilai 50 pada node inject ketiga.</li>
+</ul>
+<p>Perhatian keluaran pada panel debug di bawah ini, itu output yang diharapkan.</p>
+<p><img src="images/14.png" alt=""></p>
+
+                                
+                                </section>
+                            
+    </div>
+    <div class="search-results">
+        <div class="has-results">
+            
+            <h1 class="search-results-title"><span class='search-results-count'></span> hasil yang cocok "<span class='search-query'></span>"</h1>
+            <ul class="search-results-list"></ul>
+            
+        </div>
+        <div class="no-results">
+            
+            <h1 class="search-results-title">Tidak ada hasil yang cocok "<span class='search-query'></span>"</h1>
+            
+        </div>
+    </div>
+</div>
+
+                        </div>
+                    </div>
+                
+            </div>
+
+            
+                
+                <a href="../08/08-socket-server.html" class="navigation navigation-prev " aria-label="Previous page: 10. Socket Server">
+                    <i class="fa fa-angle-left"></i>
+                </a>
+                
+                
+                <a href="../10/10-manjemen-iot-dashboard.html" class="navigation navigation-next " aria-label="Next page: 12. Manajemen IoT Dashboard">
+                    <i class="fa fa-angle-right"></i>
+                </a>
+                
+            
+        
+    </div>
+
+    <script>
+        var gitbook = gitbook || [];
+        gitbook.push(function() {
+            gitbook.page.hasChanged({"page":{"title":"11. Installasi IoT Platform","level":"1.13","depth":1,"next":{"title":"12. Manajemen IoT Dashboard","level":"1.14","depth":1,"path":"10/10-manjemen-iot-dashboard.md","ref":"10/10-manjemen-iot-dashboard.md","articles":[]},"previous":{"title":"10. Socket Server","level":"1.12","depth":1,"path":"08/08-socket-server.md","ref":"08/08-socket-server.md","articles":[]},"dir":"ltr"},"config":{"plugins":[],"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"pluginsConfig":{"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"theme":"default","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"language":"id","gitbook":"*"},"file":{"path":"09/09-installasi-iot-platform.md","mtime":"2021-05-02T23:38:47.821Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2021-05-02T23:39:29.765Z"},"basePath":"..","book":{"language":""}});
+        });
+    </script>
+</div>
+
+        
+    <script src="../gitbook/gitbook.js"></script>
+    <script src="../gitbook/theme.js"></script>
+    
+        
+        <script src="../gitbook/gitbook-plugin-search/search-engine.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-search/search.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-lunr/lunr.min.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-lunr/search-lunr.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-sharing/buttons.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-fontsettings/fontsettings.js"></script>
+        
+    
+
+    </body>
+</html>
+
