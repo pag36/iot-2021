@@ -383,8 +383,8 @@ adalah sebagai berikut</p>
 <p> <img src="images/05.png" alt=""></p>
 </li>
 <li><p>Tambahkan <code>node mqtt in</code> ke worksheet, sesuaikan konfigurasi sebagai berikut</p>
-<p> <img src="images/06.png" alt="">
-Pada bagian <code>Server, Topic dan Qos</code> disamakan dengan <code>node mqtt out</code> sedangkan <code>Name</code> silakan isikan dengan <code>sample subscriber</code>.</p>
+<p> <img src="images/06.png" alt=""></p>
+<p>Pada bagian <code>Server, Topic dan Qos</code> disamakan dengan <code>node mqtt out</code> sedangkan <code>Name</code> silakan isikan dengan <code>sample subscriber</code>.</p>
 </li>
 <li><p>Tambahkan node terakhir yaitu <code>node debug</code>, sementara untuk kongifigurasinya tidak perlu disesuaikan. Hubungkan kedua
 node tersebut sehingga menjadi sebagai berikut</p>
@@ -527,6 +527,9 @@ WiFiClient espClient;
 <p>Upload kode di atas ke ESP8266 Anda dan amati hasilnya.</p>
 <blockquote>
 <p>Library yang digunakan pada project di atas adalah <code>winlinvip/SimpleDHT@^1.0.14</code> dan <code>knolleary/PubSubClient@^2.8</code></p>
+<p>Hal yang perlu diperhatikan juga adalah karena server broker mengarah ke alamat yang sama, silakan diganti topik baik
+yang untuk publish atau subsribe, diganti menggunakan nim masing-masing sehingga akan berbeda setiap mahasiswa. misalkan
+topik yang digunakan <code>07541099/room/suhu</code>.</p>
 </blockquote>
 <h3 id="verifikasi-hasil-percobaan">Verifikasi Hasil Percobaan</h3>
 <p>Hasil percobaan tersebut dapat dilihat pada serial monitor dan Node-RED melalui browser, kurang lebih seperti gambar di bawah</p>
@@ -605,7 +608,7 @@ Pada tab ini digunakan untuk menampilkan data kelas, NIM, dan Nama. <strong>Sila
     <script>
         var gitbook = gitbook || [];
         gitbook.push(function() {
-            gitbook.page.hasChanged({"page":{"title":"13. Konfigurasi Smart Device","level":"1.15","depth":1,"next":{"title":"14. Message Broker","level":"1.16","depth":1,"path":"12/12-iot-gateway.md","ref":"12/12-iot-gateway.md","articles":[]},"previous":{"title":"12. Manajemen IoT Dashboard","level":"1.14","depth":1,"path":"10/10-manjemen-iot-dashboard.md","ref":"10/10-manjemen-iot-dashboard.md","articles":[]},"dir":"ltr"},"config":{"plugins":[],"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"pluginsConfig":{"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"theme":"default","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"language":"id","gitbook":"*"},"file":{"path":"11/11-konfigurasi-smart-device.md","mtime":"2021-05-08T03:50:44.075Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2021-05-08T03:51:49.823Z"},"basePath":"..","book":{"language":""}});
+            gitbook.page.hasChanged({"page":{"title":"13. Konfigurasi Smart Device","level":"1.15","depth":1,"next":{"title":"14. Message Broker","level":"1.16","depth":1,"path":"12/12-iot-gateway.md","ref":"12/12-iot-gateway.md","articles":[]},"previous":{"title":"12. Manajemen IoT Dashboard","level":"1.14","depth":1,"path":"10/10-manjemen-iot-dashboard.md","ref":"10/10-manjemen-iot-dashboard.md","articles":[]},"dir":"ltr"},"config":{"plugins":[],"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"pluginsConfig":{"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"theme":"default","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"language":"id","gitbook":"*"},"file":{"path":"11/11-konfigurasi-smart-device.md","mtime":"2021-05-08T04:06:46.889Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2021-05-08T04:07:58.835Z"},"basePath":"..","book":{"language":""}});
         });
     </script>
 </div>
