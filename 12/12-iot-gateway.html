@@ -1,0 +1,923 @@
+
+<!DOCTYPE HTML>
+<html lang="id" >
+    <head>
+        <meta charset="UTF-8">
+        <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+        <title>14. Message Broker · GitBook</title>
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="description" content="">
+        <meta name="generator" content="GitBook 3.2.3">
+        
+        
+        
+    
+    <link rel="stylesheet" href="../gitbook/style.css">
+
+    
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-highlight/website.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-search/search.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-fontsettings/website.css">
+                
+            
+        
+
+    
+
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+
+        
+    
+    
+    <meta name="HandheldFriendly" content="true"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <link rel="apple-touch-icon-precomposed" sizes="152x152" href="../gitbook/images/apple-touch-icon-precomposed-152.png">
+    <link rel="shortcut icon" href="../gitbook/images/favicon.ico" type="image/x-icon">
+
+    
+    
+    <link rel="prev" href="../11/11-konfigurasi-smart-device.html" />
+    
+
+    </head>
+    <body>
+        
+<div class="book">
+    <div class="book-summary">
+        
+            
+<div id="book-search-input" role="search">
+    <input type="text" placeholder="Ketik untuk mencari" />
+</div>
+
+            
+                <nav role="navigation">
+                
+
+
+<ul class="summary">
+    
+    
+
+    
+
+    
+        
+        
+    
+        <li class="chapter " data-level="1.1" data-path="../">
+            
+                <a href="../">
+            
+                    
+                    Pendahuluan
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2" data-path="../00/kontrak.html">
+            
+                <a href="../00/kontrak.html">
+            
+                    
+                    Kontrak Kuliah
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3" data-path="../0a/0a.pertemuan1.html">
+            
+                <a href="../0a/0a.pertemuan1.html">
+            
+                    
+                    01. Memahami Konsep dan arsitektur IoT
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4" data-path="../0b/0b.pertemuan2.html">
+            
+                <a href="../0b/0b.pertemuan2.html">
+            
+                    
+                    02. Microcontroller
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5" data-path="../01/01.installasi-dan-konfigurasi.html">
+            
+                <a href="../01/01.installasi-dan-konfigurasi.html">
+            
+                    
+                    03. Instalasi dan Konfigurasi
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6" data-path="../02/02-led.html">
+            
+                <a href="../02/02-led.html">
+            
+                    
+                    04. LED
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.7" data-path="../03/03-dht11.html">
+            
+                <a href="../03/03-dht11.html">
+            
+                    
+                    05. DHT11
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.8" data-path="../04/04-sensor-cahaya.html">
+            
+                <a href="../04/04-sensor-cahaya.html">
+            
+                    
+                    06. LDR
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.9" data-path="../05/05-lcd.html">
+            
+                <a href="../05/05-lcd.html">
+            
+                    
+                    07. LCD
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.10" data-path="../06/06-uts.html">
+            
+                <a href="../06/06-uts.html">
+            
+                    
+                    08. UTS
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.11" data-path="../07/07-socket-client.html">
+            
+                <a href="../07/07-socket-client.html">
+            
+                    
+                    09. Socket Client
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.12" data-path="../08/08-socket-server.html">
+            
+                <a href="../08/08-socket-server.html">
+            
+                    
+                    10. Socket Server
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.13" data-path="../09/09-installasi-iot-platform.html">
+            
+                <a href="../09/09-installasi-iot-platform.html">
+            
+                    
+                    11. Installasi IoT Platform
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.14" data-path="../10/10-manjemen-iot-dashboard.html">
+            
+                <a href="../10/10-manjemen-iot-dashboard.html">
+            
+                    
+                    12. Manajemen IoT Dashboard
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.15" data-path="../11/11-konfigurasi-smart-device.html">
+            
+                <a href="../11/11-konfigurasi-smart-device.html">
+            
+                    
+                    13. Konfigurasi Smart Device
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter active" data-level="1.16" data-path="12-iot-gateway.html">
+            
+                <a href="12-iot-gateway.html">
+            
+                    
+                    14. Message Broker
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+    
+
+    <li class="divider"></li>
+
+    <li>
+        <a href="https://www.gitbook.com" target="blank" class="gitbook-link">
+            Dipublikasikan dengan GitBook
+        </a>
+    </li>
+</ul>
+
+
+                </nav>
+            
+        
+    </div>
+
+    <div class="book-body">
+        
+            <div class="body-inner">
+                
+                    
+
+<div class="book-header" role="navigation">
+    
+
+    <!-- Title -->
+    <h1>
+        <i class="fa fa-circle-o-notch fa-spin"></i>
+        <a href=".." >14. Message Broker</a>
+    </h1>
+</div>
+
+
+
+
+                    <div class="page-wrapper" tabindex="-1" role="main">
+                        <div class="page-inner">
+                            
+<div id="book-search-results">
+    <div class="search-noresults">
+    
+                                <section class="normal markdown-section">
+                                
+                                <h1 id="iot-gateway-dan-web-dashboard">IoT Gateway dan Web Dashboard</h1>
+<h1 id="topik-bahasan">Topik Bahasan</h1>
+<p>IoT Gateway dan Message Broker</p>
+<h2 id="kemampuan-akhir-yang-direncanakan">Kemampuan Akhir yang Direncanakan</h2>
+<ul>
+<li>Mahasiswa faham tentang konsep IoT Gateway dan penggunaannya</li>
+<li>Mahasiswa mampu melakukan instalasi dan konfigurasi message broker.</li>
+<li>Mahasiswa mampu mengolah data sensor di dalam server local atau cloud.</li>
+<li>Mahasiswa bisa membuat dashboard sederhana data sensor</li>
+</ul>
+<h2 id="teori-singkat">Teori Singkat</h2>
+<p>IoT Gateway dan message broker kaitannya sangat erat yang tidak dapat dipisahkan pada sebuah infrasturktur IoT, untuk lebih
+jelaskan dapat dilihat pada gambar di bawah ini</p>
+<p><img src="images/10.png" alt=""></p>
+<p>sumber: <em><a href="https://openautomationsoftware.com/open-automation-systems-blog/what-is-an-iot-gateway/" target="_blank">https://openautomationsoftware.com/open-automation-systems-blog/what-is-an-iot-gateway/</a></em></p>
+<p>Dari gambar di atas terlihat bahwa IoT gateway menjembatani sensor dan controller untuk melakukan komunikasi dengan internet,
+sehingga sebuah IoT gateway penyedia layanan diantara lokal koneksi parangkat IoT dan cloud/internet, perangkat  IoT mampu
+berkomuniasi dengan perangkat IoT yang lain, dan jaringan yang lebih luas.</p>
+<p>Biasanya IoT gateway adalah sebuah perangkat hardware dengan kemampuan konektivitas dan komputasi yang tinggi untuk
+meneruskan data ke cloud untuk diolah menjadi informasi yang lebih bermanfaat. Beberapa perangkat yang bisa digunakan IoT
+gateway misalkan Raspberry atau model industrial komputer.</p>
+<p>Sementara message broker sebuah penyedia pertukaran data antara iot device dengan cloud, message broker dipasang pada sebuah
+IoT gateway. Beberapa protokol yang digunakan oleh message broker ini misalkan AMQP, CoAP, dan MQTT. Konsep dari prokol
+AMQP dan MQTT adalah dengan menerapkan teknik publish dan subscribe dan CoAP mirip dengan REST API dengan design konsumsi low power, 
+publish berarti mengirimkan data ke message broker dengan topik tertentu sedangkan subscribe sendiri berarti berlangganan 
+ke message broker pada sebuah topik.</p>
+<h2 id="praktikum">Praktikum</h2>
+<h3 id="1-konfigurasi-web-server-dan-php">1. Konfigurasi Web Server dan PHP</h3>
+<p>Data-data yang dihasilkan oleh sensor agar lebih menarik perlu divisualisasi atau ditampilkan, dalam hal ini pada sebuah
+halaman website. Jika pada praktikum yang sebelumnya kita telah berhasil memanfaatkan IoT Platform, Node-RED untuk menampilkan
+data tersebut. Pada kesempatan kali ini akan dicoba untuk membuat visualisasi data dari awal, butuh sebuah web server dan
+PHP. Kemudian untuk memudahkan membuat kode program karena akan membutuhkan dashboard, misalkan chart, gauge, dan yang lain
+digunakan codeigniter4 dan framework css menggunakan bootstramp.</p>
+<p>Seperti biasanya kita akan menyiapkan instance, EC2 untuk kebutuhan di atas. Langkah-langkahnya adalah sebagai berikut</p>
+<ol>
+<li><p>Buatlah sebuah instance EC2, kemudian pada langkah <code>3. Configure Instance</code> tambahkan baris perintah di bawah ini pada 
+bagian <code>User Data</code>. Untuk lebih jelasnya perhatikan gambar di bawah ini
+<img src="images/01.png" alt=""></p>
+<pre><code class="lang-shell">#!/bin/bash
+apt update
+apt install apache2 php libapache2-mod-php -y
+apt install php-json php7.4-mysql php-xml php-intl php-curl -y
+apt install composer -y
+</code></pre>
+<p>Dengan menggunakan script di atas, kita tidak perlu repot-repot menjalankan satu persatu ketika instance berhasil dibuat
+karena sudah dijalankan ketika proses pembuatan instance.</p>
+<blockquote>
+<p>Di EC2 kita diizinkan untuk membuat script ketika membuat instance, biasanya yang disupport adalah bash scripting atau 
+perintah dasar pada sebuah terminal. Ketika bash script tersebut dijalankan, maka akan dijalankan sebagai user root
+sehingga ketika kita ingin membuat direktori pada path tertentu harus full path, misalkan buat direktori di home
+berarti <code>mkdir /home/ubuntu/[nama direktori]</code></p>
+</blockquote>
+</li>
+<li><p>Silakan tambahkan port http yaitu 80 pada langkah <code>6. Configure Security Group</code>. Port tersebut digunakan untuk akses
+web server atau web yang akan kita buat.</p>
+</li>
+<li><p>Setelah instance berhasil dijalankan, kemudian silakan buka browser Anda kemudian ketik/paste domain(alamat) dari instance
+tersebut. Misalkan domain saya adalah <code>http://ec2-54-227-120-124.compute-1.amazonaws.com/</code> seharusnya akan muncul tampilan
+seperti pada gambar berikut</p>
+<p><img src="images/02.png" alt=""></p>
+</li>
+<li><p>Untuk memudahkan proses pengembangan aplikasi web, kita akan mencoba menggunakan framework codeigniter4. Silakan masuk
+ke EC2 yang telah dibuat sebelumnya, bisa menggunakan putty atau perintah ssh. Jalankan beberapa baris perintah di bawah ini</p>
+<pre><code class="lang-shell">composer create-project codeigniter4/appstarter iot-jti --no-dev
+sudo chown -Rv www-data iot-jti/writable
+sudo mv iot-jti/ /var/www/html/
+</code></pre>
+<p>Langkah installasi codeigniter menggunakan perintah <code>composer</code> agar lebih gampang karena akan download di repository,
+langkah yang lain bisa secara manual dengan mengunjungi website codeigniter dan download.</p>
+</li>
+<li><p>Ketika akses instance melalui browser yang ditampilkan masih halaman index dari apache, kita akan mencoba untuk mengubah 
+halaman tersebut menjadi halaman codeigniter. Sebelumnya kita harus membuat konfigurasi untuk website kita, ketik beberapa 
+perintah di bawah ini</p>
+<pre><code class="lang-shell">sudo cp /etc/apache2/sites-available/000-default.conf /etc/apache2/sites-available/iot-jti.conf
+sudo nano /etc/apache2/sites-available/iot-jti.conf
+sudo a2ensite iot-jti.conf
+sudo a2dissite 000-default.conf
+sudo systemctl restart apache2
+</code></pre>
+<blockquote>
+<p>Ketika menjalankan perintah <code>sudo nano /etc/apache2/sites-available/iot-jti.conf</code> silakan dicari <code>DocumentRoot /var/www/html</code>
+kemudian diganti menjadi <code>DocumentRoot /var/www/html/iot-jti/public</code>, hanya mengganti path-nya saja. CTRL+O kemudian 
+enter untuk menyimpan perubahan dan CTRL+x untuk keluar editor nano.</p>
+</blockquote>
+</li>
+<li><p>Buka browser atau kembali browser, kemudian ketik alamat ip atau dns instance. Misalkan <code>http://ec2-54-227-120-124.compute-1.amazonaws.com/</code>
+seharusnya akan menampilkan halaman seperti pada gambar berikut</p>
+<p><img src="images/03.png" alt=""></p>
+</li>
+<li><p>Untuk mempermudah proses coding, aktifkan mode debug codeigniter menggunakan perintah di bawah ini</p>
+<pre><code class="lang-shell">   cd /var/www/html/iot-jti
+   mv env .env
+   nano .env
+</code></pre>
+<blockquote>
+<p>Silakan dicari pada bagian <code># CI_ENVIRONMENT = production</code> diubah menjadi  <code>CI_ENVIRONMENT = development</code>, tekan 
+CTRL+O kemudian enter untuk menyimpan perubahan dan CTRL+x untuk keluar editor nano.</p>
+</blockquote>
+</li>
+<li><p>Buka kembali browser, ketik alamat ip atau dns seharusnya akan menampilkan seperti pada gambar berikut pada bagian bawah
+halaman codeigniter.</p>
+<p><img src="images/04.png" alt=""></p>
+</li>
+</ol>
+<blockquote>
+<p>Codeignier sudah berhasil terpasang pada instance atau server, selanjutnya adalah membuat kode sesuai dengan kebutuhan.
+Skenario yang bisa dilakukan adalah untuk mengedit atau mengubah kode yang terdapat di codeigniter yaitu bisa menggunakan
+repository, misalkan git. Upload semua satu project codeigniter ke repository yang di server, kemudian bisa di-clone ke 
+komputer lokal atau laptop untuk melaukan editing. Ketika selesai edit, push ke repository dan di server atau instance 
+harus melakukan pull.</p>
+<p>Skenario yang lain, download project codeigniter di server pindah ke laptop/lokal komputer. Bisa menggunakan WinSCP atau tool
+yang lain. Ketika ada perubahan di lokal, maka harus upload perubahan tersebut yang ada di server.</p>
+<p>Jujur lebih menyarankan skenario yang pertama untuk menghindari terjadi konflik, terlebih lagi ketika pengembangannya sudah
+lebih dari satu orang.</p>
+</blockquote>
+<h4 id="pertanyaan">Pertanyaan</h4>
+<ol>
+<li>Jelaskan fungsi perintah-perintah yang dimasukan ke dalam <code>User Data</code> ketika membuat sebuah instance EC2?</li>
+<li>Fungi dari perintah <code>sudo a2dissite 000-default.conf</code>?</li>
+</ol>
+<h3 id="2-konfigurasi-message-broker">2. Konfigurasi Message Broker</h3>
+<p>Untuk praktikum sebelumnya kita memanfaatkan message broker yang sudah ada, dalam praktikum yang kedua mencoba bagaimana
+caranya konfigurasi message broker untuk aplikasi yang akan kita bangun. Silakan mengikuti langkah-langkah di bawah ini</p>
+<ol>
+<li><p>Buatlah sebuah instance baru, kemudian untuk langkah <code>3. Configure Instance</code> pada bagian <code>User Data</code> tambahkan baris perintah
+sebagai berikut</p>
+<pre><code class="lang-shell">#!/bin/bash
+apt-add-repository ppa:mosquitto-dev/mosquitto-ppa -y
+apt-get update
+apt-get install mosquitto mosquitto-clients -y
+</code></pre>
+<p>Baris di atas digunakan untuk melakukan installasi mosquitto sebagai message broker sekaligus install mosquitto client
+untuk melaukan pengujian publish dan subscribe. Atau dapat melihat pada gambar berikut</p>
+<p><img src="images/06.png" alt=""></p>
+</li>
+<li><p>Tambahkan 2 port yang perlu dibuka selain port 22 untuk ssh, misalkan port 1883 dan 8089 pada langkah <code>6. Configure Security
+Group</code>. Perhatikan gambar di bawah ini</p>
+<p><img src="images/05.png" alt=""></p>
+</li>
+<li><p>Ketika instance sudah jalan, silakan remote menggunakan putty atau tool yang lain. Kemudian jalankan perintah di bawah ini
+untuk mengecek apakah installasi mosquitto sudah berhasil.</p>
+<pre><code class="lang-shell">ubuntu@ip-172-31-16-8:~$ telnet localhost 1883
+Trying 127.0.0.1...
+Connected to localhost.
+Escape character is &apos;^]&apos;.
+^]
+
+telnet&gt; Connection closed.
+</code></pre>
+<p>Perintah di atas menandakan bahwa proses installasi mosquitto telah berhasil, kemudian silakan dicoba untuk melakukan
+publish dan subscribe message. Buka windows baru lagi atau duplicate session, selanjutkan lakukan perintah seperti pada
+gambar berikut</p>
+<p><img src="images/07.png" alt=""></p>
+<p>Terlihat bahwa proses subscribe dan publish berhasil dilakukan pada localhost. Parameter <code>-t</code> menandakan nama topiknya,
+<code>-m</code> berarti messagenya yang akan dikirimkan. Kemudian misalkan untuk mencoba pada host atau 
+server yang lain tambahkan parameter <code>-h</code> diikuti nama host atau ip. Misalkan <code>mosquitto_sub -h broker.sinaungoding.com -t test</code>,
+dan untuk melakukan subscribe <code>mosquitto_pub -h broker.sinaungoding.com -t test -m &quot;mqtt test&quot;</code>.</p>
+</li>
+</ol>
+<h4 id="menambahkan-password-mqtt">Menambahkan Password MQTT</h4>
+<p>Agar lebih aman terhadap pihak-pihak yang tidak bertanggungjawab, perlu ditambahkan keamanan ketika akan menggunakan
+message broker yang telah kita install, salah satunya yaitu menambahkan authentifikasi berupa user dan password ketika 
+ingin melakukan subscribe ataupun publish message.</p>
+<p>Ikuti langkah-langkah di bawah ini untuk melakukan konfigurasinya</p>
+<ol>
+<li><p>Buatlah sebuah user <code>jti</code> dengan perintah di bawah ini. User <code>jti</code> hanya contoh, silakan diganti dengan yang lain jika
+diperlukan</p>
+<pre><code class="lang-shell">ubuntu@ip-172-31-16-8:~$ sudo mosquitto_passwd -c /etc/mosquitto/passwd jti
+Password:
+Reenter password:
+</code></pre>
+</li>
+<li><p>Buatlah file konfigurasi yang menginfokan bahwa untuk publish tidak dizinkan tanpa password. Ketik perintah di bawah ini</p>
+<pre><code class="lang-shell">sudo nano /etc/mosquitto/conf.d/jti.conf
+</code></pre>
+<p>Akan muncul editor nano, selanjutnya tambahkan dua baris perintah berikut</p>
+<pre><code class="lang-shell">listener 8089
+protocol websockets
+
+listener 1883
+#protocol websockets
+
+per_listener_settings true
+allow_anonymous false
+password_file /etc/mosquitto/passwd
+log_timestamp_format %Y-%m-%dT%H:%M:%S
+</code></pre>
+<p>Tekan CTRL+O untuk menyimpan konfigurasi file dan CTRL+X untuk keluar dari editor nano.</p>
+</li>
+<li><p>Silakan restart mosquitto untuk memberikan perubahan dan coba lakukan publish atau subscribe sebuah message, kira-kira
+perintahnya adalah sebagai berikut</p>
+<pre><code class="lang-shell">sudo systemctl restart mosquitto
+</code></pre>
+<h3 id="verifikasi-hasil-percobaan">Verifikasi Hasil Percobaan</h3>
+<p>Silakan dicoba untuk publish message menggunakan perintah berikut</p>
+<pre><code class="lang-shell">buntu@ip-172-31-16-8:~$ mosquitto_pub -h localhost -t &quot;test&quot; -m &quot;hello world&quot;
+Connection error: Connection Refused: not authorised.
+Error: The connection was refused.
+</code></pre>
+<p>Dari keluaran di atas terlihat bahwa terjadi error karena ketika publish message tidak menggunakan user dan password.
+Kemudian ketika ditambahkan username dan password seperti perintah berikut</p>
+<pre><code class="lang-shell">ubuntu@ip-172-31-16-8:~$ mosquitto_pub -h localhost -t &quot;test&quot; -m &quot;hello world&quot; -u jti -P 1234
+</code></pre>
+<p>Ketika tidak menampilkan pesan berarti berhasil publish message.</p>
+</li>
+</ol>
+<h4 id="pertanyaan">Pertanyaan</h4>
+<ol>
+<li>Apakah fungsi dari baris perintah <code>protocol websockets</code> pada file konfig mosquitto?</li>
+<li>Silakan ganti menjadi <code>false</code> pada <code>per_listener_settings true</code>, restart mosquitto. Apakah yang akan terjadi atau pengaruhnya apa?</li>
+<li>Buatlah user yang lain, kemudian lakukan subscribe dan publish message!</li>
+</ol>
+<h3 id="3-menghubungkan-smart-device-aplikasi-web">3. Menghubungkan Smart Device Aplikasi Web</h3>
+<p>Setelah menyiapkan webserver untuk aplikasi web dan message broker untuk mengirimkan data sensor ataupun aktuator, selanjutnya
+perlu disiapkan Node-MCU dengan kode program jobsheet sebelumnya dan tentunya akan kita tambahkan halaman dashboad untuk
+menampilkan data sensor dari Node-MCU. Adapun langkah-langkahnya adalah sebagai berikut</p>
+<ol>
+<li><p>Tambahkan kode program pada Node-MCU, dibutuhkan DHT11. Kode programnya adalah sebagai berikut</p>
+<pre><code class="lang-c++"><span class="hljs-meta">#<span class="hljs-meta-keyword">include</span> <span class="hljs-meta-string">&lt;Arduino.h&gt;</span></span>
+<span class="hljs-meta">#<span class="hljs-meta-keyword">include</span> <span class="hljs-meta-string">&lt;ESP8266WiFi.h&gt;</span></span>
+<span class="hljs-meta">#<span class="hljs-meta-keyword">include</span> <span class="hljs-meta-string">&lt;PubSubClient.h&gt;</span></span>
+<span class="hljs-meta">#<span class="hljs-meta-keyword">include</span> <span class="hljs-meta-string">&lt;SimpleDHT.h&gt;</span></span>
+
+<span class="hljs-keyword">const</span> <span class="hljs-keyword">char</span> *ssid = <span class="hljs-string">&quot;****&quot;</span>;<span class="hljs-comment">//silakan disesuaikan sendiri</span>
+<span class="hljs-keyword">const</span> <span class="hljs-keyword">char</span> *password = <span class="hljs-string">&quot;****&quot;</span>;<span class="hljs-comment">//silakan disesuaikan sendiri</span>
+
+<span class="hljs-keyword">const</span> <span class="hljs-keyword">char</span> *mqtt_server = <span class="hljs-string">&quot;****&quot;</span>;
+
+WiFiClient espClient;
+<span class="hljs-function">PubSubClient <span class="hljs-title">client</span><span class="hljs-params">(espClient)</span></span>;
+
+<span class="hljs-function">SimpleDHT11 <span class="hljs-title">dht11</span><span class="hljs-params">(D7)</span></span>;
+
+<span class="hljs-keyword">long</span> now = millis();
+<span class="hljs-keyword">long</span> lastMeasure = <span class="hljs-number">0</span>;
+
+<span class="hljs-function"><span class="hljs-keyword">void</span> <span class="hljs-title">setup_wifi</span><span class="hljs-params">()</span>
+</span>{
+  delay(<span class="hljs-number">10</span>);
+  Serial.println();
+  Serial.print(<span class="hljs-string">&quot;Connecting to &quot;</span>);
+  Serial.println(ssid);
+  WiFi.begin(ssid, password);
+  <span class="hljs-keyword">while</span> (WiFi.status() != WL_CONNECTED)
+  {
+    delay(<span class="hljs-number">500</span>);
+    Serial.print(<span class="hljs-string">&quot;.&quot;</span>);
+  }
+  Serial.println(<span class="hljs-string">&quot;&quot;</span>);
+  Serial.print(<span class="hljs-string">&quot;WiFi connected - ESP IP address: &quot;</span>);
+  Serial.println(WiFi.localIP());
+}
+
+<span class="hljs-function"><span class="hljs-keyword">void</span> <span class="hljs-title">reconnect</span><span class="hljs-params">()</span>
+</span>{
+  <span class="hljs-keyword">while</span> (!client.connected())
+  {
+    Serial.print(<span class="hljs-string">&quot;Attempting MQTT connection...&quot;</span>);
+    <span class="hljs-keyword">if</span> (client.connect(<span class="hljs-string">&quot;ESP8266Client&quot;</span>))<span class="hljs-comment">//tambahkan parameter untuk username dan password mqtt misalkan ada</span>
+    {
+      Serial.println(<span class="hljs-string">&quot;connected&quot;</span>);
+    }
+    <span class="hljs-keyword">else</span>
+    {
+      Serial.print(<span class="hljs-string">&quot;failed, rc=&quot;</span>);
+      Serial.print(client.state());
+      Serial.println(<span class="hljs-string">&quot; try again in 5 seconds&quot;</span>);
+      delay(<span class="hljs-number">5000</span>);
+    }
+  }
+}
+
+<span class="hljs-function"><span class="hljs-keyword">void</span> <span class="hljs-title">setup</span><span class="hljs-params">()</span>
+</span>{
+  Serial.begin(<span class="hljs-number">115200</span>);
+  Serial.println(<span class="hljs-string">&quot;Mqtt Node-RED&quot;</span>);
+  setup_wifi();
+  client.setServer(mqtt_server, <span class="hljs-number">1883</span>);
+}
+
+<span class="hljs-function"><span class="hljs-keyword">void</span> <span class="hljs-title">loop</span><span class="hljs-params">()</span>
+</span>{
+  <span class="hljs-keyword">if</span> (!client.connected())
+  {
+    reconnect();
+  }
+  <span class="hljs-keyword">if</span> (!client.loop())
+  {
+    client.connect(<span class="hljs-string">&quot;ESP8266Client&quot;</span>);
+  }
+  now = millis();
+  <span class="hljs-keyword">if</span> (now - lastMeasure &gt; <span class="hljs-number">5000</span>)
+  {
+    lastMeasure = now;
+    <span class="hljs-keyword">int</span> err = SimpleDHTErrSuccess;
+
+    byte temperature = <span class="hljs-number">0</span>;
+    byte humidity = <span class="hljs-number">0</span>;
+    <span class="hljs-keyword">if</span> ((err = dht11.read(&amp;temperature, &amp;humidity, <span class="hljs-literal">NULL</span>)) != SimpleDHTErrSuccess)
+    {
+      Serial.print(<span class="hljs-string">&quot;Pembacaan DHT11 gagal, err=&quot;</span>);
+      Serial.println(err);
+      delay(<span class="hljs-number">1000</span>);
+      <span class="hljs-keyword">return</span>;
+    }
+    <span class="hljs-keyword">static</span> <span class="hljs-keyword">char</span> temperatureTemp[<span class="hljs-number">7</span>];
+    dtostrf(temperature, <span class="hljs-number">4</span>, <span class="hljs-number">2</span>, temperatureTemp);
+    Serial.println(temperatureTemp);
+
+    client.publish(<span class="hljs-string">&quot;room/suhu&quot;</span>, temperatureTemp);
+  }
+}
+</code></pre>
+<p>Beberapa yang perlu disesuaikan adalah terkait dengan <code>ssid</code> dan <code>password</code>, kemudian <code>port</code> dan <code>server</code> untuk message broker,
+silakan menggunakan message broker yang telah dikonfigurasi sebelumnya. Untuk port, yang perlu disesuaikan adalah
+<code>client.setServer(mqtt_server, 1883);</code></p>
+</li>
+<li><p>Buatlah sebuah halaman baru <code>dashboard.php</code> pada project codeigniter, di folder <code>app/Views</code>. Sehingga strukturnya menjadi
+sebagai berikut</p>
+<p><img src="images/08.png" alt=""></p>
+<p>Isi dari file php tersebut adalah sebagai berikut</p>
+<pre><code class="lang-php">&lt;!DOCTYPE html&gt;
+&lt;html lang=<span class="hljs-string">&quot;en&quot;</span>&gt;
+
+&lt;head&gt;
+    &lt;meta charset=<span class="hljs-string">&quot;UTF-8&quot;</span>&gt;
+    &lt;meta http-equiv=<span class="hljs-string">&quot;X-UA-Compatible&quot;</span> content=<span class="hljs-string">&quot;IE=edge&quot;</span>&gt;
+    &lt;meta name=<span class="hljs-string">&quot;viewport&quot;</span> content=<span class="hljs-string">&quot;width=device-width, initial-scale=1.0&quot;</span>&gt;
+    &lt;title&gt;JTI IoT&lt;/title&gt;
+    &lt;script type=<span class="hljs-string">&quot;text/javascript&quot;</span> src=<span class="hljs-string">&quot;http://ajax.googleapis.com/ajax/libs/jquery/1.8.2/jquery.min.js&quot;</span>&gt;&lt;/script&gt;
+    &lt;script src=<span class="hljs-string">&quot;https://cdnjs.cloudflare.com/ajax/libs/paho-mqtt/1.0.1/mqttws31.min.js&quot;</span> type=<span class="hljs-string">&quot;text/javascript&quot;</span>&gt;&lt;/script&gt;
+    &lt;script type=<span class="hljs-string">&quot;text/javascript&quot;</span>&gt;
+        <span class="hljs-keyword">var</span> MQTTbroker = <span class="hljs-string">&apos;****&apos;</span>;<span class="hljs-comment">//servernya disesuaikan</span>
+        <span class="hljs-keyword">var</span> MQTTport = ****; <span class="hljs-comment">//sesuaikan port websockets messsage broker,</span>
+        <span class="hljs-keyword">var</span> MQTTsubTopic = <span class="hljs-string">&apos;****&apos;</span>; <span class="hljs-comment">//topiknya perlu disesuaikan</span>
+        <span class="hljs-keyword">var</span> chart; <span class="hljs-comment">// global variuable for chart</span>
+        <span class="hljs-keyword">var</span> dataTopics = <span class="hljs-keyword">new</span> <span class="hljs-keyword">Array</span>();
+        <span class="hljs-comment">//mqtt broker</span>
+        <span class="hljs-keyword">var</span> client = <span class="hljs-keyword">new</span> Paho.MQTT.Client(MQTTbroker, MQTTport, <span class="hljs-string">&quot;jti_&quot;</span> + parseInt(Math.random() * <span class="hljs-number">100</span>, <span class="hljs-number">10</span>));
+        client.onMessageArrived = onMessageArrived;
+        client.onConnectionLost = onConnectionLost;
+
+        <span class="hljs-comment">//mqtt connecton options including the mqtt broker subscriptions</span>
+        <span class="hljs-keyword">var</span> options = {
+            userName: <span class="hljs-string">&quot;****&quot;</span>,<span class="hljs-comment">//silakan disikan username dan password yang didaftarkan mqtt</span>
+            password: <span class="hljs-string">&quot;****&quot;</span>,
+            timeout: <span class="hljs-number">3</span>,
+            useSSL: <span class="hljs-keyword">false</span>,
+            onSuccess: <span class="hljs-function"><span class="hljs-keyword">function</span><span class="hljs-params">()</span> </span>{
+                console.log(<span class="hljs-string">&quot;mqtt connected&quot;</span>);
+                <span class="hljs-comment">// Connection succeeded; subscribe to our topics</span>
+                client.subscribe(MQTTsubTopic, {
+                    qos: <span class="hljs-number">1</span>
+                });
+            },
+            onFailure: <span class="hljs-function"><span class="hljs-keyword">function</span><span class="hljs-params">(message)</span> </span>{
+                console.log(<span class="hljs-string">&quot;Connection failed, ERROR: &quot;</span> + message.errorMessage);
+                <span class="hljs-comment">//window.setTimeout(location.reload(),20000); //wait 20seconds before trying to connect again.</span>
+            }
+        };
+        <span class="hljs-comment">//can be used to reconnect on connection lost</span>
+        <span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">onConnectionLost</span><span class="hljs-params">(responseObject)</span> </span>{
+            console.log(<span class="hljs-string">&quot;connection lost: &quot;</span> + responseObject.errorMessage);
+            <span class="hljs-comment">//window.setTimeout(location.reload(),20000); //wait 20seconds before trying to connect again.</span>
+        };
+        <span class="hljs-comment">//what is done when a message arrives from the broker</span>
+        <span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">onMessageArrived</span><span class="hljs-params">(message)</span> </span>{
+            console.log(message.destinationName, <span class="hljs-string">&apos;&apos;</span>, message.payloadString);
+            <span class="hljs-comment">//check if it is a new topic, if not add it to the array</span>
+            <span class="hljs-keyword">if</span> (dataTopics.indexOf(message.destinationName) &lt; <span class="hljs-number">0</span>) {
+
+                dataTopics.push(message.destinationName); <span class="hljs-comment">//add new topic to array</span>
+                <span class="hljs-keyword">var</span> y = dataTopics.indexOf(message.destinationName); <span class="hljs-comment">//get the index no</span>
+
+                <span class="hljs-comment">//create new data series for the chart</span>
+                <span class="hljs-keyword">var</span> newseries = {
+                    id: y,
+                    name: message.destinationName,
+                    data: []
+                };
+                chart.addSeries(newseries); <span class="hljs-comment">//add the series</span>
+            };
+
+            <span class="hljs-keyword">var</span> y = dataTopics.indexOf(message.destinationName); <span class="hljs-comment">//get the index no of the topic from the array</span>
+            <span class="hljs-keyword">var</span> myEpoch = <span class="hljs-keyword">new</span> Date().getTime(); <span class="hljs-comment">//get current epoch time</span>
+            <span class="hljs-keyword">var</span> thenum = message.payloadString.replace(/^\D+/g, <span class="hljs-string">&apos;&apos;</span>); <span class="hljs-comment">//remove any text spaces from the message</span>
+            <span class="hljs-keyword">var</span> plotMqtt = [myEpoch, Number(thenum)]; <span class="hljs-comment">//create the array</span>
+            <span class="hljs-keyword">if</span> (isNumber(thenum)) { <span class="hljs-comment">//check if it is a real number and not text</span>
+                console.log(<span class="hljs-string">&apos;is a propper number, will send to chart.&apos;</span>)
+                plot(plotMqtt, y); <span class="hljs-comment">//send it to the plot function</span>
+            };
+        };
+        <span class="hljs-comment">//check if a real number</span>
+        <span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">isNumber</span><span class="hljs-params">(n)</span> </span>{
+            <span class="hljs-keyword">return</span> !isNaN(parseFloat(n)) &amp;&amp; isFinite(n);
+        };
+        <span class="hljs-comment">//function that is called once the document has loaded</span>
+        <span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">init</span><span class="hljs-params">()</span> </span>{
+            <span class="hljs-comment">//i find i have to set this to false if i have trouble with timezones.</span>
+            Highcharts.setOptions({
+                <span class="hljs-keyword">global</span>: {
+                    useUTC: <span class="hljs-keyword">false</span>
+                }
+            });
+            <span class="hljs-comment">// Connect to MQTT broker</span>
+            client.connect(options);
+        };
+        <span class="hljs-comment">//this adds the plots to the chart</span>
+        <span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">plot</span><span class="hljs-params">(point, chartno)</span> </span>{
+            console.log(point);
+
+            <span class="hljs-keyword">var</span> series = chart.series[<span class="hljs-number">0</span>],
+                shift = series.data.length &gt; <span class="hljs-number">20</span>; <span class="hljs-comment">// shift if the series is</span>
+            <span class="hljs-comment">// longer than 20</span>
+            <span class="hljs-comment">// add the point</span>
+            chart.series[chartno].addPoint(point, <span class="hljs-keyword">true</span>, shift);
+        };
+        <span class="hljs-comment">//settings for the chart</span>
+        $(document).ready(<span class="hljs-function"><span class="hljs-keyword">function</span><span class="hljs-params">()</span> </span>{
+            chart = <span class="hljs-keyword">new</span> Highcharts.Chart({
+                chart: {
+                    renderTo: <span class="hljs-string">&apos;container&apos;</span>,
+                    defaultSeriesType: <span class="hljs-string">&apos;spline&apos;</span>
+                },
+                title: {
+                    text: <span class="hljs-string">&apos;Dashboard IoT JTI - Suhu Live Websockets&apos;</span>
+                },
+                subtitle: {
+                    text: <span class="hljs-string">&apos;broker: &apos;</span> + MQTTbroker + <span class="hljs-string">&apos; | port: &apos;</span> + MQTTport + <span class="hljs-string">&apos; | topic : &apos;</span> + MQTTsubTopic
+                },
+                xAxis: {
+                    type: <span class="hljs-string">&apos;datetime&apos;</span>,
+                    tickPixelInterval: <span class="hljs-number">150</span>,
+                    maxZoom: <span class="hljs-number">20</span> * <span class="hljs-number">1000</span>
+                },
+                yAxis: {
+                    minPadding: <span class="hljs-number">0.2</span>,
+                    maxPadding: <span class="hljs-number">0.2</span>,
+                    title: {
+                        text: <span class="hljs-string">&apos;Value&apos;</span>,
+                        margin: <span class="hljs-number">80</span>
+                    }
+                },
+                series: []
+            });
+        });
+    &lt;/script&gt;
+    &lt;script src=<span class="hljs-string">&quot;http://code.highcharts.com/stock/highstock.js&quot;</span>&gt;&lt;/script&gt;
+    &lt;script src=<span class="hljs-string">&quot;http://code.highcharts.com/stock/modules/exporting.js&quot;</span>&gt;&lt;/script&gt;
+&lt;/head&gt;
+
+&lt;body onload=<span class="hljs-string">&quot;init();&quot;</span>&gt;
+    &lt;!--Start the javascript ball rolling <span class="hljs-keyword">and</span> connect to the mqtt broker--&gt;
+    &lt;div id=<span class="hljs-string">&quot;container&quot;</span> style=<span class="hljs-string">&quot;height: 500px; min-width: 500px&quot;</span>&gt;&lt;/div&gt;&lt;!-- this the placeholder <span class="hljs-keyword">for</span> the chart--&gt;
+&lt;/body&gt;
+
+&lt;/html&gt;
+</code></pre>
+<p>Code di atas digunakan untuk menampilkan suhu yang dikirimkan oleh Node-MCU, karena aplikasi web berjalan di atas browser
+sehingga protokol yang digunakan tidak menggunakan http biasanya untuk komunikasi antara aplikasi dengan server broker. 
+Yang diguankan adalah protokol websocket, komunikasi tersebut di-hanlde oleh javascript dengan bantuan library <code>pahomqtt</code>.</p>
+<p>Perlu disesuikan port, server, dan topik dari kode di atas agar bisa menampilkan data, silakan disesuaikan dengan
+konfigurasi yang telah Anda lakukan sebelumnya.</p>
+</li>
+<li><p>Ubah juga pada file <code>Home.php</code> yang terdapat di folder <code>app/Controllers</code> menjadi berikut ini</p>
+<pre><code class="lang-php"><span class="hljs-meta">&lt;?php</span>
+
+<span class="hljs-keyword">namespace</span> <span class="hljs-title">App</span>\<span class="hljs-title">Controllers</span>;
+
+<span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">Home</span> <span class="hljs-keyword">extends</span> <span class="hljs-title">BaseController</span>
+</span>{
+    <span class="hljs-keyword">public</span> <span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">index</span><span class="hljs-params">()</span>
+    </span>{
+        <span class="hljs-keyword">return</span> view(<span class="hljs-string">&apos;dashboard&apos;</span>);
+    }
+}
+</code></pre>
+<p>Dengan mengubah controller pada fungsi <code>index()</code> sehingga ketika mengakses halaman utama, akan diarahkan ke halaman <code>dashboard.php</code>.</p>
+</li>
+<li><p>Upload kode tersebut ke server, bisa menggunakan WinSCP atau ketika sudah menggunakan repository berarti perlu <code>push</code> ke 
+repo selanjutnya yang di server perlu dilakukan <code>pull</code>. Selanjutnya buka browser Anda dan ketik alamat aplikasi web yang 
+ada di instance EC2, seharusnya menampilkan halaman seperti berikut</p>
+<p><img src="images/09.png" alt="">   </p>
+</li>
+</ol>
+<h4 id="pertanyaan">Pertanyaan</h4>
+<ol>
+<li>Berapa lama sekali pengiriman data sensor DHT dari Node-MCU ke server broker? Silakan diubah menjadi lebih cepat!</li>
+<li>Fungsi baris perintah <code>dtostrf(temperature, 4, 2, temperatureTemp);</code> digunakan untuk apa? Jelaskan!</li>
+<li>Modifikasi bentuk chart pada halaman <code>dashboard.php</code> dalam bentuk yang lain, misalkan chart bar ataupun gauge!</li>
+</ol>
+<h2 id="video-pendukung">Video Pendukung</h2>
+<p>
+<iframe width="790" height="494" src="https://www.youtube.com/embed/fKsZBicqzQ8" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+</p>
+
+<h2 id="tugas">Tugas</h2>
+<p>Buatlah sebuah tampilan website yang fungsi utama adalah untuk menampilkan sensor cahaya, suhu, dan kelembaban. Kemudian
+Dapat juga menghidupkan masing-masing LED RGB, website tersebut harus telah teruplod di EC2(lampirkan alamatnya pada
+laporan praktikum) dan videokan hasilnya.</p>
+<blockquote>
+<p>Untuk tampilan grafik bisa menggunakan referensi dari <em>highcharts.com</em></p>
+<p>Sebagai contoh bisa melihat tampilan seperti berikut ini</p>
+</blockquote>
+<p><img src="images/tugas.gif" alt=""></p>
+
+                                
+                                </section>
+                            
+    </div>
+    <div class="search-results">
+        <div class="has-results">
+            
+            <h1 class="search-results-title"><span class='search-results-count'></span> hasil yang cocok "<span class='search-query'></span>"</h1>
+            <ul class="search-results-list"></ul>
+            
+        </div>
+        <div class="no-results">
+            
+            <h1 class="search-results-title">Tidak ada hasil yang cocok "<span class='search-query'></span>"</h1>
+            
+        </div>
+    </div>
+</div>
+
+                        </div>
+                    </div>
+                
+            </div>
+
+            
+                
+                <a href="../11/11-konfigurasi-smart-device.html" class="navigation navigation-prev navigation-unique" aria-label="Previous page: 13. Konfigurasi Smart Device">
+                    <i class="fa fa-angle-left"></i>
+                </a>
+                
+                
+            
+        
+    </div>
+
+    <script>
+        var gitbook = gitbook || [];
+        gitbook.push(function() {
+            gitbook.page.hasChanged({"page":{"title":"14. Message Broker","level":"1.16","depth":1,"previous":{"title":"13. Konfigurasi Smart Device","level":"1.15","depth":1,"path":"11/11-konfigurasi-smart-device.md","ref":"11/11-konfigurasi-smart-device.md","articles":[]},"dir":"ltr"},"config":{"plugins":[],"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"pluginsConfig":{"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"theme":"default","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"language":"id","gitbook":"*"},"file":{"path":"12/12-iot-gateway.md","mtime":"2021-05-08T03:50:44.083Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2021-05-08T03:51:49.823Z"},"basePath":"..","book":{"language":""}});
+        });
+    </script>
+</div>
+
+        
+    <script src="../gitbook/gitbook.js"></script>
+    <script src="../gitbook/theme.js"></script>
+    
+        
+        <script src="../gitbook/gitbook-plugin-search/search-engine.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-search/search.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-lunr/lunr.min.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-lunr/search-lunr.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-sharing/buttons.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-fontsettings/fontsettings.js"></script>
+        
+    
+
+    </body>
+</html>
+
