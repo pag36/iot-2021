@@ -16,3 +16,6 @@
 - [12. Manajemen IoT Dashboard](10/10-manjemen-iot-dashboard.md)
 - [13. Konfigurasi Smart Device](11/11-konfigurasi-smart-device.md)
 - [14. Message Broker](12/12-iot-gateway.md)
+- [15. Progress Report(1)](13/13-progress-report1.md)
+- [16. Progress Report(2)](14/14-progress-report2.md)
+- [17. UAS](15/15-uas.md)
