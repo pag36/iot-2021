@@ -22,7 +22,7 @@ script:
 deploy:
   provider: pages
   skip_cleanup: true
-  github_token: $GITHUB_TOKEN
+  github_token: $GITHUB_TOKENS
   local_dir: _book
   fqdn: iot-2021.sinaungoding.com
   on:
