@@ -51,7 +51,8 @@ adalah sebagai berikut
 4. Tambahkan `node mqtt in` ke worksheet, sesuaikan konfigurasi sebagai berikut
 
     ![](images/06.png)
-Pada bagian `Server, Topic dan Qos` disamakan dengan `node mqtt out` sedangkan `Name` silakan isikan dengan `sample subscriber`.
+
+   Pada bagian `Server, Topic dan Qos` disamakan dengan `node mqtt out` sedangkan `Name` silakan isikan dengan `sample subscriber`.
    
 5. Tambahkan node terakhir yaitu `node debug`, sementara untuk kongifigurasinya tidak perlu disesuaikan. Hubungkan kedua
 node tersebut sehingga menjadi sebagai berikut
@@ -198,6 +199,10 @@ void loop()
 
 Upload kode di atas ke ESP8266 Anda dan amati hasilnya.
 > Library yang digunakan pada project di atas adalah `winlinvip/SimpleDHT@^1.0.14` dan `knolleary/PubSubClient@^2.8`
+> 
+> Hal yang perlu diperhatikan juga adalah karena server broker mengarah ke alamat yang sama, silakan diganti topik baik
+> yang untuk publish atau subsribe, diganti menggunakan nim masing-masing sehingga akan berbeda setiap mahasiswa. misalkan
+> topik yang digunakan `07541099/room/suhu`.
 
 ### Verifikasi Hasil Percobaan
 Hasil percobaan tersebut dapat dilihat pada serial monitor dan Node-RED melalui browser, kurang lebih seperti gambar di bawah
