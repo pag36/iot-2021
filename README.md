@@ -40,7 +40,7 @@
 ## Dosen Pengampu
 
 1. Agung Nugroho Pramudhita, S.T., M.T.
-2. Irsyad Arif Mashudi, S.Kom M.Kom
+2. [Irsyad Arif Mashudi, S.Kom M.Kom](https://github.com/daysri)
 3. [Noprianto, S.Kom., M.Eng](https://github.com/0d3ng)
 4. Usman Nurhasan, S.Kom., MT
-5. Vipkas Al Hadid Firdausi, ST., MT 
+5. [Vipkas Al Hadid Firdausi, ST., MT](https://github.com/vipkas) 
