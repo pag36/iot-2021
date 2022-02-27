@@ -2,25 +2,25 @@
 
 ## Pokok Bahasan
 
-| Pertemuan | Pokok Bahasan                                  | Keterangan                      |
-| ---:      | ---                                            | ---                             |
-| 1         | Memahami Konsep dan arsitektur IoT |                                 |
-| 2         | Microcontroller                     |                                 |
-| 3         | Instalasi dan Konfigurasi software                        |                                 |
-| 4         | Project 1: LED                                  |                                 |
-| 5         | Project 2: DHT11                            |                                 |
-| 6         | Project 3: LDR                           |                                 |
-| 7         | Project 4: LCD                                         |                                 |
-| 8         | UTS                 |                                 |
-| 9         | Project 5: Socket Client |                                 |
-| 10        | Project 6: Socket Server                               |                                 |
-| 11        | Project 7: Installasi IoT Platform                         |                                 |
-| 12        | Project 8: Konfigurasi IoT Platfrom Lanjutan                                  |                                 |
-| 13        | Project 9: Manajemen IoT Dashboard System                                  |                                 |
-| 14        | Project 10: Manajemen IoT Dashboard System Lanjutan                                         |                                 |
-| 15        | Project 11: Konfigurasi Smart Device                                     |                                 |
-| 16        | Message Broker                                      |                                 |
-| 17        | UAS                                            |                                 |
+Minggu | Topik
+--------|------------------------------------------------------------------
+1      | Konsep dan Arsitektur IoT
+2      | Microcontroller
+3      | Installasi dan Konfigurasi Software
+4      | Kuis 1
+5      | LED
+6      | DHT11
+7      | LDR dan Ultrasonic
+8      | ITS
+9      | LCD I2C
+10     | Socket Client Server
+11     | Installasi IoT Platform
+12     | Kuis 2
+13     | Manajement IoT Dashboard System
+14     | Konfigurasi Smart Device, Konsep IoT Gateway, dan Message Broker
+15     | Project
+16     | Project
+17     | UAS
 
 ## Kriteria Penilaian
 

@@ -1,34 +1,46 @@
 # Internet of Things
 
+|                  |                          |
+|------------------|--------------------------|
+| Mata Kuliah      | Internet Of Things       |
+| Kode Mata Kuliah | RTI216005                |
+| SKS / Jam        | 3 SKS (6 Jam per Minggu) |
+| Semester         | 6                        |
+
 ## Capaian Pembelajaran
-1. Memahami dan menerapkan Microcontroller Unit (Arduino dan NodeMCU)
-2. Memahami dan menerapkan kendali jarak jauh (remote control) hardware dengan Socket TCP/IP
-3. Memahami konsep edge computing (Optional)
-4. Memahami dan menerapkan cloud computing IoT (Public, Server Ubuntu & Raspberry Pi 3)
-5. Memahami konsep protocol transport MQTT
+
+- Mahasiswa mampu menerapkan Microcontroller Unit (Arduino dan NodeMCU)
+- Mahasiswa dapat menerapkan kendali jarak jauh (remote control) hardware dengan Socket TCP/IP
+- Mahasiswa mampu menerapkan memahami konsep edge computing (Optional)
+- Mahasiswa mampu dan memahami dan menerapkan cloud computing IoT (Oracle Cloud)
+- Mahasiswa mampu menjelaskan konsep protocol transport MQTT dan menerapkan
 
 ## Deskripsi Matakuliah
-1. Menjelaskan Arsitektur IoT yang terdiri dari device constraint, edge computing dan cloud computing IoT dan bagaimana 
-cara mengimplementasikannya.
-2. Membuat program kontrol hardware microcontroller yang dikendalikan secara lokal maupun secara jarak 
-jauh (remote control)
+
+- Menjelaskan Arsitektur IoT yang terdiri dari device constraint, edge computing dan cloud computing IoT dan bagaimana
+  cara mengimplementasikannya.
+- Membuat program kontrol hardware microcontroller yang dikendalikan secara lokal maupun secara jarak jauh (remote
+  control)
 
 ## Pustaka
+
 1. Pemrograman Arduino Untuk Pemula, 2019, Jasakom
+2. Smart Attendance dengan Smart Card dan Fingerprint, 2021, Polinema Press
 
 ## Media Pembelajaran
+
 1. Software
 
-    Fritzing Designer, Linux Ubuntu Desktop Version, Linux Raspbery Pi 3 Version, IDE Arduino, Visual Studio 2017 C#, 
-    Notepad++
+   Fritzing Designer, IDE Arduino, Visual Studio Code, Oracle Platform, dan Node-Red
 2. Hardware
 
-    Arduino, RaspBerry Pi 3, ESP8266-01, NodeMCU Amica, Personal Computer, Project Board, Berbagai Sensor, 
-    Berbagai Actuator, LCD, dan Komponen Pendukung lainnya
+   NodeMCU Amica, Personal Computer, Project Board, Berbagai Sensor, Berbagai Actuator, LCD, dan Komponen Pendukung
+   lainnya
 
 ## Dosen Pengampu
-1. Dodit Suprianto, S.Kom., MT.
-2. Vipkas Al Hadid Firdausi, ST., MT 
+
+1. Agung Nugroho Pramudhita, S.T., M.T.
+2. Irsyad Arif Mashudi, S.Kom M.Kom
 3. [Noprianto, S.Kom., M.Eng](https://github.com/0d3ng)
 4. Usman Nurhasan, S.Kom., MT
-5. Very Sugiarto, S.Pd., M.Kom
+5. Vipkas Al Hadid Firdausi, ST., MT 
