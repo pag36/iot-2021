@@ -102,7 +102,8 @@ Contoh source code untuk membaca data intensitas cahaya.
 
 Setelah source code diupload, buka serial monitor pada PlatformIO untuk melihat hasil pembacaan data intensitas cahaya di sekitar sensor.
 
-> Normalnya ketika program Anda dijalankan maka akan menampilkan nilai 0-1024, semakin rendah nilai dari pembacaan sensor berarti semakin gelap terang yang terdapat di sekitar Anda dan sebaliknya. Ketika hasil pembacaan sensor nilainya tidak seperti yang disebutkan, silakan kalibrasi sensor tersebut dengan cara memutar baut kecil yang terdapat di sensor menggunakan obeng kecil sambil mengamati keluaran yang ada di serial monitor.
+
+> Normalnya ketika program Anda dijalankan maka akan menampilkan nilai 0-1024, Semakin banyak cahaya yang mengenai LDR maka nilai resistansinya akan menurun, dan sebaliknya semakin sedikit cahaya yang mengenai LDR maka nilai hambatannya akan semakin membesar. Ketika hasil pembacaan sensor nilainya tidak seperti yang disebutkan, silakan kalibrasi sensor tersebut dengan cara memutar baut kecil yang terdapat di sensor menggunakan obeng kecil sambil mengamati keluaran yang ada di serial monitor.
 
 ## Praktikum 2 - Membaca data jarak benda
 
@@ -148,7 +149,6 @@ void loop() {
    delay(1000);
 }
 ```    
-
 
 ## Video Pendukung
 <p>
