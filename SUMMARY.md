@@ -7,8 +7,7 @@
 - [03. Instalasi dan Konfigurasi](01/01.installasi-dan-konfigurasi.md)
 - [04. LED](02/02-led.md)
 - [05. DHT11](03/03-dht11.md)
-
-[comment]: <> (- [06. LDR]&#40;04/04-sensor-cahaya.md&#41;)
+- [06. LDR dan HC-SR04](04/04-sensor-cahaya.md)
 
 [comment]: <> (- [07. LCD]&#40;05/05-lcd.md&#41;)
 
