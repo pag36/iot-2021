@@ -1,0 +1,480 @@
+
+<!DOCTYPE HTML>
+<html lang="id" >
+    <head>
+        <meta charset="UTF-8">
+        <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+        <title>06. LDR dan HC-SR04 · GitBook</title>
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="description" content="">
+        <meta name="generator" content="GitBook 3.2.3">
+        
+        
+        
+    
+    <link rel="stylesheet" href="../gitbook/style.css">
+
+    
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-highlight/website.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-search/search.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-fontsettings/website.css">
+                
+            
+        
+
+    
+
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+
+        
+    
+    
+    <meta name="HandheldFriendly" content="true"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <link rel="apple-touch-icon-precomposed" sizes="152x152" href="../gitbook/images/apple-touch-icon-precomposed-152.png">
+    <link rel="shortcut icon" href="../gitbook/images/favicon.ico" type="image/x-icon">
+
+    
+    
+    <link rel="prev" href="../03/03-dht11.html" />
+    
+
+    </head>
+    <body>
+        
+<div class="book">
+    <div class="book-summary">
+        
+            
+<div id="book-search-input" role="search">
+    <input type="text" placeholder="Ketik untuk mencari" />
+</div>
+
+            
+                <nav role="navigation">
+                
+
+
+<ul class="summary">
+    
+    
+
+    
+
+    
+        
+        
+    
+        <li class="chapter " data-level="1.1" data-path="../">
+            
+                <a href="../">
+            
+                    
+                    Pendahuluan
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2" data-path="../00/kontrak.html">
+            
+                <a href="../00/kontrak.html">
+            
+                    
+                    Kontrak Kuliah
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3" data-path="../0a/0a.pertemuan1.html">
+            
+                <a href="../0a/0a.pertemuan1.html">
+            
+                    
+                    01. Memahami Konsep dan arsitektur IoT
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4" data-path="../0b/0b.pertemuan2.html">
+            
+                <a href="../0b/0b.pertemuan2.html">
+            
+                    
+                    02. Microcontroller
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5" data-path="../01/01.installasi-dan-konfigurasi.html">
+            
+                <a href="../01/01.installasi-dan-konfigurasi.html">
+            
+                    
+                    03. Instalasi dan Konfigurasi
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6" data-path="../02/02-led.html">
+            
+                <a href="../02/02-led.html">
+            
+                    
+                    04. LED
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.7" data-path="../03/03-dht11.html">
+            
+                <a href="../03/03-dht11.html">
+            
+                    
+                    05. DHT11
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter active" data-level="1.8" data-path="04-sensor-cahaya.html">
+            
+                <a href="04-sensor-cahaya.html">
+            
+                    
+                    06. LDR dan HC-SR04
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+    
+
+    <li class="divider"></li>
+
+    <li>
+        <a href="https://www.gitbook.com" target="blank" class="gitbook-link">
+            Dipublikasikan dengan GitBook
+        </a>
+    </li>
+</ul>
+
+
+                </nav>
+            
+        
+    </div>
+
+    <div class="book-body">
+        
+            <div class="body-inner">
+                
+                    
+
+<div class="book-header" role="navigation">
+    
+
+    <!-- Title -->
+    <h1>
+        <i class="fa fa-circle-o-notch fa-spin"></i>
+        <a href=".." >06. LDR dan HC-SR04</a>
+    </h1>
+</div>
+
+
+
+
+                    <div class="page-wrapper" tabindex="-1" role="main">
+                        <div class="page-inner">
+                            
+<div id="book-search-results">
+    <div class="search-noresults">
+    
+                                <section class="normal markdown-section">
+                                
+                                <h1 id="ldr-dan-hc-sr04">LDR dan HC-SR04</h1>
+<h2 id="topik-bahasan">Topik Bahasan</h2>
+<p>Implementasi program sensor cahaya LDR dan sensor Ultrasonic</p>
+<h2 id="kemampuan-akhir-yang-direncanakan">Kemampuan Akhir yang Direncanakan</h2>
+<ul>
+<li>Mahasiswa dapat menjelaskan cara kerja sensor cahaya LDR</li>
+<li>Mahasiswa dapat menghitung dan menampilkan intensitas cahaya yang dierima oleh sensor LDR secara analog</li>
+<li>Mahasiswa dapat menampilkan nilai temperatur dan kelembaban ke serial monitor</li>
+<li>Mahasiswa dapat mengklasifikasi keterangan pada serial monitor: &#x201C;Gelap&#x201D;, &#x201C;Redup&#x201D;, &#x201C;Terang&#x201D;</li>
+<li>Mahasiswa dapat menjelaskan proses perhitungan jarak berdasarkan gelombang dikirim dan diterima</li>
+<li>Mahasiswa dapat menampilkan jarak antara benda penghalang dengan ultrasonic ke layar serial monitor dalam satuan cm dan inch</li>
+</ul>
+<h2 id="teori-singkat">Teori Singkat</h2>
+<h3 id="sensor-cahaya">Sensor Cahaya</h3>
+<p>Sensor cahaya digunakan untuk menangkap intensitas cahaya di sekitar. Sensor yang digunakan adalah sensor LDR (Light Dependent Resistor). </p>
+<p>Pin pada sensor cahaya terdapat 3 buah, VCC, ground, dan data. Data yang ditangkap pada sensor cahaya berupa data analog, sehingga kita harus menghubungkan pin data pada pin analog NodeMCU. Struktur pin pada sensor cahaya LDR seperti berikut.
+<img src="sensor-ldr.jpg" alt="sensor cahaya"></p>
+<p>Contoh penggunaan LDR digunakan sebagai sensor penerang jalan otomatis, lampu kamar tidur, alarm, rangkaian anti pencurian otomatis menggunakan laser, dan masih banyak yang lain.</p>
+<p><strong>Skematik dari rangkaian di atas</strong></p>
+<table>
+<thead>
+<tr>
+<th>NODEMCU</th>
+<th>LDR</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>A0</td>
+<td>Data</td>
+</tr>
+<tr>
+<td>Vin</td>
+<td>VCC</td>
+</tr>
+<tr>
+<td>GND</td>
+<td>Ground</td>
+</tr>
+</tbody>
+</table>
+<blockquote>
+<p>A0 merupakan pin khusus yang digunakan sebagai input analog</p>
+</blockquote>
+<h3 id="ultrasonic-sensor-hc-sr04">Ultrasonic Sensor HC-SR04</h3>
+<p>Sensor ultrasonik merupakan sensor yang berfungsi untuk mendeteksi suatu benda dengan jarak tertentu sesuai dengan jenis sensornya. Pada praktikum kali ini dibahas mengenai cara menggunakan serta implemetasi sensor ultrasonik pada NodeMCU. Sensor ultrasonik yang digunakan adalah tipe HC-SR04 dengan jarak yang dapat untuk mendeteksi benda dengan akurasi 3 mm. Sensor ini memiliki pin Trigger, dimana pin ini berfungsi sebagai pengirim sinyal dan pin Echo yang berfungsi sebagai penerima sinyal yang didapat dari pantulan benda.</p>
+<p>Sensor ultrasonik ialah sensor yang mempunyai kemampuan untuk mengubah besaran fisis yaitu bunyi kedalam besaran listrik, begitu juga sebaliknya. Sensor ini bekerja berdasarkan perhitungan dari pantulan suatu gelombang ultrasonik sehingga jarak suatu benda dapat diketahui. Nilai gelombang ultrasonik mencapai 20.000 Hz yang tidak bisa didengar oleh telinga manusia karena sangat tinggi dan hanya bisa didengar oleh hewan-hewan tertentu seperti anjing, kucing, atau kelelawar.</p>
+<p>Pada sensor ultrasonik tersusun atas rangkaian transmitter sebagai pemancar gelombang ultrasonik  dan rangkaian receiver sebagai penerima gelombang ultrasonik. Transmitter sensor akan memancarkan sinyal ultrasonik dan saat sinyal ultrasonik mengenai sebuah penghalang, maka sinyal ultrasonik akan dipantulkan. Sinyal ultrasonik yang dipantulkan akan diterima oleh receiver sensor. Mikrokontroller digunakan untuk mengolah dan menghitung sinyal yang diterima oleh rangkaian receiver sensor sehingga jarak sensor terhadap benda di depannya atau bidang pantul dapat diketahui. Agar lebih jelas perhatikan ilustrasi dibawah ini.</p>
+<p><img src="images/01.png" alt=""></p>
+<p>Sinyal ultrasonik yang dipancarkan tersebut akan merambat sebagai sinyal atau gelombang bunyi dengan kecepatan bunyi yang berkisar 340 m/s. Dengan demikian, untuk menentukan jarak benda dengan pantulan dapat ditentukan dengan menggunakan rumus:</p>
+<p><code>S = 340.t/2</code></p>
+<p>dimana,<br><code>S</code> adalah jarak antara sensor ultrasonik dengan bidang pantul</p>
+<p><code>t</code> adalah selisih waktu antara pemancaran gelombang ultrasonik sampai diterima kembali oleh bagian penerima/receiver sensor ultrasonic</p>
+<p>Penggunaan Sensor Ultrasonik meliputi berbagai bidang, seperti :</p>
+<p>Dunia Kesehatan:</p>
+<ul>
+<li>Mendeteksi organ-organ dan penyakit dalam tubuh manusia dengan USG</li>
+</ul>
+<p>Dunia Industri:</p>
+<ul>
+<li>Mendeteksi suatu objek dalam proses produksi barang</li>
+<li>Mendeteksi keberadaan mineral dan bahan-bahan tambang.</li>
+</ul>
+<p>Dunia Robotika:</p>
+<ul>
+<li>Sebagai pengganti indra pada robot untuk mengetahui jarak.</li>
+</ul>
+<p>Dunia Maritim:</p>
+<ul>
+<li>Sebagai Radar</li>
+</ul>
+<p><img src="images/02.png" alt="Sensor Ultrasonic HC-SR04"></p>
+<p>Sensor Ultrasonic HC-SR04</p>
+<h2 id="praktikum-1---membaca-data-intensitas-cahaya">Praktikum 1 - Membaca data intensitas cahaya</h2>
+<p>Pada praktikum pertama, anda akan melakukan percobaan untuk menangkap data intensitas cahaya.</p>
+<p>Berikut ini adalah rangkaian yang dapat digunakan
+<img src="images/esp8266-ldr.png" alt=""></p>
+<p>Contoh source code untuk membaca data intensitas cahaya.</p>
+<ol>
+<li>Buatlah projek pada PlatformIO, namanya sesuai dengan keinginan Anda.</li>
+<li><p>Deklarasikan variabel untuk menampung nilai sensor dan untuk variabel sensor seperti di bawah ini</p>
+<pre><code class="lang-c++"> <span class="hljs-meta">#<span class="hljs-meta-keyword">define</span> sensorLDR A0</span>
+ <span class="hljs-keyword">int</span> nilaiSensor;
+</code></pre>
+</li>
+<li>Tambahkan beberapa kode untuk melakukan konfigurasi serial monitor pada <code>fungsi setup()</code>.<pre><code class="lang-c++"> Serial.begin(<span class="hljs-number">115200</span>);
+ Serial.println(<span class="hljs-string">&quot;Contoh Penggunaan Sensor LDR&quot;</span>);
+ delay(<span class="hljs-number">3000</span>);
+</code></pre>
+</li>
+<li>Dan yang terakhir, membuat kode untuk membaca nilai dari sensor dan menampilkannya seperti berikut ini pada <code>fungsi loop()</code>.<pre><code class="lang-c++"> nilaiSensor = analogRead(sensorLDR);
+ Serial.print(&#x201C;Nilai Sensor : &#x201C;);
+ Serial.println(nilaiSensor);
+ delay(<span class="hljs-number">1000</span>);
+</code></pre>
+</li>
+</ol>
+<p>Setelah source code diupload, buka serial monitor pada PlatformIO untuk melihat hasil pembacaan data intensitas cahaya di sekitar sensor.</p>
+<blockquote>
+<p>Normalnya ketika program Anda dijalankan maka akan menampilkan nilai 0-1024, semakin rendah nilai dari pembacaan sensor berarti semakin gelap terang yang terdapat di sekitar Anda dan sebaliknya. Ketika hasil pembacaan sensor nilainya tidak seperti yang disebutkan, silakan kalibrasi sensor tersebut dengan cara memutar baut kecil yang terdapat di sensor menggunakan obeng kecil sambil mengamati keluaran yang ada di serial monitor.</p>
+</blockquote>
+<h2 id="praktikum-2---membaca-data-jarak-benda">Praktikum 2 - Membaca data jarak benda</h2>
+<p>Pada project awal ini akan dilakukan percobaan untuk bagaimana menerapakan atau mengimplementasikan pembacaan sensor 
+ultrasonic untuk kemudian ditampilkan pada serial monitor yang ada pada Platformio.</p>
+<p><strong>Rangkaian</strong></p>
+<p><img src="images/06.png" alt="Rangkaian"></p>
+<p>Sensor Ultrasonik HC-SR04</p>
+<ul>
+<li><code>Pin Trigger</code> dihubungkan ke pin <code>D3</code> NodeMCU</li>
+<li><code>Pin Echo</code> dihubungkan ke pin <code>D4</code> NodeMCU</li>
+<li><code>VCC</code> dihubungkan ke <code>VU</code> NodeMCU</li>
+<li><code>GND</code> dihubungkan ke <code>GND</code> NodeMCU</li>
+</ul>
+<p><strong>Syntax Program</strong></p>
+<p>Setelah rangkaian elektrik telah selesai anda rangkai, selanjutnya hal yang perlu anda lakukan adalah menulis syntax program 
+sesuai dengan nomor pin dari rangkaian elektrik tersebut. Berikut ini langkah-langkah dalam menulis serta uploading pada nodeMCU:</p>
+<pre><code class="lang-cpp"><span class="hljs-meta">#<span class="hljs-meta-keyword">define</span> triggerPin D3</span>
+<span class="hljs-meta">#<span class="hljs-meta-keyword">define</span> echoPin D4</span>
+
+<span class="hljs-function"><span class="hljs-keyword">void</span> <span class="hljs-title">setup</span><span class="hljs-params">()</span> </span>{
+   Serial.begin (<span class="hljs-number">9600</span>);
+   pinMode(triggerPin, OUTPUT);
+   pinMode(echoPin, INPUT);
+   pinMode(BUILTIN_LED, OUTPUT);
+}
+
+<span class="hljs-function"><span class="hljs-keyword">void</span> <span class="hljs-title">loop</span><span class="hljs-params">()</span> </span>{
+   <span class="hljs-keyword">long</span> duration, jarak;
+   digitalWrite(triggerPin, LOW);
+   delayMicroseconds(<span class="hljs-number">2</span>);
+   digitalWrite(triggerPin, HIGH);
+   delayMicroseconds(<span class="hljs-number">10</span>);
+   digitalWrite(triggerPin, LOW);
+   duration = pulseIn(echoPin, HIGH);
+   jarak = (duration/<span class="hljs-number">2</span>) / <span class="hljs-number">29.1</span>;
+   Serial.print(jarak);
+   Serial.println(<span class="hljs-string">&quot; cm&quot;</span>);
+   delay(<span class="hljs-number">1000</span>);
+}
+</code></pre>
+<h2 id="video-pendukung">Video Pendukung</h2>
+<p>
+<iframe width="640" height="320" src="https://www.youtube.com/embed/84RNgzA-ESo" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+</p>
+
+<h2 id="tugas">Tugas</h2>
+<ol>
+<li>Buatlah sebuah rangkaian untuk LED, sensor cahaya dan sensor suhu menggunakan fritzing, kemudian buatlah program dengan skenario sebagai berikut<ul>
+<li>Ketika cahaya redup dan suhu kategori dingin maka LED warna biru akan berkedip-kedip.</li>
+<li>Ketika cahaya terang dan suhu tergolong tinggi, LED merah akan menyala.<blockquote>
+<p>Ketika tidak memiliki LED RGB, silakan memanfaatkan LED build in adalah LED bawaan esp8266, biasanya berwarna biru atau merah</p>
+</blockquote>
+</li>
+</ul>
+</li>
+<li><ul>
+<li>Buatlah rangkaian dan kode programnya dimana:</li>
+<li>Terdapat tambahan 1 LED RGB,</li>
+<li>LED Blue menyala jika jarak yang terbaca 1 cm</li>
+<li>LED Green menyala jika jarak yang terbaca 2 cm</li>
+<li>LED Red menyala jika jarak yang terbaca  3 cm</li>
+<li>LED menyala semua dan berkedip kedip selama 1 detik jika jarak melebihi dari 3 cm</li>
+</ul>
+</li>
+<li>Upload hasilnya berupa file video menggunakan youtube atau google drive dan sisipkan linknya pada laporan Anda.</li>
+</ol>
+
+                                
+                                </section>
+                            
+    </div>
+    <div class="search-results">
+        <div class="has-results">
+            
+            <h1 class="search-results-title"><span class='search-results-count'></span> hasil yang cocok "<span class='search-query'></span>"</h1>
+            <ul class="search-results-list"></ul>
+            
+        </div>
+        <div class="no-results">
+            
+            <h1 class="search-results-title">Tidak ada hasil yang cocok "<span class='search-query'></span>"</h1>
+            
+        </div>
+    </div>
+</div>
+
+                        </div>
+                    </div>
+                
+            </div>
+
+            
+                
+                <a href="../03/03-dht11.html" class="navigation navigation-prev navigation-unique" aria-label="Previous page: 05. DHT11">
+                    <i class="fa fa-angle-left"></i>
+                </a>
+                
+                
+            
+        
+    </div>
+
+    <script>
+        var gitbook = gitbook || [];
+        gitbook.push(function() {
+            gitbook.page.hasChanged({"page":{"title":"06. LDR dan HC-SR04","level":"1.8","depth":1,"previous":{"title":"05. DHT11","level":"1.7","depth":1,"path":"03/03-dht11.md","ref":"03/03-dht11.md","articles":[]},"dir":"ltr"},"config":{"plugins":[],"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"pluginsConfig":{"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"theme":"default","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"language":"id","gitbook":"*"},"file":{"path":"04/04-sensor-cahaya.md","mtime":"2022-03-29T16:12:39.217Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2022-03-29T16:13:31.950Z"},"basePath":"..","book":{"language":""}});
+        });
+    </script>
+</div>
+
+        
+    <script src="../gitbook/gitbook.js"></script>
+    <script src="../gitbook/theme.js"></script>
+    
+        
+        <script src="../gitbook/gitbook-plugin-search/search-engine.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-search/search.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-lunr/lunr.min.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-lunr/search-lunr.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-sharing/buttons.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-fontsettings/fontsettings.js"></script>
+        
+    
+
+    </body>
+</html>
+
