@@ -117,7 +117,7 @@ ultrasonic untuk kemudian ditampilkan pada serial monitor yang ada pada Platform
 Sensor Ultrasonik HC-SR04
 - `Pin Trigger` dihubungkan ke pin `D3` NodeMCU
 - `Pin Echo` dihubungkan ke pin `D4` NodeMCU
-- `VCC` dihubungkan ke `VU` NodeMCU
+- `VCC` dihubungkan ke `Vin` NodeMCU
 - `GND` dihubungkan ke `GND` NodeMCU
 
 **Syntax Program**
@@ -125,11 +125,11 @@ Sensor Ultrasonik HC-SR04
 Setelah rangkaian elektrik telah selesai anda rangkai, selanjutnya hal yang perlu anda lakukan adalah menulis syntax program 
 sesuai dengan nomor pin dari rangkaian elektrik tersebut. Berikut ini langkah-langkah dalam menulis serta uploading pada nodeMCU:
 ```cpp
-#define triggerPin D3
-#define echoPin D4
+#define triggerPin D1
+#define echoPin D2
 
 void setup() {
-   Serial.begin (9600);
+   Serial.begin (115200);
    pinMode(triggerPin, OUTPUT);
    pinMode(echoPin, INPUT);
    pinMode(BUILTIN_LED, OUTPUT);
@@ -143,10 +143,10 @@ void loop() {
    delayMicroseconds(10);
    digitalWrite(triggerPin, LOW);
    duration = pulseIn(echoPin, HIGH);
-   jarak = (duration/2) / 29.1;
+   jarak = duration * 0.034 / 2;
    Serial.print(jarak);
    Serial.println(" cm");
-   delay(1000);
+   delay(2000);
 }
 ```    
 
