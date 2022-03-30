@@ -346,17 +346,17 @@ ultrasonic untuk kemudian ditampilkan pada serial monitor yang ada pada Platform
 <ul>
 <li><code>Pin Trigger</code> dihubungkan ke pin <code>D3</code> NodeMCU</li>
 <li><code>Pin Echo</code> dihubungkan ke pin <code>D4</code> NodeMCU</li>
-<li><code>VCC</code> dihubungkan ke <code>VU</code> NodeMCU</li>
+<li><code>VCC</code> dihubungkan ke <code>Vin</code> NodeMCU</li>
 <li><code>GND</code> dihubungkan ke <code>GND</code> NodeMCU</li>
 </ul>
 <p><strong>Syntax Program</strong></p>
 <p>Setelah rangkaian elektrik telah selesai anda rangkai, selanjutnya hal yang perlu anda lakukan adalah menulis syntax program 
 sesuai dengan nomor pin dari rangkaian elektrik tersebut. Berikut ini langkah-langkah dalam menulis serta uploading pada nodeMCU:</p>
-<pre><code class="lang-cpp"><span class="hljs-meta">#<span class="hljs-meta-keyword">define</span> triggerPin D3</span>
-<span class="hljs-meta">#<span class="hljs-meta-keyword">define</span> echoPin D4</span>
+<pre><code class="lang-cpp"><span class="hljs-meta">#<span class="hljs-meta-keyword">define</span> triggerPin D1</span>
+<span class="hljs-meta">#<span class="hljs-meta-keyword">define</span> echoPin D2</span>
 
 <span class="hljs-function"><span class="hljs-keyword">void</span> <span class="hljs-title">setup</span><span class="hljs-params">()</span> </span>{
-   Serial.begin (<span class="hljs-number">9600</span>);
+   Serial.begin (<span class="hljs-number">115200</span>);
    pinMode(triggerPin, OUTPUT);
    pinMode(echoPin, INPUT);
    pinMode(BUILTIN_LED, OUTPUT);
@@ -370,10 +370,10 @@ sesuai dengan nomor pin dari rangkaian elektrik tersebut. Berikut ini langkah-la
    delayMicroseconds(<span class="hljs-number">10</span>);
    digitalWrite(triggerPin, LOW);
    duration = pulseIn(echoPin, HIGH);
-   jarak = (duration/<span class="hljs-number">2</span>) / <span class="hljs-number">29.1</span>;
+   jarak = duration * <span class="hljs-number">0.034</span> / <span class="hljs-number">2</span>;
    Serial.print(jarak);
    Serial.println(<span class="hljs-string">&quot; cm&quot;</span>);
-   delay(<span class="hljs-number">1000</span>);
+   delay(<span class="hljs-number">2000</span>);
 }
 </code></pre>
 <h2 id="video-pendukung">Video Pendukung</h2>
@@ -441,7 +441,7 @@ sesuai dengan nomor pin dari rangkaian elektrik tersebut. Berikut ini langkah-la
     <script>
         var gitbook = gitbook || [];
         gitbook.push(function() {
-            gitbook.page.hasChanged({"page":{"title":"06. LDR dan HC-SR04","level":"1.8","depth":1,"previous":{"title":"05. DHT11","level":"1.7","depth":1,"path":"03/03-dht11.md","ref":"03/03-dht11.md","articles":[]},"dir":"ltr"},"config":{"plugins":[],"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"pluginsConfig":{"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"theme":"default","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"language":"id","gitbook":"*"},"file":{"path":"04/04-sensor-cahaya.md","mtime":"2022-03-29T16:18:42.391Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2022-03-29T16:19:41.088Z"},"basePath":"..","book":{"language":""}});
+            gitbook.page.hasChanged({"page":{"title":"06. LDR dan HC-SR04","level":"1.8","depth":1,"previous":{"title":"05. DHT11","level":"1.7","depth":1,"path":"03/03-dht11.md","ref":"03/03-dht11.md","articles":[]},"dir":"ltr"},"config":{"plugins":[],"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"pluginsConfig":{"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"theme":"default","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"language":"id","gitbook":"*"},"file":{"path":"04/04-sensor-cahaya.md","mtime":"2022-03-30T22:57:36.595Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2022-03-30T22:58:43.766Z"},"basePath":"..","book":{"language":""}});
         });
     </script>
 </div>
