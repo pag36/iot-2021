@@ -38,8 +38,13 @@ Adapun langkah-langkahnya adalah sebagai berikut;
 5. Tambahkan potongan kode pada fungsi `setup()` seperti berikut ini
 
     ```c++
-    Serial.begin(115200);
+    #include <Wire.h>
+    void setup()
+    {
+    Wire.begin();
+    Serial.begin(9600);
     Serial.println("\nI2C Scanner");
+    }
     ```
 6. Pada fungsi `loop()` tambahkan juga kode seperti berikut
     ```c++
@@ -97,7 +102,7 @@ Pada praktikum ini kita akan mencoba menggunakan LCD untuk menampilkan sebuah te
     ```c++
       lcd.init(); // initialize the lcd
       lcd.backlight();
-
+      lcd.clear();
       lcd.home();
     ```
 5. Buatlah sebuah fungsi `scroolText(...)`, fungsi ini digunakan untuk melakukan scrolling text yang terdapat pada LCD agar lebih menarik.
