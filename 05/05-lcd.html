@@ -302,8 +302,13 @@
 <li>Untuk lokasi penyimpanan project disesuaikan dengan kebutuhan Anda.</li>
 <li>Tunggu beberapa saat sampai dibuat struktur project oleh Visual Studio Code. Kemudian tambahkankan beberapa konfigurasi pada file <code>platform.ini</code>. Tambahkan kode <code>monitor_speed = 115200</code> untuk mengkonfigurasi serial console terkait baudrate.</li>
 <li><p>Tambahkan potongan kode pada fungsi <code>setup()</code> seperti berikut ini</p>
-<pre><code class="lang-c++"> Serial.begin(<span class="hljs-number">115200</span>);
+<pre><code class="lang-c++"> <span class="hljs-meta">#<span class="hljs-meta-keyword">include</span> <span class="hljs-meta-string">&lt;Wire.h&gt;</span></span>
+ <span class="hljs-function"><span class="hljs-keyword">void</span> <span class="hljs-title">setup</span><span class="hljs-params">()</span>
+ </span>{
+ Wire.begin();
+ Serial.begin(<span class="hljs-number">9600</span>);
  Serial.println(<span class="hljs-string">&quot;\nI2C Scanner&quot;</span>);
+ }
 </code></pre>
 </li>
 <li>Pada fungsi <code>loop()</code> tambahkan juga kode seperti berikut<pre><code class="lang-c++">   byte error, address;
@@ -356,10 +361,9 @@ Upload kode di atas, kemudian amati hasilnya pada serial monitor.</li>
  <span class="hljs-function">LiquidCrystal_I2C <span class="hljs-title">lcd</span><span class="hljs-params">(<span class="hljs-number">0x27</span>, <span class="hljs-number">16</span>, <span class="hljs-number">2</span>)</span></span>;
 </code></pre>
 </li>
-<li><p>Tambahkan kode pada fungsi <code>setup()</code> untuk memanggil berapa fungsi sebagai berikut</p>
-<pre><code class="lang-c++">   lcd.init(); <span class="hljs-comment">// initialize the lcd</span>
+<li>Tambahkan kode pada fungsi <code>setup()</code> untuk memanggil berapa fungsi sebagai berikut<pre><code class="lang-c++">   lcd.init(); <span class="hljs-comment">// initialize the lcd</span>
    lcd.backlight();
-
+   lcd.clear();
    lcd.home();
 </code></pre>
 </li>
@@ -451,7 +455,7 @@ Upload kode di atas, kemudian amati hasilnya pada serial monitor.</li>
     <script>
         var gitbook = gitbook || [];
         gitbook.push(function() {
-            gitbook.page.hasChanged({"page":{"title":"07. LCD","level":"1.9","depth":1,"previous":{"title":"06. LDR dan HC-SR04","level":"1.8","depth":1,"path":"04/04-sensor-cahaya.md","ref":"04/04-sensor-cahaya.md","articles":[]},"dir":"ltr"},"config":{"plugins":[],"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"pluginsConfig":{"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"theme":"default","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"language":"id","gitbook":"*"},"file":{"path":"05/05-lcd.md","mtime":"2022-04-12T02:09:49.537Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2022-04-12T02:10:55.905Z"},"basePath":"..","book":{"language":""}});
+            gitbook.page.hasChanged({"page":{"title":"07. LCD","level":"1.9","depth":1,"previous":{"title":"06. LDR dan HC-SR04","level":"1.8","depth":1,"path":"04/04-sensor-cahaya.md","ref":"04/04-sensor-cahaya.md","articles":[]},"dir":"ltr"},"config":{"plugins":[],"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"pluginsConfig":{"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"theme":"default","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"language":"id","gitbook":"*"},"file":{"path":"05/05-lcd.md","mtime":"2022-04-12T04:11:19.201Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2022-04-12T04:12:41.186Z"},"basePath":"..","book":{"language":""}});
         });
     </script>
 </div>
