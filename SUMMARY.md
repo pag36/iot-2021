@@ -9,10 +9,7 @@
 - [05. DHT11](03/03-dht11.md)
 - [06. LDR dan HC-SR04](04/04-sensor-cahaya.md)
 - [07. LCD](05/05-lcd.md)
-
-[comment]: <> (- [08. UTS]&#40;06/06-uts.md&#41;)
-
-[comment]: <> (- [09. Socket Client]&#40;07/07-socket-client.md&#41;)
+- [08. Socket Server Client](07/07-socket-client.md)
 
 [comment]: <> (- [10. Socket Server]&#40;08/08-socket-server.md&#41;)
 

@@ -126,7 +126,10 @@ menghidupkan LED bawaan esp8266.
 ## Tugas
 
 Terdapat sebuah dusun di desa tertentu yang sudah menerapkan IoT, contoh penerapan tersebut di gang-gang ketika sudah
-beranjak malam lampu yang terdapat pada gang tersebut akan menyala. Pada dusun tersebut juga terdapat kebun rumah kaca, dimana suhu dan kelembaban sangat diperhatikan untuk menjaga produktivitas sayur-sayur di dalam kebun. Semua sensor yang terdapat pada dusun tersebut juga dapat dipantau dan semua lampu yang terdapat pada gang-gang dapat dinyalakan melalui server, ketika posisi malam maka akan mengirimkan data ke server dan server memerintahkan lampu untuk menyala. Lampu yang digunakan bisa menggunakan LED.
+beranjak malam lampu yang terdapat pada gang tersebut akan menyala. Pada dusun tersebut juga terdapat kebun rumah kaca, 
+dimana suhu dan kelembaban sangat diperhatikan untuk menjaga produktivitas sayur-sayur di dalam kebun. 
+Semua sensor yang terdapat pada dusun tersebut juga dapat dipantau dan semua lampu yang terdapat pada gang-gang dapat dinyalakan melalui server, 
+ketika posisi malam maka akan mengirimkan data ke server dan server memerintahkan lampu untuk menyala. Lampu yang digunakan bisa menggunakan LED.
 
 Dari kasus di atas, buat program untuk kebutuhan tersebut baik dari sisi controller (ESP8266) dan dari sisi server. Seperti
 biasa untuk output dokumentasikan berupa link video google drive ataupun youtube, selanjutnya sisipkan link tersebut pada
