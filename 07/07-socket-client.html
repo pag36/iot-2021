@@ -1,0 +1,662 @@
+
+<!DOCTYPE HTML>
+<html lang="id" >
+    <head>
+        <meta charset="UTF-8">
+        <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+        <title>08. Socket Server Client · GitBook</title>
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="description" content="">
+        <meta name="generator" content="GitBook 3.2.3">
+        
+        
+        
+    
+    <link rel="stylesheet" href="../gitbook/style.css">
+
+    
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-highlight/website.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-search/search.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-fontsettings/website.css">
+                
+            
+        
+
+    
+
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+
+        
+    
+    
+    <meta name="HandheldFriendly" content="true"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <link rel="apple-touch-icon-precomposed" sizes="152x152" href="../gitbook/images/apple-touch-icon-precomposed-152.png">
+    <link rel="shortcut icon" href="../gitbook/images/favicon.ico" type="image/x-icon">
+
+    
+    
+    <link rel="prev" href="../05/05-lcd.html" />
+    
+
+    </head>
+    <body>
+        
+<div class="book">
+    <div class="book-summary">
+        
+            
+<div id="book-search-input" role="search">
+    <input type="text" placeholder="Ketik untuk mencari" />
+</div>
+
+            
+                <nav role="navigation">
+                
+
+
+<ul class="summary">
+    
+    
+
+    
+
+    
+        
+        
+    
+        <li class="chapter " data-level="1.1" data-path="../">
+            
+                <a href="../">
+            
+                    
+                    Pendahuluan
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2" data-path="../00/kontrak.html">
+            
+                <a href="../00/kontrak.html">
+            
+                    
+                    Kontrak Kuliah
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3" data-path="../0a/0a.pertemuan1.html">
+            
+                <a href="../0a/0a.pertemuan1.html">
+            
+                    
+                    01. Memahami Konsep dan arsitektur IoT
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4" data-path="../0b/0b.pertemuan2.html">
+            
+                <a href="../0b/0b.pertemuan2.html">
+            
+                    
+                    02. Microcontroller
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5" data-path="../01/01.installasi-dan-konfigurasi.html">
+            
+                <a href="../01/01.installasi-dan-konfigurasi.html">
+            
+                    
+                    03. Instalasi dan Konfigurasi
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6" data-path="../02/02-led.html">
+            
+                <a href="../02/02-led.html">
+            
+                    
+                    04. LED
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.7" data-path="../03/03-dht11.html">
+            
+                <a href="../03/03-dht11.html">
+            
+                    
+                    05. DHT11
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.8" data-path="../04/04-sensor-cahaya.html">
+            
+                <a href="../04/04-sensor-cahaya.html">
+            
+                    
+                    06. LDR dan HC-SR04
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.9" data-path="../05/05-lcd.html">
+            
+                <a href="../05/05-lcd.html">
+            
+                    
+                    07. LCD
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter active" data-level="1.10" data-path="07-socket-client.html">
+            
+                <a href="07-socket-client.html">
+            
+                    
+                    08. Socket Server Client
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+    
+
+    <li class="divider"></li>
+
+    <li>
+        <a href="https://www.gitbook.com" target="blank" class="gitbook-link">
+            Dipublikasikan dengan GitBook
+        </a>
+    </li>
+</ul>
+
+
+                </nav>
+            
+        
+    </div>
+
+    <div class="book-body">
+        
+            <div class="body-inner">
+                
+                    
+
+<div class="book-header" role="navigation">
+    
+
+    <!-- Title -->
+    <h1>
+        <i class="fa fa-circle-o-notch fa-spin"></i>
+        <a href=".." >08. Socket Server Client</a>
+    </h1>
+</div>
+
+
+
+
+                    <div class="page-wrapper" tabindex="-1" role="main">
+                        <div class="page-inner">
+                            
+<div id="book-search-results">
+    <div class="search-noresults">
+    
+                                <section class="normal markdown-section">
+                                
+                                <h1 id="socket-server-dan-client">Socket Server dan Client</h1>
+<h2 id="topik-bahasan">Topik Bahasan</h2>
+<p>Socket Server dan Client</p>
+<h2 id="kemampuan-akhir-yang-direncanakan">Kemampuan Akhir yang Direncanakan</h2>
+<ul>
+<li>Mahasiswa mampu untuk menjelaskan konsep TCP/IP</li>
+<li>Mahasiswa mampu untuk menjelaskan konsep protokol Socket TCP/IP agar MCU dapat berkomunikasi dengan perangkat lainnya</li>
+<li>Mahasiswa dapat membuat program socket client di sisi MCU yang bertugas mengirim data sensor ke Socket Server secara real-time</li>
+<li>Mahasiswa mampu menjelaskan cara kerja socket server yang bertugas sebagai &#x201C;listening&#x201D; dari semua socket client yang terkoneksi</li>
+<li>Mahasiswa mampu menjelaskan konsep socket Asynchronous dengan pada komunikasi</li>
+<li>Mahasiswa dapat membuat program Socket Server dengan GUI C#, Java, Phyton, dan lain-lain untuk menerima data sensor MCU, kemudian menampilkannya secara real-time di sisi socket server</li>
+</ul>
+<h2 id="teori-singkat">Teori Singkat</h2>
+<p>Program socket biasanya digunakan untuk komunikasi antara berbagai proses yang berjalan pada sistem yang berbeda, program
+tersebut kebanyakan dibuat untuk lingkungan program client dan server.</p>
+<p>Ada 2 jenis protokol yang dapat digunakan untuk melakukan komunikasi menggunakan socket:</p>
+<ol>
+<li><p>TCP/IP Socket</p>
+<p>Konsep yang digunakan pada protokol ini adalah <em>connection oriented</em> dan <em>reliable data transfer</em>, ketika program
+yang kita buat menggunakan protokol ini tidak mementingkan kecepatan tetapi lebih mementingkan ketepatan data yang dikirimkan.</p>
+<p><em>Connection oriented</em> sendiri adalah sebuah konsep dimana socket yang terhubung harus memiliki tanggung jawab untuk
+memberikan notifikasi ketika sedang melakukan pengiriman data, atau sering disebut juga dengan istilah <em>synchronous</em>.</p>
+</li>
+<li><p>UDP Socket</p>
+<p>Berbeda dengan komunikasi protokol TCP/IP, UDP Socket menggunakan konsep <em>connectionless oriented</em> dan <em>unreliable
+data transfer</em>. Akan cocok sekali ketika kita akan membangun sebuah aplikasi yang lebih mementingkan dengan kecepatan
+data dengan mengesampingkan ketepatan datanya. UDP Socket menggunakan istilah <em>asynchronous</em>, yang artinya tidak
+memperdulikan response dari penerima.</p>
+</li>
+</ol>
+<p>Pada kesempatan ini yang akan digunakan adalah protokol TCP/IP, untuk alur dari protokol TCP/IP dapat dilihat pada
+gambar di bawah ini</p>
+<p><img src="images/socket-programming.png" alt=""></p>
+<p align="center">https://www.javatpoint.com/socket-programming</p>
+
+<p>Dari gambar di atas terlihat bahwa ketika sebuah server harus melakukan listening yang artinya siap menerima koneksi dari
+sebuah socket client. Setelah socket server menerima koneksi dari socket client, socket server akan menerima dan selanjutnya
+bisa dilanjutkan untuk berkomunikasi dengan socket client atau memutuskan komunikasi dengan socket client tersebut.</p>
+<p>Buatlah sebuah kode berikut ini, kode tersebut ditulis menggunakan Python.</p>
+<h2 id="praktikum-1">Praktikum 1</h2>
+<pre><code class="lang-python"><span class="hljs-keyword">import</span> socket
+<span class="hljs-keyword">from</span> threading <span class="hljs-keyword">import</span> Thread
+
+
+<span class="hljs-comment"># Multithreaded Python server</span>
+<span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">ClientThread</span><span class="hljs-params">(Thread)</span>:</span>
+
+    <span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">__init__</span><span class="hljs-params">(self, ip, port)</span>:</span>
+        Thread.__init__(self)
+        self.ip = ip
+        self.port = port
+        print(<span class="hljs-string">&quot;Incoming connection from &quot;</span> + ip + <span class="hljs-string">&quot;:&quot;</span> + str(port))
+
+    <span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">run</span><span class="hljs-params">(self)</span>:</span>
+        <span class="hljs-keyword">while</span> <span class="hljs-keyword">True</span>:
+            <span class="hljs-keyword">try</span>:
+                data = conn.recv(<span class="hljs-number">2048</span>)
+                <span class="hljs-keyword">if</span> len(data) == <span class="hljs-number">0</span>:
+                    <span class="hljs-keyword">break</span>
+
+                print(<span class="hljs-string">&quot;length: &quot;</span> + str(len(data)))
+                print(<span class="hljs-string">&quot;Server received data:&quot;</span>, data)
+                <span class="hljs-comment"># MESSAGE = input(&quot;Input response:&quot;)</span>
+                MESSAGE = <span class="hljs-string">&quot;OK&quot;</span>
+                conn.send(MESSAGE.encode(<span class="hljs-string">&quot;utf8&quot;</span>))  <span class="hljs-comment"># echo</span>
+            <span class="hljs-keyword">except</span> Exception <span class="hljs-keyword">as</span> e:
+                print(e)
+                <span class="hljs-keyword">break</span>
+
+
+TCP_IP = <span class="hljs-string">&quot;0.0.0.0&quot;</span>
+TCP_PORT = <span class="hljs-number">2004</span>
+BUFFER_SIZE = <span class="hljs-number">20</span>
+
+tcpServer = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
+tcpServer.setsockopt(socket.SOL_SOCKET, socket.SO_REUSEADDR, <span class="hljs-number">1</span>)
+tcpServer.bind((TCP_IP, TCP_PORT))
+threads = []
+
+<span class="hljs-keyword">while</span> <span class="hljs-keyword">True</span>:
+    tcpServer.listen(<span class="hljs-number">4</span>)
+    print(<span class="hljs-string">&quot;Server started on &quot;</span> + TCP_IP + <span class="hljs-string">&quot; port &quot;</span> + str(TCP_PORT))
+    (conn, (ip, port)) = tcpServer.accept()
+    newthread = ClientThread(ip, port)
+    newthread.start()
+    threads.append(newthread)
+
+<span class="hljs-keyword">for</span> t <span class="hljs-keyword">in</span> threads:
+    t.join()
+</code></pre>
+<blockquote>
+<p>Jika sudah memiliki dan membuat instance EC2 di AWS, silakan upload kode file tersebut di atas agar kita coba langsung jalankan di cloud. Tetapi misalkan memang belum memiliki, silaan dicoba pada lokal komputer Anda. Sebaiknya memang dicoba terlebih dahulu di lokal komputer sebelum upload di cloud.</p>
+<p>Sebelum menjalankan dicek terlebih dahulu file tersebut, apakah sudah executable atau belum. Atau coba langsung dijalankan, tetapi kalau misalkan tidak bisa dijalankan kemungkinan file tersebut belum executable sehingga perlu dilakukan mode executable. Coba cek menggunakan perintah <code>ls -lh</code>, sehingga outputnya kurang lebih seperti di bawah ini</p>
+</blockquote>
+<pre><code>-rwxr-xr-x@  1 od3ng  staff   1.2K Apr  6 11:10 server.py
+drwxr-xr-x  10 od3ng  staff   340B Apr  5 14:56 vs-client
+</code></pre><p>Jika dilihat output dari file <code>server.py</code> tersebut sudah mode executable, dibuktikan untuk modenya <code>-rwxr-xr-x</code> yang artinya semua level user bisa menggunakan. Jika masih tidak bisa menjalankan, silakan ketika perintah <code>chmod +x server.py</code> yang dimana file <code>server.py</code> adalah program Anda.</p>
+<blockquote>
+<p>Catatan: Biasanya mode di atas, digunakan untuk sistem operasi jenis UNIX seperti Linux ataupun Mac OS</p>
+</blockquote>
+<p>Setelah program tersebut dijalankan, socket server siap menerima komunikasi dari socket client. Untuk mencobanya bisa menggunakan perintah telnet, caranya adalah sebagai berikut</p>
+<pre><code>telnet [host] [port]
+</code></pre><p>Setelah berhasil masuk silakan ketikan sesuatu dan tekan enter.</p>
+<h3 id="verifikasi-hasil-percobaan">Verifikasi Hasil Percobaan</h3>
+<p>Output yang dihasilkan dari sisi server dapat dilihat seperti di bawah ini.</p>
+<pre><code>Server started on 0.0.0.0 port 1884
+length: 16
+Server received data: b&apos;Hai from ESP8266&apos;
+Incoming connection from 114.5.110.7:42950
+Server started on 0.0.0.0 port 1884
+length: 16
+Server received data: b&apos;Hai from ESP8266&apos;
+Incoming connection from 114.5.110.7:42951
+Server started on 0.0.0.0 port 1884
+length: 16
+Server received data: b&apos;Hai from ESP8266&apos;
+Incoming connection from 114.5.110.7:42955
+</code></pre><blockquote>
+<p>Silakan disesuaikan kode di atas untuk host dan port yang digunakan, ganti kode <code>TCP_IP = &quot;0.0.0.0&quot;</code> dan <code>TCP_PORT = 9000</code>, kedua konfigurasi tersebut disesuaikan dengan ip atau port yang dibuka pada laptop/komputer ataupun instance AWS Anda.</p>
+</blockquote>
+<p>Setelah berhasil menjalankan socket sever, selanjutnya perlu dibuat socket client yang berjalan di controller atau ESP8266 Amica atau Lolita yang Anda miliki. Buatlah kode berikut</p>
+<pre><code class="lang-cpp"><span class="hljs-meta">#<span class="hljs-meta-keyword">include</span> <span class="hljs-meta-string">&lt;Arduino.h&gt;</span></span>
+<span class="hljs-meta">#<span class="hljs-meta-keyword">include</span> <span class="hljs-meta-string">&lt;ESP8266WiFi.h&gt;</span></span>
+
+<span class="hljs-meta">#<span class="hljs-meta-keyword">define</span> LED D4</span>
+
+<span class="hljs-keyword">const</span> <span class="hljs-keyword">char</span> *ssid = <span class="hljs-string">&quot;****&quot;</span>; <span class="hljs-comment">// nama SSID untuk koneksi Anda</span>
+<span class="hljs-keyword">const</span> <span class="hljs-keyword">char</span> *password = <span class="hljs-string">&quot;****&quot;</span>; <span class="hljs-comment">// password akses point WIFI Anda</span>
+<span class="hljs-keyword">const</span> <span class="hljs-keyword">uint16_t</span> port = ****; <span class="hljs-comment">// diganti dengan port serve Anda</span>
+<span class="hljs-keyword">const</span> <span class="hljs-keyword">char</span> *host = <span class="hljs-string">&quot;****&quot;</span>;<span class="hljs-comment">//diganti dengan host server Anda, bisa ip ataupun domain</span>
+
+<span class="hljs-function"><span class="hljs-keyword">void</span> <span class="hljs-title">connect_wifi</span><span class="hljs-params">()</span>
+</span>{
+  Serial.<span class="hljs-built_in">printf</span>(<span class="hljs-string">&quot;Connecting to %s &quot;</span>, ssid);
+  WiFi.begin(ssid, password);
+  <span class="hljs-keyword">while</span> (WiFi.status() != WL_CONNECTED)
+  {
+    delay(<span class="hljs-number">500</span>);
+    Serial.print(<span class="hljs-string">&quot;.&quot;</span>);
+  }
+  Serial.println(<span class="hljs-string">&quot; connected&quot;</span>);
+}
+
+<span class="hljs-function"><span class="hljs-keyword">void</span> <span class="hljs-title">connect_server</span><span class="hljs-params">()</span>
+</span>{
+  WiFiClient client;
+
+  Serial.<span class="hljs-built_in">printf</span>(<span class="hljs-string">&quot;\n[Connecting to %s ... &quot;</span>, host);
+  <span class="hljs-keyword">if</span> (client.connect(host, port))
+  {
+    Serial.println(<span class="hljs-string">&quot;connected]&quot;</span>);
+
+    Serial.println(<span class="hljs-string">&quot;[Sending a request]&quot;</span>);
+    client.print(<span class="hljs-string">&quot;Hai from ESP8266&quot;</span>);
+
+    Serial.println(<span class="hljs-string">&quot;[Response:]&quot;</span>);
+    String line = client.readStringUntil(<span class="hljs-string">&apos;\n&apos;</span>);
+    Serial.println(line);
+    client.stop();
+    Serial.println(<span class="hljs-string">&quot;\n[Disconnected]&quot;</span>);
+  }
+  <span class="hljs-keyword">else</span>
+  {
+    Serial.println(<span class="hljs-string">&quot;connection failed!]&quot;</span>);
+    client.stop();
+  }
+  delay(<span class="hljs-number">3000</span>);
+}
+
+<span class="hljs-function"><span class="hljs-keyword">void</span> <span class="hljs-title">setup</span><span class="hljs-params">()</span>
+</span>{
+  Serial.begin(<span class="hljs-number">115200</span>);
+  connect_wifi();
+}
+
+<span class="hljs-function"><span class="hljs-keyword">void</span> <span class="hljs-title">loop</span><span class="hljs-params">()</span>
+</span>{
+  connect_server();
+}
+</code></pre>
+<p>Untuk dapat berkomunikasi dengan socket server, ESP8266 sudah terdapat modul wifi yang siap untuk digunakan. Ubahlah kode di bawah ini sesuai dengan kebutuhan Anda.</p>
+<h3 id="verifikasi-hasil-percobaan">Verifikasi Hasil Percobaan</h3>
+<p>Ketika berhasil terhubung ke server, output di console dapat dilihat pada keluaran berikut.</p>
+<pre><code>[Connecting to ec2-52-90-53-121.compute-1.amazonaws.com ... connected]
+[Sending a request]
+[Response:]
+OK
+
+[Disconnected]
+
+[Connecting to ec2-52-90-53-121.compute-1.amazonaws.com ... connected]
+[Sending a request]
+[Response:]
+OK
+
+[Disconnected]
+
+[Connecting to ec2-52-90-53-121.compute-1.amazonaws.com ... connected]
+[Sending a request]
+</code></pre><pre><code class="lang-cpp"><span class="hljs-keyword">const</span> <span class="hljs-keyword">char</span> *ssid = <span class="hljs-string">&quot;****&quot;</span>;
+<span class="hljs-keyword">const</span> <span class="hljs-keyword">char</span> *password = <span class="hljs-string">&quot;****&quot;</span>;
+<span class="hljs-keyword">const</span> <span class="hljs-keyword">uint16_t</span> port = ****;
+<span class="hljs-keyword">const</span> <span class="hljs-keyword">char</span> *host = <span class="hljs-string">&quot;****&quot;</span>;
+</code></pre>
+<p>Keterangan:</p>
+<ul>
+<li><code>ssid</code> adalah ssid yang bisa digunakan untuk berkomunikasi, bisa tethering dengan handphone.</li>
+<li><code>password</code> adalah password ssid yang digunakan.</li>
+<li><code>port</code> adalah port socket sever aplikasi yang telah kita buat sebelumnya.</li>
+<li><code>host</code> adalah host tempat socket server dijalankan, jika di local bisa menggunakan <code>localhost atau 127.0.0.1.</code></li>
+</ul>
+<p>Silakan upload program tersebut ke controller Anda dan amati outputnya pada serial monitor.</p>
+<h2 id="praktikum-2">Praktikum 2</h2>
+<p>Masih menggunakan kode socket server yang sebelumnya, ubahlah kode pada fungsi <code>run</code> menjadi seperti di bawah ini.</p>
+<pre><code class="lang-python"><span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">run</span><span class="hljs-params">(self)</span>:</span>
+        <span class="hljs-keyword">while</span> <span class="hljs-keyword">True</span>:
+            <span class="hljs-keyword">try</span>:
+                MESSAGE = input(<span class="hljs-string">&quot;Input response:&quot;</span>)
+                conn.send(MESSAGE.encode(<span class="hljs-string">&quot;utf8&quot;</span>))  <span class="hljs-comment"># echo</span>
+            <span class="hljs-keyword">except</span> Exception <span class="hljs-keyword">as</span> e:
+                print(e)
+                <span class="hljs-keyword">break</span>
+            sleep(<span class="hljs-number">0.25</span>)
+</code></pre>
+<p>Dengan mengubah program tersebut, socket server yang akan kita buat mampu menerima input dari keyboard sehingga dapat dimanfaatkan untuk memasukan perintah pada controller atau ESP8266 yang kita miliki.</p>
+<pre><code class="lang-cpp"><span class="hljs-meta">#<span class="hljs-meta-keyword">include</span> <span class="hljs-meta-string">&lt;Arduino.h&gt;</span></span>
+<span class="hljs-meta">#<span class="hljs-meta-keyword">include</span> <span class="hljs-meta-string">&lt;ESP8266WiFi.h&gt;</span></span>
+
+<span class="hljs-keyword">const</span> <span class="hljs-keyword">char</span> *ssid = <span class="hljs-string">&quot;####&quot;</span>;
+<span class="hljs-keyword">const</span> <span class="hljs-keyword">char</span> *password = <span class="hljs-string">&quot;####&quot;</span>;
+<span class="hljs-keyword">const</span> <span class="hljs-keyword">uint16_t</span> port = <span class="hljs-number">9001</span>;
+<span class="hljs-keyword">const</span> <span class="hljs-keyword">char</span> *host = <span class="hljs-string">&quot;####&quot;</span>;
+
+WiFiClient client;
+
+<span class="hljs-function"><span class="hljs-keyword">void</span> <span class="hljs-title">connect_wifi</span><span class="hljs-params">()</span>
+</span>{
+  Serial.<span class="hljs-built_in">printf</span>(<span class="hljs-string">&quot;Connecting to %s &quot;</span>, ssid);
+  WiFi.begin(ssid, password);
+  <span class="hljs-keyword">while</span> (WiFi.status() != WL_CONNECTED)
+  {
+    delay(<span class="hljs-number">500</span>);
+    Serial.print(<span class="hljs-string">&quot;.&quot;</span>);
+  }
+  Serial.println(<span class="hljs-string">&quot; connected&quot;</span>);
+  delay(<span class="hljs-number">250</span>);
+}
+
+<span class="hljs-function"><span class="hljs-keyword">void</span> <span class="hljs-title">connect_server</span><span class="hljs-params">()</span>
+</span>{
+  <span class="hljs-keyword">while</span> (!client.connect(host, port))
+  {
+    Serial.<span class="hljs-built_in">printf</span>(<span class="hljs-string">&quot;\n[Connecting to %s ... &quot;</span>, host);
+    delay(<span class="hljs-number">1000</span>);
+    <span class="hljs-keyword">return</span>;
+  }
+  Serial.println(<span class="hljs-string">&quot;connected]&quot;</span>);
+  delay(<span class="hljs-number">1000</span>);
+}
+
+<span class="hljs-function"><span class="hljs-keyword">void</span> <span class="hljs-title">setup</span><span class="hljs-params">()</span>
+</span>{
+  Serial.begin(<span class="hljs-number">115200</span>);
+  Serial.println(<span class="hljs-string">&quot;Contoh penggunaan socket client&quot;</span>);
+  connect_wifi();
+  connect_server();
+}
+
+<span class="hljs-function"><span class="hljs-keyword">void</span> <span class="hljs-title">loop</span><span class="hljs-params">()</span>
+</span>{
+  <span class="hljs-keyword">if</span> (client.connected())
+  {
+    Serial.print(<span class="hljs-string">&quot;[Response:]&quot;</span>);
+    String line = client.readStringUntil(<span class="hljs-string">&apos;\n&apos;</span>);
+    Serial.println(line);
+    <span class="hljs-keyword">if</span> (line.equalsIgnoreCase(<span class="hljs-string">&quot;led-on&quot;</span>))
+    {
+      pinMode(LED_BUILTIN, HIGH);
+      delay(<span class="hljs-number">3000</span>);
+      pinMode(LED_BUILTIN, LOW);
+    }
+  }<span class="hljs-keyword">else</span>{
+    connect_server();
+  }
+  delay(<span class="hljs-number">250</span>);
+}
+</code></pre>
+<p>Kode tersebut mirip dengan kode pada pertemuan sebelumnya, yang perlu dimodifkasi adalah bagian di bawah ini</p>
+<pre><code class="lang-cpp"><span class="hljs-keyword">if</span> (line.equalsIgnoreCase(<span class="hljs-string">&quot;led-on&quot;</span>))
+    {
+      pinMode(BUILTIN_LED, HIGH);
+      delay(<span class="hljs-number">3000</span>);
+      pinMode(BUILTIN_LED, LOW);
+    }
+</code></pre>
+<p>Fungsi kode di atas digunakan untuk membaca setiap data dari socket server, ketika data tersebut <code>led-on</code> berarti akan
+menghidupkan LED bawaan esp8266.</p>
+<blockquote>
+<p>Silakan tambahkan pengecekan ketika tidak terhubung ke server maka akan reconnect atau mencoba terhubung kembali ke server pada fungsi <code>loop()</code>.</p>
+</blockquote>
+<h2 id="video-pendukung">Video Pendukung</h2>
+<p>
+
+<iframe width="640" height="320" src="https://www.youtube.com/embed/14j9ihm_svQ" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
+</p>
+
+<p><iframe width="640" height="320" src="https://www.youtube.com/embed/Q2r7uWvuXZ4" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe></p>
+
+<p>
+<iframe width="640" height="320" src="https://www.youtube.com/embed/WBk2p4kW5LA" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+</p>
+
+<h2 id="tugas">Tugas</h2>
+<p>Terdapat sebuah dusun di desa tertentu yang sudah menerapkan IoT, contoh penerapan tersebut di gang-gang ketika sudah
+beranjak malam lampu yang terdapat pada gang tersebut akan menyala. Pada dusun tersebut juga terdapat kebun rumah kaca,
+dimana suhu dan kelembaban sangat diperhatikan untuk menjaga produktivitas sayur-sayur di dalam kebun.
+Semua sensor yang terdapat pada dusun tersebut juga dapat dipantau dan semua lampu yang terdapat pada gang-gang dapat dinyalakan melalui server,
+ketika posisi malam maka akan mengirimkan data ke server dan server memerintahkan lampu untuk menyala. Lampu yang digunakan bisa menggunakan LED.</p>
+<p>Dari kasus di atas, buat program untuk kebutuhan tersebut baik dari sisi controller (ESP8266) dan dari sisi server. Seperti
+biasa untuk output dokumentasikan berupa link video google drive ataupun youtube, selanjutnya sisipkan link tersebut pada
+laporan Anda.</p>
+
+                                
+                                </section>
+                            
+    </div>
+    <div class="search-results">
+        <div class="has-results">
+            
+            <h1 class="search-results-title"><span class='search-results-count'></span> hasil yang cocok "<span class='search-query'></span>"</h1>
+            <ul class="search-results-list"></ul>
+            
+        </div>
+        <div class="no-results">
+            
+            <h1 class="search-results-title">Tidak ada hasil yang cocok "<span class='search-query'></span>"</h1>
+            
+        </div>
+    </div>
+</div>
+
+                        </div>
+                    </div>
+                
+            </div>
+
+            
+                
+                <a href="../05/05-lcd.html" class="navigation navigation-prev navigation-unique" aria-label="Previous page: 07. LCD">
+                    <i class="fa fa-angle-left"></i>
+                </a>
+                
+                
+            
+        
+    </div>
+
+    <script>
+        var gitbook = gitbook || [];
+        gitbook.push(function() {
+            gitbook.page.hasChanged({"page":{"title":"08. Socket Server Client","level":"1.10","depth":1,"previous":{"title":"07. LCD","level":"1.9","depth":1,"path":"05/05-lcd.md","ref":"05/05-lcd.md","articles":[]},"dir":"ltr"},"config":{"plugins":[],"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"pluginsConfig":{"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"theme":"default","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"language":"id","gitbook":"*"},"file":{"path":"07/07-socket-client.md","mtime":"2022-04-17T18:49:18.347Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2022-04-17T18:50:14.084Z"},"basePath":"..","book":{"language":""}});
+        });
+    </script>
+</div>
+
+        
+    <script src="../gitbook/gitbook.js"></script>
+    <script src="../gitbook/theme.js"></script>
+    
+        
+        <script src="../gitbook/gitbook-plugin-search/search-engine.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-search/search.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-lunr/lunr.min.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-lunr/search-lunr.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-sharing/buttons.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-fontsettings/fontsettings.js"></script>
+        
+    
+
+    </body>
+</html>
+
