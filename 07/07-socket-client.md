@@ -1,14 +1,17 @@
-# Socket Client
+# Socket Server dan Client
 
 ## Topik Bahasan
 
-Socket Client
+Socket Server dan Client
 
 ## Kemampuan Akhir yang Direncanakan
 
 - Mahasiswa mampu untuk menjelaskan konsep TCP/IP
 - Mahasiswa mampu untuk menjelaskan konsep protokol Socket TCP/IP agar MCU dapat berkomunikasi dengan perangkat lainnya
 - Mahasiswa dapat membuat program socket client di sisi MCU yang bertugas mengirim data sensor ke Socket Server secara real-time
+- Mahasiswa mampu menjelaskan cara kerja socket server yang bertugas sebagai “listening” dari semua socket client yang terkoneksi
+- Mahasiswa mampu menjelaskan konsep socket Asynchronous dengan pada komunikasi
+- Mahasiswa dapat membuat program Socket Server dengan GUI C#, Java, Phyton, dan lain-lain untuk menerima data sensor MCU, kemudian menampilkannya secara real-time di sisi socket server
 
 ## Teori Singkat
 
@@ -45,7 +48,7 @@ bisa dilanjutkan untuk berkomunikasi dengan socket client atau memutuskan komuni
 
 Buatlah sebuah kode berikut ini, kode tersebut ditulis menggunakan Python.
 
-## Praktikum
+## Praktikum 1
 
 ```python
 import socket
@@ -245,16 +248,134 @@ Keterangan:
 
 Silakan upload program tersebut ke controller Anda dan amati outputnya pada serial monitor.
 
+## Praktikum 2
+
+Masih menggunakan kode socket server yang sebelumnya, ubahlah kode pada fungsi `run` menjadi seperti di bawah ini.
+
+```python
+def run(self):
+        while True:
+            try:
+                MESSAGE = input("Input response:")
+                conn.send(MESSAGE.encode("utf8"))  # echo
+            except Exception as e:
+                print(e)
+                break
+            sleep(0.25)
+```
+
+Dengan mengubah program tersebut, socket server yang akan kita buat mampu menerima input dari keyboard sehingga dapat dimanfaatkan untuk memasukan perintah pada controller atau ESP8266 yang kita miliki.
+
+```cpp
+#include <Arduino.h>
+#include <ESP8266WiFi.h>
+
+const char *ssid = "####";
+const char *password = "####";
+const uint16_t port = 9001;
+const char *host = "####";
+
+WiFiClient client;
+
+void connect_wifi()
+{
+  Serial.printf("Connecting to %s ", ssid);
+  WiFi.begin(ssid, password);
+  while (WiFi.status() != WL_CONNECTED)
+  {
+    delay(500);
+    Serial.print(".");
+  }
+  Serial.println(" connected");
+  delay(250);
+}
+
+void connect_server()
+{
+  while (!client.connect(host, port))
+  {
+    Serial.printf("\n[Connecting to %s ... ", host);
+    delay(1000);
+    return;
+  }
+  Serial.println("connected]");
+  delay(1000);
+}
+
+void setup()
+{
+  Serial.begin(115200);
+  Serial.println("Contoh penggunaan socket client");
+  connect_wifi();
+  connect_server();
+}
+
+void loop()
+{
+  if (client.connected())
+  {
+    Serial.print("[Response:]");
+    String line = client.readStringUntil('\n');
+    Serial.println(line);
+    if (line.equalsIgnoreCase("led-on"))
+    {
+      pinMode(LED_BUILTIN, HIGH);
+      delay(3000);
+      pinMode(LED_BUILTIN, LOW);
+    }
+  }else{
+    connect_server();
+  }
+  delay(250);
+}
+```
+
+Kode tersebut mirip dengan kode pada pertemuan sebelumnya, yang perlu dimodifkasi adalah bagian di bawah ini
+
+```cpp
+if (line.equalsIgnoreCase("led-on"))
+    {
+      pinMode(BUILTIN_LED, HIGH);
+      delay(3000);
+      pinMode(BUILTIN_LED, LOW);
+    }
+```
+
+Fungsi kode di atas digunakan untuk membaca setiap data dari socket server, ketika data tersebut `led-on` berarti akan
+menghidupkan LED bawaan esp8266.
+
+> Silakan tambahkan pengecekan ketika tidak terhubung ke server maka akan reconnect atau mencoba terhubung kembali ke server pada fungsi `loop()`.
+
 ## Video Pendukung
 
 <p>
-<iframe width="933" height="583" src="https://www.youtube.com/embed/14j9ihm_svQ" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
+<iframe width="640" height="320" src="https://www.youtube.com/embed/14j9ihm_svQ" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
 </p>
-<p><iframe width="933" height="583" src="https://www.youtube.com/embed/Q2r7uWvuXZ4" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe></p>
-<p><iframe width="933" height="583" src="https://www.youtube.com/embed/kk56HEsUQCU" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe></p>
-<p><iframe width="933" height="583" src="https://www.youtube.com/embed/MsoaFrAurlo" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe></p>
+
+<p><iframe width="640" height="320" src="https://www.youtube.com/embed/Q2r7uWvuXZ4" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe></p>
+
+<p>
+<iframe width="640" height="320" src="https://www.youtube.com/embed/WBk2p4kW5LA" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+</p>
+
+[comment]: <> (<p><iframe width="933" height="583" src="https://www.youtube.com/embed/kk56HEsUQCU" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe></p>)
+
+[comment]: <> (<p><iframe width="933" height="583" src="https://www.youtube.com/embed/MsoaFrAurlo" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe></p>)
 
 ## Tugas
 
-Dianalogikan Anda mempunyai sebuah smart home dimana terpasang pada smart home tersebut sensor DHT11. Kirimkan data sensor tersebut secara berkala ke server
-Hasil dari yang Anda buat, silakan dokumentasikan di google drive atau youtube dan cantumkan pada laporan Anda.
+[comment]: <> (Dianalogikan Anda mempunyai sebuah smart home dimana terpasang pada smart home tersebut sensor DHT11. Kirimkan data sensor tersebut secara berkala ke server)
+
+[comment]: <> (Hasil dari yang Anda buat, silakan dokumentasikan di google drive atau youtube dan cantumkan pada laporan Anda.)
+
+Terdapat sebuah dusun di desa tertentu yang sudah menerapkan IoT, contoh penerapan tersebut di gang-gang ketika sudah
+beranjak malam lampu yang terdapat pada gang tersebut akan menyala. Pada dusun tersebut juga terdapat kebun rumah kaca,
+dimana suhu dan kelembaban sangat diperhatikan untuk menjaga produktivitas sayur-sayur di dalam kebun.
+Semua sensor yang terdapat pada dusun tersebut juga dapat dipantau dan semua lampu yang terdapat pada gang-gang dapat dinyalakan melalui server,
+ketika posisi malam maka akan mengirimkan data ke server dan server memerintahkan lampu untuk menyala. Lampu yang digunakan bisa menggunakan LED.
+
+Dari kasus di atas, buat program untuk kebutuhan tersebut baik dari sisi controller (ESP8266) dan dari sisi server. Seperti
+biasa untuk output dokumentasikan berupa link video google drive ataupun youtube, selanjutnya sisipkan link tersebut pada
+laporan Anda.
