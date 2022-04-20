@@ -248,6 +248,8 @@ Keterangan:
 
 Silakan upload program tersebut ke controller Anda dan amati outputnya pada serial monitor.
 
+> Khusus untuk sistem operasi windows, silakan dimatikan semua firewall atau bisa dengan mendaftarkan port yang akan dibuka atau bisa diakses dari luar. Misalkan port yang di atas digunakan adalah 2004, berarti yang harus di-allow adalah port 2004. Konfigurasi ada di control panel 
+
 ## Praktikum 2
 
 Masih menggunakan kode socket server yang sebelumnya, ubahlah kode pada fungsi `run` menjadi seperti di bawah ini.
