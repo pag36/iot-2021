@@ -6,8 +6,11 @@ Manajemen IoT Dashboard System
 
 ## Kemampuan Akhir yang Direncanakan
 
-- Mahasiswa mampu untuk membuat dashboard untuk project IoT
-- Mahasiswa mampu untuk melakukan pengaturan smart device
+- Mahasiswa mampu mengkonfigurasi rule user pada IoT Platform
+- Mahasiswa mampu mengkonfigurasi smart device
+- Mahasiswa mampu mengimplementasikan program di sisi smart device merujuk pada library IoT Server yang digunakan
+- Mahasiswa mampu untuk mengkomunikasikan antara smart device dan IoT Server
+- Mahasiswa mampu untuk menampilkan data sensor ke IoT Dashboard System sebagai monitoring
 
 ## Teori Singkat
 
