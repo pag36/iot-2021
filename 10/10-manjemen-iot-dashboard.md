@@ -6,8 +6,11 @@ Manajemen IoT Dashboard System
 
 ## Kemampuan Akhir yang Direncanakan
 
-- Mahasiswa mampu untuk membuat dashboard untuk project IoT
-- Mahasiswa mampu untuk melakukan pengaturan smart device
+- Mahasiswa mampu mengkonfigurasi rule user pada IoT Platform
+- Mahasiswa mampu mengkonfigurasi smart device
+- Mahasiswa mampu mengimplementasikan program di sisi smart device merujuk pada library IoT Server yang digunakan
+- Mahasiswa mampu untuk mengkomunikasikan antara smart device dan IoT Server
+- Mahasiswa mampu untuk menampilkan data sensor ke IoT Dashboard System sebagai monitoring
 
 ## Teori Singkat
 
@@ -40,7 +43,8 @@ Untuk menggunakan dashboard Node-RED, kita harus install terlebih dahulu modulny
 
     Langkah yang dapat dilakukan adalah sebagai berikut
 
-    - Silakan akses Node-RED via browser, misalkan `http://ec2-52-91-160-126.compute-1.amazonaws.com:1880/`.
+    - Silakan akses Node-RED via browser, misalkan `http://ec2-52-91-160-126.compute-1.amazonaws.com:1880/`. **Sesuaikan 
+    alamat atau lokasi Node-RED yang Anda install, misalkan jika menggunakan Oracle Cloud.**
     - Klik button yang terdapat di pojok kanan atas dan cari menu `Manage pallete`. Perhatikan gambar di bawah ini
 
       ![](images/01.png)
