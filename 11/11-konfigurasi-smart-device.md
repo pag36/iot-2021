@@ -38,7 +38,7 @@ adalah sebagai berikut
    
    ![](images/03.png)
    
-   > Pada bagian `Name` isikan `Mqtt Server AWS`, `Server` diisikan `broker.sinaungoding.com` dan `port` isikan `1883`.
+   > Pada bagian `Name` isikan `Mqtt Server AWS`, `Server` diisikan `broker.hivemq.com` dan `port` isikan `1883`.
    > 
    Untuk `node mqtt out` kira-kira seperti berikut
 
