@@ -12,7 +12,6 @@
 - [08. Socket Server Client](07/07-socket-client.md)
 - [09. Installasi IoT Platform](09/09-installasi-iot-platform.md)
 - [10. Manajemen IoT Dashboard](10/10-manjemen-iot-dashboard.md)
-
-[comment]: <> (- [13. Konfigurasi Smart Device]&#40;11/11-konfigurasi-smart-device.md&#41;)
+- [11. Konfigurasi Smart Device](11/11-konfigurasi-smart-device.md)
 
 [comment]: <> (- [14. Message Broker]&#40;12/12-iot-gateway.md&#41;)
