@@ -113,7 +113,7 @@ akan kita tampilkan pada dashboard yang sebelumnya telah kita buat. Kode lengkap
 // kampus
 const char *ssid = "Smart Parking";            // sesuaikan dengan username wifi
 const char *password = "5m4rT_P4rk!Ng";        // sesuaikan dengan password wifi
-const char *mqtt_server = "hivemq.broker.com"; // isikan server broker
+const char *mqtt_server = "broker.hivemq.com"; // isikan server broker
 
 WiFiClient espClient;
 PubSubClient client(espClient);
