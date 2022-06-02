@@ -106,10 +106,14 @@ akan kita tampilkan pada dashboard yang sebelumnya telah kita buat. Kode lengkap
 #include <PubSubClient.h>
 #include <SimpleDHT.h>
 
-const char *ssid = "****";//silakan disesuaikan sendiri
-const char *password = "****";//silakan disesuaikan sendiri
+// hp
+// const char *ssid = "od3ng";
+// const char *password = "0d3n9bro";
 
-const char *mqtt_server = "broker.sinaungoding.com";
+// kampus
+const char *ssid = "Smart Parking";            // sesuaikan dengan username wifi
+const char *password = "5m4rT_P4rk!Ng";        // sesuaikan dengan password wifi
+const char *mqtt_server = "hivemq.broker.com"; // isikan server broker
 
 WiFiClient espClient;
 PubSubClient client(espClient);
@@ -118,6 +122,7 @@ SimpleDHT11 dht11(D7);
 
 long now = millis();
 long lastMeasure = 0;
+String macAddr = "";
 
 void setup_wifi()
 {
@@ -134,6 +139,8 @@ void setup_wifi()
   Serial.println("");
   Serial.print("WiFi connected - ESP IP address: ");
   Serial.println(WiFi.localIP());
+  macAddr = WiFi.macAddress();
+  Serial.println(macAddr);
 }
 
 void reconnect()
@@ -141,7 +148,7 @@ void reconnect()
   while (!client.connected())
   {
     Serial.print("Attempting MQTT connection...");
-    if (client.connect("ESP8266Client"))
+    if (client.connect(macAddr.c_str()))
     {
       Serial.println("connected");
     }
@@ -171,7 +178,7 @@ void loop()
   }
   if (!client.loop())
   {
-    client.connect("ESP8266Client");
+    client.connect(macAddr.c_str());
   }
   now = millis();
   if (now - lastMeasure > 5000)
@@ -192,7 +199,7 @@ void loop()
     dtostrf(temperature, 4, 2, temperatureTemp);
     Serial.println(temperatureTemp);
 
-    client.publish("room/suhu", temperatureTemp);
+    client.publish("room/suhu", temperatureTemp); // agar lebih unix silakan tambahkan NIM ex: 0001/room/suhu
   }
 }
 ```
