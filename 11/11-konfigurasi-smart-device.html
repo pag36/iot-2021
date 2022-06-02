@@ -393,10 +393,14 @@ akan kita tampilkan pada dashboard yang sebelumnya telah kita buat. Kode lengkap
 <span class="hljs-meta">#<span class="hljs-meta-keyword">include</span> <span class="hljs-meta-string">&lt;PubSubClient.h&gt;</span></span>
 <span class="hljs-meta">#<span class="hljs-meta-keyword">include</span> <span class="hljs-meta-string">&lt;SimpleDHT.h&gt;</span></span>
 
-<span class="hljs-keyword">const</span> <span class="hljs-keyword">char</span> *ssid = <span class="hljs-string">&quot;****&quot;</span>;<span class="hljs-comment">//silakan disesuaikan sendiri</span>
-<span class="hljs-keyword">const</span> <span class="hljs-keyword">char</span> *password = <span class="hljs-string">&quot;****&quot;</span>;<span class="hljs-comment">//silakan disesuaikan sendiri</span>
+<span class="hljs-comment">// hp</span>
+<span class="hljs-comment">// const char *ssid = &quot;od3ng&quot;;</span>
+<span class="hljs-comment">// const char *password = &quot;0d3n9bro&quot;;</span>
 
-<span class="hljs-keyword">const</span> <span class="hljs-keyword">char</span> *mqtt_server = <span class="hljs-string">&quot;broker.sinaungoding.com&quot;</span>;
+<span class="hljs-comment">// kampus</span>
+<span class="hljs-keyword">const</span> <span class="hljs-keyword">char</span> *ssid = <span class="hljs-string">&quot;Smart Parking&quot;</span>;            <span class="hljs-comment">// sesuaikan dengan username wifi</span>
+<span class="hljs-keyword">const</span> <span class="hljs-keyword">char</span> *password = <span class="hljs-string">&quot;5m4rT_P4rk!Ng&quot;</span>;        <span class="hljs-comment">// sesuaikan dengan password wifi</span>
+<span class="hljs-keyword">const</span> <span class="hljs-keyword">char</span> *mqtt_server = <span class="hljs-string">&quot;broker.hivemq.com&quot;</span>; <span class="hljs-comment">// isikan server broker</span>
 
 WiFiClient espClient;
 <span class="hljs-function">PubSubClient <span class="hljs-title">client</span><span class="hljs-params">(espClient)</span></span>;
@@ -405,6 +409,7 @@ WiFiClient espClient;
 
 <span class="hljs-keyword">long</span> now = millis();
 <span class="hljs-keyword">long</span> lastMeasure = <span class="hljs-number">0</span>;
+String macAddr = <span class="hljs-string">&quot;&quot;</span>;
 
 <span class="hljs-function"><span class="hljs-keyword">void</span> <span class="hljs-title">setup_wifi</span><span class="hljs-params">()</span>
 </span>{
@@ -421,6 +426,8 @@ WiFiClient espClient;
   Serial.println(<span class="hljs-string">&quot;&quot;</span>);
   Serial.print(<span class="hljs-string">&quot;WiFi connected - ESP IP address: &quot;</span>);
   Serial.println(WiFi.localIP());
+  macAddr = WiFi.macAddress();
+  Serial.println(macAddr);
 }
 
 <span class="hljs-function"><span class="hljs-keyword">void</span> <span class="hljs-title">reconnect</span><span class="hljs-params">()</span>
@@ -428,7 +435,7 @@ WiFiClient espClient;
   <span class="hljs-keyword">while</span> (!client.connected())
   {
     Serial.print(<span class="hljs-string">&quot;Attempting MQTT connection...&quot;</span>);
-    <span class="hljs-keyword">if</span> (client.connect(<span class="hljs-string">&quot;ESP8266Client&quot;</span>))
+    <span class="hljs-keyword">if</span> (client.connect(macAddr.c_str()))
     {
       Serial.println(<span class="hljs-string">&quot;connected&quot;</span>);
     }
@@ -458,7 +465,7 @@ WiFiClient espClient;
   }
   <span class="hljs-keyword">if</span> (!client.loop())
   {
-    client.connect(<span class="hljs-string">&quot;ESP8266Client&quot;</span>);
+    client.connect(macAddr.c_str());
   }
   now = millis();
   <span class="hljs-keyword">if</span> (now - lastMeasure &gt; <span class="hljs-number">5000</span>)
@@ -479,7 +486,7 @@ WiFiClient espClient;
     dtostrf(temperature, <span class="hljs-number">4</span>, <span class="hljs-number">2</span>, temperatureTemp);
     Serial.println(temperatureTemp);
 
-    client.publish(<span class="hljs-string">&quot;room/suhu&quot;</span>, temperatureTemp);
+    client.publish(<span class="hljs-string">&quot;room/suhu&quot;</span>, temperatureTemp); <span class="hljs-comment">// agar lebih unix silakan tambahkan NIM ex: 0001/room/suhu</span>
   }
 }
 </code></pre>
@@ -563,7 +570,7 @@ Pada tab ini digunakan untuk menampilkan data kelas, NIM, dan Nama. <strong>Sila
     <script>
         var gitbook = gitbook || [];
         gitbook.push(function() {
-            gitbook.page.hasChanged({"page":{"title":"11. Konfigurasi Smart Device","level":"1.13","depth":1,"previous":{"title":"10. Manajemen IoT Dashboard","level":"1.12","depth":1,"path":"10/10-manjemen-iot-dashboard.md","ref":"10/10-manjemen-iot-dashboard.md","articles":[]},"dir":"ltr"},"config":{"plugins":[],"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"pluginsConfig":{"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"theme":"default","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"language":"id","gitbook":"*"},"file":{"path":"11/11-konfigurasi-smart-device.md","mtime":"2022-06-01T21:07:13.037Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2022-06-01T21:08:27.952Z"},"basePath":"..","book":{"language":""}});
+            gitbook.page.hasChanged({"page":{"title":"11. Konfigurasi Smart Device","level":"1.13","depth":1,"previous":{"title":"10. Manajemen IoT Dashboard","level":"1.12","depth":1,"path":"10/10-manjemen-iot-dashboard.md","ref":"10/10-manjemen-iot-dashboard.md","articles":[]},"dir":"ltr"},"config":{"plugins":[],"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"pluginsConfig":{"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"theme":"default","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"language":"id","gitbook":"*"},"file":{"path":"11/11-konfigurasi-smart-device.md","mtime":"2022-06-02T05:46:25.906Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2022-06-02T05:47:23.648Z"},"basePath":"..","book":{"language":""}});
         });
     </script>
 </div>
