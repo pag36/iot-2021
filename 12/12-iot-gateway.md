@@ -298,6 +298,9 @@ Kemudian ketika ditambahkan username dan password seperti perintah berikut
 ubuntu@ip-172-31-16-8:~$ mosquitto_pub -h localhost -t "test" -m "hello world" -u jti -P 1234
 ```
 Ketika tidak menampilkan pesan berarti berhasil publish message.
+> Untuk memudahkan melakukan pengecekan bisa menggunakan mqtt client menggunakan http://mqtt-explorer.com, silakan 
+> download dan installasi. Tampilannya adalah sebagai berikut
+> ![](images/14.png)
 
 #### Pertanyaan
 1. Apakah fungsi dari baris perintah `protocol websockets` pada file konfig mosquitto?
