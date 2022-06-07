@@ -6,7 +6,6 @@ IoT Gateway dan Message Broker
 
 ## Kemampuan Akhir yang Direncanakan
 
-- Mahasiswa faham tentang konsep IoT Gateway dan penggunaannya
 - Mahasiswa mampu melakukan instalasi dan konfigurasi message broker.
 - Mahasiswa mampu mengolah data sensor di dalam server local atau cloud.
 - Mahasiswa bisa membuat dashboard sederhana data sensor
@@ -34,13 +33,14 @@ publish berarti mengirimkan data ke message broker dengan topik tertentu sedangk
 ke message broker pada sebuah topik.
 
 ## Praktikum
-### 1. Konfigurasi Web Server dan PHP
+### 1. Konfigurasi Web Server
 Data-data yang dihasilkan oleh sensor agar lebih menarik perlu divisualisasi atau ditampilkan, dalam hal ini pada sebuah
 halaman website. Jika pada praktikum yang sebelumnya kita telah berhasil memanfaatkan IoT Platform, Node-RED untuk menampilkan
-data tersebut. Pada kesempatan kali ini akan dicoba untuk membuat visualisasi data dari awal, butuh sebuah web server dan
-PHP. Kemudian untuk memudahkan membuat kode program karena akan membutuhkan dashboard, misalkan chart, gauge, dan yang lain
-digunakan codeigniter4 dan framework css menggunakan bootstramp.
+data tersebut. Pada kesempatan kali ini akan dicoba untuk membuat visualisasi data dari awal, butuh sebuah web server. 
+Kemudian untuk memudahkan membuat kode program karena akan membutuhkan dashboard, misalkan chart, gauge, dan yang lain
+digunakan halaman html,css serta menggunakan bootstramp.
 
+#### 1. Konfigurasi PHP dan Codeiginter
 Seperti biasanya kita akan menyiapkan instance, EC2 untuk kebutuhan di atas. Langkah-langkahnya adalah sebagai berikut
 1. Buatlah sebuah instance EC2, kemudian pada langkah `3. Configure Instance` tambahkan baris perintah di bawah ini pada 
    bagian `User Data`. Untuk lebih jelasnya perhatikan gambar di bawah ini
@@ -127,11 +127,45 @@ halaman codeigniter.
 > Jujur lebih menyarankan skenario yang pertama untuk menghindari terjadi konflik, terlebih lagi ketika pengembangannya sudah
 > lebih dari satu orang.
 
-#### Pertanyaan
-1. Jelaskan fungsi perintah-perintah yang dimasukan ke dalam `User Data` ketika membuat sebuah instance EC2?
-2. Fungi dari perintah `sudo a2dissite 000-default.conf`?
+#### 2. Konfigurasi Web Server OCI
+Pada langkah yang kedua akan melakukan konfigurasi pada Oracle Cloud Infrastructure, silakan masuk terlebih dahulu ke instance
+yang akan Anda konfigurasi kemudian ikuti langkah-langkah di bawah ini
+1. Silakan memasang web server terlebih dahulu, web server yang akan diguankan adalah apache. Berikut perintah untuk melakukan
+installasi
+   ```shell
+   sudo apt update
+   sudo apt install apache2 -y
+   ```
+   Untuk melakukan pengecekan ketika selesai proses installasi adalah dengan menggunakan perintah `telnet`. 
+   ```shell
+   ubuntu@praktikum-iot:~$ telnet localhost 80
+   Trying 127.0.0.1...
+   Connected to localhost.
+   Escape character is '^]'.
+   ^]
+   ```
+   > Selain mengunakan telnet, bisa juga menggunakan perintah `sudo systemctl status apache2` untuk mengetahui status
+   > apakah apache berjalan atau tidak. 
+   
+   Dari keluaran perintah `telnet` di atas web server sudah berjalan, akan tetapi ketika ingin mengakses instance kita dari luar
+masih belum bisa dilakukan. Silakan terlebih dahulu Virtual Cloud Network seperti pada materi yang sebelumnya agar port 
+80 bisa diakses dari luar. Jangan lupa jalankan perintah di bawah ini ketika sudah menambahkan atau mendaftarkan port 80.
+   ```shell
+   sudo iptables -I INPUT 6 -m state --state NEW -p tcp --dport 80 -j ACCEPT
+   sudo netfilter-persistent save
+   ```
+   Tampilan ketika sudah berhasil adalah halaman home page, seperti pada gambar berikut
+   ![](images/11.png)
+2. Normalnya web server harus dijalankan manual ketika instance tidak berjalan, agar dapat secara otomatis berjalan silakan
+ketik perintah di bawah ini
+   ```shell
+   sudo systemctl enable apache2
+   ```
+   Silakan restart instance Anda, untuk membuktikan apakah perintah di atas sesuai yang diharapkan yaitu web server sudah
+berjalan tanpa menjalankan secara manual kembali.
 
 ### 2. Konfigurasi Message Broker
+#### 1. Amazone Web Service (AWS)
 Untuk praktikum sebelumnya kita memanfaatkan message broker yang sudah ada, dalam praktikum yang kedua mencoba bagaimana
 caranya konfigurasi message broker untuk aplikasi yang akan kita bangun. Silakan mengikuti langkah-langkah di bawah ini
 1. Buatlah sebuah instance baru, kemudian untuk langkah `3. Configure Instance` pada bagian `User Data` tambahkan baris perintah
@@ -172,7 +206,47 @@ publish dan subscribe message. Buka windows baru lagi atau duplicate session, se
    Terlihat bahwa proses subscribe dan publish berhasil dilakukan pada localhost. Parameter `-t` menandakan nama topiknya,
    `-m` berarti messagenya yang akan dikirimkan. Kemudian misalkan untuk mencoba pada host atau 
    server yang lain tambahkan parameter `-h` diikuti nama host atau ip. Misalkan `mosquitto_sub -h broker.sinaungoding.com -t test`,
-   dan untuk melakukan subscribe `mosquitto_pub -h broker.sinaungoding.com -t test -m "mqtt test"`.
+   dan untuk melakukan subscribe `mosquitto_pub -h broker.hivemq.com -t test -m "mqtt test"`.
+
+#### 2. Oracle Cloud Infrastructure (OCI)
+Untuk konfigurasi message broker di OCI sebenarnya sama, hanya langkah-langkah pada menu atau istilah yang berbeda ketika
+menggunakan Oracle Cloud Infrastructure. 
+1. Silakan masuk terlebih dahulu ke instance Anda, kemudian jalankan perintah di bawah ini
+   ```shell
+   sudo apt-add-repository ppa:mosquitto-dev/mosquitto-ppa -y
+   sudo apt-get update
+   sudo apt-get install mosquitto mosquitto-clients -y
+   ```
+   Perintah di atas digunakan untuk melakukan installasi message broker yaitu menggunakan `mosquitto dan mosquitto-clients`
+untuk melakukan publish atau subscribe menggunakan terminal. Seperti biasa untuk melakukan pengecekan kita bisa menggunakan perintah
+`telnet` apakah sudah berhasil dan berjalan belum message broker.
+   ```shell
+   ubuntu@praktikum-iot:~$ telnet localhost 1883
+   Trying 127.0.0.1...
+   Connected to localhost.
+   Escape character is '^]'.
+   ^]
+   ```
+   Kita butuh lagi port yang akan digunakan sebagai client untuk terhubung ke message broker menggunakan protokol websocket,
+misalkan kita akan menggunakan port 8090. Jangan lupa untuk menyimpan perubahan firewall yang telah dikonfigurasi pada VCN
+menggunakan perintah firewall.
+   ```shell
+   sudo iptables -I INPUT 6 -m state --state NEW -p tcp --dport 1883 -j ACCEPT
+   sudo iptables -I INPUT 6 -m state --state NEW -p tcp --dport 8090 -j ACCEPT
+   sudo netfilter-persistent save
+   ```
+2. Setelah message broker berhasil dikonfigurasi, selanjutnya kita bisa memanfaatkan atau mencoba untuk publish message data
+sekaligus menerima pengiriman data. Perintah yang bisa dilakukan adalah sebagai berikut untuk menerima data atau subscribe
+   ```shell
+   ubuntu@praktikum-iot:~$ mosquitto_sub -t "iot/polinema"
+   ```
+   Perintah di atas untuk mernerima data dengan topik "iot/polinema", sehingga ketika ada yang mengirimkan data dengan topik
+tersebut data akan diterima. Kemudian untuk menerima data dapat menggunakan perintah berikut
+   ```shell
+   ubuntu@praktikum-iot:~$ mosquitto_pub -t "iot/polinema" -m "iot jaya"
+   ```
+   Dengan menggunakan perintah di atas digunakan untuk mengirimkan data "iot jaya" dengan topik "iot/polinema", seharusnya pada
+perintah subscribe di atas akan menerima data.
 
 #### Menambahkan Password MQTT
 Agar lebih aman terhadap pihak-pihak yang tidak bertanggungjawab, perlu ditambahkan keamanan ketika akan menggunakan
@@ -194,7 +268,7 @@ diperlukan
    ```
    Akan muncul editor nano, selanjutnya tambahkan dua baris perintah berikut
    ```shell
-   listener 8089
+   listener 8090
    protocol websockets
    
    listener 1883
@@ -203,7 +277,6 @@ diperlukan
    per_listener_settings true
    allow_anonymous false
    password_file /etc/mosquitto/passwd
-   log_timestamp_format %Y-%m-%dT%H:%M:%S
    ```
    Tekan CTRL+O untuk menyimpan konfigurasi file dan CTRL+X untuk keluar dari editor nano.
 
@@ -236,16 +309,20 @@ Setelah menyiapkan webserver untuk aplikasi web dan message broker untuk mengiri
 perlu disiapkan Node-MCU dengan kode program jobsheet sebelumnya dan tentunya akan kita tambahkan halaman dashboad untuk
 menampilkan data sensor dari Node-MCU. Adapun langkah-langkahnya adalah sebagai berikut
 1. Tambahkan kode program pada Node-MCU, dibutuhkan DHT11. Kode programnya adalah sebagai berikut
-   ```c++
+   ```cpp
    #include <Arduino.h>
    #include <ESP8266WiFi.h>
    #include <PubSubClient.h>
    #include <SimpleDHT.h>
    
-   const char *ssid = "****";//silakan disesuaikan sendiri
-   const char *password = "****";//silakan disesuaikan sendiri
+   // hp
+   // const char *ssid = "od3ng";
+   // const char *password = "0d3n9bro";
    
-   const char *mqtt_server = "****";
+   // kampus
+   const char *ssid = "Smart Parking";            // sesuaikan dengan username wifi
+   const char *password = "5m4rT_P4rk!Ng";        // sesuaikan dengan password wifi
+   const char *mqtt_server = "broker.hivemq.com"; // isikan server broker
    
    WiFiClient espClient;
    PubSubClient client(espClient);
@@ -254,66 +331,69 @@ menampilkan data sensor dari Node-MCU. Adapun langkah-langkahnya adalah sebagai 
    
    long now = millis();
    long lastMeasure = 0;
+   String macAddr = "";
    
    void setup_wifi()
    {
-     delay(10);
-     Serial.println();
-     Serial.print("Connecting to ");
-     Serial.println(ssid);
-     WiFi.begin(ssid, password);
-     while (WiFi.status() != WL_CONNECTED)
-     {
-       delay(500);
-       Serial.print(".");
-     }
-     Serial.println("");
-     Serial.print("WiFi connected - ESP IP address: ");
-     Serial.println(WiFi.localIP());
+   delay(10);
+   Serial.println();
+   Serial.print("Connecting to ");
+   Serial.println(ssid);
+   WiFi.begin(ssid, password);
+   while (WiFi.status() != WL_CONNECTED)
+   {
+   delay(500);
+   Serial.print(".");
+   }
+   Serial.println("");
+   Serial.print("WiFi connected - ESP IP address: ");
+   Serial.println(WiFi.localIP());
+   macAddr = WiFi.macAddress();
+   Serial.println(macAddr);
    }
    
    void reconnect()
    {
-     while (!client.connected())
-     {
-       Serial.print("Attempting MQTT connection...");
-       if (client.connect("ESP8266Client"))//tambahkan parameter untuk username dan password mqtt misalkan ada
-       {
-         Serial.println("connected");
-       }
-       else
-       {
-         Serial.print("failed, rc=");
-         Serial.print(client.state());
-         Serial.println(" try again in 5 seconds");
-         delay(5000);
-       }
-     }
+   while (!client.connected())
+   {
+   Serial.print("Attempting MQTT connection...");
+   if (client.connect(macAddr.c_str()))
+   {
+   Serial.println("connected");
+   }
+   else
+   {
+   Serial.print("failed, rc=");
+   Serial.print(client.state());
+   Serial.println(" try again in 5 seconds");
+   delay(5000);
+   }
+   }
    }
    
    void setup()
    {
-     Serial.begin(115200);
-     Serial.println("Mqtt Node-RED");
-     setup_wifi();
-     client.setServer(mqtt_server, 1883);
+   Serial.begin(115200);
+   Serial.println("Mqtt Node-RED");
+   setup_wifi();
+   client.setServer(mqtt_server, 1883);
    }
    
    void loop()
    {
-     if (!client.connected())
-     {
-       reconnect();
-     }
-     if (!client.loop())
-     {
-       client.connect("ESP8266Client");
-     }
-     now = millis();
-     if (now - lastMeasure > 5000)
-     {
-       lastMeasure = now;
-       int err = SimpleDHTErrSuccess;
+   if (!client.connected())
+   {
+   reconnect();
+   }
+   if (!client.loop())
+   {
+   client.connect(macAddr.c_str());
+   }
+   now = millis();
+   if (now - lastMeasure > 5000)
+   {
+   lastMeasure = now;
+   int err = SimpleDHTErrSuccess;
    
        byte temperature = 0;
        byte humidity = 0;
@@ -328,21 +408,18 @@ menampilkan data sensor dari Node-MCU. Adapun langkah-langkahnya adalah sebagai 
        dtostrf(temperature, 4, 2, temperatureTemp);
        Serial.println(temperatureTemp);
    
-       client.publish("room/suhu", temperatureTemp);
-     }
+       client.publish("room/suhu", temperatureTemp); // agar lebih unix silakan tambahkan NIM ex: 0001/room/suhu
+   }
    }
    ```
    Beberapa yang perlu disesuaikan adalah terkait dengan `ssid` dan `password`, kemudian `port` dan `server` untuk message broker,
 silakan menggunakan message broker yang telah dikonfigurasi sebelumnya. Untuk port, yang perlu disesuaikan adalah
    `client.setServer(mqtt_server, 1883);`
    
-2. Buatlah sebuah halaman baru `dashboard.php` pada project codeigniter, di folder `app/Views`. Sehingga strukturnya menjadi
-sebagai berikut
-   
-   ![](images/08.png)
+2. Edit file atau buat file index.html yang terdapat di `/var/www/html/index.html` menggunakan file seperti di bawah ini
    
    Isi dari file php tersebut adalah sebagai berikut
-   ```php
+   ```html
    <!DOCTYPE html>
    <html lang="en">
    
@@ -485,24 +562,17 @@ sehingga protokol yang digunakan tidak menggunakan http biasanya untuk komunikas
    Yang diguankan adalah protokol websocket, komunikasi tersebut di-hanlde oleh javascript dengan bantuan library `pahomqtt`.
    
    Perlu disesuikan port, server, dan topik dari kode di atas agar bisa menampilkan data, silakan disesuaikan dengan
-konfigurasi yang telah Anda lakukan sebelumnya.
-   
-3. Ubah juga pada file `Home.php` yang terdapat di folder `app/Controllers` menjadi berikut ini
-
-   ```php
-   <?php
-   
-   namespace App\Controllers;
-   
-   class Home extends BaseController
-   {
-       public function index()
-       {
-           return view('dashboard');
-       }
-   }
-   ```
-   Dengan mengubah controller pada fungsi `index()` sehingga ketika mengakses halaman utama, akan diarahkan ke halaman `dashboard.php`.
+konfigurasi yang telah Anda lakukan sebelumnya. Untuk melakukan pengecekan silakan buka browser Anda kemudian ketika alamat
+server Anda dana amati log dengan cara inspect element. Berikut ini adalah tampilan ketika web socket sudah terhubung ke
+message broker.
+   ![](images/12.png)
+Tampilan di atas ketika tidak ada data
+   ![](images/13.png)
+   Sedangkan tampilan di atas adalah dengan cara inspect element untuk mengetahui logging pada kode program untuk mengetahui
+web socket terhubung ke message broker.
+> Ketika tidak terhubung dipastikan kembali konfigurasi pada NodeMCU dan halaman html terkait dengan host message broker, port,
+> user, dan password. Ketika tidak terhubung menggunakan user password coba pada bagian `per_listener_settings true`, silakan
+> ubah menjadi false.
 
 4. Upload kode tersebut ke server, bisa menggunakan WinSCP atau ketika sudah menggunakan repository berarti perlu `push` ke 
 repo selanjutnya yang di server perlu dilakukan `pull`. Selanjutnya buka browser Anda dan ketik alamat aplikasi web yang 
@@ -513,7 +583,7 @@ repo selanjutnya yang di server perlu dilakukan `pull`. Selanjutnya buka browser
 #### Pertanyaan
 1. Berapa lama sekali pengiriman data sensor DHT dari Node-MCU ke server broker? Silakan diubah menjadi lebih cepat!
 2. Fungsi baris perintah `dtostrf(temperature, 4, 2, temperatureTemp);` digunakan untuk apa? Jelaskan!
-3. Modifikasi bentuk chart pada halaman `dashboard.php` dalam bentuk yang lain, misalkan chart bar ataupun gauge!
+3. Modifikasi bentuk chart pada halaman `index.html` dalam bentuk yang lain, misalkan chart bar ataupun gauge!
 
 ## Video Pendukung
 
@@ -523,7 +593,7 @@ repo selanjutnya yang di server perlu dilakukan `pull`. Selanjutnya buka browser
 
 ## Tugas
 Buatlah sebuah tampilan website yang fungsi utama adalah untuk menampilkan sensor cahaya, suhu, dan kelembaban. Kemudian
-Dapat juga menghidupkan masing-masing LED RGB, website tersebut harus telah teruplod di EC2(lampirkan alamatnya pada
+Dapat juga menghidupkan masing-masing LED RGB, website tersebut harus telah teruplod di OCI(lampirkan alamatnya pada
 laporan praktikum) dan videokan hasilnya.
 > Untuk tampilan grafik bisa menggunakan referensi dari _highcharts.com_
 > 
