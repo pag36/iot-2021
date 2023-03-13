@@ -180,12 +180,12 @@ Hardware Preparation:
 
    Dari gambar di atas dapat dilihat pengkabelan seperti pada tabel di bawah ini
 
-   | ESP8266 Amica | LED RGB                   	     |
-                           |---------------|------------------------------------|
-   | D5            | Red                                |
-   | D6            | Green                              |
-   | D7            | Blue                               |
-   | Vin/3V3       | Tegangan		 	                 |
+| ESP8266 Amica | LED RGB                   	     |
+|---------------|------------------------------------|
+| D5            | Red                                |
+| D6            | Green                              |
+| D7            | Blue                               |
+| Vin/3V3       | Tegangan		 	                 |
 
 2. Selanjutnya tuliskan kode program berikut pada Visual Studio Code
 
@@ -251,12 +251,13 @@ sedangkan ESP32 bisa merujuk di [sini](https://randomnerdtutorials.com/esp32-pin
 
    Sehingga untuk rangkaian menjadi seperti berikut
 
-   | ESP8266 Amica | LED RGB                   	     |
-      |---------------|------------------------------------|
-   | 21             | Red                                |
-   | 19            | Green                              |
-   | 18            | Blue                               |
-   | Vin/3V3       | Tegangan		 	                 |
+| ESP32    | LED RGB                   	     |
+|---------------|------------------------------------|
+| 21      | Red                                |
+| 19      | Green                              |
+| 18      | Blue                               |
+| Vin/3V3 | Tegangan		 	                 |
+
 3. Sedangkan untuk kode program modifikasi sedikit untuk mendeklarasikan GPIO sehingga menjadi seperti berikut
    ```cpp
    #define RED_LED 21 //led warna merah
@@ -362,7 +363,7 @@ untuk komponen yang dibutuhkan dan rangkaian masih menggunakan komponen pada pro
    dengan
    jeda waktu 1 detik
 
-> Praktikan juga untuk praktikum yang ke-2 menggunakan Wokwi, dari diagram sampai dengan program yang berjalan pada
+> Lakukan juga untuk praktikum yang ke-2 menggunakan Wokwi, dari diagram sampai dengan program yang berjalan pada
 > Wokwi dan VS Code.
 
 ## Video Pendukung
