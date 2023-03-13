@@ -347,13 +347,35 @@ gambar di bawah ini</p>
 tidak rusak atau putus karena kelebihan arus</p>
 </blockquote>
 <p>Dari gambar di atas dapat dilihat pengkabelan seperti pada tabel di bawah ini</p>
-<p>| ESP8266 Amica | LED RGB                            |</p>
-<pre><code>                    |---------------|------------------------------------|
-</code></pre><p>| D5            | Red                                |
-| D6            | Green                              |
-| D7            | Blue                               |
-| Vin/3V3       | Tegangan                              |</p>
 </li>
+</ul>
+<table>
+<thead>
+<tr>
+<th>ESP8266 Amica</th>
+<th>LED RGB</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>D5</td>
+<td>Red</td>
+</tr>
+<tr>
+<td>D6</td>
+<td>Green</td>
+</tr>
+<tr>
+<td>D7</td>
+<td>Blue</td>
+</tr>
+<tr>
+<td>Vin/3V3</td>
+<td>Tegangan</td>
+</tr>
+</tbody>
+</table>
+<ol>
 <li><p>Selanjutnya tuliskan kode program berikut pada Visual Studio Code</p>
 <pre><code class="lang-cpp"><span class="hljs-meta">#<span class="hljs-meta-keyword">include</span> <span class="hljs-meta-string">&lt;Arduino.h&gt;</span></span>
 
@@ -403,7 +425,7 @@ lain.</p>
 </li>
 <li>Segera setelah proses compile dan upload selesai, LED pada rangkaian project board akan menyala secara berurutan
 dengan jeda waktu 1 detik</li>
-</ul>
+</ol>
 <h4 id="project-wokwi">Project Wokwi</h4>
 <p>Kemudian Anda bisa mendesign rangkaian menggunakan Wokwi, tetapi sayangannya untuk board ESP8266 belum tersedia
 sehingga membutuhkan penyesuaian GPIO ketika program tersebut dijalankan. Sesuai dengan penjelasan di atas untuk
@@ -414,13 +436,35 @@ sedangkan ESP32 bisa merujuk di <a href="https://randomnerdtutorials.com/esp32-p
 <li><p>Buatlah sebuah rangkain seperti pada gambar berikut</p>
 <p><img src="images/04-16.png" alt="img.png"></p>
 <p>Sehingga untuk rangkaian menjadi seperti berikut</p>
-<p>| ESP8266 Amica | LED RGB                            |
-   |---------------|------------------------------------|
-| 21             | Red                                |
-| 19            | Green                              |
-| 18            | Blue                               |
-| Vin/3V3       | Tegangan                              |</p>
 </li>
+</ol>
+<table>
+<thead>
+<tr>
+<th>ESP32</th>
+<th>LED RGB</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>21</td>
+<td>Red</td>
+</tr>
+<tr>
+<td>19</td>
+<td>Green</td>
+</tr>
+<tr>
+<td>18</td>
+<td>Blue</td>
+</tr>
+<tr>
+<td>Vin/3V3</td>
+<td>Tegangan</td>
+</tr>
+</tbody>
+</table>
+<ol>
 <li>Sedangkan untuk kode program modifikasi sedikit untuk mendeklarasikan GPIO sehingga menjadi seperti berikut<pre><code class="lang-cpp"><span class="hljs-meta">#<span class="hljs-meta-keyword">define</span> RED_LED 21 <span class="hljs-comment">//led warna merah</span></span>
 <span class="hljs-meta">#<span class="hljs-meta-keyword">define</span> GREEN_LED 19 <span class="hljs-comment">//led warna hijau</span></span>
 <span class="hljs-meta">#<span class="hljs-meta-keyword">define</span> BLUE_LED 18 <span class="hljs-comment">//led warnah biru</span></span>
@@ -521,7 +565,7 @@ dengan
 jeda waktu 1 detik</li>
 </ol>
 <blockquote>
-<p>Praktikan juga untuk praktikum yang ke-2 menggunakan Wokwi, dari diagram sampai dengan program yang berjalan pada
+<p>Lakukan juga untuk praktikum yang ke-2 menggunakan Wokwi, dari diagram sampai dengan program yang berjalan pada
 Wokwi dan VS Code.</p>
 </blockquote>
 <h2 id="video-pendukung">Video Pendukung</h2>
@@ -576,7 +620,7 @@ pengkabelannya) dan kode programnya!</li>
     <script>
         var gitbook = gitbook || [];
         gitbook.push(function() {
-            gitbook.page.hasChanged({"page":{"title":"04. LED","level":"1.6","depth":1,"previous":{"title":"03. Instalasi dan Konfigurasi","level":"1.5","depth":1,"path":"01/01.installasi-dan-konfigurasi.md","ref":"01/01.installasi-dan-konfigurasi.md","articles":[]},"dir":"ltr"},"config":{"plugins":[],"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"pluginsConfig":{"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"theme":"default","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"language":"id","gitbook":"*"},"file":{"path":"02/02-led.md","mtime":"2023-03-13T20:59:47.825Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2023-03-13T21:01:11.872Z"},"basePath":"..","book":{"language":""}});
+            gitbook.page.hasChanged({"page":{"title":"04. LED","level":"1.6","depth":1,"previous":{"title":"03. Instalasi dan Konfigurasi","level":"1.5","depth":1,"path":"01/01.installasi-dan-konfigurasi.md","ref":"01/01.installasi-dan-konfigurasi.md","articles":[]},"dir":"ltr"},"config":{"plugins":[],"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"pluginsConfig":{"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"theme":"default","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"language":"id","gitbook":"*"},"file":{"path":"02/02-led.md","mtime":"2023-03-13T21:11:01.088Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2023-03-13T21:12:22.293Z"},"basePath":"..","book":{"language":""}});
         });
     </script>
 </div>
