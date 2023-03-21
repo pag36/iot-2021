@@ -6,8 +6,7 @@
 - [02. Microcontroller](0b/0b.pertemuan2.md)
 - [03. Instalasi dan Konfigurasi](01/01.installasi-dan-konfigurasi.md)
 - [04. LED](02/02-led.md)
-
-[//]: # (- [05. DHT11]&#40;03/03-dht11.md&#41;)
+- [05. DHT11](03/03-dht11.md)
 
 [//]: # (- [06. LDR dan HC-SR04]&#40;04/04-sensor-cahaya.md&#41;)
 
