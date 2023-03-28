@@ -149,7 +149,7 @@ Untuk design dapat dilihat pada gambar di bawah ini
 Silakan jalankan, kemudian ubah nilai LDR menggunakan slider tetapi terlebih dahulu klik komponen atau part LDR sehingga
 menampilkan seperti pada gambar di bawah ini
 
-![img.png](04/images/08.png)
+![img.png](images/08.png)
 
 ## Praktikum 2 - Membaca data jarak benda
 
