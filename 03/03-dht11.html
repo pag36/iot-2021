@@ -57,6 +57,8 @@
     <link rel="shortcut icon" href="../gitbook/images/favicon.ico" type="image/x-icon">
 
     
+    <link rel="next" href="../04/04-sensor-cahaya.html" />
+    
     
     <link rel="prev" href="../02/02-led.html" />
     
@@ -171,6 +173,19 @@
             
                     
                     05. DHT11
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.8" data-path="../04/04-sensor-cahaya.html">
+            
+                <a href="../04/04-sensor-cahaya.html">
+            
+                    
+                    06. LDR dan HC-SR04
             
                 </a>
             
@@ -568,24 +583,26 @@ Serial.println(F(<span class="hljs-string">&quot;&#xB0;F&quot;</span>));
 </tbody>
 </table>
 <ol>
-<li><p>Sedangkan untuk kode program masukan ke code editor di wokwi sehingga menjadi seperti berikut
-```cpp
- const int DHT_PIN = 15; //mendefinisikan pin digital yang digunakan DHT22
- DHTesp dhtSensor; //objek dhtSensor untuk membaca suhu dan kelembaban dari sensor</p>
-<p> void setup() {
- Serial.begin(115200);
- dhtSensor.setup(DHT_PIN, DHTesp::DHT22); //inisialisasi sensor DHT22 
- }</p>
-<p> void loop() {
+<li><p>Sedangkan untuk kode program masukan ke code editor di wokwi sehingga menjadi seperti berikut</p>
+<pre><code class="lang-cpp"> <span class="hljs-keyword">const</span> <span class="hljs-keyword">int</span> DHT_PIN = <span class="hljs-number">15</span>; <span class="hljs-comment">//mendefinisikan pin digital yang digunakan DHT22</span>
+ DHTesp dhtSensor; <span class="hljs-comment">//objek dhtSensor untuk membaca suhu dan kelembaban dari sensor</span>
+
+ <span class="hljs-function"><span class="hljs-keyword">void</span> <span class="hljs-title">setup</span><span class="hljs-params">()</span> </span>{
+ Serial.begin(<span class="hljs-number">115200</span>);
+ dhtSensor.setup(DHT_PIN, DHTesp::DHT22); <span class="hljs-comment">//inisialisasi sensor DHT22 </span>
+ }
+
+ <span class="hljs-function"><span class="hljs-keyword">void</span> <span class="hljs-title">loop</span><span class="hljs-params">()</span> </span>{
  TempAndHumidity  data = dhtSensor.getTempAndHumidity();
- Serial.println(&quot;Temp: &quot; + String(data.temperature, 2) + &quot;&#xB0;C&quot;);
- Serial.println(&quot;Kelembapan: &quot; + String(data.humidity, 1) + &quot;%&quot;);
- Serial.println(&quot;---&quot;);
- delay(1000);
- }</p>
+ Serial.println(<span class="hljs-string">&quot;Temp: &quot;</span> + String(data.temperature, <span class="hljs-number">2</span>) + <span class="hljs-string">&quot;&#xB0;C&quot;</span>);
+ Serial.println(<span class="hljs-string">&quot;Kelembapan: &quot;</span> + String(data.humidity, <span class="hljs-number">1</span>) + <span class="hljs-string">&quot;%&quot;</span>);
+ Serial.println(<span class="hljs-string">&quot;---&quot;</span>);
+ delay(<span class="hljs-number">1000</span>);
+ }
+</code></pre>
+<h2 id="video-pendukung">Video Pendukung</h2>
 </li>
 </ol>
-<h2 id="video-pendukung">Video Pendukung</h2>
 <iframe width="897" height="561" src="https://www.youtube.com/embed/pQg1BdpLtrQ" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 
 <h2 id="tugas">Tugas</h2>
@@ -628,10 +645,14 @@ Serial.println(F(<span class="hljs-string">&quot;&#xB0;F&quot;</span>));
 
             
                 
-                <a href="../02/02-led.html" class="navigation navigation-prev navigation-unique" aria-label="Previous page: 04. LED">
+                <a href="../02/02-led.html" class="navigation navigation-prev " aria-label="Previous page: 04. LED">
                     <i class="fa fa-angle-left"></i>
                 </a>
                 
+                
+                <a href="../04/04-sensor-cahaya.html" class="navigation navigation-next " aria-label="Next page: 06. LDR dan HC-SR04">
+                    <i class="fa fa-angle-right"></i>
+                </a>
                 
             
         
@@ -640,7 +661,7 @@ Serial.println(F(<span class="hljs-string">&quot;&#xB0;F&quot;</span>));
     <script>
         var gitbook = gitbook || [];
         gitbook.push(function() {
-            gitbook.page.hasChanged({"page":{"title":"05. DHT11","level":"1.7","depth":1,"previous":{"title":"04. LED","level":"1.6","depth":1,"path":"02/02-led.md","ref":"02/02-led.md","articles":[]},"dir":"ltr"},"config":{"plugins":[],"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"pluginsConfig":{"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"theme":"default","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"language":"id","gitbook":"*"},"file":{"path":"03/03-dht11.md","mtime":"2023-03-21T01:08:57.758Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2023-03-21T01:09:53.750Z"},"basePath":"..","book":{"language":""}});
+            gitbook.page.hasChanged({"page":{"title":"05. DHT11","level":"1.7","depth":1,"next":{"title":"06. LDR dan HC-SR04","level":"1.8","depth":1,"path":"04/04-sensor-cahaya.md","ref":"04/04-sensor-cahaya.md","articles":[]},"previous":{"title":"04. LED","level":"1.6","depth":1,"path":"02/02-led.md","ref":"02/02-led.md","articles":[]},"dir":"ltr"},"config":{"plugins":[],"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"pluginsConfig":{"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"theme":"default","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"language":"id","gitbook":"*"},"file":{"path":"03/03-dht11.md","mtime":"2023-03-28T04:05:14.655Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2023-03-28T04:06:12.028Z"},"basePath":"..","book":{"language":""}});
         });
     </script>
 </div>
