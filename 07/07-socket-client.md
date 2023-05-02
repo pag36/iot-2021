@@ -8,14 +8,18 @@ Socket Server dan Client
 
 - Mahasiswa mampu untuk menjelaskan konsep TCP/IP
 - Mahasiswa mampu untuk menjelaskan konsep protokol Socket TCP/IP agar MCU dapat berkomunikasi dengan perangkat lainnya
-- Mahasiswa dapat membuat program socket client di sisi MCU yang bertugas mengirim data sensor ke Socket Server secara real-time
-- Mahasiswa mampu menjelaskan cara kerja socket server yang bertugas sebagai “listening” dari semua socket client yang terkoneksi
+- Mahasiswa dapat membuat program socket client di sisi MCU yang bertugas mengirim data sensor ke Socket Server secara
+  real-time
+- Mahasiswa mampu menjelaskan cara kerja socket server yang bertugas sebagai “listening” dari semua socket client yang
+  terkoneksi
 - Mahasiswa mampu menjelaskan konsep socket Asynchronous dengan pada komunikasi
-- Mahasiswa dapat membuat program Socket Server dengan GUI C#, Java, Phyton, dan lain-lain untuk menerima data sensor MCU, kemudian menampilkannya secara real-time di sisi socket server
+- Mahasiswa dapat membuat program Socket Server dengan GUI C#, Java, Phyton, dan lain-lain untuk menerima data sensor
+  MCU, kemudian menampilkannya secara real-time di sisi socket server
 
 ## Teori Singkat
 
-Program socket biasanya digunakan untuk komunikasi antara berbagai proses yang berjalan pada sistem yang berbeda, program
+Program socket biasanya digunakan untuk komunikasi antara berbagai proses yang berjalan pada sistem yang berbeda,
+program
 tersebut kebanyakan dibuat untuk lingkungan program client dan server.
 
 Ada 2 jenis protokol yang dapat digunakan untuk melakukan komunikasi menggunakan socket:
@@ -23,7 +27,8 @@ Ada 2 jenis protokol yang dapat digunakan untuk melakukan komunikasi menggunakan
 1. TCP/IP Socket
 
    Konsep yang digunakan pada protokol ini adalah _connection oriented_ dan _reliable data transfer_, ketika program
-   yang kita buat menggunakan protokol ini tidak mementingkan kecepatan tetapi lebih mementingkan ketepatan data yang dikirimkan.
+   yang kita buat menggunakan protokol ini tidak mementingkan kecepatan tetapi lebih mementingkan ketepatan data yang
+   dikirimkan.
 
    _Connection oriented_ sendiri adalah sebuah konsep dimana socket yang terhubung harus memiliki tanggung jawab untuk
    memberikan notifikasi ketika sedang melakukan pengiriman data, atau sering disebut juga dengan istilah _synchronous_.
@@ -42,8 +47,10 @@ gambar di bawah ini
 
 <p align="center">https://www.javatpoint.com/socket-programming</p>
 
-Dari gambar di atas terlihat bahwa ketika sebuah server harus melakukan listening yang artinya siap menerima koneksi dari
-sebuah socket client. Setelah socket server menerima koneksi dari socket client, socket server akan menerima dan selanjutnya
+Dari gambar di atas terlihat bahwa ketika sebuah server harus melakukan listening yang artinya siap menerima koneksi
+dari
+sebuah socket client. Setelah socket server menerima koneksi dari socket client, socket server akan menerima dan
+selanjutnya
 bisa dilanjutkan untuk berkomunikasi dengan socket client atau memutuskan komunikasi dengan socket client tersebut.
 
 Buatlah sebuah kode berikut ini, kode tersebut ditulis menggunakan Python.
@@ -102,20 +109,32 @@ for t in threads:
     t.join()
 ```
 
-> Jika sudah memiliki dan membuat instance EC2 di AWS, silakan upload kode file tersebut di atas agar kita coba langsung jalankan di cloud. Tetapi misalkan memang belum memiliki, silaan dicoba pada lokal komputer Anda. Sebaiknya memang dicoba terlebih dahulu di lokal komputer sebelum upload di cloud.
+> Jika sudah memiliki dan membuat instance EC2 di AWS, silakan upload kode file tersebut di atas agar kita coba langsung
+> jalankan di cloud. Tetapi misalkan memang belum memiliki, silaan dicoba pada lokal komputer Anda. Sebaiknya memang
+> dicoba terlebih dahulu di lokal komputer sebelum upload di cloud.
 
-> Sebelum menjalankan dicek terlebih dahulu file tersebut, apakah sudah executable atau belum. Atau coba langsung dijalankan, tetapi kalau misalkan tidak bisa dijalankan kemungkinan file tersebut belum executable sehingga perlu dilakukan mode executable. Coba cek menggunakan perintah `ls -lh`, sehingga outputnya kurang lebih seperti di bawah ini
+> Sebelum menjalankan dicek terlebih dahulu file tersebut, apakah sudah executable atau belum. Atau coba langsung
+> dijalankan, tetapi kalau misalkan tidak bisa dijalankan kemungkinan file tersebut belum executable sehingga perlu
+> dilakukan mode executable. Coba cek menggunakan perintah `ls -lh`, sehingga outputnya kurang lebih seperti di bawah
+> ini
 
 ```
 -rwxr-xr-x@  1 od3ng  staff   1.2K Apr  6 11:10 server.py
 drwxr-xr-x  10 od3ng  staff   340B Apr  5 14:56 vs-client
 ```
 
-Jika dilihat output dari file `server.py` tersebut sudah mode executable, dibuktikan untuk modenya `-rwxr-xr-x` yang artinya semua level user bisa menggunakan. Jika masih tidak bisa menjalankan, silakan ketika perintah `chmod +x server.py` yang dimana file `server.py` adalah program Anda.
+Jika dilihat output dari file `server.py` tersebut sudah mode executable, dibuktikan untuk modenya `-rwxr-xr-x` yang
+artinya semua level user bisa menggunakan. Jika masih tidak bisa menjalankan, silakan ketika
+perintah `chmod +x server.py` yang dimana file `server.py` adalah program Anda.
 
 > Catatan: Biasanya mode di atas, digunakan untuk sistem operasi jenis UNIX seperti Linux ataupun Mac OS
 
-Setelah program tersebut dijalankan, socket server siap menerima komunikasi dari socket client. Untuk mencobanya bisa menggunakan perintah telnet, caranya adalah sebagai berikut
+> Sebagai alternative, Anda bisa menjalankan program tersebut pada laptop Anda untuk menjadi sebuah server. Laptop Anda
+> harus sudah terinstall Python dan port yang digunakan juga harus open atau sudah Anda konfigurasi sehingga bisa
+> diakses tidak hanya dari lokal.
+
+Setelah program tersebut dijalankan, socket server siap menerima komunikasi dari socket client. Untuk mencobanya bisa
+menggunakan perintah telnet, caranya adalah sebagai berikut
 
 ```
 telnet [host] [port]
@@ -142,9 +161,12 @@ Server received data: b'Hai from ESP8266'
 Incoming connection from 114.5.110.7:42955
 ```
 
-> Silakan disesuaikan kode di atas untuk host dan port yang digunakan, ganti kode `TCP_IP = "0.0.0.0"` dan `TCP_PORT = 9000`, kedua konfigurasi tersebut disesuaikan dengan ip atau port yang dibuka pada laptop/komputer ataupun instance AWS Anda.
+> Silakan disesuaikan kode di atas untuk host dan port yang digunakan, ganti kode `TCP_IP = "0.0.0.0"`
+> dan `TCP_PORT = 9000`, kedua konfigurasi tersebut disesuaikan dengan ip atau port yang dibuka pada laptop/komputer
+> ataupun instance AWS Anda.
 
-Setelah berhasil menjalankan socket sever, selanjutnya perlu dibuat socket client yang berjalan di controller atau ESP8266 Amica atau Lolita yang Anda miliki. Buatlah kode berikut
+Setelah berhasil menjalankan socket sever, selanjutnya perlu dibuat socket client yang berjalan di controller atau
+ESP8266 Amica atau Lolita yang Anda miliki. Buatlah kode berikut
 
 ```cpp
 #include <Arduino.h>
@@ -207,7 +229,8 @@ void loop()
 }
 ```
 
-Untuk dapat berkomunikasi dengan socket server, ESP8266 sudah terdapat modul wifi yang siap untuk digunakan. Ubahlah kode di bawah ini sesuai dengan kebutuhan Anda.
+Untuk dapat berkomunikasi dengan socket server, ESP8266 sudah terdapat modul wifi yang siap untuk digunakan. Ubahlah
+kode di bawah ini sesuai dengan kebutuhan Anda.
 
 ### Verifikasi Hasil Percobaan
 
@@ -248,7 +271,10 @@ Keterangan:
 
 Silakan upload program tersebut ke controller Anda dan amati outputnya pada serial monitor.
 
-> Khusus untuk sistem operasi windows, silakan dimatikan semua firewall atau bisa dengan mendaftarkan port yang akan dibuka atau bisa diakses dari luar. Misalkan port yang di atas digunakan adalah 2004, berarti yang harus di-allow adalah port 2004. Konfigurasi ada di control panel 
+> Khusus untuk sistem operasi windows, silakan dimatikan semua firewall atau bisa dengan mendaftarkan port yang akan
+> dibuka atau bisa diakses dari luar. Misalkan port yang di atas digunakan adalah 2004, berarti yang harus di-allow
+> adalah
+> port 2004. Konfigurasi ada di control panel
 
 ## Praktikum 2
 
@@ -266,7 +292,8 @@ def run(self):
             sleep(0.25)
 ```
 
-Dengan mengubah program tersebut, socket server yang akan kita buat mampu menerima input dari keyboard sehingga dapat dimanfaatkan untuk memasukan perintah pada controller atau ESP8266 yang kita miliki.
+Dengan mengubah program tersebut, socket server yang akan kita buat mampu menerima input dari keyboard sehingga dapat
+dimanfaatkan untuk memasukan perintah pada controller atau ESP8266 yang kita miliki.
 
 ```cpp
 #include <Arduino.h>
@@ -346,7 +373,8 @@ if (line.equalsIgnoreCase("led-on"))
 Fungsi kode di atas digunakan untuk membaca setiap data dari socket server, ketika data tersebut `led-on` berarti akan
 menghidupkan LED bawaan esp8266.
 
-> Silakan tambahkan pengecekan ketika tidak terhubung ke server maka akan reconnect atau mencoba terhubung kembali ke server pada fungsi `loop()`.
+> Silakan tambahkan pengecekan ketika tidak terhubung ke server maka akan reconnect atau mencoba terhubung kembali ke
+> server pada fungsi `loop()`.
 
 ## Video Pendukung
 
@@ -375,9 +403,21 @@ menghidupkan LED bawaan esp8266.
 Terdapat sebuah dusun di desa tertentu yang sudah menerapkan IoT, contoh penerapan tersebut di gang-gang ketika sudah
 beranjak malam lampu yang terdapat pada gang tersebut akan menyala. Pada dusun tersebut juga terdapat kebun rumah kaca,
 dimana suhu dan kelembaban sangat diperhatikan untuk menjaga produktivitas sayur-sayur di dalam kebun.
-Semua sensor yang terdapat pada dusun tersebut juga dapat dipantau dan semua lampu yang terdapat pada gang-gang dapat dinyalakan melalui server,
-ketika posisi malam maka akan mengirimkan data ke server dan server memerintahkan lampu untuk menyala. Lampu yang digunakan bisa menggunakan LED.
+Semua sensor yang terdapat pada dusun tersebut juga dapat dipantau langsung menggunakan LCD, selain itu secara terus
+menerus data sensor dikirimkan ke server secara periodik(misalkan setiap 10 detik) serta semua lampu yang terdapat pada
+gang-gang dapat
+dinyalakan melalui server,
+ketika posisi malam tiba server memerintahkan lampu untuk menyala jika belum menyala. Lampu yang
+digunakan bisa menggunakan LED.
+Dari kasus di atas, buat program untuk kebutuhan tersebut baik dari sisi controller (ESP8266) dan dari sisi server.
+Adapun kebutuhannya adalah sebagai berikut
 
-Dari kasus di atas, buat program untuk kebutuhan tersebut baik dari sisi controller (ESP8266) dan dari sisi server. Seperti
-biasa untuk output dokumentasikan berupa link video google drive ataupun youtube, selanjutnya sisipkan link tersebut pada
-laporan Anda.
+1. Terdapat sensor LDR, DHT11, serta untuk aktuator LCD dan LED.
+3. Semua data sensor secara periodik dikirimkan ke server, misalkan setiap 10 detik. Server cukup menampilkan data
+   sensor di konsol, tidak perlu diolah atau disimpan.
+4. Data sensor juga ditampilkan di LCD.
+5. LED bisa dinyalakan oleh server pada waktu tertentu, perlu ada pengecekan apakah LED sudah nyala atau belum.
+6. Selamat mencoba. ^_^
+
+Seperti biasa untuk output dokumentasikan berupa link video google drive ataupun youtube, selanjutnya sisipkan link tersebut
+pada laporan Anda.

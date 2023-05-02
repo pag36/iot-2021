@@ -9,8 +9,7 @@
 - [05. DHT11](03/03-dht11.md)
 - [06. LDR dan HC-SR04](04/04-sensor-cahaya.md)
 - [07. LCD](05/05-lcd.md)
-
-[//]: # (- [08. Socket Server Client]&#40;07/07-socket-client.md&#41;)
+- [08. Socket Server Client](07/07-socket-client.md)
 
 [//]: # (- [09. Installasi IoT Platform]&#40;09/09-installasi-iot-platform.md&#41;)
 
