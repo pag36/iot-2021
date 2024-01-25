@@ -24,8 +24,9 @@
 
 ## Pustaka
 
-1. Pemrograman Arduino Untuk Pemula, 2019, Jasakom
-2. Smart Attendance dengan Smart Card dan Fingerprint, 2021, Polinema Press
+1. Buku Ajar Internet of Things(IoT), 2023, Polinema Press
+2. Pemrograman Arduino Untuk Pemula, 2019, Jasakom
+3. Smart Attendance dengan Smart Card dan Fingerprint, 2021, Polinema Press
 
 ## Media Pembelajaran
 
