@@ -24,9 +24,9 @@
 
 ## Pustaka
 
-1. Buku Ajar Internet of Things(IoT), 2023, Polinema Press
-2. Pemrograman Arduino Untuk Pemula, 2019, Jasakom
-3. Smart Attendance dengan Smart Card dan Fingerprint, 2021, Polinema Press
+1. Noprianto,dkk. (2023). _Buku Ajar Internet of Things(IoT)_. Malang:Polinema Press
+2. Dodit, dkk. (2019). _Pemrograman Arduino Untuk Pemula_. Jakarta:Jasakom
+3. Noprianto dan Vivi. (2021). _Smart Attendance dengan Smart Card dan Fingerprint_.Malang:Polinema Press
 
 ## Media Pembelajaran
 
