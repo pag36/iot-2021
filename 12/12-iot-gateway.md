@@ -359,7 +359,7 @@ Ikuti langkah-langkah di bawah ini untuk melakukan konfigurasinya
    ```
    > Jika menggunakan sistem operasi windows bisa menggunakan perintah yang sama pada Windows
    PowerShell, `mosquitto_passwd -c 'C:\Program Files\mosquitto\pwfile' jti.` Jangan lupa membuka Windows PowerShell
-   sebagai Administrator.
+   sebagai Administrator. Anda juga bisa menggunakan parameter `-b` untuk menambahkan user, serta parameter `-D` untuk menghapus user pada file konfigurasi tersebut.
 
 2. Buatlah file konfigurasi yang menginfokan bahwa untuk publish tidak dizinkan tanpa password. Ketik perintah di bawah
    ini
