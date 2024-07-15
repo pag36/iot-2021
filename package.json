@@ -1,7 +1,7 @@
 {
   "name": "iot",
   "version": "1.0.0",
-  "description": "",
+  "description": "|                  |                          | |------------------|--------------------------| | Mata Kuliah      | Internet Of Things       | | Kode Mata Kuliah | RTI216005                | | SKS / Jam        | 3 SKS (6 Jam per Minggu) | | Semester         | 6                        |",
   "main": "index.js",
   "scripts": {
     "start": "gitbook serve",
