@@ -42,4 +42,4 @@ jobs:
         with:
           GITHUB_TOKEN: ${{ secrets.TOKEN }}
           publish_dir: ./_book
-          cname: iot-2022.sinaungoding.com
+          cname: aioti.sinaungoding.com
