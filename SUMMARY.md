@@ -3,8 +3,7 @@
 - [Pendahuluan](README.md)
 - [Kontrak Kuliah](00/kontrak.md)
 - [01. Memahami Konsep dan arsitektur IoT](0a/0a.pertemuan1.md)
-
-[comment]: <> (- [02. Microcontroller]&#40;0b/0b.pertemuan2.md&#41;)
+- [02. Microcontroller](0b/0b.pertemuan2.md)
 
 [comment]: <> (- [03. Instalasi dan Konfigurasi]&#40;01/01.installasi-dan-konfigurasi.md&#41;)
 
