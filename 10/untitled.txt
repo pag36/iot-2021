@@ -1,0 +1,1353 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<quiz>
+<!-- question: 0  -->
+  <question type="category">
+    <category>
+      <text>$course$/top/POST-TEST2</text>
+    </category>
+    <info format="html">
+      <text>The default category for questions shared in context 'TSA : POST-TEST2'.</text>
+    </info>
+    <idnumber></idnumber>
+  </question>
+
+<!-- question: 296243  -->
+"<question type=""multichoice"">
+    <name>
+      <text>W2_1</text>
+    </name>
+    <questiontext format=""html"">
+      <text><![CDATA[<p>Apa yang dimaksud dengan komponen elektronika aktif?<br></p>]]></text>
+    </questiontext>
+    <generalfeedback format=""html"">
+      <text></text>"	</generalfeedback>   <defaultgrade>1.0000000</defaultgrade>    <penalty>0.3333333</penalty>    <hidden>0</hidden>    <idnumber></idnumber>  	" <single>true</single>
+    <shuffleanswers>true</shuffleanswers>
+    <answernumbering>abc</answernumbering>
+    <correctfeedback format=""html"">
+      <text>Your answer is correct.</text>
+    </correctfeedback>"	"<partiallycorrectfeedback format=""html"">
+      <text>Your answer is partially correct.</text>
+    </partiallycorrectfeedback>
+    <incorrectfeedback format=""html"">
+      <text>Your answer is incorrect.</text>
+    </incorrectfeedback>
+    <shownumcorrect/>"	"<answer fraction=""0"" format=""html"">
+      <text><![CDATA[<p>Komponen yang tidak memerlukan arus eksternal untuk beroperasi<br></p>]]></text>
+      <feedback format=""html"">
+        <text></text>
+      </feedback>
+    </answer>"	"<answer fraction=""100"" format=""html"">
+      <text><![CDATA[<p>Komponen yang hanya berfungsi dengan arus listrik eksternal<br></p>]]></text>
+      <feedback format=""html"">
+        <text></text>
+      </feedback>
+    </answer>"	"<answer fraction=""0"" format=""html"">
+      <text><![CDATA[<p>Komponen yang berfungsi tanpa arus listrik<br></p>]]></text>
+      <feedback format=""html"">
+        <text></text>
+      </feedback>
+    </answer>"	"<answer fraction=""0"" format=""html"">
+      <text><![CDATA[<p>Komponen yang menyimpan muatan listrik<br></p>]]></text>
+      <feedback format=""html"">
+        <text></text>
+      </feedback>
+    </answer>"	"<answer fraction=""0"" format=""html"">
+      <text><![CDATA[<p>Komponen yang mengubah energi cahaya menjadi listrik<br></p>]]></text>
+      <feedback format=""html"">
+        <text></text>
+      </feedback>
+    </answer>"	</question>	"<question type=""multichoice"">
+    <name>
+      <text>W2_1</text>
+    </name>
+    <questiontext format=""html"">
+      <text><![CDATA[<p>Apa yang dimaksud dengan komponen elektronika aktif?<br></p>]]></text>
+    </questiontext>
+    <generalfeedback format=""html"">
+      <text></text></generalfeedback>   <defaultgrade>1.0000000</defaultgrade>    <penalty>0.3333333</penalty>    <hidden>0</hidden>    <idnumber></idnumber>   <single>true</single>
+    <shuffleanswers>true</shuffleanswers>
+    <answernumbering>abc</answernumbering>
+    <correctfeedback format=""html"">
+      <text>Your answer is correct.</text>
+    </correctfeedback><partiallycorrectfeedback format=""html"">
+      <text>Your answer is partially correct.</text>
+    </partiallycorrectfeedback>
+    <incorrectfeedback format=""html"">
+      <text>Your answer is incorrect.</text>
+    </incorrectfeedback>
+    <shownumcorrect/><answer fraction=""0"" format=""html"">
+      <text><![CDATA[<p>Komponen yang tidak memerlukan arus eksternal untuk beroperasi<br></p>]]></text>
+      <feedback format=""html"">
+        <text></text>
+      </feedback>
+    </answer><answer fraction=""100"" format=""html"">
+      <text><![CDATA[<p>Komponen yang hanya berfungsi dengan arus listrik eksternal<br></p>]]></text>
+      <feedback format=""html"">
+        <text></text>
+      </feedback>
+    </answer><answer fraction=""0"" format=""html"">
+      <text><![CDATA[<p>Komponen yang berfungsi tanpa arus listrik<br></p>]]></text>
+      <feedback format=""html"">
+        <text></text>
+      </feedback>
+    </answer><answer fraction=""0"" format=""html"">
+      <text><![CDATA[<p>Komponen yang menyimpan muatan listrik<br></p>]]></text>
+      <feedback format=""html"">
+        <text></text>
+      </feedback>
+    </answer><answer fraction=""0"" format=""html"">
+      <text><![CDATA[<p>Komponen yang mengubah energi cahaya menjadi listrik<br></p>]]></text>
+      <feedback format=""html"">
+        <text></text>
+      </feedback>
+    </answer></question>"
+"<question type=""multichoice"">
+    <name>
+      <text>W2_2</text>
+    </name>
+    <questiontext format=""html"">
+      <text><![CDATA[<p>Jenis dioda yang digunakan sebagai penstabil tegangan adalah?<br></p>]]></text>
+    </questiontext>
+    <generalfeedback format=""html"">
+      <text></text>"	</generalfeedback>   <defaultgrade>1.0000000</defaultgrade>    <penalty>0.3333333</penalty>    <hidden>0</hidden>    <idnumber></idnumber>  	" <single>true</single>
+    <shuffleanswers>true</shuffleanswers>
+    <answernumbering>abc</answernumbering>
+    <correctfeedback format=""html"">
+      <text>Your answer is correct.</text>
+    </correctfeedback>"	"<partiallycorrectfeedback format=""html"">
+      <text>Your answer is partially correct.</text>
+    </partiallycorrectfeedback>
+    <incorrectfeedback format=""html"">
+      <text>Your answer is incorrect.</text>
+    </incorrectfeedback>
+    <shownumcorrect/>"	"<answer fraction=""0"" format=""html"">
+      <text><![CDATA[<p>Dioda LED<br></p>]]></text>
+      <feedback format=""html"">
+        <text></text>
+      </feedback>
+    </answer>"	"<answer fraction=""100"" format=""html"">
+      <text><![CDATA[<p>Dioda Zener<br></p>]]></text>
+      <feedback format=""html"">
+        <text></text>
+      </feedback>
+    </answer>"	"<answer fraction=""0"" format=""html"">
+      <text><![CDATA[<p>Dioda Photo<br></p>]]></text>
+      <feedback format=""html"">
+        <text></text>
+      </feedback>
+    </answer>"	"<answer fraction=""0"" format=""html"">
+      <text><![CDATA[<p>Dioda Schottky<br></p>]]></text>
+      <feedback format=""html"">
+        <text></text>
+      </feedback>
+    </answer>"	"<answer fraction=""0"" format=""html"">
+      <text><![CDATA[<p>Dioda Bridge<br></p>]]></text>
+      <feedback format=""html"">
+        <text></text>
+      </feedback>
+    </answer>"	</question>	"<question type=""multichoice"">
+    <name>
+      <text>W2_2</text>
+    </name>
+    <questiontext format=""html"">
+      <text><![CDATA[<p>Jenis dioda yang digunakan sebagai penstabil tegangan adalah?<br></p>]]></text>
+    </questiontext>
+    <generalfeedback format=""html"">
+      <text></text></generalfeedback>   <defaultgrade>1.0000000</defaultgrade>    <penalty>0.3333333</penalty>    <hidden>0</hidden>    <idnumber></idnumber>   <single>true</single>
+    <shuffleanswers>true</shuffleanswers>
+    <answernumbering>abc</answernumbering>
+    <correctfeedback format=""html"">
+      <text>Your answer is correct.</text>
+    </correctfeedback><partiallycorrectfeedback format=""html"">
+      <text>Your answer is partially correct.</text>
+    </partiallycorrectfeedback>
+    <incorrectfeedback format=""html"">
+      <text>Your answer is incorrect.</text>
+    </incorrectfeedback>
+    <shownumcorrect/><answer fraction=""0"" format=""html"">
+      <text><![CDATA[<p>Dioda LED<br></p>]]></text>
+      <feedback format=""html"">
+        <text></text>
+      </feedback>
+    </answer><answer fraction=""100"" format=""html"">
+      <text><![CDATA[<p>Dioda Zener<br></p>]]></text>
+      <feedback format=""html"">
+        <text></text>
+      </feedback>
+    </answer><answer fraction=""0"" format=""html"">
+      <text><![CDATA[<p>Dioda Photo<br></p>]]></text>
+      <feedback format=""html"">
+        <text></text>
+      </feedback>
+    </answer><answer fraction=""0"" format=""html"">
+      <text><![CDATA[<p>Dioda Schottky<br></p>]]></text>
+      <feedback format=""html"">
+        <text></text>
+      </feedback>
+    </answer><answer fraction=""0"" format=""html"">
+      <text><![CDATA[<p>Dioda Bridge<br></p>]]></text>
+      <feedback format=""html"">
+        <text></text>
+      </feedback>
+    </answer></question>"
+"<question type=""multichoice"">
+    <name>
+      <text>W2_3</text>
+    </name>
+    <questiontext format=""html"">
+      <text><![CDATA[<p>Komponen elektronika yang digunakan dalam amplifier adalah?<br></p>]]></text>
+    </questiontext>
+    <generalfeedback format=""html"">
+      <text></text>"	</generalfeedback>   <defaultgrade>1.0000000</defaultgrade>    <penalty>0.3333333</penalty>    <hidden>0</hidden>    <idnumber></idnumber>  	" <single>true</single>
+    <shuffleanswers>true</shuffleanswers>
+    <answernumbering>abc</answernumbering>
+    <correctfeedback format=""html"">
+      <text>Your answer is correct.</text>
+    </correctfeedback>"	"<partiallycorrectfeedback format=""html"">
+      <text>Your answer is partially correct.</text>
+    </partiallycorrectfeedback>
+    <incorrectfeedback format=""html"">
+      <text>Your answer is incorrect.</text>
+    </incorrectfeedback>
+    <shownumcorrect/>"	"<answer fraction=""0"" format=""html"">
+      <text><![CDATA[<p>Resistor<br></p>]]></text>
+      <feedback format=""html"">
+        <text></text>
+      </feedback>
+    </answer>"	"<answer fraction=""0"" format=""html"">
+      <text><![CDATA[<p>Kapasitor<br></p>]]></text>
+      <feedback format=""html"">
+        <text></text>
+      </feedback>
+    </answer>"	"<answer fraction=""100"" format=""html"">
+      <text><![CDATA[<p>Transistor<br></p>]]></text>
+      <feedback format=""html"">
+        <text></text>
+      </feedback>
+    </answer>"	"<answer fraction=""0"" format=""html"">
+      <text><![CDATA[<p>Induktor<br></p>]]></text>
+      <feedback format=""html"">
+        <text></text>
+      </feedback>
+    </answer>"	"<answer fraction=""0"" format=""html"">
+      <text><![CDATA[<p>Dioda<br></p>]]></text>
+      <feedback format=""html"">
+        <text></text>
+      </feedback>
+    </answer>"	</question>	"<question type=""multichoice"">
+    <name>
+      <text>W2_3</text>
+    </name>
+    <questiontext format=""html"">
+      <text><![CDATA[<p>Komponen elektronika yang digunakan dalam amplifier adalah?<br></p>]]></text>
+    </questiontext>
+    <generalfeedback format=""html"">
+      <text></text></generalfeedback>   <defaultgrade>1.0000000</defaultgrade>    <penalty>0.3333333</penalty>    <hidden>0</hidden>    <idnumber></idnumber>   <single>true</single>
+    <shuffleanswers>true</shuffleanswers>
+    <answernumbering>abc</answernumbering>
+    <correctfeedback format=""html"">
+      <text>Your answer is correct.</text>
+    </correctfeedback><partiallycorrectfeedback format=""html"">
+      <text>Your answer is partially correct.</text>
+    </partiallycorrectfeedback>
+    <incorrectfeedback format=""html"">
+      <text>Your answer is incorrect.</text>
+    </incorrectfeedback>
+    <shownumcorrect/><answer fraction=""0"" format=""html"">
+      <text><![CDATA[<p>Resistor<br></p>]]></text>
+      <feedback format=""html"">
+        <text></text>
+      </feedback>
+    </answer><answer fraction=""0"" format=""html"">
+      <text><![CDATA[<p>Kapasitor<br></p>]]></text>
+      <feedback format=""html"">
+        <text></text>
+      </feedback>
+    </answer><answer fraction=""100"" format=""html"">
+      <text><![CDATA[<p>Transistor<br></p>]]></text>
+      <feedback format=""html"">
+        <text></text>
+      </feedback>
+    </answer><answer fraction=""0"" format=""html"">
+      <text><![CDATA[<p>Induktor<br></p>]]></text>
+      <feedback format=""html"">
+        <text></text>
+      </feedback>
+    </answer><answer fraction=""0"" format=""html"">
+      <text><![CDATA[<p>Dioda<br></p>]]></text>
+      <feedback format=""html"">
+        <text></text>
+      </feedback>
+    </answer></question>"
+"<question type=""multichoice"">
+    <name>
+      <text>W2_4</text>
+    </name>
+    <questiontext format=""html"">
+      <text><![CDATA[<p>FET adalah singkatan dari?<br></p>]]></text>
+    </questiontext>
+    <generalfeedback format=""html"">
+      <text></text>"	</generalfeedback>   <defaultgrade>1.0000000</defaultgrade>    <penalty>0.3333333</penalty>    <hidden>0</hidden>    <idnumber></idnumber>  	" <single>true</single>
+    <shuffleanswers>true</shuffleanswers>
+    <answernumbering>abc</answernumbering>
+    <correctfeedback format=""html"">
+      <text>Your answer is correct.</text>
+    </correctfeedback>"	"<partiallycorrectfeedback format=""html"">
+      <text>Your answer is partially correct.</text>
+    </partiallycorrectfeedback>
+    <incorrectfeedback format=""html"">
+      <text>Your answer is incorrect.</text>
+    </incorrectfeedback>
+    <shownumcorrect/>"	"<answer fraction=""100"" format=""html"">
+      <text><![CDATA[<p>Field Effect Transistor<br></p>]]></text>
+      <feedback format=""html"">
+        <text></text>
+      </feedback>
+    </answer>"	"<answer fraction=""0"" format=""html"">
+      <text><![CDATA[<p>Fast Energy Transistor<br></p>]]></text>
+      <feedback format=""html"">
+        <text></text>
+      </feedback>
+    </answer>"	"<answer fraction=""0"" format=""html"">
+      <text><![CDATA[<p>Free Electron Transistor<br></p>]]></text>
+      <feedback format=""html"">
+        <text></text>
+      </feedback>
+    </answer>"	"<answer fraction=""0"" format=""html"">
+      <text><![CDATA[<p>Functional Electronic Transistor<br></p>]]></text>
+      <feedback format=""html"">
+        <text></text>
+      </feedback>
+    </answer>"	"<answer fraction=""0"" format=""html"">
+      <text><![CDATA[<p>Full Energy Transistor<br></p>]]></text>
+      <feedback format=""html"">
+        <text></text>
+      </feedback>
+    </answer>"	</question>	"<question type=""multichoice"">
+    <name>
+      <text>W2_4</text>
+    </name>
+    <questiontext format=""html"">
+      <text><![CDATA[<p>FET adalah singkatan dari?<br></p>]]></text>
+    </questiontext>
+    <generalfeedback format=""html"">
+      <text></text></generalfeedback>   <defaultgrade>1.0000000</defaultgrade>    <penalty>0.3333333</penalty>    <hidden>0</hidden>    <idnumber></idnumber>   <single>true</single>
+    <shuffleanswers>true</shuffleanswers>
+    <answernumbering>abc</answernumbering>
+    <correctfeedback format=""html"">
+      <text>Your answer is correct.</text>
+    </correctfeedback><partiallycorrectfeedback format=""html"">
+      <text>Your answer is partially correct.</text>
+    </partiallycorrectfeedback>
+    <incorrectfeedback format=""html"">
+      <text>Your answer is incorrect.</text>
+    </incorrectfeedback>
+    <shownumcorrect/><answer fraction=""100"" format=""html"">
+      <text><![CDATA[<p>Field Effect Transistor<br></p>]]></text>
+      <feedback format=""html"">
+        <text></text>
+      </feedback>
+    </answer><answer fraction=""0"" format=""html"">
+      <text><![CDATA[<p>Fast Energy Transistor<br></p>]]></text>
+      <feedback format=""html"">
+        <text></text>
+      </feedback>
+    </answer><answer fraction=""0"" format=""html"">
+      <text><![CDATA[<p>Free Electron Transistor<br></p>]]></text>
+      <feedback format=""html"">
+        <text></text>
+      </feedback>
+    </answer><answer fraction=""0"" format=""html"">
+      <text><![CDATA[<p>Functional Electronic Transistor<br></p>]]></text>
+      <feedback format=""html"">
+        <text></text>
+      </feedback>
+    </answer><answer fraction=""0"" format=""html"">
+      <text><![CDATA[<p>Full Energy Transistor<br></p>]]></text>
+      <feedback format=""html"">
+        <text></text>
+      </feedback>
+    </answer></question>"
+"<question type=""multichoice"">
+    <name>
+      <text>W2_5</text>
+    </name>
+    <questiontext format=""html"">
+      <text><![CDATA[<p>Komponen elektronika yang memiliki kapasitansi adalah?<br></p>]]></text>
+    </questiontext>
+    <generalfeedback format=""html"">
+      <text></text>"	</generalfeedback>   <defaultgrade>1.0000000</defaultgrade>    <penalty>0.3333333</penalty>    <hidden>0</hidden>    <idnumber></idnumber>  	" <single>true</single>
+    <shuffleanswers>true</shuffleanswers>
+    <answernumbering>abc</answernumbering>
+    <correctfeedback format=""html"">
+      <text>Your answer is correct.</text>
+    </correctfeedback>"	"<partiallycorrectfeedback format=""html"">
+      <text>Your answer is partially correct.</text>
+    </partiallycorrectfeedback>
+    <incorrectfeedback format=""html"">
+      <text>Your answer is incorrect.</text>
+    </incorrectfeedback>
+    <shownumcorrect/>"	"<answer fraction=""0"" format=""html"">
+      <text><![CDATA[<p>Resistor<br></p>]]></text>
+      <feedback format=""html"">
+        <text></text>
+      </feedback>
+    </answer>"	"<answer fraction=""100"" format=""html"">
+      <text><![CDATA[<p>Kapasitor<br></p>]]></text>
+      <feedback format=""html"">
+        <text></text>
+      </feedback>
+    </answer>"	"<answer fraction=""0"" format=""html"">
+      <text><![CDATA[<p>Transistor<br></p>]]></text>
+      <feedback format=""html"">
+        <text></text>
+      </feedback>
+    </answer>"	"<answer fraction=""0"" format=""html"">
+      <text><![CDATA[<p>Induktor<br></p>]]></text>
+      <feedback format=""html"">
+        <text></text>
+      </feedback>
+    </answer>"	"<answer fraction=""0"" format=""html"">
+      <text><![CDATA[<p>Dioda<br></p>]]></text>
+      <feedback format=""html"">
+        <text></text>
+      </feedback>
+    </answer>"	</question>	"<question type=""multichoice"">
+    <name>
+      <text>W2_5</text>
+    </name>
+    <questiontext format=""html"">
+      <text><![CDATA[<p>Komponen elektronika yang memiliki kapasitansi adalah?<br></p>]]></text>
+    </questiontext>
+    <generalfeedback format=""html"">
+      <text></text></generalfeedback>   <defaultgrade>1.0000000</defaultgrade>    <penalty>0.3333333</penalty>    <hidden>0</hidden>    <idnumber></idnumber>   <single>true</single>
+    <shuffleanswers>true</shuffleanswers>
+    <answernumbering>abc</answernumbering>
+    <correctfeedback format=""html"">
+      <text>Your answer is correct.</text>
+    </correctfeedback><partiallycorrectfeedback format=""html"">
+      <text>Your answer is partially correct.</text>
+    </partiallycorrectfeedback>
+    <incorrectfeedback format=""html"">
+      <text>Your answer is incorrect.</text>
+    </incorrectfeedback>
+    <shownumcorrect/><answer fraction=""0"" format=""html"">
+      <text><![CDATA[<p>Resistor<br></p>]]></text>
+      <feedback format=""html"">
+        <text></text>
+      </feedback>
+    </answer><answer fraction=""100"" format=""html"">
+      <text><![CDATA[<p>Kapasitor<br></p>]]></text>
+      <feedback format=""html"">
+        <text></text>
+      </feedback>
+    </answer><answer fraction=""0"" format=""html"">
+      <text><![CDATA[<p>Transistor<br></p>]]></text>
+      <feedback format=""html"">
+        <text></text>
+      </feedback>
+    </answer><answer fraction=""0"" format=""html"">
+      <text><![CDATA[<p>Induktor<br></p>]]></text>
+      <feedback format=""html"">
+        <text></text>
+      </feedback>
+    </answer><answer fraction=""0"" format=""html"">
+      <text><![CDATA[<p>Dioda<br></p>]]></text>
+      <feedback format=""html"">
+        <text></text>
+      </feedback>
+    </answer></question>"
+"<question type=""multichoice"">
+    <name>
+      <text>W2_6</text>
+    </name>
+    <questiontext format=""html"">
+      <text><![CDATA[<p>Satuan nilai resistansi atau hambatan adalah?<br></p>]]></text>
+    </questiontext>
+    <generalfeedback format=""html"">
+      <text></text>"	</generalfeedback>   <defaultgrade>1.0000000</defaultgrade>    <penalty>0.3333333</penalty>    <hidden>0</hidden>    <idnumber></idnumber>  	" <single>true</single>
+    <shuffleanswers>true</shuffleanswers>
+    <answernumbering>abc</answernumbering>
+    <correctfeedback format=""html"">
+      <text>Your answer is correct.</text>
+    </correctfeedback>"	"<partiallycorrectfeedback format=""html"">
+      <text>Your answer is partially correct.</text>
+    </partiallycorrectfeedback>
+    <incorrectfeedback format=""html"">
+      <text>Your answer is incorrect.</text>
+    </incorrectfeedback>
+    <shownumcorrect/>"	"<answer fraction=""0"" format=""html"">
+      <text><![CDATA[<p>Volt<br></p>]]></text>
+      <feedback format=""html"">
+        <text></text>
+      </feedback>
+    </answer>"	"<answer fraction=""0"" format=""html"">
+      <text><![CDATA[<p>Ampere<br></p>]]></text>
+      <feedback format=""html"">
+        <text></text>
+      </feedback>
+    </answer>"	"<answer fraction=""100"" format=""html"">
+      <text><![CDATA[<p>Ohm<br></p>]]></text>
+      <feedback format=""html"">
+        <text></text>
+      </feedback>
+    </answer>"	"<answer fraction=""0"" format=""html"">
+      <text><![CDATA[<p>Henry<br></p>]]></text>
+      <feedback format=""html"">
+        <text></text>
+      </feedback>
+    </answer>"	"<answer fraction=""0"" format=""html"">
+      <text><![CDATA[<p>Farad<br></p>]]></text>
+      <feedback format=""html"">
+        <text></text>
+      </feedback>
+    </answer>"	</question>	"<question type=""multichoice"">
+    <name>
+      <text>W2_6</text>
+    </name>
+    <questiontext format=""html"">
+      <text><![CDATA[<p>Satuan nilai resistansi atau hambatan adalah?<br></p>]]></text>
+    </questiontext>
+    <generalfeedback format=""html"">
+      <text></text></generalfeedback>   <defaultgrade>1.0000000</defaultgrade>    <penalty>0.3333333</penalty>    <hidden>0</hidden>    <idnumber></idnumber>   <single>true</single>
+    <shuffleanswers>true</shuffleanswers>
+    <answernumbering>abc</answernumbering>
+    <correctfeedback format=""html"">
+      <text>Your answer is correct.</text>
+    </correctfeedback><partiallycorrectfeedback format=""html"">
+      <text>Your answer is partially correct.</text>
+    </partiallycorrectfeedback>
+    <incorrectfeedback format=""html"">
+      <text>Your answer is incorrect.</text>
+    </incorrectfeedback>
+    <shownumcorrect/><answer fraction=""0"" format=""html"">
+      <text><![CDATA[<p>Volt<br></p>]]></text>
+      <feedback format=""html"">
+        <text></text>
+      </feedback>
+    </answer><answer fraction=""0"" format=""html"">
+      <text><![CDATA[<p>Ampere<br></p>]]></text>
+      <feedback format=""html"">
+        <text></text>
+      </feedback>
+    </answer><answer fraction=""100"" format=""html"">
+      <text><![CDATA[<p>Ohm<br></p>]]></text>
+      <feedback format=""html"">
+        <text></text>
+      </feedback>
+    </answer><answer fraction=""0"" format=""html"">
+      <text><![CDATA[<p>Henry<br></p>]]></text>
+      <feedback format=""html"">
+        <text></text>
+      </feedback>
+    </answer><answer fraction=""0"" format=""html"">
+      <text><![CDATA[<p>Farad<br></p>]]></text>
+      <feedback format=""html"">
+        <text></text>
+      </feedback>
+    </answer></question>"
+"<question type=""multichoice"">
+    <name>
+      <text>W2_7</text>
+    </name>
+    <questiontext format=""html"">
+      <text><![CDATA[<p>Jenis resistor yang nilainya dapat diubah-ubah disebut?
+<br></p>]]></text>
+    </questiontext>
+    <generalfeedback format=""html"">
+      <text></text>"	</generalfeedback>   <defaultgrade>1.0000000</defaultgrade>    <penalty>0.3333333</penalty>    <hidden>0</hidden>    <idnumber></idnumber>  	" <single>true</single>
+    <shuffleanswers>true</shuffleanswers>
+    <answernumbering>abc</answernumbering>
+    <correctfeedback format=""html"">
+      <text>Your answer is correct.</text>
+    </correctfeedback>"	"<partiallycorrectfeedback format=""html"">
+      <text>Your answer is partially correct.</text>
+    </partiallycorrectfeedback>
+    <incorrectfeedback format=""html"">
+      <text>Your answer is incorrect.</text>
+    </incorrectfeedback>
+    <shownumcorrect/>"	"<answer fraction=""0"" format=""html"">
+      <text><![CDATA[<p>Resistor Tetap<br></p>]]></text>
+      <feedback format=""html"">
+        <text></text>
+      </feedback>
+    </answer>"	"<answer fraction=""100"" format=""html"">
+      <text><![CDATA[<p>Resistor Variabel<br></p>]]></text>
+      <feedback format=""html"">
+        <text></text>
+      </feedback>
+    </answer>"	"<answer fraction=""0"" format=""html"">
+      <text><![CDATA[<p>Resistor Film<br></p>]]></text>
+      <feedback format=""html"">
+        <text></text>
+      </feedback>
+    </answer>"	"<answer fraction=""0"" format=""html"">
+      <text><![CDATA[<p>Resistor Kawat<br></p>]]></text>
+      <feedback format=""html"">
+        <text></text>
+      </feedback>
+    </answer>"	"<answer fraction=""0"" format=""html"">
+      <text><![CDATA[<p>Resistor Carbon<br></p>]]></text>
+      <feedback format=""html"">
+        <text></text>
+      </feedback>
+    </answer>"	</question>	"<question type=""multichoice"">
+    <name>
+      <text>W2_7</text>
+    </name>
+    <questiontext format=""html"">
+      <text><![CDATA[<p>Jenis resistor yang nilainya dapat diubah-ubah disebut?
+<br></p>]]></text>
+    </questiontext>
+    <generalfeedback format=""html"">
+      <text></text></generalfeedback>   <defaultgrade>1.0000000</defaultgrade>    <penalty>0.3333333</penalty>    <hidden>0</hidden>    <idnumber></idnumber>   <single>true</single>
+    <shuffleanswers>true</shuffleanswers>
+    <answernumbering>abc</answernumbering>
+    <correctfeedback format=""html"">
+      <text>Your answer is correct.</text>
+    </correctfeedback><partiallycorrectfeedback format=""html"">
+      <text>Your answer is partially correct.</text>
+    </partiallycorrectfeedback>
+    <incorrectfeedback format=""html"">
+      <text>Your answer is incorrect.</text>
+    </incorrectfeedback>
+    <shownumcorrect/><answer fraction=""0"" format=""html"">
+      <text><![CDATA[<p>Resistor Tetap<br></p>]]></text>
+      <feedback format=""html"">
+        <text></text>
+      </feedback>
+    </answer><answer fraction=""100"" format=""html"">
+      <text><![CDATA[<p>Resistor Variabel<br></p>]]></text>
+      <feedback format=""html"">
+        <text></text>
+      </feedback>
+    </answer><answer fraction=""0"" format=""html"">
+      <text><![CDATA[<p>Resistor Film<br></p>]]></text>
+      <feedback format=""html"">
+        <text></text>
+      </feedback>
+    </answer><answer fraction=""0"" format=""html"">
+      <text><![CDATA[<p>Resistor Kawat<br></p>]]></text>
+      <feedback format=""html"">
+        <text></text>
+      </feedback>
+    </answer><answer fraction=""0"" format=""html"">
+      <text><![CDATA[<p>Resistor Carbon<br></p>]]></text>
+      <feedback format=""html"">
+        <text></text>
+      </feedback>
+    </answer></question>"
+"<question type=""multichoice"">
+    <name>
+      <text>W2_8</text>
+    </name>
+    <questiontext format=""html"">
+      <text><![CDATA[<p>IC yang beroperasi pada sinyal yang berbentuk gelombang kontinyu disebut?<br></p>]]></text>
+    </questiontext>
+    <generalfeedback format=""html"">
+      <text></text>"	</generalfeedback>   <defaultgrade>1.0000000</defaultgrade>    <penalty>0.3333333</penalty>    <hidden>0</hidden>    <idnumber></idnumber>  	" <single>true</single>
+    <shuffleanswers>true</shuffleanswers>
+    <answernumbering>abc</answernumbering>
+    <correctfeedback format=""html"">
+      <text>Your answer is correct.</text>
+    </correctfeedback>"	"<partiallycorrectfeedback format=""html"">
+      <text>Your answer is partially correct.</text>
+    </partiallycorrectfeedback>
+    <incorrectfeedback format=""html"">
+      <text>Your answer is incorrect.</text>
+    </incorrectfeedback>
+    <shownumcorrect/>"	"<answer fraction=""0"" format=""html"">
+      <text><![CDATA[<p>IC Digital<br></p>]]></text>
+      <feedback format=""html"">
+        <text></text>
+      </feedback>
+    </answer>"	"<answer fraction=""0"" format=""html"">
+      <text><![CDATA[<p>IC Campuran<br></p>]]></text>
+      <feedback format=""html"">
+        <text></text>
+      </feedback>
+    </answer>"	"<answer fraction=""100"" format=""html"">
+      <text><![CDATA[<p>IC Analog<br></p>]]></text>
+      <feedback format=""html"">
+        <text></text>
+      </feedback>
+    </answer>"	"<answer fraction=""0"" format=""html"">
+      <text><![CDATA[<p>IC Mikroprosesor<br></p>]]></text>
+      <feedback format=""html"">
+        <text></text>
+      </feedback>
+    </answer>"	"<answer fraction=""0"" format=""html"">
+      <text><![CDATA[<p>IC Memory<br></p>]]></text>
+      <feedback format=""html"">
+        <text></text>
+      </feedback>
+    </answer>"	</question>	"<question type=""multichoice"">
+    <name>
+      <text>W2_8</text>
+    </name>
+    <questiontext format=""html"">
+      <text><![CDATA[<p>IC yang beroperasi pada sinyal yang berbentuk gelombang kontinyu disebut?<br></p>]]></text>
+    </questiontext>
+    <generalfeedback format=""html"">
+      <text></text></generalfeedback>   <defaultgrade>1.0000000</defaultgrade>    <penalty>0.3333333</penalty>    <hidden>0</hidden>    <idnumber></idnumber>   <single>true</single>
+    <shuffleanswers>true</shuffleanswers>
+    <answernumbering>abc</answernumbering>
+    <correctfeedback format=""html"">
+      <text>Your answer is correct.</text>
+    </correctfeedback><partiallycorrectfeedback format=""html"">
+      <text>Your answer is partially correct.</text>
+    </partiallycorrectfeedback>
+    <incorrectfeedback format=""html"">
+      <text>Your answer is incorrect.</text>
+    </incorrectfeedback>
+    <shownumcorrect/><answer fraction=""0"" format=""html"">
+      <text><![CDATA[<p>IC Digital<br></p>]]></text>
+      <feedback format=""html"">
+        <text></text>
+      </feedback>
+    </answer><answer fraction=""0"" format=""html"">
+      <text><![CDATA[<p>IC Campuran<br></p>]]></text>
+      <feedback format=""html"">
+        <text></text>
+      </feedback>
+    </answer><answer fraction=""100"" format=""html"">
+      <text><![CDATA[<p>IC Analog<br></p>]]></text>
+      <feedback format=""html"">
+        <text></text>
+      </feedback>
+    </answer><answer fraction=""0"" format=""html"">
+      <text><![CDATA[<p>IC Mikroprosesor<br></p>]]></text>
+      <feedback format=""html"">
+        <text></text>
+      </feedback>
+    </answer><answer fraction=""0"" format=""html"">
+      <text><![CDATA[<p>IC Memory<br></p>]]></text>
+      <feedback format=""html"">
+        <text></text>
+      </feedback>
+    </answer></question>"
+"<question type=""multichoice"">
+    <name>
+      <text>W2_9</text>
+    </name>
+    <questiontext format=""html"">
+      <text><![CDATA[<p>Komponen pasif yang digunakan untuk menghambat arus listrik dalam rangkaian disebut?
+<br></p>]]></text>
+    </questiontext>
+    <generalfeedback format=""html"">
+      <text></text>"	</generalfeedback>   <defaultgrade>1.0000000</defaultgrade>    <penalty>0.3333333</penalty>    <hidden>0</hidden>    <idnumber></idnumber>  	" <single>true</single>
+    <shuffleanswers>true</shuffleanswers>
+    <answernumbering>abc</answernumbering>
+    <correctfeedback format=""html"">
+      <text>Your answer is correct.</text>
+    </correctfeedback>"	"<partiallycorrectfeedback format=""html"">
+      <text>Your answer is partially correct.</text>
+    </partiallycorrectfeedback>
+    <incorrectfeedback format=""html"">
+      <text>Your answer is incorrect.</text>
+    </incorrectfeedback>
+    <shownumcorrect/>"	"<answer fraction=""100"" format=""html"">
+      <text><![CDATA[<p>Resistor<br></p>]]></text>
+      <feedback format=""html"">
+        <text></text>
+      </feedback>
+    </answer>"	"<answer fraction=""0"" format=""html"">
+      <text><![CDATA[<p>Kapasitor<br></p>]]></text>
+      <feedback format=""html"">
+        <text></text>
+      </feedback>
+    </answer>"	"<answer fraction=""0"" format=""html"">
+      <text><![CDATA[<p>Transistor<br></p>]]></text>
+      <feedback format=""html"">
+        <text></text>
+      </feedback>
+    </answer>"	"<answer fraction=""0"" format=""html"">
+      <text><![CDATA[<p>Induktor<br></p>]]></text>
+      <feedback format=""html"">
+        <text></text>
+      </feedback>
+    </answer>"	"<answer fraction=""0"" format=""html"">
+      <text><![CDATA[<p>Dioda<br></p>]]></text>
+      <feedback format=""html"">
+        <text></text>
+      </feedback>
+    </answer>"	</question>	"<question type=""multichoice"">
+    <name>
+      <text>W2_9</text>
+    </name>
+    <questiontext format=""html"">
+      <text><![CDATA[<p>Komponen pasif yang digunakan untuk menghambat arus listrik dalam rangkaian disebut?
+<br></p>]]></text>
+    </questiontext>
+    <generalfeedback format=""html"">
+      <text></text></generalfeedback>   <defaultgrade>1.0000000</defaultgrade>    <penalty>0.3333333</penalty>    <hidden>0</hidden>    <idnumber></idnumber>   <single>true</single>
+    <shuffleanswers>true</shuffleanswers>
+    <answernumbering>abc</answernumbering>
+    <correctfeedback format=""html"">
+      <text>Your answer is correct.</text>
+    </correctfeedback><partiallycorrectfeedback format=""html"">
+      <text>Your answer is partially correct.</text>
+    </partiallycorrectfeedback>
+    <incorrectfeedback format=""html"">
+      <text>Your answer is incorrect.</text>
+    </incorrectfeedback>
+    <shownumcorrect/><answer fraction=""100"" format=""html"">
+      <text><![CDATA[<p>Resistor<br></p>]]></text>
+      <feedback format=""html"">
+        <text></text>
+      </feedback>
+    </answer><answer fraction=""0"" format=""html"">
+      <text><![CDATA[<p>Kapasitor<br></p>]]></text>
+      <feedback format=""html"">
+        <text></text>
+      </feedback>
+    </answer><answer fraction=""0"" format=""html"">
+      <text><![CDATA[<p>Transistor<br></p>]]></text>
+      <feedback format=""html"">
+        <text></text>
+      </feedback>
+    </answer><answer fraction=""0"" format=""html"">
+      <text><![CDATA[<p>Induktor<br></p>]]></text>
+      <feedback format=""html"">
+        <text></text>
+      </feedback>
+    </answer><answer fraction=""0"" format=""html"">
+      <text><![CDATA[<p>Dioda<br></p>]]></text>
+      <feedback format=""html"">
+        <text></text>
+      </feedback>
+    </answer></question>"
+"<question type=""multichoice"">
+    <name>
+      <text>W2_10</text>
+    </name>
+    <questiontext format=""html"">
+      <text><![CDATA[<p>Jenis IC yang digunakan untuk mengubah sinyal digital menjadi analog adalah?<br></p>]]></text>
+    </questiontext>
+    <generalfeedback format=""html"">
+      <text></text>"	</generalfeedback>   <defaultgrade>1.0000000</defaultgrade>    <penalty>0.3333333</penalty>    <hidden>0</hidden>    <idnumber></idnumber>  	" <single>true</single>
+    <shuffleanswers>true</shuffleanswers>
+    <answernumbering>abc</answernumbering>
+    <correctfeedback format=""html"">
+      <text>Your answer is correct.</text>
+    </correctfeedback>"	"<partiallycorrectfeedback format=""html"">
+      <text>Your answer is partially correct.</text>
+    </partiallycorrectfeedback>
+    <incorrectfeedback format=""html"">
+      <text>Your answer is incorrect.</text>
+    </incorrectfeedback>
+    <shownumcorrect/>"	"<answer fraction=""0"" format=""html"">
+      <text><![CDATA[<p>IC Analog<br></p>]]></text>
+      <feedback format=""html"">
+        <text></text>
+      </feedback>
+    </answer>"	"<answer fraction=""0"" format=""html"">
+      <text><![CDATA[<p>IC Digital<br></p>]]></text>
+      <feedback format=""html"">
+        <text></text>
+      </feedback>
+    </answer>"	"<answer fraction=""100"" format=""html"">
+      <text><![CDATA[<p>IC Campuran<br></p>]]></text>
+      <feedback format=""html"">
+        <text></text>
+      </feedback>
+    </answer>"	"<answer fraction=""0"" format=""html"">
+      <text><![CDATA[<p> IC Mikroprosesor<br></p>]]></text>
+      <feedback format=""html"">
+        <text></text>
+      </feedback>
+    </answer>"	"<answer fraction=""0"" format=""html"">
+      <text><![CDATA[<p>IC Penguat Sinyal<br></p>]]></text>
+      <feedback format=""html"">
+        <text></text>
+      </feedback>
+    </answer>"	</question>	"<question type=""multichoice"">
+    <name>
+      <text>W2_10</text>
+    </name>
+    <questiontext format=""html"">
+      <text><![CDATA[<p>Jenis IC yang digunakan untuk mengubah sinyal digital menjadi analog adalah?<br></p>]]></text>
+    </questiontext>
+    <generalfeedback format=""html"">
+      <text></text></generalfeedback>   <defaultgrade>1.0000000</defaultgrade>    <penalty>0.3333333</penalty>    <hidden>0</hidden>    <idnumber></idnumber>   <single>true</single>
+    <shuffleanswers>true</shuffleanswers>
+    <answernumbering>abc</answernumbering>
+    <correctfeedback format=""html"">
+      <text>Your answer is correct.</text>
+    </correctfeedback><partiallycorrectfeedback format=""html"">
+      <text>Your answer is partially correct.</text>
+    </partiallycorrectfeedback>
+    <incorrectfeedback format=""html"">
+      <text>Your answer is incorrect.</text>
+    </incorrectfeedback>
+    <shownumcorrect/><answer fraction=""0"" format=""html"">
+      <text><![CDATA[<p>IC Analog<br></p>]]></text>
+      <feedback format=""html"">
+        <text></text>
+      </feedback>
+    </answer><answer fraction=""0"" format=""html"">
+      <text><![CDATA[<p>IC Digital<br></p>]]></text>
+      <feedback format=""html"">
+        <text></text>
+      </feedback>
+    </answer><answer fraction=""100"" format=""html"">
+      <text><![CDATA[<p>IC Campuran<br></p>]]></text>
+      <feedback format=""html"">
+        <text></text>
+      </feedback>
+    </answer><answer fraction=""0"" format=""html"">
+      <text><![CDATA[<p> IC Mikroprosesor<br></p>]]></text>
+      <feedback format=""html"">
+        <text></text>
+      </feedback>
+    </answer><answer fraction=""0"" format=""html"">
+      <text><![CDATA[<p>IC Penguat Sinyal<br></p>]]></text>
+      <feedback format=""html"">
+        <text></text>
+      </feedback>
+    </answer></question>"
+"<question type=""multichoice"">
+    <name>
+      <text>W2_11</text>
+    </name>
+    <questiontext format=""html"">
+      <text><![CDATA[<p>Komponen yang berfungsi sebagai sensor cahaya adalah?<br></p>]]></text>
+    </questiontext>
+    <generalfeedback format=""html"">
+      <text></text>"	</generalfeedback>   <defaultgrade>1.0000000</defaultgrade>    <penalty>0.3333333</penalty>    <hidden>0</hidden>    <idnumber></idnumber>  	" <single>true</single>
+    <shuffleanswers>true</shuffleanswers>
+    <answernumbering>abc</answernumbering>
+    <correctfeedback format=""html"">
+      <text>Your answer is correct.</text>
+    </correctfeedback>"	"<partiallycorrectfeedback format=""html"">
+      <text>Your answer is partially correct.</text>
+    </partiallycorrectfeedback>
+    <incorrectfeedback format=""html"">
+      <text>Your answer is incorrect.</text>
+    </incorrectfeedback>
+    <shownumcorrect/>"	"<answer fraction=""0"" format=""html"">
+      <text><![CDATA[<p>Dioda LED<br></p>]]></text>
+      <feedback format=""html"">
+        <text></text>
+      </feedback>
+    </answer>"	"<answer fraction=""0"" format=""html"">
+      <text><![CDATA[<p>Dioda Zener<br></p>]]></text>
+      <feedback format=""html"">
+        <text></text>
+      </feedback>
+    </answer>"	"<answer fraction=""100"" format=""html"">
+      <text><![CDATA[<p>Photodioda<br></p>]]></text>
+      <feedback format=""html"">
+        <text></text>
+      </feedback>
+    </answer>"	"<answer fraction=""0"" format=""html"">
+      <text><![CDATA[<p>Dioda Schottky<br></p>]]></text>
+      <feedback format=""html"">
+        <text></text>
+      </feedback>
+    </answer>"	"<answer fraction=""0"" format=""html"">
+      <text><![CDATA[<p>Dioda Bridge<br></p>]]></text>
+      <feedback format=""html"">
+        <text></text>
+      </feedback>
+    </answer>"	</question>	"<question type=""multichoice"">
+    <name>
+      <text>W2_11</text>
+    </name>
+    <questiontext format=""html"">
+      <text><![CDATA[<p>Komponen yang berfungsi sebagai sensor cahaya adalah?<br></p>]]></text>
+    </questiontext>
+    <generalfeedback format=""html"">
+      <text></text></generalfeedback>   <defaultgrade>1.0000000</defaultgrade>    <penalty>0.3333333</penalty>    <hidden>0</hidden>    <idnumber></idnumber>   <single>true</single>
+    <shuffleanswers>true</shuffleanswers>
+    <answernumbering>abc</answernumbering>
+    <correctfeedback format=""html"">
+      <text>Your answer is correct.</text>
+    </correctfeedback><partiallycorrectfeedback format=""html"">
+      <text>Your answer is partially correct.</text>
+    </partiallycorrectfeedback>
+    <incorrectfeedback format=""html"">
+      <text>Your answer is incorrect.</text>
+    </incorrectfeedback>
+    <shownumcorrect/><answer fraction=""0"" format=""html"">
+      <text><![CDATA[<p>Dioda LED<br></p>]]></text>
+      <feedback format=""html"">
+        <text></text>
+      </feedback>
+    </answer><answer fraction=""0"" format=""html"">
+      <text><![CDATA[<p>Dioda Zener<br></p>]]></text>
+      <feedback format=""html"">
+        <text></text>
+      </feedback>
+    </answer><answer fraction=""100"" format=""html"">
+      <text><![CDATA[<p>Photodioda<br></p>]]></text>
+      <feedback format=""html"">
+        <text></text>
+      </feedback>
+    </answer><answer fraction=""0"" format=""html"">
+      <text><![CDATA[<p>Dioda Schottky<br></p>]]></text>
+      <feedback format=""html"">
+        <text></text>
+      </feedback>
+    </answer><answer fraction=""0"" format=""html"">
+      <text><![CDATA[<p>Dioda Bridge<br></p>]]></text>
+      <feedback format=""html"">
+        <text></text>
+      </feedback>
+    </answer></question>"
+"<question type=""multichoice"">
+    <name>
+      <text>W2_12</text>
+    </name>
+    <questiontext format=""html"">
+      <text><![CDATA[<p>Jenis transistor yang dikendalikan dengan tegangan pada daerah Gate disebut?<br></p>]]></text>
+    </questiontext>
+    <generalfeedback format=""html"">
+      <text></text>"	</generalfeedback>   <defaultgrade>1.0000000</defaultgrade>    <penalty>0.3333333</penalty>    <hidden>0</hidden>    <idnumber></idnumber>  	" <single>true</single>
+    <shuffleanswers>true</shuffleanswers>
+    <answernumbering>abc</answernumbering>
+    <correctfeedback format=""html"">
+      <text>Your answer is correct.</text>
+    </correctfeedback>"	"<partiallycorrectfeedback format=""html"">
+      <text>Your answer is partially correct.</text>
+    </partiallycorrectfeedback>
+    <incorrectfeedback format=""html"">
+      <text>Your answer is incorrect.</text>
+    </incorrectfeedback>
+    <shownumcorrect/>"	"<answer fraction=""0"" format=""html"">
+      <text><![CDATA[<p>Transistor Bipolar<br></p>]]></text>
+      <feedback format=""html"">
+        <text></text>
+      </feedback>
+    </answer>"	"<answer fraction=""100"" format=""html"">
+      <text><![CDATA[<p>Field Effect Transistor (FET)<br></p>]]></text>
+      <feedback format=""html"">
+        <text></text>
+      </feedback>
+    </answer>"	"<answer fraction=""0"" format=""html"">
+      <text><![CDATA[<p>Transistor NPN<br></p>]]></text>
+      <feedback format=""html"">
+        <text></text>
+      </feedback>
+    </answer>"	"<answer fraction=""0"" format=""html"">
+      <text><![CDATA[<p>Transistor PNP<br></p>]]></text>
+      <feedback format=""html"">
+        <text></text>
+      </feedback>
+    </answer>"	"<answer fraction=""0"" format=""html"">
+      <text><![CDATA[<p>Integrated Circuit (IC)<br></p>]]></text>
+      <feedback format=""html"">
+        <text></text>
+      </feedback>
+    </answer>"	</question>	"<question type=""multichoice"">
+    <name>
+      <text>W2_12</text>
+    </name>
+    <questiontext format=""html"">
+      <text><![CDATA[<p>Jenis transistor yang dikendalikan dengan tegangan pada daerah Gate disebut?<br></p>]]></text>
+    </questiontext>
+    <generalfeedback format=""html"">
+      <text></text></generalfeedback>   <defaultgrade>1.0000000</defaultgrade>    <penalty>0.3333333</penalty>    <hidden>0</hidden>    <idnumber></idnumber>   <single>true</single>
+    <shuffleanswers>true</shuffleanswers>
+    <answernumbering>abc</answernumbering>
+    <correctfeedback format=""html"">
+      <text>Your answer is correct.</text>
+    </correctfeedback><partiallycorrectfeedback format=""html"">
+      <text>Your answer is partially correct.</text>
+    </partiallycorrectfeedback>
+    <incorrectfeedback format=""html"">
+      <text>Your answer is incorrect.</text>
+    </incorrectfeedback>
+    <shownumcorrect/><answer fraction=""0"" format=""html"">
+      <text><![CDATA[<p>Transistor Bipolar<br></p>]]></text>
+      <feedback format=""html"">
+        <text></text>
+      </feedback>
+    </answer><answer fraction=""100"" format=""html"">
+      <text><![CDATA[<p>Field Effect Transistor (FET)<br></p>]]></text>
+      <feedback format=""html"">
+        <text></text>
+      </feedback>
+    </answer><answer fraction=""0"" format=""html"">
+      <text><![CDATA[<p>Transistor NPN<br></p>]]></text>
+      <feedback format=""html"">
+        <text></text>
+      </feedback>
+    </answer><answer fraction=""0"" format=""html"">
+      <text><![CDATA[<p>Transistor PNP<br></p>]]></text>
+      <feedback format=""html"">
+        <text></text>
+      </feedback>
+    </answer><answer fraction=""0"" format=""html"">
+      <text><![CDATA[<p>Integrated Circuit (IC)<br></p>]]></text>
+      <feedback format=""html"">
+        <text></text>
+      </feedback>
+    </answer></question>"
+"<question type=""multichoice"">
+    <name>
+      <text>W2_13</text>
+    </name>
+    <questiontext format=""html"">
+      <text><![CDATA[<p>Komponen yang memiliki fungsi utama sebagai penguat sinyal adalah?<br></p>]]></text>
+    </questiontext>
+    <generalfeedback format=""html"">
+      <text></text>"	</generalfeedback>   <defaultgrade>1.0000000</defaultgrade>    <penalty>0.3333333</penalty>    <hidden>0</hidden>    <idnumber></idnumber>  	" <single>true</single>
+    <shuffleanswers>true</shuffleanswers>
+    <answernumbering>abc</answernumbering>
+    <correctfeedback format=""html"">
+      <text>Your answer is correct.</text>
+    </correctfeedback>"	"<partiallycorrectfeedback format=""html"">
+      <text>Your answer is partially correct.</text>
+    </partiallycorrectfeedback>
+    <incorrectfeedback format=""html"">
+      <text>Your answer is incorrect.</text>
+    </incorrectfeedback>
+    <shownumcorrect/>"	"<answer fraction=""0"" format=""html"">
+      <text><![CDATA[<p>Resistor<br></p>]]></text>
+      <feedback format=""html"">
+        <text></text>
+      </feedback>
+    </answer>"	"<answer fraction=""0"" format=""html"">
+      <text><![CDATA[<p>Kapasitor<br></p>]]></text>
+      <feedback format=""html"">
+        <text></text>
+      </feedback>
+    </answer>"	"<answer fraction=""100"" format=""html"">
+      <text><![CDATA[<p>Transistor<br></p>]]></text>
+      <feedback format=""html"">
+        <text></text>
+      </feedback>
+    </answer>"	"<answer fraction=""0"" format=""html"">
+      <text><![CDATA[<p>Induktor<br></p>]]></text>
+      <feedback format=""html"">
+        <text></text>
+      </feedback>
+    </answer>"	"<answer fraction=""0"" format=""html"">
+      <text><![CDATA[<p>Dioda<br></p>]]></text>
+      <feedback format=""html"">
+        <text></text>
+      </feedback>
+    </answer>"	</question>	"<question type=""multichoice"">
+    <name>
+      <text>W2_13</text>
+    </name>
+    <questiontext format=""html"">
+      <text><![CDATA[<p>Komponen yang memiliki fungsi utama sebagai penguat sinyal adalah?<br></p>]]></text>
+    </questiontext>
+    <generalfeedback format=""html"">
+      <text></text></generalfeedback>   <defaultgrade>1.0000000</defaultgrade>    <penalty>0.3333333</penalty>    <hidden>0</hidden>    <idnumber></idnumber>   <single>true</single>
+    <shuffleanswers>true</shuffleanswers>
+    <answernumbering>abc</answernumbering>
+    <correctfeedback format=""html"">
+      <text>Your answer is correct.</text>
+    </correctfeedback><partiallycorrectfeedback format=""html"">
+      <text>Your answer is partially correct.</text>
+    </partiallycorrectfeedback>
+    <incorrectfeedback format=""html"">
+      <text>Your answer is incorrect.</text>
+    </incorrectfeedback>
+    <shownumcorrect/><answer fraction=""0"" format=""html"">
+      <text><![CDATA[<p>Resistor<br></p>]]></text>
+      <feedback format=""html"">
+        <text></text>
+      </feedback>
+    </answer><answer fraction=""0"" format=""html"">
+      <text><![CDATA[<p>Kapasitor<br></p>]]></text>
+      <feedback format=""html"">
+        <text></text>
+      </feedback>
+    </answer><answer fraction=""100"" format=""html"">
+      <text><![CDATA[<p>Transistor<br></p>]]></text>
+      <feedback format=""html"">
+        <text></text>
+      </feedback>
+    </answer><answer fraction=""0"" format=""html"">
+      <text><![CDATA[<p>Induktor<br></p>]]></text>
+      <feedback format=""html"">
+        <text></text>
+      </feedback>
+    </answer><answer fraction=""0"" format=""html"">
+      <text><![CDATA[<p>Dioda<br></p>]]></text>
+      <feedback format=""html"">
+        <text></text>
+      </feedback>
+    </answer></question>"
+"<question type=""multichoice"">
+    <name>
+      <text>W2_14</text>
+    </name>
+    <questiontext format=""html"">
+      <text><![CDATA[<p>Induktor akan menimbulkan medan magnet ketika?<br></p>]]></text>
+    </questiontext>
+    <generalfeedback format=""html"">
+      <text></text>"	</generalfeedback>   <defaultgrade>1.0000000</defaultgrade>    <penalty>0.3333333</penalty>    <hidden>0</hidden>    <idnumber></idnumber>  	" <single>true</single>
+    <shuffleanswers>true</shuffleanswers>
+    <answernumbering>abc</answernumbering>
+    <correctfeedback format=""html"">
+      <text>Your answer is correct.</text>
+    </correctfeedback>"	"<partiallycorrectfeedback format=""html"">
+      <text>Your answer is partially correct.</text>
+    </partiallycorrectfeedback>
+    <incorrectfeedback format=""html"">
+      <text>Your answer is incorrect.</text>
+    </incorrectfeedback>
+    <shownumcorrect/>"	"<answer fraction=""0"" format=""html"">
+      <text><![CDATA[<p>Tidak ada arus yang mengalir<br></p>]]></text>
+      <feedback format=""html"">
+        <text></text>
+      </feedback>
+    </answer>"	"<answer fraction=""100"" format=""html"">
+      <text><![CDATA[<p>Dialiri arus listrik<br></p>]]></text>
+      <feedback format=""html"">
+        <text></text>
+      </feedback>
+    </answer>"	"<answer fraction=""0"" format=""html"">
+      <text><![CDATA[<p>Dialiri arus AC<br></p>]]></text>
+      <feedback format=""html"">
+        <text></text>
+      </feedback>
+    </answer>"	"<answer fraction=""0"" format=""html"">
+      <text><![CDATA[<p>Terhubung dengan resistor<br></p>]]></text>
+      <feedback format=""html"">
+        <text></text>
+      </feedback>
+    </answer>"	"<answer fraction=""0"" format=""html"">
+      <text><![CDATA[<p>Terhubung dengan kapasitor<br></p>]]></text>
+      <feedback format=""html"">
+        <text></text>
+      </feedback>
+    </answer>"	</question>	"<question type=""multichoice"">
+    <name>
+      <text>W2_14</text>
+    </name>
+    <questiontext format=""html"">
+      <text><![CDATA[<p>Induktor akan menimbulkan medan magnet ketika?<br></p>]]></text>
+    </questiontext>
+    <generalfeedback format=""html"">
+      <text></text></generalfeedback>   <defaultgrade>1.0000000</defaultgrade>    <penalty>0.3333333</penalty>    <hidden>0</hidden>    <idnumber></idnumber>   <single>true</single>
+    <shuffleanswers>true</shuffleanswers>
+    <answernumbering>abc</answernumbering>
+    <correctfeedback format=""html"">
+      <text>Your answer is correct.</text>
+    </correctfeedback><partiallycorrectfeedback format=""html"">
+      <text>Your answer is partially correct.</text>
+    </partiallycorrectfeedback>
+    <incorrectfeedback format=""html"">
+      <text>Your answer is incorrect.</text>
+    </incorrectfeedback>
+    <shownumcorrect/><answer fraction=""0"" format=""html"">
+      <text><![CDATA[<p>Tidak ada arus yang mengalir<br></p>]]></text>
+      <feedback format=""html"">
+        <text></text>
+      </feedback>
+    </answer><answer fraction=""100"" format=""html"">
+      <text><![CDATA[<p>Dialiri arus listrik<br></p>]]></text>
+      <feedback format=""html"">
+        <text></text>
+      </feedback>
+    </answer><answer fraction=""0"" format=""html"">
+      <text><![CDATA[<p>Dialiri arus AC<br></p>]]></text>
+      <feedback format=""html"">
+        <text></text>
+      </feedback>
+    </answer><answer fraction=""0"" format=""html"">
+      <text><![CDATA[<p>Terhubung dengan resistor<br></p>]]></text>
+      <feedback format=""html"">
+        <text></text>
+      </feedback>
+    </answer><answer fraction=""0"" format=""html"">
+      <text><![CDATA[<p>Terhubung dengan kapasitor<br></p>]]></text>
+      <feedback format=""html"">
+        <text></text>
+      </feedback>
+    </answer></question>"
+"<question type=""multichoice"">
+    <name>
+      <text>W2_15</text>
+    </name>
+    <questiontext format=""html"">
+      <text><![CDATA[<p>Alat yang digunakan untuk mengukur tegangan listrik adalah?<br></p>]]></text>
+    </questiontext>
+    <generalfeedback format=""html"">
+      <text></text>"	</generalfeedback>   <defaultgrade>1.0000000</defaultgrade>    <penalty>0.3333333</penalty>    <hidden>0</hidden>    <idnumber></idnumber>  	" <single>true</single>
+    <shuffleanswers>true</shuffleanswers>
+    <answernumbering>abc</answernumbering>
+    <correctfeedback format=""html"">
+      <text>Your answer is correct.</text>
+    </correctfeedback>"	"<partiallycorrectfeedback format=""html"">
+      <text>Your answer is partially correct.</text>
+    </partiallycorrectfeedback>
+    <incorrectfeedback format=""html"">
+      <text>Your answer is incorrect.</text>
+    </incorrectfeedback>
+    <shownumcorrect/>"	"<answer fraction=""0"" format=""html"">
+      <text><![CDATA[<p>Amperemeter<br></p>]]></text>
+      <feedback format=""html"">
+        <text></text>
+      </feedback>
+    </answer>"	"<answer fraction=""0"" format=""html"">
+      <text><![CDATA[<p>Tang ampere<br></p>]]></text>
+      <feedback format=""html"">
+        <text></text>
+      </feedback>
+    </answer>"	"<answer fraction=""0"" format=""html"">
+      <text><![CDATA[<p>Avometer<br></p>]]></text>
+      <feedback format=""html"">
+        <text></text>
+      </feedback>
+    </answer>"	"<answer fraction=""100"" format=""html"">
+      <text><![CDATA[<p>Voltmeter<br></p>]]></text>
+      <feedback format=""html"">
+        <text></text>
+      </feedback>
+    </answer>"	"<answer fraction=""0"" format=""html"">
+      <text><![CDATA[<p>Osiloskop<br></p>]]></text>
+      <feedback format=""html"">
+        <text></text>
+      </feedback>
+    </answer>"	</question>	"<question type=""multichoice"">
+    <name>
+      <text>W2_15</text>
+    </name>
+    <questiontext format=""html"">
+      <text><![CDATA[<p>Alat yang digunakan untuk mengukur tegangan listrik adalah?<br></p>]]></text>
+    </questiontext>
+    <generalfeedback format=""html"">
+      <text></text></generalfeedback>   <defaultgrade>1.0000000</defaultgrade>    <penalty>0.3333333</penalty>    <hidden>0</hidden>    <idnumber></idnumber>   <single>true</single>
+    <shuffleanswers>true</shuffleanswers>
+    <answernumbering>abc</answernumbering>
+    <correctfeedback format=""html"">
+      <text>Your answer is correct.</text>
+    </correctfeedback><partiallycorrectfeedback format=""html"">
+      <text>Your answer is partially correct.</text>
+    </partiallycorrectfeedback>
+    <incorrectfeedback format=""html"">
+      <text>Your answer is incorrect.</text>
+    </incorrectfeedback>
+    <shownumcorrect/><answer fraction=""0"" format=""html"">
+      <text><![CDATA[<p>Amperemeter<br></p>]]></text>
+      <feedback format=""html"">
+        <text></text>
+      </feedback>
+    </answer><answer fraction=""0"" format=""html"">
+      <text><![CDATA[<p>Tang ampere<br></p>]]></text>
+      <feedback format=""html"">
+        <text></text>
+      </feedback>
+    </answer><answer fraction=""0"" format=""html"">
+      <text><![CDATA[<p>Avometer<br></p>]]></text>
+      <feedback format=""html"">
+        <text></text>
+      </feedback>
+    </answer><answer fraction=""100"" format=""html"">
+      <text><![CDATA[<p>Voltmeter<br></p>]]></text>
+      <feedback format=""html"">
+        <text></text>
+      </feedback>
+    </answer><answer fraction=""0"" format=""html"">
+      <text><![CDATA[<p>Osiloskop<br></p>]]></text>
+      <feedback format=""html"">
+        <text></text>
+      </feedback>
+    </answer></question>"
