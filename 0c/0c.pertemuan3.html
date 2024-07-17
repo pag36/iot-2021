@@ -4,7 +4,7 @@
     <head>
         <meta charset="UTF-8">
         <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
-        <title>02. Pengantar Elektronik · GitBook</title>
+        <title>03. Pengenalan Jenis-Jenis dan Cara Kerja Sensor · GitBook</title>
         <meta http-equiv="X-UA-Compatible" content="IE=edge" />
         <meta name="description" content="">
         <meta name="generator" content="GitBook 3.2.3">
@@ -57,10 +57,8 @@
     <link rel="shortcut icon" href="../gitbook/images/favicon.ico" type="image/x-icon">
 
     
-    <link rel="next" href="../0c/0c.pertemuan3.html" />
     
-    
-    <link rel="prev" href="../0a/0a.pertemuan1.html" />
+    <link rel="prev" href="../0b/0b.pertemuan2.html" />
     
 
     </head>
@@ -128,9 +126,9 @@
             
         </li>
     
-        <li class="chapter active" data-level="1.4" data-path="0b.pertemuan2.html">
+        <li class="chapter " data-level="1.4" data-path="../0b/0b.pertemuan2.html">
             
-                <a href="0b.pertemuan2.html">
+                <a href="../0b/0b.pertemuan2.html">
             
                     
                     02. Pengantar Elektronik
@@ -141,9 +139,9 @@
             
         </li>
     
-        <li class="chapter " data-level="1.5" data-path="../0c/0c.pertemuan3.html">
+        <li class="chapter active" data-level="1.5" data-path="0c.pertemuan3.html">
             
-                <a href="../0c/0c.pertemuan3.html">
+                <a href="0c.pertemuan3.html">
             
                     
                     03. Pengenalan Jenis-Jenis dan Cara Kerja Sensor
@@ -184,7 +182,7 @@
     <!-- Title -->
     <h1>
         <i class="fa fa-circle-o-notch fa-spin"></i>
-        <a href=".." >02. Pengantar Elektronik</a>
+        <a href=".." >03. Pengenalan Jenis-Jenis dan Cara Kerja Sensor</a>
     </h1>
 </div>
 
@@ -199,7 +197,7 @@
     
                                 <section class="normal markdown-section">
                                 
-                                <h1 id="pertemuan-ke-2-pengantar-elektronik">Pertemuan ke 2: Pengantar Elektronik</h1>
+                                <h1 id="pertemuan-ke-3-pengenalan-jenis-jenis-dan-cara-kerja-sensor">Pertemuan ke 3: Pengenalan Jenis-Jenis dan Cara Kerja Sensor</h1>
 <h2 id="topik-bahasan">Topik Bahasan</h2>
 <p>Pengenalan Elektronika Dasar(Pengantar IoT, Pengantar Elektronik, Pengenalan jenis-jenis &amp; Cara Kerja Sensor, Pengenalan
 jenis-jenis &amp; Cara Kerja Aktuator)</p>
@@ -214,82 +212,105 @@ pendeteksi gas, dan sensor pendeteksi hujan.</li>
 <li>Pengenalan jenis-jenis &amp; Cara Kerja Aktuator</li>
 </ul>
 <h2 id="praktikum">Praktikum</h2>
-<h3 id="teori-singkat-tinkercad">Teori Singkat Tinkercad</h3>
-<p>Tinkercad adalah platform desain dan simulasi online yang memungkinkan pengguna untuk membuat dan menguji model 3D serta
-rangkaian elektronik secara intuitif. Dikembangkan oleh Autodesk, Tinkercad menyediakan alat sederhana dan mudah
-digunakan yang cocok untuk pemula maupun profesional. Pengguna dapat merancang objek 3D, membuat rangkaian elektronik,
-dan bahkan melakukan simulasi interaktif untuk memeriksa fungsionalitas desain mereka. Dengan fitur drag-and-drop,
-Tinkercad memfasilitasi pembelajaran STEM (Science, Technology, Engineering, and Mathematics) dan memungkinkan
-kolaborasi serta pembagian proyek secara online.
-<img src="img.png" alt="img.png"></p>
-<h3 id="praktikum-alat-ukur">Praktikum Alat Ukur</h3>
-<p>Berikut adalah langkah-langkah untuk mengukur tegangan pada resistor menggunakan multimeter di Tinkercad, lengkap dengan
-tangkapan layar:</p>
+<p>Berikut adalah langkah-langkah untuk mendemonstrasikan penggunaan sensor ultrasonik dengan menggunakan Tinkercad,
+lengkap dengan tangkapan layar:</p>
 <h3 id="langkah-langkah">Langkah-langkah:</h3>
 <ol>
 <li><p><strong>Buka Tinkercad:</strong></p>
 </li>
 <li><p>Kunjungi <a href="https://www.tinkercad.com" target="_blank">Tinkercad</a> dan masuk dengan akun Anda.</p>
 </li>
-<li><p>Klik &quot;Circuits&quot; di dashboard dan pilih &quot;Create new Circuit.&quot;
-<img src="img_1.png" alt="img_1.png"></p>
+<li><p>Klik &quot;Circuits&quot; di dashboard dan pilih &quot;Create new Circuit.&quot;</p>
 </li>
 <li><p><strong>Tambahkan Komponen:</strong></p>
 </li>
 <li><p>Dari panel komponen di sebelah kanan, tambahkan komponen berikut ke kanvas:</p>
 <ul>
 <li>Breadboard</li>
-<li>Resistor</li>
-<li>Power Supply (Battery 9V)</li>
-<li>Multimeter</li>
-<li>Jumper wires
-<img src="img_3.png" alt="img_3.png"></li>
+<li>Arduino Uno R3</li>
+<li>Sensor Ultrasonik HC-SR04</li>
+<li>Resistor 220 ohm</li>
+<li>LED</li>
+<li>Jumper wires</li>
 </ul>
 </li>
+</ol>
+<p><img src="img.png" alt="img.png"></p>
+<ol>
 <li><p><strong>Rangkai Komponen:</strong></p>
 </li>
-<li><p><strong>Resistor:</strong></p>
+<li><p><strong>Sensor Ultrasonik HC-SR04:</strong></p>
 <ul>
-<li>Tempatkan resistor pada breadboard.</li>
+<li>Hubungkan pin VCC sensor ke 5V pada Arduino.</li>
+<li>Hubungkan pin GND sensor ke GND pada Arduino.</li>
+<li>Hubungkan pin TRIG sensor ke pin digital 9 pada Arduino.</li>
+<li>Hubungkan pin ECHO sensor ke pin digital 10 pada Arduino.</li>
 </ul>
 </li>
-<li><strong>Power Supply:</strong><ul>
-<li>Hubungkan terminal positif power supply (9V) ke salah satu ujung resistor.</li>
-<li>Hubungkan terminal negatif power supply (GND) ke rail ground pada breadboard.</li>
-</ul>
-</li>
-<li><p><strong>Jumper Wires:</strong></p>
+<li><p><strong>LED:</strong></p>
 <ul>
-<li>Hubungkan ujung lainnya dari resistor ke rail ground pada breadboard.</li>
+<li>Hubungkan anoda LED (kaki panjang) ke salah satu pin digital (misalnya, pin 13) pada Arduino melalui resistor 220
+ohm.</li>
+<li>Hubungkan katoda LED (kaki pendek) ke GND pada breadboard.</li>
 </ul>
-<p><img src="img_4.png" alt="img_4.png"></p>
 </li>
-<li><p><strong>Tambahkan Multimeter:</strong></p>
+<li><p><strong>Menambahkan Kode Program:</strong></p>
 </li>
-<li><p>Dari panel komponen, tambahkan multimeter ke kanvas.</p>
+<li><p>Klik pada Arduino Uno R3 dan pilih opsi &quot;Code.&quot;</p>
 </li>
-<li><p>Atur multimeter ke mode pengukuran tegangan (V).</p>
-</li>
-<li><p><strong>Menghubungkan Multimeter:</strong></p>
-</li>
-<li><p>Hubungkan probe merah multimeter ke ujung resistor yang terhubung dengan sumber tegangan positif.</p>
-</li>
-<li><p>Hubungkan probe hitam multimeter ke ujung resistor yang terhubung dengan ground (GND).
-<img src="img_5.png" alt="img_5.png"></p>
-</li>
+<li>Pilih bahasa pemrograman &quot;Blocks + Text&quot; untuk mempermudah pengkodean.</li>
+<li>Tambahkan kode berikut ke editor:</li>
+</ol>
+<pre><code class="lang-cpp"><span class="hljs-meta">#<span class="hljs-meta-keyword">define</span> trigPin 9</span>
+<span class="hljs-meta">#<span class="hljs-meta-keyword">define</span> echoPin 10</span>
+<span class="hljs-meta">#<span class="hljs-meta-keyword">define</span> ledPin 13</span>
+
+<span class="hljs-function"><span class="hljs-keyword">void</span> <span class="hljs-title">setup</span><span class="hljs-params">()</span> </span>{
+  pinMode(trigPin, OUTPUT);
+  pinMode(echoPin, INPUT);
+  pinMode(ledPin, OUTPUT);
+  Serial.begin(<span class="hljs-number">9600</span>);
+}
+
+<span class="hljs-function"><span class="hljs-keyword">void</span> <span class="hljs-title">loop</span><span class="hljs-params">()</span> </span>{
+  <span class="hljs-keyword">long</span> duration, distance;
+  digitalWrite(trigPin, LOW);
+  delayMicroseconds(<span class="hljs-number">2</span>);
+  digitalWrite(trigPin, HIGH);
+  delayMicroseconds(<span class="hljs-number">10</span>);
+  digitalWrite(trigPin, LOW);
+
+  duration = pulseIn(echoPin, HIGH);
+  distance = (duration / <span class="hljs-number">2</span>) / <span class="hljs-number">29.1</span>;
+
+  <span class="hljs-keyword">if</span> (distance &lt; <span class="hljs-number">20</span>) {
+    digitalWrite(ledPin, HIGH);
+  } <span class="hljs-keyword">else</span> {
+    digitalWrite(ledPin, LOW);
+  }
+
+  Serial.print(distance);
+  Serial.println(<span class="hljs-string">&quot; cm&quot;</span>);
+  delay(<span class="hljs-number">500</span>);
+}
+</code></pre>
+<ol>
 <li><p><strong>Menjalankan Simulasi:</strong></p>
 </li>
 <li><p>Klik tombol &quot;Start Simulation&quot; di Tinkercad.</p>
 </li>
-<li>Multimeter akan menampilkan tegangan yang ada di resistor.
-<img src="img_6.png" alt="img_6.png"></li>
+<li>Pada jendela serial monitor, Anda akan melihat jarak yang terukur oleh sensor ultrasonik.</li>
+<li>LED akan menyala jika objek berada dalam jarak kurang dari 20 cm dari sensor.</li>
 </ol>
-<h4 id="pertanyaan">Pertanyaan</h4>
-<p>Ubah satuan Resistance miliohm atau ohm, apa yang terjadi? Jelaskan mengapa bisa demikian?</p>
+<p><img src="img_1.png" alt="img_1.png"></p>
+<h3 id="tugas-praktikum">Tugas Praktikum</h3>
+<ol>
+<li>Silakan ubah jarak benda(objek warna hijau) menjadi &lt; 20 cm apa yang terjadi? Mengapa bisa demikian?</li>
+<li>Silakan disesuaikan jarak &gt; 30 cm dengan objek sehingga LED bisanya menyala!</li>
+</ol>
 <h2 id="tugas-mandiri">Tugas Mandiri</h2>
-<p>Dengan menggunakan tingkercad silakan mensimulasikan rangkaian seri dan paralel pada sebuah baterai(1.5V) atau power
-supply boleh dilengkapi LED atau komponen lain , kemudian ukur menggunakan multimeter tegangan tersebut. Amati dan
-simpulkan hasilnya</p>
+<p>Dengan menggunakan tingkercad silakan mensimulasikan menggunakan sensor yang lain, misalkan LDR, DHT11, sensor motion,
+atau yang lain. Akan lebih baik menggabungkan dari sensor-sensor tersebut. :)</p>
 
                                 
                                 </section>
@@ -317,14 +338,10 @@ simpulkan hasilnya</p>
 
             
                 
-                <a href="../0a/0a.pertemuan1.html" class="navigation navigation-prev " aria-label="Previous page: 01. Memahami Konsep dan arsitektur IoT">
+                <a href="../0b/0b.pertemuan2.html" class="navigation navigation-prev navigation-unique" aria-label="Previous page: 02. Pengantar Elektronik">
                     <i class="fa fa-angle-left"></i>
                 </a>
                 
-                
-                <a href="../0c/0c.pertemuan3.html" class="navigation navigation-next " aria-label="Next page: 03. Pengenalan Jenis-Jenis dan Cara Kerja Sensor">
-                    <i class="fa fa-angle-right"></i>
-                </a>
                 
             
         
@@ -333,7 +350,7 @@ simpulkan hasilnya</p>
     <script>
         var gitbook = gitbook || [];
         gitbook.push(function() {
-            gitbook.page.hasChanged({"page":{"title":"02. Pengantar Elektronik","level":"1.4","depth":1,"next":{"title":"03. Pengenalan Jenis-Jenis dan Cara Kerja Sensor","level":"1.5","depth":1,"path":"0c/0c.pertemuan3.md","ref":"0c/0c.pertemuan3.md","articles":[]},"previous":{"title":"01. Memahami Konsep dan arsitektur IoT","level":"1.3","depth":1,"path":"0a/0a.pertemuan1.md","ref":"0a/0a.pertemuan1.md","articles":[]},"dir":"ltr"},"config":{"plugins":[],"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"pluginsConfig":{"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"theme":"default","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"language":"id","gitbook":"*"},"file":{"path":"0b/0b.pertemuan2.md","mtime":"2024-07-17T00:08:22.024Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2024-07-17T00:09:23.184Z"},"basePath":"..","book":{"language":""}});
+            gitbook.page.hasChanged({"page":{"title":"03. Pengenalan Jenis-Jenis dan Cara Kerja Sensor","level":"1.5","depth":1,"previous":{"title":"02. Pengantar Elektronik","level":"1.4","depth":1,"path":"0b/0b.pertemuan2.md","ref":"0b/0b.pertemuan2.md","articles":[]},"dir":"ltr"},"config":{"plugins":[],"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"pluginsConfig":{"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"theme":"default","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"language":"id","gitbook":"*"},"file":{"path":"0c/0c.pertemuan3.md","mtime":"2024-07-17T00:08:22.024Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2024-07-17T00:09:23.184Z"},"basePath":"..","book":{"language":""}});
         });
     </script>
 </div>
