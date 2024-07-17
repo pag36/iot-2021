@@ -4,8 +4,7 @@
 - [Kontrak Kuliah](00/kontrak.md)
 - [01. Memahami Konsep dan arsitektur IoT](0a/0a.pertemuan1.md)
 - [02. Pengantar Elektronik](0b/0b.pertemuan2.md)
-
-[comment]: <> (- [03. Instalasi dan Konfigurasi]&#40;01/01.installasi-dan-konfigurasi.md&#41;)
+- [03. Pengenalan Jenis-Jenis dan Cara Kerja Sensor](01/01.installasi-dan-konfigurasi.md)
 
 [comment]: <> (- [04. LED]&#40;02/02-led.md&#41;)
 
