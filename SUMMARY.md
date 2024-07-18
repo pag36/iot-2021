@@ -5,8 +5,7 @@
 - [01. Memahami Konsep dan arsitektur IoT](0a/0a.pertemuan1.md)
 - [02. Pengantar Elektronik](0b/0b.pertemuan2.md)
 - [03. Pengenalan Jenis-Jenis dan Cara Kerja Sensor](0c/0c.pertemuan3.md)
-
-[comment]: <> (- [04. LED]&#40;02/02-led.md&#41;)
+- [04. Pengenalan Jenis-Jenis dan Cara Kerja Aktuator](0d/0d.pertemuan4.md)
 
 [comment]: <> (- [05. DHT11]&#40;03/03-dht11.md&#41;)
 
