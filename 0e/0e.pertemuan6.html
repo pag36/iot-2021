@@ -257,68 +257,81 @@ mulai bekerja dengan Wokwi.</p>
 <p>Berikut adalah langkah-langkah untuk praktikum menyalakan LED menggunakan Wokwi dengan board Arduino Uno:</p>
 <ol>
 <li><p><strong>Buka Wokwi</strong>:</p>
-</li>
-<li><p>Kunjungi situs <a href="https://wokwi.com/" target="_blank">Wokwi</a> dan masuk ke akun Anda atau daftar jika belum memiliki akun.</p>
+<ul>
+<li>Kunjungi situs <a href="https://wokwi.com/" target="_blank">Wokwi</a> dan masuk ke akun Anda atau daftar jika belum memiliki akun.</li>
+</ul>
 </li>
 <li><p><strong>Buat Proyek Baru</strong>:</p>
-</li>
+<ul>
 <li><p>Klik tombol &#x201C;New Project&#x201D; untuk membuat proyek baru.</p>
 <p><img src="img_1.png" alt="img_1.png"></p>
 </li>
-<li><p><strong>Tambahkan Komponen Arduino Uno</strong>:</p>
+</ul>
 </li>
+<li><p><strong>Tambahkan Komponen Arduino Uno</strong>:</p>
+<ul>
 <li><p>Setelah berada di antarmuka proyek, tambahkan komponen Arduino Uno dengan mengklik ikon &quot;Arduino Uno&quot; di menu komponen
 atau dengan mencari &quot;Arduino Uno&quot; di kotak pencarian komponen dan menyeretnya ke area kerja.</p>
 <p><img src="img_2.png" alt="img_2.png"></p>
 </li>
-<li><p><strong>Tambahkan LED</strong>:</p>
+</ul>
 </li>
+<li><p><strong>Tambahkan LED</strong>:</p>
+<ul>
 <li><p>Cari &quot;LED&quot; di kotak pencarian komponen dan seret komponen LED ke area kerja.</p>
 <p><img src="img_3.png" alt="img_3.png"></p>
 </li>
-<li><p><strong>Tambahkan Resistor</strong>:</p>
+</ul>
 </li>
-<li><p>Tambahkan resistor dengan cara mencari &quot;Resistor&quot; di kotak pencarian dan menyeretnya ke area kerja. Resistor
-diperlukan untuk menghindari kerusakan pada LED.</p>
+<li><p><strong>Tambahkan Resistor</strong>:</p>
+<ul>
+<li>Tambahkan resistor dengan cara mencari &quot;Resistor&quot; di kotak pencarian dan menyeretnya ke area kerja. Resistor
+diperlukan untuk menghindari kerusakan pada LED.</li>
+</ul>
 </li>
 <li><p><strong>Hubungkan Komponen</strong>:</p>
-</li>
-<li><p><strong>Hubungkan Kaki Panjang (Anoda) LED</strong> ke salah satu pin digital pada Arduino Uno, misalnya pin 13.</p>
-</li>
+<ul>
+<li><strong>Hubungkan Kaki Panjang (Anoda) LED</strong> ke salah satu pin digital pada Arduino Uno, misalnya pin 13.</li>
 <li><strong>Hubungkan Kaki Pendek (Katoda) LED</strong> ke salah satu kaki resistor.</li>
 <li><p><strong>Hubungkan Kaki Lain Resistor</strong> ke GND (Ground) pada Arduino Uno.</p>
 <p><img src="img_4.png" alt="img_4.png"></p>
 </li>
+</ul>
+</li>
 <li><p><strong>Tulis Kode Arduino</strong>:</p>
-</li>
-<li><p>Klik pada ikon &quot;Code&quot; atau &quot;Sketch&quot; untuk membuka editor kode Arduino.</p>
-</li>
-<li>Tulis kode berikut untuk menyalakan LED:</li>
-</ol>
+<ul>
+<li>Klik pada ikon &quot;Code&quot; atau &quot;Sketch&quot; untuk membuka editor kode Arduino.</li>
+<li><p>Tulis kode berikut untuk menyalakan LED:</p>
 <pre><code class="lang-cpp"><span class="hljs-function"><span class="hljs-keyword">void</span> <span class="hljs-title">setup</span><span class="hljs-params">()</span> </span>{
-  pinMode(<span class="hljs-number">13</span>, OUTPUT);  <span class="hljs-comment">// Set pin 13 as an output</span>
+ pinMode(<span class="hljs-number">13</span>, OUTPUT);  <span class="hljs-comment">// Set pin 13 as an output</span>
 }
 
 <span class="hljs-function"><span class="hljs-keyword">void</span> <span class="hljs-title">loop</span><span class="hljs-params">()</span> </span>{
-  digitalWrite(<span class="hljs-number">13</span>, HIGH);  <span class="hljs-comment">// Turn on the LED</span>
-  delay(<span class="hljs-number">1000</span>);             <span class="hljs-comment">// Wait for 1 second</span>
-  digitalWrite(<span class="hljs-number">13</span>, LOW);   <span class="hljs-comment">// Turn off the LED</span>
-  delay(<span class="hljs-number">1000</span>);             <span class="hljs-comment">// Wait for 1 second</span>
+ digitalWrite(<span class="hljs-number">13</span>, HIGH);  <span class="hljs-comment">// Turn on the LED</span>
+ delay(<span class="hljs-number">1000</span>);             <span class="hljs-comment">// Wait for 1 second</span>
+ digitalWrite(<span class="hljs-number">13</span>, LOW);   <span class="hljs-comment">// Turn off the LED</span>
+ delay(<span class="hljs-number">1000</span>);             <span class="hljs-comment">// Wait for 1 second</span>
 }
 </code></pre>
-<ol>
-<li><p><strong>Simulasikan Proyek</strong>:</p>
 </li>
+</ul>
+</li>
+<li><p><strong>Simulasikan Proyek</strong>:</p>
+<ul>
 <li><p>Klik tombol &quot;Start Simulation&quot; atau &quot;Run&quot; untuk memulai simulasi. LED akan mulai berkedip dengan interval 1 detik.</p>
 <p><img src="img_5.png" alt="img_5.png"></p>
 </li>
-<li><p><strong>Periksa Koneksi dan Kode</strong>:</p>
+</ul>
 </li>
-<li><p>Jika LED tidak menyala, periksa kembali koneksi antara komponen dan pastikan kode sudah benar.</p>
+<li><p><strong>Periksa Koneksi dan Kode</strong>:</p>
+<ul>
+<li>Jika LED tidak menyala, periksa kembali koneksi antara komponen dan pastikan kode sudah benar.</li>
+</ul>
 </li>
 <li><p><strong>Simpan Proyek</strong>:</p>
-</li>
-<li><p>Setelah berhasil, simpan proyek Anda dengan mengklik &quot;Save&quot; dan beri nama proyek Anda.</p>
+<ul>
+<li>Setelah berhasil, simpan proyek Anda dengan mengklik &quot;Save&quot; dan beri nama proyek Anda.</li>
+</ul>
 </li>
 </ol>
 <h3 id="tugas-praktikum">Tugas Praktikum</h3>
@@ -365,7 +378,7 @@ simulasi dengan screen recording. <strong>(Sama dengan tugas yang sebelumnya han
     <script>
         var gitbook = gitbook || [];
         gitbook.push(function() {
-            gitbook.page.hasChanged({"page":{"title":"05. Jenis Elektronik Development Board","level":"1.7","depth":1,"previous":{"title":"04. Pengenalan Jenis-Jenis dan Cara Kerja Aktuator","level":"1.6","depth":1,"path":"0d/0d.pertemuan4.md","ref":"0d/0d.pertemuan4.md","articles":[]},"dir":"ltr"},"config":{"plugins":[],"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"pluginsConfig":{"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"theme":"default","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"language":"id","gitbook":"*"},"file":{"path":"0e/0e.pertemuan6.md","mtime":"2024-07-21T23:40:46.582Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2024-07-21T23:41:37.262Z"},"basePath":"..","book":{"language":""}});
+            gitbook.page.hasChanged({"page":{"title":"05. Jenis Elektronik Development Board","level":"1.7","depth":1,"previous":{"title":"04. Pengenalan Jenis-Jenis dan Cara Kerja Aktuator","level":"1.6","depth":1,"path":"0d/0d.pertemuan4.md","ref":"0d/0d.pertemuan4.md","articles":[]},"dir":"ltr"},"config":{"plugins":[],"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"pluginsConfig":{"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"theme":"default","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"language":"id","gitbook":"*"},"file":{"path":"0e/0e.pertemuan6.md","mtime":"2024-07-21T23:55:39.642Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2024-07-21T23:56:31.448Z"},"basePath":"..","book":{"language":""}});
         });
     </script>
 </div>
