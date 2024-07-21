@@ -6,6 +6,7 @@
 - [02. Pengantar Elektronik](0b/0b.pertemuan2.md)
 - [03. Pengenalan Jenis-Jenis dan Cara Kerja Sensor](0c/0c.pertemuan3.md)
 - [04. Pengenalan Jenis-Jenis dan Cara Kerja Aktuator](0d/0d.pertemuan4.md)
+- [05. Jenis Elektronik Development Board](0e/0e.pertemuan6.md)
 
 [comment]: <> (- [05. DHT11]&#40;03/03-dht11.md&#41;)
 
