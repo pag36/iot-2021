@@ -48,9 +48,9 @@ Memiliki laptop/komputer dengan spesifikasi minimal:
 - Terdapat 1.5 GB ruang kosong pada penyimpanan
 - Resolusi layar minimal 1024x768
 
-## Dosen Pengampu
+## Fasilitator
 
 1. [Agung Nugroho Pramudhita, S.T., M.T.](https://github.com/agungpramudhita)
-3. [Noprianto, S.Kom., M.Eng](https://github.com/354lux)
+3. [Benni Agung Nugroho, S.Kom., M.Cs.](https://github.com/354lux)
 3. [Noprianto, S.Kom., M.Eng](https://github.com/0d3ng)
-3. [Noprianto, S.Kom., M.Eng](https://github.com/togaaldila)
+3. [Toga Aldila Cinderatama, S.ST., M.Sc.](https://github.com/togaaldila)
