@@ -39,9 +39,11 @@ terkenal dengan ringan untuk dijalankan, konsep _event-driven_, dan menggunakan 
 diinstall dalam sebuah jaringan dengan spesifikasi hardware yang murah seperti raspberry maupun di cloud. Pada praktikum
 kali ini akan diinstall pada sebuah layanan cloud yaitu AWS.
 
-> Misalnya belum mendaftar sebagai AWS Educate bisa diganti dengan install di Raspberry Pi atau di komputer local. Tentunya
+> Misalnya belum mendaftar sebagai AWS Educate bisa diganti dengan install di Raspberry Pi atau di komputer local.
+> Tentunya
 > ketika install di local dengan sistem operasi windows sangat berbeda dengan langkah yang disajikan pada jobsheet ini,
-> Untuk lebih jelasnya bisa melihat dokumentasinya di [https://nodered.org/docs/getting-started/](https://nodered.org/docs/getting-started/)
+> Untuk lebih jelasnya bisa melihat dokumentasinya
+> di [https://nodered.org/docs/getting-started/](https://nodered.org/docs/getting-started/)
 
 Berikut ini adalah langkah-langkahnya
 
@@ -62,7 +64,8 @@ Berikut ini adalah langkah-langkahnya
 4. Kemudian silakan pilih `EC2`, untuk membuat sebuah instance langkahnya seperti pada praktikum tentang socket client.
    Silakan cek kembali pada pertemuan [sebelumnya](07/07-socket-client.md).
 
-   > Jangan lupa pada langkah `Configure Security Group`, buatlah sebuah rule untuk protokol `Custom TCP Rule` dengan menambahkan
+   > Jangan lupa pada langkah `Configure Security Group`, buatlah sebuah rule untuk protokol `Custom TCP Rule` dengan
+   menambahkan
    > port 1880. Port tersebut digunakan untuk mengakses node-red yang akan kita install pada EC2.
 
 5. Silakan login ke instance yang telah Anda buat, setelah login ketika perintah seperti di bawah ini
@@ -116,7 +119,8 @@ Berikut ini adalah langkah-langkahnya
 
    ![](images/04.png)
 
-> Ketika instance dimatikan atau direstart maka Node-Red harus dinyalan kembali, berikut ini adalah perintah yang digunakan
+> Ketika instance dimatikan atau direstart maka Node-Red harus dinyalan kembali, berikut ini adalah perintah yang
+> digunakan
 > agar Node-Red tetap berjalan ketika instance restart.
 >
 
@@ -189,6 +193,34 @@ sudo netfilter-persistent save
 > Node-RED bisa juga dilakukan installasi pada mesin lokal atau localhost, caranya sama seperti langkah-langkah di atas.
 > Yang paling penting adalah harus sudah terinstall `nodejs dan npm`.
 
+### 3. Installasi menggunakan docker
+
+Ketika menggunakan docker Anda cukup mengunduh image node-red, yang paling penting docker desktop sudah terinstall
+terlebih dahulu di laptop/pc atau server Anda. Jika sudah terinstall docker desktop silakan ketik perintah di bawah ini
+atau Anda bisa mengecek icon desktop docker di pojok kanan bawah jika menggunakan windows.
+
+```shell
+╰─ docker --version                                                                                             90% 
+Docker version 20.10.21, build baeda1f
+```
+
+Jika sudah muncul seperti di atas, dilanjutkan dengan ketika perintah di bawah ini
+
+```shell
+ docker run -it -p 1880:1880 -v myNodeREDdata:/data --name mynodered nodered/node-red
+```
+
+Keterangan dari perintah di atas adalah
+
++ `-it` merupakan parameter yang artinya iteraktif pada image node-red ketika dijalankan.
++ `-p 1880:1880` artinya adalah mapping port 1880 dari container node-red ke port 1880 mesin local atau host.
++ `-v myNodeREDdata:/data` berarti membuat volume dengan nama `myNodeREDdata:/data` agar ketika container dihapus data
+  tidak terhapus.
++ `--name mynodered` adalah nama container yang kita buat.
++ `nodered/node-red` adalah nama image yang kita jalankan.
+
+Anda bisa mengecek apakah node-red sudah berjalan dengan buka browser - ketik `http://localhost:1880/`
+
 ### 3. Menambahkan Keamanan pada Node-Red
 
 Ketika sudah berhasil install Node-RED, kita langsung bisa mengakses halaman editor yang mana terdapat semua flow atau
@@ -260,10 +292,12 @@ dilakukan decrypt. Cara lain yang dapat digunakan membuat password menggunakan p
    ```
 
 Isikan `your-password-here` sesuai dengan password Anda.
-> Ketika terjadi error karena library bcryptjs belum diinstall, silakan diinstall menggunakan perintah `npm install bcryptjs --save`
+> Ketika terjadi error karena library bcryptjs belum diinstall, silakan diinstall menggunakan
+> perintah `npm install bcryptjs --save`
 
+> Jika Anda menggunakan windows, silakan mencari file `setting.js` pada direktori installasi node-red, untuk
+> langkah-langkah selanjutnya sama.
 >
-
 Silakan masuk ke Node-RED, seharusnya akan meminta user dan password seperti gambar berikut ini
 ![](images/05.png)
 
