@@ -25,4 +25,5 @@ Misalkan terjadi error karena perbedaan versi dari npm atau nodeJs, silakan hapu
 - Masuk ke halaman `github.com`
 - Lakukan **pull requests** dengan klik tombol `New pull request`
 - Pilih branch yang akan digabungkan `base: master dan compare: dev-tsa-2024`
-- Klik pull request
+- Klik tombol Create pull request
+- Tunggu beberapa saat, sampai proses pengecekan `github pages In progress sampai All checks have passed`
