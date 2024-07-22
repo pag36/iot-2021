@@ -114,6 +114,8 @@ sebagai berikut
 
     ![](images/13.png)
 
+> Ketika melakukan installasi pada komputer atau laptop Anda, silakan alamat pada browser diganti dengan `http://localhost:1880/ui`. 
+
 #### Pertanyaan
 
 Silakan modifikasi flow di atas sehingga ketika node switch digeser tidak menghasilkan nilai true atau false, tetapi ketika

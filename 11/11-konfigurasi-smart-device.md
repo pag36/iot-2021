@@ -222,6 +222,37 @@ Tampilan serial monitor
 
 Tampilan Node-RED pada browser
 
+> Untuk menerima data Anda harus menambahkan beberapa penyesuaian, 
+> 1. subscribe apa topiknya? 
+> 2. set callbacknya apa
+> 3. buat sebuah callback
+
+Contoh potongan kode untuk menerima sebuah data
+```shell
+...
+client.subscribe("room/suhu");//fungsi subscribe
+...
+...
+client.setCallback(callback);//set callback
+...
+...
+void callback(char *topic, byte *payload, unsigned int length)
+{
+  // variable StringPayload untuk menyimpan konten paket data yang diterima
+  String StringPayload = "";
+
+  // Menjadikan setiap character yang diterima menjadi string utuh
+  // melalui proses penggabungan character
+  for (int i = 0; i < length; i++)
+  {
+    StringPayload += (char)payload[i];
+  }
+
+  Serial.println("TOPIC: " + String(topic));
+  Serial.println("PAYLOAD: " + String(StringPayload));
+}
+```
+
 #### Pertanyaan
 1. Modifikasi program di ESP8266 di atas agar bisa melakukan subscribe dengan topik `room/lamp`?
 2. Tambahkan kode di atas agar bisa publish nilai kelembaban dengan topik `room/humadity`?
