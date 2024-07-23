@@ -8,6 +8,7 @@
 - [04. Pengenalan Jenis-Jenis dan Cara Kerja Aktuator](0d/0d.pertemuan4.md)
 - [05. Jenis Elektronik Development Board](0e/0e.pertemuan6.md)
 - [06. Jenis Komunikasi Data](0f/0f.pertemuan7.md)
+- [07. Pengenalan Teknologi Smart Card](0g/0f.pertemuan8.md)
 - [08. Praktik Dasar Elektronika](0h/0h.pertemuan9.md)
 
   
