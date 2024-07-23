@@ -4,7 +4,7 @@
     <head>
         <meta charset="UTF-8">
         <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
-        <title>04. Pengenalan Jenis-Jenis dan Cara Kerja Aktuator · GitBook</title>
+        <title>06. Jenis Komunikasi Data · GitBook</title>
         <meta http-equiv="X-UA-Compatible" content="IE=edge" />
         <meta name="description" content="">
         <meta name="generator" content="GitBook 3.2.3">
@@ -57,10 +57,8 @@
     <link rel="shortcut icon" href="../gitbook/images/favicon.ico" type="image/x-icon">
 
     
-    <link rel="next" href="../0e/0e.pertemuan6.html" />
     
-    
-    <link rel="prev" href="../0c/0c.pertemuan3.html" />
+    <link rel="prev" href="../0e/0e.pertemuan6.html" />
     
 
     </head>
@@ -154,9 +152,9 @@
             
         </li>
     
-        <li class="chapter active" data-level="1.6" data-path="0d.pertemuan4.html">
+        <li class="chapter " data-level="1.6" data-path="../0d/0d.pertemuan4.html">
             
-                <a href="0d.pertemuan4.html">
+                <a href="../0d/0d.pertemuan4.html">
             
                     
                     04. Pengenalan Jenis-Jenis dan Cara Kerja Aktuator
@@ -180,9 +178,9 @@
             
         </li>
     
-        <li class="chapter " data-level="1.8" data-path="../0f/0f.pertemuan7.html">
+        <li class="chapter active" data-level="1.8" data-path="0f.pertemuan7.html">
             
-                <a href="../0f/0f.pertemuan7.html">
+                <a href="0f.pertemuan7.html">
             
                     
                     06. Jenis Komunikasi Data
@@ -223,7 +221,7 @@
     <!-- Title -->
     <h1>
         <i class="fa fa-circle-o-notch fa-spin"></i>
-        <a href=".." >04. Pengenalan Jenis-Jenis dan Cara Kerja Aktuator</a>
+        <a href=".." >06. Jenis Komunikasi Data</a>
     </h1>
 </div>
 
@@ -238,100 +236,99 @@
     
                                 <section class="normal markdown-section">
                                 
-                                <h1 id="pertemuan-ke-4-pengenalan-jenis-jenis-dan-cara-kerja-aktuator">Pertemuan ke 4: Pengenalan Jenis-Jenis dan Cara Kerja Aktuator</h1>
+                                <h1 id="pertemuan-ke-6-jenis-komunikasi-data">Pertemuan ke 6: Jenis Komunikasi Data</h1>
 <h2 id="topik-bahasan">Topik Bahasan</h2>
-<p>Pengenalan Elektronika Dasar(Pengantar IoT, Pengantar Elektronik, Pengenalan jenis-jenis &amp; Cara Kerja Sensor, Pengenalan
-jenis-jenis &amp; Cara Kerja Aktuator)</p>
+<p>Proyek Dasar Mikrokontroller
+(Jenis Electronics Development Board dan Bahasa Pemrograman Microcontroller, Pengenalan &amp; Jenis Komunikasi Data,
+Pengenalan Teknologi Smart card, Praktik Dasar Elektronika)</p>
 <h2 id="deskripsi">Deskripsi</h2>
 <ul>
-<li>Memahami pengertian, peluang, revolusi industri 4.0, dan potensi IoT</li>
-<li>Memahami dan mampu menjelaskan rangkaian elektronika, alat ukur (Multimeter), alat-alat pendukung elektronika (
-Solder,Screw Driver, Pinset dll), dan K3 (Keselamatan dan Kesehatan Kerja).</li>
-<li>Memahami jenis-jenis dan cara kerja sensor seperti: ECG sensor, heart rate sensor, sensor temperatur, sensor
-kelembaban udara, ultrasonic sensor, sensor cahaya, sensor suara, sensor kelembaban tanah, pir sensor, sensor
-pendeteksi gas, dan sensor pendeteksi hujan.</li>
-<li>Pengenalan jenis-jenis &amp; Cara Kerja Aktuator</li>
+<li>Memahami berbagai jenis Electronics Development Board seperti: Arduino Uno/Nano, ATMega Series, STM32, ESP8266, ESP32,
+Raspi Pi Pico, Raspberry Pi, dan Jetson Nano</li>
+<li>Memahami jenis komunikasi data, baik data wired maupun wireless seperti: Komunikasi Serial, I2C, SPI, WiFi, Bluetooth
+/ BLE, LoRa, ZigBee, Seluler (2G - 5G), NFC, dan NB-IoT.</li>
+<li>Memahami konsep dan teknologi smart card seperti Mifare, Desfire, Javacard dan protokol komunikasi smart car(APDU).</li>
+<li>Mampu menggunakan solder/desolder dengan benar, mampu mensimulasikan dan merancang rangkaian listrik (fritzing/wokwi),
+Mampu menerapkan dasar pemrograman Arduino.</li>
 </ul>
 <h2 id="praktikum">Praktikum</h2>
-<p>Berikut adalah langkah-langkah untuk menggunakan motor DC sebagai aktuator menggunakan Tinkercad:</p>
-<h3 id="langkah-langkah">Langkah-langkah:</h3>
+<p>Tentu, berikut adalah langkah-langkah untuk membuat proyek di Wokwi yang menghidupkan LED menggunakan komunikasi serial
+pada board ESP32:</p>
+<h3 id="langkah-langkah-menggunakan-wokwi">Langkah-langkah Menggunakan Wokwi</h3>
 <ol>
-<li><p><strong>Buka Tinkercad:</strong></p>
-</li>
-<li><p>Kunjungi <a href="https://www.tinkercad.com" target="_blank">Tinkercad</a> dan masuk dengan akun Anda.</p>
-</li>
-<li><p>Klik &quot;Circuits&quot; di dashboard dan pilih &quot;Create new Circuit.&quot;</p>
-</li>
-<li><p><strong>Tambahkan Komponen:</strong></p>
-</li>
-<li><p>Dari panel komponen di sebelah kanan, tambahkan komponen berikut ke kanvas:</p>
+<li><p><strong>Masuk ke Wokwi:</strong></p>
 <ul>
-<li>Breadboard</li>
-<li>Arduino Uno R3</li>
-<li>Motor DC</li>
-<li>Transistor NPN (misalnya, 2N2222)</li>
-<li>Diode (misalnya, 1N4007)</li>
-<li>Resistor (220 ohm)</li>
-<li><p>Jumper wires</p>
+<li>Buka <a href="https://wokwi.com/" target="_blank">Wokwi</a>.</li>
+</ul>
+</li>
+<li><p><strong>Buat Proyek Baru:</strong></p>
+<ul>
+<li><p>Klik &quot;New Project&quot; dan pilih &quot;ESP32&quot;.</p>
 <p><img src="img.png" alt="img.png"></p>
 </li>
 </ul>
 </li>
-<li><p><strong>Rangkai Komponen:</strong></p>
-</li>
-<li><p><strong>Motor DC:</strong></p>
+<li><p><strong>Tambah Komponen:</strong></p>
 <ul>
-<li>Hubungkan salah satu terminal motor DC ke kolektor transistor NPN.</li>
-<li>Hubungkan terminal lainnya dari motor DC ke anoda diode (anoda adalah sisi tanpa garis).</li>
-</ul>
-</li>
-<li><p><strong>Transistor:</strong></p>
-<ul>
-<li>Hubungkan basis transistor ke salah satu pin digital pada Arduino (misalnya, pin 9) melalui resistor 220 ohm.</li>
-<li>Hubungkan emitor transistor ke rail ground pada breadboard.</li>
-</ul>
-</li>
-<li><p><strong>Arduino:</strong></p>
-<ul>
-<li>Hubungkan pin GND pada Arduino ke rail ground pada breadboard.</li>
-<li><p>Hubungkan pin digital 9 pada Arduino ke basis transistor melalui resistor 220 ohm.</p>
-<p><img src="img_1.png" alt="img_1.png"></p>
+<li>Klik &quot;Add Part&quot; dan cari &quot;LED&quot;.</li>
+<li>Tambahkan LED ke canvas.</li>
+<li>Klik &quot;Add Part&quot; dan cari &quot;Resistor&quot;.</li>
+<li><p>Tambahkan resistor ke canvas.</p>
+<p><img src="img_2.png" alt="img_2.png"></p>
 </li>
 </ul>
 </li>
-<li><p><strong>Menambahkan Kode Program:</strong></p>
+<li><p><strong>Wiring:</strong></p>
+<ul>
+<li>Sambungkan kaki positif LED (anoda) ke salah satu kaki resistor.</li>
+<li>Sambungkan kaki lain resistor ke pin GPIO 2 pada ESP32.</li>
+<li><p>Sambungkan kaki negatif LED (katoda) ke GND pada ESP32.</p>
+<p><img src="img_3.png" alt="img_3.png"></p>
 </li>
-<li><p>Klik pada Arduino Uno R3 dan pilih opsi &quot;Code.&quot;</p>
+</ul>
 </li>
-<li>Pilih bahasa pemrograman &quot;Blocks + Text&quot; untuk mempermudah pengkodean.</li>
-<li>Tambahkan kode berikut ke editor:</li>
-</ol>
-<pre><code class="lang-cpp"><span class="hljs-keyword">int</span> motorPin = <span class="hljs-number">9</span>;
-
-<span class="hljs-function"><span class="hljs-keyword">void</span> <span class="hljs-title">setup</span><span class="hljs-params">()</span> </span>{
-  pinMode(motorPin, OUTPUT);
+<li><p><strong>Upload Kode untuk ESP32:</strong></p>
+<ul>
+<li>Klik pada ikon &quot;Code&quot; untuk menambahkan kode ke ESP32.</li>
+<li><p>Masukkan kode berikut untuk ESP32:</p>
+<pre><code class="lang-cpp"><span class="hljs-function"><span class="hljs-keyword">void</span> <span class="hljs-title">setup</span><span class="hljs-params">()</span>
+</span>{
+  pinMode(<span class="hljs-number">13</span>, OUTPUT);
+  Serial.begin(<span class="hljs-number">9600</span>);
 }
-
-<span class="hljs-function"><span class="hljs-keyword">void</span> <span class="hljs-title">loop</span><span class="hljs-params">()</span> </span>{
-  digitalWrite(motorPin, HIGH);
-  delay(<span class="hljs-number">1000</span>);
-  digitalWrite(motorPin, LOW);
-  delay(<span class="hljs-number">1000</span>);
+<span class="hljs-function"><span class="hljs-keyword">void</span> <span class="hljs-title">loop</span><span class="hljs-params">()</span>
+</span>{
+  <span class="hljs-keyword">if</span> (Serial.available()) {
+    <span class="hljs-keyword">char</span> c = Serial.read();
+    <span class="hljs-keyword">if</span> (c == <span class="hljs-string">&apos;A&apos;</span>)
+    {
+      digitalWrite(<span class="hljs-number">13</span>, HIGH);
+      Serial.println(<span class="hljs-string">&quot;led on&quot;</span>);
+    }
+    <span class="hljs-keyword">else</span> <span class="hljs-keyword">if</span> (c == <span class="hljs-string">&apos;B&apos;</span>)
+    {
+      digitalWrite(<span class="hljs-number">13</span>, LOW);
+      Serial.println(<span class="hljs-string">&quot;led off&quot;</span>);
+    }
+  }
 }
 </code></pre>
-<p><img src="img_2.png" alt="img_2.png"></p>
-<ol>
-<li><p><strong>Menjalankan Simulasi:</strong></p>
 </li>
-<li><p>Klik tombol &quot;Start Simulation&quot; di Tinkercad.</p>
+</ul>
 </li>
-<li>Motor DC akan berputar selama 1 detik, kemudian berhenti selama 1 detik, dan siklus ini akan berulang.</li>
+<li><p><strong>Run Simulation:</strong></p>
+<ul>
+<li><p>Klik &quot;Start Simulation&quot; untuk menjalankan simulasi.</p>
+<p><img src="img_4.png" alt="img_4.png"></p>
+</li>
+<li><p>Masukkan huruf <code>A atau B</code> untuk <strong>menghidupkan/mematikan</strong> LED melalui serial monitor.</p>
+</li>
+</ul>
+</li>
 </ol>
-<p>Dengan mengikuti langkah-langkah ini, Anda dapat mendemonstrasikan penggunaan motor DC sebagai aktuator dengan Arduino
-di Tinkercad.</p>
 <h2 id="tugas-mandiri">Tugas Mandiri</h2>
-<p>Dengan menggunakan tingkercad silakan mensimulasikan penggunaan aktuator dan aktuator sekaligus. Silakan dokumentasikan
-hasil simulasi dengan screen recording.</p>
+<p>Dengan menggunakan wokwi silakan mensimulasikan penggunaan aktuator dan aktuator sekaligus menggunakan komunikasi
+serial. Silakan dokumentasikan hasil simulasi dengan screen recording.</p>
 
                                 
                                 </section>
@@ -359,14 +356,10 @@ hasil simulasi dengan screen recording.</p>
 
             
                 
-                <a href="../0c/0c.pertemuan3.html" class="navigation navigation-prev " aria-label="Previous page: 03. Pengenalan Jenis-Jenis dan Cara Kerja Sensor">
+                <a href="../0e/0e.pertemuan6.html" class="navigation navigation-prev navigation-unique" aria-label="Previous page: 05. Jenis Elektronik Development Board">
                     <i class="fa fa-angle-left"></i>
                 </a>
                 
-                
-                <a href="../0e/0e.pertemuan6.html" class="navigation navigation-next " aria-label="Next page: 05. Jenis Elektronik Development Board">
-                    <i class="fa fa-angle-right"></i>
-                </a>
                 
             
         
@@ -375,7 +368,7 @@ hasil simulasi dengan screen recording.</p>
     <script>
         var gitbook = gitbook || [];
         gitbook.push(function() {
-            gitbook.page.hasChanged({"page":{"title":"04. Pengenalan Jenis-Jenis dan Cara Kerja Aktuator","level":"1.6","depth":1,"next":{"title":"05. Jenis Elektronik Development Board","level":"1.7","depth":1,"path":"0e/0e.pertemuan6.md","ref":"0e/0e.pertemuan6.md","articles":[]},"previous":{"title":"03. Pengenalan Jenis-Jenis dan Cara Kerja Sensor","level":"1.5","depth":1,"path":"0c/0c.pertemuan3.md","ref":"0c/0c.pertemuan3.md","articles":[]},"dir":"ltr"},"config":{"plugins":[],"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"pluginsConfig":{"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"theme":"default","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"language":"id","gitbook":"*"},"file":{"path":"0d/0d.pertemuan4.md","mtime":"2024-07-23T00:16:28.992Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2024-07-23T00:17:23.248Z"},"basePath":"..","book":{"language":""}});
+            gitbook.page.hasChanged({"page":{"title":"06. Jenis Komunikasi Data","level":"1.8","depth":1,"previous":{"title":"05. Jenis Elektronik Development Board","level":"1.7","depth":1,"path":"0e/0e.pertemuan6.md","ref":"0e/0e.pertemuan6.md","articles":[]},"dir":"ltr"},"config":{"plugins":[],"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"pluginsConfig":{"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"theme":"default","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"language":"id","gitbook":"*"},"file":{"path":"0f/0f.pertemuan7.md","mtime":"2024-07-23T00:16:28.992Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2024-07-23T00:17:23.248Z"},"basePath":"..","book":{"language":""}});
         });
     </script>
 </div>
