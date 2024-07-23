@@ -9,8 +9,8 @@
 - [05. Jenis Elektronik Development Board](0e/0e.pertemuan6.md)
 - [06. Jenis Komunikasi Data](0f/0f.pertemuan7.md)
 - [08. Praktik Dasar Elektronika](0h/0h.pertemuan9.md)
-  
 
+  
 [comment]: <> (- [05. DHT11]&#40;03/03-dht11.md&#41;)
 
 [comment]: <> (- [06. LDR dan HC-SR04]&#40;04/04-sensor-cahaya.md&#41;)
