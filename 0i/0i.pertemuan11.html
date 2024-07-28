@@ -405,23 +405,20 @@ Tidak semua pin Arduino mendukung PWM karena memerlukan kompatibilitas dengan IC
 <li><p>Frekuensi: Frekuensi dapat berupa nilai antara 0 dan 78125. Frekuensi 5000 Hz dapat digunakan untuk mengontrol kecerahan LED.
 -Siklus kerja(Duty cycle): Siklus kerja dapat berupa nilai antara 0 dan 1023. Dimana 1023 menunjukkan siklus kerja 100% (kecerahan penuh), dan 0 menunjukkan siklus kerja 0% (LED tidak menyala).</p>
 </li>
-<li><p>Duplikasi code berikut
-```python</p>
-<h1 id="untuk-membuat-pin-pwm-impor-class-pwm-selain-class-pin-dari-modul-machine">Untuk membuat pin PWM, impor class PWM selain class Pin dari modul machine.</h1>
-<p>from machine import Pin, PWM 
-from time import sleep</p>
+<li><p>Duplikasi code berikut</p>
 </li>
 </ul>
-<p>frequency = 5000</p>
-<h1 id="buat-objek-pwm-yaitu-led">buat objek PWM yaitu led.</h1>
-<p>led = PWM(Pin(5), frequency) </p>
-<h1 id="di-dalam-perulangan-while-kita-membuat-perulangan-for-yang-meningkatkan-siklus-kerja-sebesar-1-di-setiap-perulangan-dengan-interval-5-ms-di-antara-setiap-perubahan">Di dalam perulangan while, kita membuat perulangan for yang meningkatkan siklus kerja sebesar 1 di setiap perulangan dengan interval 5 ms di antara setiap perubahan.</h1>
-<p>while True:
-  for duty_cycle in range(0, 1024):</p>
-<pre><code>#Untuk mengatur siklus kerja gunakan metode duty() pada objek PWM dan teruskan siklus tugas sebagai argumen:
-led.duty(duty_cycle)
-sleep(0.005)
-</code></pre><p>```</p>
+<pre><code class="lang-python"><span class="hljs-keyword">from</span> machine <span class="hljs-keyword">import</span> Pin, PWM 
+<span class="hljs-keyword">from</span> time <span class="hljs-keyword">import</span> sleep
+
+frequency = <span class="hljs-number">5000</span>
+led = PWM(Pin(<span class="hljs-number">5</span>), frequency) 
+
+<span class="hljs-keyword">while</span> <span class="hljs-keyword">True</span>:
+  <span class="hljs-keyword">for</span> duty_cycle <span class="hljs-keyword">in</span> range(<span class="hljs-number">0</span>, <span class="hljs-number">1024</span>):
+    led.duty(duty_cycle)
+    sleep(<span class="hljs-number">0.005</span>)
+</code></pre>
 <ul>
 <li>Hasilnya seharusnya led berganti tingkat terangnya.
 <a href="https://www.youtube.com/shorts/FfVE_UA46Eg" target="_blank">https://www.youtube.com/shorts/FfVE_UA46Eg</a></li>
@@ -476,7 +473,7 @@ sleep(0.005)
     <script>
         var gitbook = gitbook || [];
         gitbook.push(function() {
-            gitbook.page.hasChanged({"page":{"title":"09. Praktik Pemrograman Microcontroller","level":"1.11","depth":1,"previous":{"title":"08. Praktik Dasar Elektronika","level":"1.10","depth":1,"path":"0h/0h.pertemuan9.md","ref":"0h/0h.pertemuan9.md","articles":[]},"dir":"ltr"},"config":{"plugins":[],"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"pluginsConfig":{"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"theme":"default","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"language":"id","gitbook":"*"},"file":{"path":"0i/0i.pertemuan11.md","mtime":"2024-07-28T14:14:21.109Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2024-07-28T14:15:10.908Z"},"basePath":"..","book":{"language":""}});
+            gitbook.page.hasChanged({"page":{"title":"09. Praktik Pemrograman Microcontroller","level":"1.11","depth":1,"previous":{"title":"08. Praktik Dasar Elektronika","level":"1.10","depth":1,"path":"0h/0h.pertemuan9.md","ref":"0h/0h.pertemuan9.md","articles":[]},"dir":"ltr"},"config":{"plugins":[],"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"pluginsConfig":{"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"theme":"default","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"language":"id","gitbook":"*"},"file":{"path":"0i/0i.pertemuan11.md","mtime":"2024-07-28T14:22:02.972Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2024-07-28T14:22:53.098Z"},"basePath":"..","book":{"language":""}});
         });
     </script>
 </div>
