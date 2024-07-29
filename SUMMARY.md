@@ -11,7 +11,7 @@
 - [07. Pengenalan Teknologi Smart Card](0g/0f.pertemuan8.md)
 - [08. Praktik Dasar Elektronika](0h/0h.pertemuan9.md)
 - [09. Praktik Pemrograman Microcontroller](0i/0i.pertemuan11.md)
-
+- [10. Praktik Sensor DHT11, LCD, dan RTC](0j/0j.pertemuan12.md)
 
 [comment]: <> (- [05. DHT11]&#40;03/03-dht11.md&#41;)
 
