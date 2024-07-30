@@ -1,0 +1,637 @@
+
+<!DOCTYPE HTML>
+<html lang="id" >
+    <head>
+        <meta charset="UTF-8">
+        <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+        <title>11. Praktik Sensor Ultrasonic PIR LDR · GitBook</title>
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="description" content="">
+        <meta name="generator" content="GitBook 3.2.3">
+        
+        
+        
+    
+    <link rel="stylesheet" href="../gitbook/style.css">
+
+    
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-highlight/website.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-search/search.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-fontsettings/website.css">
+                
+            
+        
+
+    
+
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+
+        
+    
+    
+    <meta name="HandheldFriendly" content="true"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <link rel="apple-touch-icon-precomposed" sizes="152x152" href="../gitbook/images/apple-touch-icon-precomposed-152.png">
+    <link rel="shortcut icon" href="../gitbook/images/favicon.ico" type="image/x-icon">
+
+    
+    
+    <link rel="prev" href="../0j/0j.pertemuan12.html" />
+    
+
+    </head>
+    <body>
+        
+<div class="book">
+    <div class="book-summary">
+        
+            
+<div id="book-search-input" role="search">
+    <input type="text" placeholder="Ketik untuk mencari" />
+</div>
+
+            
+                <nav role="navigation">
+                
+
+
+<ul class="summary">
+    
+    
+
+    
+
+    
+        
+        
+    
+        <li class="chapter " data-level="1.1" data-path="../">
+            
+                <a href="../">
+            
+                    
+                    Pendahuluan
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2" data-path="../00/kontrak.html">
+            
+                <a href="../00/kontrak.html">
+            
+                    
+                    Kontrak Kuliah
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3" data-path="../0a/0a.pertemuan1.html">
+            
+                <a href="../0a/0a.pertemuan1.html">
+            
+                    
+                    01. Memahami Konsep dan arsitektur IoT
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4" data-path="../0b/0b.pertemuan2.html">
+            
+                <a href="../0b/0b.pertemuan2.html">
+            
+                    
+                    02. Pengantar Elektronik
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5" data-path="../0c/0c.pertemuan3.html">
+            
+                <a href="../0c/0c.pertemuan3.html">
+            
+                    
+                    03. Pengenalan Jenis-Jenis dan Cara Kerja Sensor
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6" data-path="../0d/0d.pertemuan4.html">
+            
+                <a href="../0d/0d.pertemuan4.html">
+            
+                    
+                    04. Pengenalan Jenis-Jenis dan Cara Kerja Aktuator
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.7" data-path="../0e/0e.pertemuan6.html">
+            
+                <a href="../0e/0e.pertemuan6.html">
+            
+                    
+                    05. Jenis Elektronik Development Board
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.8" data-path="../0f/0f.pertemuan7.html">
+            
+                <a href="../0f/0f.pertemuan7.html">
+            
+                    
+                    06. Jenis Komunikasi Data
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.9" data-path="../0g/0f.pertemuan8.html">
+            
+                <a href="../0g/0f.pertemuan8.html">
+            
+                    
+                    07. Pengenalan Teknologi Smart Card
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.10" data-path="../0h/0h.pertemuan9.html">
+            
+                <a href="../0h/0h.pertemuan9.html">
+            
+                    
+                    08. Praktik Dasar Elektronika
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.11" data-path="../0i/0i.pertemuan11.html">
+            
+                <a href="../0i/0i.pertemuan11.html">
+            
+                    
+                    09. Praktik Pemrograman Microcontroller
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.12" data-path="../0j/0j.pertemuan12.html">
+            
+                <a href="../0j/0j.pertemuan12.html">
+            
+                    
+                    10. Praktik Sensor DHT11, LCD, dan RTC
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter active" data-level="1.13" data-path="0k.pertemuan13.html">
+            
+                <a href="0k.pertemuan13.html">
+            
+                    
+                    11. Praktik Sensor Ultrasonic PIR LDR
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+    
+
+    <li class="divider"></li>
+
+    <li>
+        <a href="https://www.gitbook.com" target="blank" class="gitbook-link">
+            Dipublikasikan dengan GitBook
+        </a>
+    </li>
+</ul>
+
+
+                </nav>
+            
+        
+    </div>
+
+    <div class="book-body">
+        
+            <div class="body-inner">
+                
+                    
+
+<div class="book-header" role="navigation">
+    
+
+    <!-- Title -->
+    <h1>
+        <i class="fa fa-circle-o-notch fa-spin"></i>
+        <a href=".." >11. Praktik Sensor Ultrasonic PIR LDR</a>
+    </h1>
+</div>
+
+
+
+
+                    <div class="page-wrapper" tabindex="-1" role="main">
+                        <div class="page-inner">
+                            
+<div id="book-search-results">
+    <div class="search-noresults">
+    
+                                <section class="normal markdown-section">
+                                
+                                <h1 id="pertemuan-ke-13--praktik-sensor-ultrasonic-pir-ldr">Pertemuan ke 13 : Praktik Sensor Ultrasonic PIR LDR</h1>
+<h2 id="topik-bahasan">Topik Bahasan</h2>
+<p>Proyek Dasar Internet of Things I (Praktik Pemrograman Mikrokontroler, Praktik Sensor: Sensor DHT, LCD, Praktik Sensor: Ultrasonic, PIR, dan LDR, Praktik Aktuator: LED dan Relay, Praktik Aktuator: Buzzer dan Servo)</p>
+<h2 id="deskripsi">Deskripsi</h2>
+<ul>
+<li>Mampu melakukan instalasi, memahami bahasa pemrograman dan pin pada Arduino. </li>
+<li>Mampu melakukan uji coba serial monitor dan uji coba PWM dengan potensiometer.</li>
+<li>Mampu merancang dan membuat proyek menggunakan sensor DHT22.</li>
+<li>Mampu merancang dan membuat proyek menggunakan sensor Ultrasonic, PIR, dan LDR.</li>
+<li>Mampu merancang dan membuat proyek menggunakan aktuator LED dan Relay.</li>
+<li>Mampu merancang dan membuat proyek menggunakan aktuator Buzzer dan Servo.</li>
+</ul>
+<h2 id="teori-singkat">Teori Singkat</h2>
+<h3 id="sensor-ultrasonic">Sensor Ultrasonic</h3>
+<p>Sensor ultrasonik adalah sebuah sensor yang berfungsi untuk mengubah besaran fisis (bunyi/gelombang ultrasonik) menjadi besaran listrik dan sebaliknya. </p>
+<p>Sensor ultrasonik dapat digunakan untuk mengukur jarak dengan suatu benda tertentu.</p>
+<p>Gelombang ultrasonik adalah gelombang bunyi yang mempunyai frekuensi sangat tinggi yaitu 20.000 Hz. Bunyi ultrasonik tidak dapat di dengar oleh telinga manusia. Bunyi ultrasonik dapat didengar oleh anjing, kucing, kelelawar, dan lumba-lumba. Bunyi ultrasonik nisa merambat melalui zat padat, cair dan gas. </p>
+<p><img src="img.png" alt="img.png">  </p>
+<p>Cara kerja sensor ini didasarkan pada prinsip dari pantulan suatu gelombang suara sehingga dapat dipakai untuk menafsirkan eksistensi (jarak) suatu benda dengan frekuensi tertentu.</p>
+<p><img src="img2.png" alt="img2.png"> </p>
+<p>Dengan rumus sebagai berikut:
+S =  jarak (cm)
+T = waktu (detik) </p>
+<p><img src="img1.png" alt="img1.png"> </p>
+<p>Dimana:</p>
+<ul>
+<li>S = adalah jarak antara sensor dengan benda yang diukur (m).</li>
+<li>t = adalah waktu yang dibutuhkan sinyal untuk kembali ke sensor (s).</li>
+<li>340 = adalah kecepatan dari gelombang suara (340 m/s)</li>
+<li>2 = adalah faktor pembagi jarak karena gelombang suara mengalami pemantulan</li>
+</ul>
+<p>Sensor ultrasonik HC-SR04 menggunakan sonar untuk menentukan jarak suatu objek. </p>
+<p>Sensor ini dapat membaca dari 2 cm hingga 400 cm (0,8 inci hingga 157 inci) dengan akurasi 0,3 cm (0,1 inci).</p>
+<p>Selain itu, modul khusus ini dilengkapi dengan modul pemancar dan penerima ultrasonik.</p>
+<p><img src="img3.png" alt="img3.png"></p>
+<p><strong>Spesifikasi sensor HC-SR04</strong></p>
+<table>
+<thead>
+<tr>
+<th>Nama</th>
+<th>Nilai</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Tegangan</td>
+<td>3,3 V - 5,5 V</td>
+</tr>
+<tr>
+<td>Arus</td>
+<td>15 mA</td>
+</tr>
+<tr>
+<td>Frekuensi</td>
+<td>40 kHz</td>
+</tr>
+<tr>
+<td>Jangkauan minimal</td>
+<td>2 cm</td>
+</tr>
+<tr>
+<td>Jangkauan maksimal</td>
+<td>4 meter</td>
+</tr>
+<tr>
+<td>Sudut pengukuruan</td>
+<td>15&#xBA;</td>
+</tr>
+<tr>
+<td>Toleransi</td>
+<td>0,3 cm</td>
+</tr>
+</tbody>
+</table>
+<p>Pinout dari sensor ultrasonik adalah sebagai berikut</p>
+<p><img src="img4.png" alt="img4.png"></p>
+<h3 id="sensor-pir">Sensor PIR</h3>
+<p><strong>Sensor PIR (Passive Infra Red)</strong> merupakan sensor yang memanfaatkan pancaran gelombang inframerah yang dipancarkan oleh benda sekitar. Dengan demikian, sensor ini dapat mengetahui adanya pergerakan yang ada di depannya.</p>
+<p>Jangkauan sensor PIR dengan objek maksimal 12m dengan sudut sebaran 60 derajat.</p>
+<p><img src="img6.png" alt="img6.png"></p>
+<p><strong>Cara kerjanya sensor PIR</strong> yaitu pyroelectric pada sensor menerima gelombang inframerah dari benda sekitar dan menghasilkan arus listrik. Untuk memastikan yang dibaca adalah benar-benar gerakan, terdapat komparator untuk membandingkan dengan gelombang lain yang diterima. Jika terdapat perbedaan, maka output sensor akan mengeluarkan tegangan listrik.</p>
+<p><img src="img7.png" alt="img7.png"></p>
+<p>Pinout dari sensor PIR adalah sebagai berikut</p>
+<p><img src="img13.png" alt="img13.png"></p>
+<h3 id="sensor-cahaya">Sensor Cahaya</h3>
+<p><strong>Sensor cahaya atau LDR (Light Dependent Resistor)</strong> pada dasarnya adalah sebuah komponen yang memiliki resistansi yang dapat berubah ubah sesuai dengan cahaya yang diterima. Sensor ini memiliki 2 kaki yang tidak berpolaritas, sehingga pemasangan boleh terbalik.Modul sensor cahaya LDR dapat merasakan dan mengukur cahaya di sekitarnya. Modul ini memiliki dua output: output digital yang dapat berupa Low atau High dan output analog</p>
+<p><img src="img8.png" alt="img8.png"></p>
+<p>Sensor ini akan meningkat resistansi atau hambatannya apabila cahaya yang diterima sedikit. Sebaliknya, apabila cahaya yang diterima banyak maka resistansinya akan mengecil.</p>
+<p>Cara mengecek/mengukur sensor ini adalah dengan multimeter dan mengatur pada posisi Ohm. Saat mendapatkan cahaya terang resistansi akan berkurang disbanding dengan tidak mendapatkan cahaya. Sensor ini dapat dimanfaatkan untuk saklar lampu otomatis.</p>
+<p><img src="img12.png" alt="img12.png"> </p>
+<p>Pinout dari sensor LDR.</p>
+<ul>
+<li>VCC-&gt;sudah jelas</li>
+<li>GND-&gt;sudah jelas</li>
+<li>DO pin-&gt;Ini adalah pin keluaran digital. ini memberikan sinyal HIGH saat gelap dan LOW saat terang. Kita dapat mengatur ambang batas antara gelap dan terang menggunakan potensiometer bawaan</li>
+<li>AO pin-&gt;Ini adalah pin keluaran analog. Nilainya berkurang jika cahaya semakin terang dan meningkat seiring dengan semakin gelapnya cahaya</li>
+</ul>
+<p><img src="img22.png" alt="img22.png"> </p>
+<h2 id="praktikum-1-arduino-dan-sensor-ultrasonic-dengan-wokwi">Praktikum 1: Arduino dan Sensor Ultrasonic dengan Wokwi</h2>
+<p>Selesaikan langkah-langkah praktikum berikut ini menggunakan Wokwi di browser Anda.</p>
+<ol>
+<li>Masuk ke Wokwi. Klik New Projects untuk membuat projek baru. Pilih Arduino UNO.</li>
+</ol>
+<p><img src="img5.png" alt="img5.png"> </p>
+<ol>
+<li>Tambahkan komponen baru dengan klik Add (+). Tambahkan HC-SR04 Sensor Ultrasonik</li>
+</ol>
+<p><img src="img9.png" alt="img9.png"> </p>
+<ol>
+<li>Hubungkan seluruh komponen sebagai berikut.</li>
+<li>VCC -&gt; 5V</li>
+<li>Trig -&gt; 3</li>
+<li>Echo -&gt; 2</li>
+<li>Gnd -&gt; GND</li>
+</ol>
+<p><img src="img10.png" alt="img10.png"> </p>
+<ol>
+<li>Tambahkan kode program.Program tersebut digunakan untuk menampilkan hasil pembacaan data sensor ultrasonik. Hasil pembacaan ditampilkan di serial monitor. Jalankan simulasi dengan kllik Start Simulation.</li>
+</ol>
+<pre><code class="lang-cpp"><span class="hljs-meta">#<span class="hljs-meta-keyword">define</span> ECHO_PIN 2</span>
+<span class="hljs-meta">#<span class="hljs-meta-keyword">define</span> TRIG_PIN 3</span>
+
+<span class="hljs-function"><span class="hljs-keyword">void</span> <span class="hljs-title">setup</span><span class="hljs-params">()</span></span>{
+  Serial.begin(<span class="hljs-number">115200</span>);
+  pinMode(LED_BUILTIN, OUTPUT);
+  pinMode(TRIG_PIN, OUTPUT);
+  pinMode(ECHO_PIN, INPUT);
+}
+
+<span class="hljs-function"><span class="hljs-keyword">float</span> <span class="hljs-title">readDistanceCM</span><span class="hljs-params">()</span></span>{
+  digitalWrite(TRIG_PIN, LOW);
+  delayMicroseconds(<span class="hljs-number">2</span>);
+  digitalWrite(TRIG_PIN, HIGH);
+  delayMicroseconds(<span class="hljs-number">10</span>);
+  digitalWrite(TRIG_PIN, LOW);
+  <span class="hljs-keyword">int</span> duration = pulseIn(ECHO_PIN,HIGH);
+  <span class="hljs-keyword">return</span> duration * <span class="hljs-number">0.034</span> / <span class="hljs-number">2</span>;
+}
+
+<span class="hljs-function"><span class="hljs-keyword">void</span> <span class="hljs-title">loop</span><span class="hljs-params">()</span></span>{
+  digitalWrite(TRIG_PIN, LOW);
+  delayMicroseconds(<span class="hljs-number">2</span>);
+  digitalWrite(TRIG_PIN, HIGH);
+  delayMicroseconds(<span class="hljs-number">10</span>);
+  digitalWrite(TRIG_PIN, LOW);
+  <span class="hljs-keyword">int</span> duration = pulseIn(ECHO_PIN,HIGH);
+  <span class="hljs-keyword">float</span> distance = duration * <span class="hljs-number">0.034</span> / <span class="hljs-number">2</span>;
+
+Serial.print(<span class="hljs-string">&quot;Jarak: &quot;</span>);
+Serial.println(readDistanceCM());
+}
+</code></pre>
+<ol>
+<li>Klik Serial Monitor (bawah) untuk melihat hasil pembacaan sensor. Ubah jarak dengan klik pada sensor, lakukan pengubahan jarak. Jika jarak berhasil muncul, berarti pembacaan data sensor sudah berhasil. Klik Stop simulation untuk menghentikan simulasi</li>
+</ol>
+<p><img src="img11.png" alt="img11.png"> </p>
+<h2 id="praktikum-2-praktik-arduino-dan-sensor-pir">Praktikum 2: Praktik Arduino dan Sensor PIR</h2>
+<p>Selesaikan langkah-langkah praktikum berikut ini menggunakan Wokwi di browser Anda.</p>
+<ol>
+<li>Masuk ke Wokwi. Klik New Projects untuk membuat projek baru. Pilih Arduino UNO.</li>
+</ol>
+<p><img src="img5.png" alt="img5.png"> </p>
+<ol>
+<li>Tambahkan komponen baru dengan klik Add (+). Tambahkan Sensor PIR. Tambahkan LED dan resistor.</li>
+</ol>
+<p><img src="img9.png" alt="img9.png"></p>
+<ol>
+<li>Hubungkan seluruh komponen sebagai berikut.</li>
+<li>VCC -&gt; 5V</li>
+<li>D -&gt; 2</li>
+<li>Gnd -&gt; GND</li>
+</ol>
+<p><img src="img14.png" alt="img14.png"></p>
+<ol>
+<li>Tambahkan kode program. Program tersebut digunakan untuk menampilkan hasil pembacaan data sensor PIR atau motion. Hasil pembacaan berupa teks di Serial Monitor atau LED yang menyala</li>
+</ol>
+<pre><code class="lang-cpp"><span class="hljs-keyword">int</span> ledPin = <span class="hljs-number">13</span>;
+<span class="hljs-keyword">int</span> inputPin = <span class="hljs-number">2</span>;
+<span class="hljs-keyword">int</span> pirState = LOW;
+<span class="hljs-keyword">int</span> val = <span class="hljs-number">0</span>;
+
+<span class="hljs-function"><span class="hljs-keyword">void</span> <span class="hljs-title">setup</span><span class="hljs-params">()</span></span>{
+  pinMode(ledPin, OUTPUT);
+  pinMode(inputPin, INPUT);
+
+  Serial.begin(<span class="hljs-number">9600</span>);
+}
+
+<span class="hljs-function"><span class="hljs-keyword">void</span> <span class="hljs-title">loop</span><span class="hljs-params">()</span></span>{
+  val = digitalRead(inputPin);
+  <span class="hljs-keyword">if</span> (val == HIGH){
+    digitalWrite(ledPin, HIGH);
+    <span class="hljs-keyword">if</span> (pirState == LOW){
+      Serial.println(<span class="hljs-string">&quot;Gerakan terdeteksi!&quot;</span>);
+      pirState = HIGH;
+    }
+  } <span class="hljs-keyword">else</span> {
+    digitalWrite(ledPin, LOW);
+    <span class="hljs-keyword">if</span> (pirState == HIGH){
+      Serial.println(<span class="hljs-string">&quot;Tidak ada gerakan!&quot;</span>);
+      pirState = LOW;
+    }
+  }
+}
+</code></pre>
+<ol>
+<li>Klik Sensor PIR, dan klik Simulate motion untuk mensimulasikan adanya suatu gerakan.
+Klik Stop Simulation untuk menghentikan simulasi. Muncul tulisan pada serial monitor, dan lampu LED akan menyala. LED akan mati saat tidak terdapat gerakan.</li>
+</ol>
+<p><img src="img15.png" alt="img15.png"></p>
+<h2 id="praktikum-3-praktik-arduino-dan-sensor-ldr">Praktikum 3: Praktik Arduino dan Sensor LDR</h2>
+<p>Selesaikan langkah-langkah praktikum berikut ini menggunakan Wokwi di browser Anda.</p>
+<ol>
+<li>Masuk ke Wokwi. Klik New Projects untuk membuat projek baru. Pilih Arduino UNO.</li>
+</ol>
+<p><img src="img5.png" alt="img5.png"> </p>
+<ol>
+<li>Tambahkan komponen baru dengan klik Add (+). Tambahkan Sensor Photoresistor (LDR). Tambahkan LED dan resistor. Tambahkan LCD 16x2 (I2C).</li>
+</ol>
+<p><img src="img9.png" alt="img9.png"></p>
+<ol>
+<li>Hubungkan seluruh komponen sebagai berikut.</li>
+</ol>
+<p><img src="img16.png" alt="img16.png">
+<img src="img17.png" alt="img17.png"></p>
+<ol>
+<li>Buatlah program seperti ditunjukan pada gambar. Program tersebut digunakan untuk membaca nilai pembacaan sencor cahaya (lux) dan ditampilan pada LCD. Selain LCD, lampu LED akan hidup sesuai dengan nilai yang diperoleh sensor LDR. Klik Start Simulation untuk memulai simulasi.</li>
+</ol>
+<p><img src="img18.png" alt="img18.png"></p>
+<ol>
+<li>Klik Sensor LDR, dan atur nilai sesuai dengan keinginan. Klik Stop Simulation untuk menghentikan simulasi. Saat nilai lux tinggi maka LED akan mati dan LCD menunjukkan cahaya terang. Saat nilai lux rendah maka LED akan menyala dan LCD menunjukkan cahaya gelap.</li>
+</ol>
+<p><img src="img19.png" alt="img19.png"></p>
+<h2 id="praktik-esp-dengan-wokwi-praktik-riil">Praktik ESP dengan Wokwi/ Praktik Riil</h2>
+<ul>
+<li><p>Kunjungi link project ini untuk melihat implementasi sensor ultrasonik di ESP32 -<a href="https://wokwi.com/projects/404851305115009025" target="_blank">https://wokwi.com/projects/404851305115009025</a></p>
+</li>
+<li><p>Berikut contoh implementasi sensor PIR di ESP32</p>
+</li>
+<li>Wiring</li>
+</ul>
+<p><img src="img23.png" alt="img23.png"></p>
+<ul>
+<li>Coding</li>
+</ul>
+<p><img src="img24.png" alt="img24.png"></p>
+<ul>
+<li>Hasil</li>
+</ul>
+<p><img src="img25.png" alt="img25.png"></p>
+<h2 id="tugas-mandiri">Tugas Mandiri</h2>
+<p>Selesaikan langkah-langkah praktikum berikut ini menggunakan Wokwi di browser Anda.</p>
+<p><strong>Tugas 1</strong></p>
+<ul>
+<li>Buatlah program yang dapat mendeteksi adanya gerakan (motion) khusus pada malam hari.</li>
+</ul>
+<p><img src="img20.png" alt="img20.png">
+<img src="img21.png" alt="img21.png"></p>
+
+                                
+                                </section>
+                            
+    </div>
+    <div class="search-results">
+        <div class="has-results">
+            
+            <h1 class="search-results-title"><span class='search-results-count'></span> hasil yang cocok "<span class='search-query'></span>"</h1>
+            <ul class="search-results-list"></ul>
+            
+        </div>
+        <div class="no-results">
+            
+            <h1 class="search-results-title">Tidak ada hasil yang cocok "<span class='search-query'></span>"</h1>
+            
+        </div>
+    </div>
+</div>
+
+                        </div>
+                    </div>
+                
+            </div>
+
+            
+                
+                <a href="../0j/0j.pertemuan12.html" class="navigation navigation-prev navigation-unique" aria-label="Previous page: 10. Praktik Sensor DHT11, LCD, dan RTC">
+                    <i class="fa fa-angle-left"></i>
+                </a>
+                
+                
+            
+        
+    </div>
+
+    <script>
+        var gitbook = gitbook || [];
+        gitbook.push(function() {
+            gitbook.page.hasChanged({"page":{"title":"11. Praktik Sensor Ultrasonic PIR LDR","level":"1.13","depth":1,"previous":{"title":"10. Praktik Sensor DHT11, LCD, dan RTC","level":"1.12","depth":1,"path":"0j/0j.pertemuan12.md","ref":"0j/0j.pertemuan12.md","articles":[]},"dir":"ltr"},"config":{"plugins":[],"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"pluginsConfig":{"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"theme":"default","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"language":"id","gitbook":"*"},"file":{"path":"0k/0k.pertemuan13.md","mtime":"2024-07-30T16:39:22.693Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2024-07-30T16:40:10.851Z"},"basePath":"..","book":{"language":""}});
+        });
+    </script>
+</div>
+
+        
+    <script src="../gitbook/gitbook.js"></script>
+    <script src="../gitbook/theme.js"></script>
+    
+        
+        <script src="../gitbook/gitbook-plugin-search/search-engine.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-search/search.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-lunr/lunr.min.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-lunr/search-lunr.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-sharing/buttons.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-fontsettings/fontsettings.js"></script>
+        
+    
+
+    </body>
+</html>
+
