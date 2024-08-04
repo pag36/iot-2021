@@ -14,7 +14,7 @@
 - [10. Praktik Sensor DHT11, LCD, dan RTC](0j/0j.pertemuan12.md)
 - [11. Praktik Sensor Ultrasonic PIR LDR](0k/0k.pertemuan13.md)
 - [12. Praktik Aktuator LED dan Relay](0l/0l.pertemuan14.md)
-- [12. Praktik Aktuator Buzzer dan Servo](0m/0m.pertemuan16.md)
+- [13. Praktik Aktuator Buzzer dan Servo](0m/0m.pertemuan16.md)
 
 [comment]: <> (- [05. DHT11]&#40;03/03-dht11.md&#41;)
 
