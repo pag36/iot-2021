@@ -1,0 +1,635 @@
+
+<!DOCTYPE HTML>
+<html lang="id" >
+    <head>
+        <meta charset="UTF-8">
+        <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+        <title>13. Praktik Aktuator Buzzer dan Servo · GitBook</title>
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="description" content="">
+        <meta name="generator" content="GitBook 3.2.3">
+        
+        
+        
+    
+    <link rel="stylesheet" href="../gitbook/style.css">
+
+    
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-highlight/website.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-search/search.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-fontsettings/website.css">
+                
+            
+        
+
+    
+
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+
+        
+    
+    
+    <meta name="HandheldFriendly" content="true"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <link rel="apple-touch-icon-precomposed" sizes="152x152" href="../gitbook/images/apple-touch-icon-precomposed-152.png">
+    <link rel="shortcut icon" href="../gitbook/images/favicon.ico" type="image/x-icon">
+
+    
+    
+    <link rel="prev" href="../0l/0l.pertemuan14.html" />
+    
+
+    </head>
+    <body>
+        
+<div class="book">
+    <div class="book-summary">
+        
+            
+<div id="book-search-input" role="search">
+    <input type="text" placeholder="Ketik untuk mencari" />
+</div>
+
+            
+                <nav role="navigation">
+                
+
+
+<ul class="summary">
+    
+    
+
+    
+
+    
+        
+        
+    
+        <li class="chapter " data-level="1.1" data-path="../">
+            
+                <a href="../">
+            
+                    
+                    Pendahuluan
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2" data-path="../00/kontrak.html">
+            
+                <a href="../00/kontrak.html">
+            
+                    
+                    Kontrak Kuliah
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3" data-path="../0a/0a.pertemuan1.html">
+            
+                <a href="../0a/0a.pertemuan1.html">
+            
+                    
+                    01. Memahami Konsep dan arsitektur IoT
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4" data-path="../0b/0b.pertemuan2.html">
+            
+                <a href="../0b/0b.pertemuan2.html">
+            
+                    
+                    02. Pengantar Elektronik
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5" data-path="../0c/0c.pertemuan3.html">
+            
+                <a href="../0c/0c.pertemuan3.html">
+            
+                    
+                    03. Pengenalan Jenis-Jenis dan Cara Kerja Sensor
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6" data-path="../0d/0d.pertemuan4.html">
+            
+                <a href="../0d/0d.pertemuan4.html">
+            
+                    
+                    04. Pengenalan Jenis-Jenis dan Cara Kerja Aktuator
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.7" data-path="../0e/0e.pertemuan6.html">
+            
+                <a href="../0e/0e.pertemuan6.html">
+            
+                    
+                    05. Jenis Elektronik Development Board
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.8" data-path="../0f/0f.pertemuan7.html">
+            
+                <a href="../0f/0f.pertemuan7.html">
+            
+                    
+                    06. Jenis Komunikasi Data
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.9" data-path="../0g/0f.pertemuan8.html">
+            
+                <a href="../0g/0f.pertemuan8.html">
+            
+                    
+                    07. Pengenalan Teknologi Smart Card
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.10" data-path="../0h/0h.pertemuan9.html">
+            
+                <a href="../0h/0h.pertemuan9.html">
+            
+                    
+                    08. Praktik Dasar Elektronika
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.11" data-path="../0i/0i.pertemuan11.html">
+            
+                <a href="../0i/0i.pertemuan11.html">
+            
+                    
+                    09. Praktik Pemrograman Microcontroller
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.12" data-path="../0j/0j.pertemuan12.html">
+            
+                <a href="../0j/0j.pertemuan12.html">
+            
+                    
+                    10. Praktik Sensor DHT11, LCD, dan RTC
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.13" data-path="../0k/0k.pertemuan13.html">
+            
+                <a href="../0k/0k.pertemuan13.html">
+            
+                    
+                    11. Praktik Sensor Ultrasonic PIR LDR
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.14" data-path="../0l/0l.pertemuan14.html">
+            
+                <a href="../0l/0l.pertemuan14.html">
+            
+                    
+                    12. Praktik Aktuator LED dan Relay
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter active" data-level="1.15" data-path="0m.pertemuan16.html">
+            
+                <a href="0m.pertemuan16.html">
+            
+                    
+                    13. Praktik Aktuator Buzzer dan Servo
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+    
+
+    <li class="divider"></li>
+
+    <li>
+        <a href="https://www.gitbook.com" target="blank" class="gitbook-link">
+            Dipublikasikan dengan GitBook
+        </a>
+    </li>
+</ul>
+
+
+                </nav>
+            
+        
+    </div>
+
+    <div class="book-body">
+        
+            <div class="body-inner">
+                
+                    
+
+<div class="book-header" role="navigation">
+    
+
+    <!-- Title -->
+    <h1>
+        <i class="fa fa-circle-o-notch fa-spin"></i>
+        <a href=".." >13. Praktik Aktuator Buzzer dan Servo</a>
+    </h1>
+</div>
+
+
+
+
+                    <div class="page-wrapper" tabindex="-1" role="main">
+                        <div class="page-inner">
+                            
+<div id="book-search-results">
+    <div class="search-noresults">
+    
+                                <section class="normal markdown-section">
+                                
+                                <h1 id="pertemuan-ke-16--praktik-aktuator-buzzer-dan-servo">Pertemuan ke 16 : Praktik Aktuator: Buzzer dan Servo</h1>
+<h2 id="topik-bahasan">Topik Bahasan</h2>
+<p>Proyek Dasar Internet of Things I (Praktik Pemrograman Mikrokontroler, Praktik Sensor: Sensor DHT, LCD, Praktik Sensor: Ultrasonic, PIR, dan LDR, Praktik Aktuator: LED dan Relay, Praktik Aktuator: Buzzer dan Servo)</p>
+<h2 id="deskripsi">Deskripsi</h2>
+<ul>
+<li>Mampu melakukan instalasi, memahami bahasa pemrograman dan pin pada Arduino. </li>
+<li>Mampu melakukan uji coba serial monitor dan uji coba PWM dengan potensiometer.</li>
+<li>Mampu merancang dan membuat proyek menggunakan sensor DHT22.</li>
+<li>Mampu merancang dan membuat proyek menggunakan sensor Ultrasonic, PIR, dan LDR.</li>
+<li>Mampu merancang dan membuat proyek menggunakan aktuator LED dan Relay.</li>
+<li>Mampu merancang dan membuat proyek menggunakan aktuator Buzzer dan Servo.</li>
+</ul>
+<h2 id="teori-singkat">Teori Singkat</h2>
+<h3 id="pengertian-aktuator">Pengertian Aktuator</h3>
+<p><strong>Aktuator</strong> adalah sebuah peralatan mekanis untuk menggerakkan atau mengontrol sebuah mekanisme atau sistem. Aktuator diaktifkan dengan menggunakan lengan mekanis yang biasanya digerakkan oleh motor listrik. Aktuator biasanya adalah suatu output dari suatu sistem yang dikendalikan mikrokontroller.</p>
+<p>Contoh: Motor DC, relay, solenoid valve, servo motor, stepper motor, dll.</p>
+<p><img src="img.png" alt="img.png"></p>
+<h3 id="buzzer">Buzzer</h3>
+<p><strong>Buzzer atau Beeper</strong> merupakan komponen elektronik yang digunakan untuk menghasilkan suara atau bip. </p>
+<p>Buzzer merupakan perangkat output yang mengubah sinyal listrik menjadi suara berdasarkan frekuensi yang ditentukan.</p>
+<p>Fungsi buzzer adalah sebagai komponen yang menghasilkan output berupa bunyi beep. Kegunaan buzzer yang paling umum yaitu sebagai alarm, indikator suara, dan timer. </p>
+<p><img src="img1.png" alt="img1.png"></p>
+<p><strong>Jenis-jenis Buzzer</strong></p>
+<p>Terdapat 2 jenis buzzer, yaitu aktif dan pasif</p>
+<p>Buzzer aktif adalah buzzer yang sudah memiliki suaranya sendiri saat diberikan tegangan listrik.</p>
+<p>Buzzer pasif adalah jenis buzzer yang tidak memiliki suara sendiri sehingga perlu menentukan jenis suara yang akan digunakan.</p>
+<p>Cara mengetes buzzer aktif atau pasif yaitu hubungkan pin + buzzer pada tegangan positif dan hubungkan pin &#x2013; buzzer pada ground. Jika buzzer menyala, maka buzzer tersebut adalah buzzer aktif.</p>
+<p><img src="img2.png" alt="img2.png"></p>
+<p><strong>Modul Buzzer, Skema Modul Buzzer</strong></p>
+<p><img src="img3.png" alt="img3.png">
+<img src="img4.png" alt="img4.png">
+<img src="img5.png" alt="img5.png">
+<img src="img6.png" alt="img6.png"></p>
+<h3 id="motor-servo">Motor Servo</h3>
+<p><strong>Motor servo</strong> adalah perangkat elektromekanis yang dirancang menggunakan sistem kontrol jenis loop tertutup (servo) sebagai penggerak dalam sebuah rangkaian yang menghasilkan torsi dan kecepatan berdasarkan arus listrik dan tegangan yang diberikan.</p>
+<p>Motor servo bekerja dengan memutar gear dengan derajat tertentu sesuai dengan keinginan.</p>
+<p><img src="img7.png" alt="img7.png"></p>
+<p>The Engineering Mindset - <a href="https://www.youtube.com/watch?v=1WnGv-DPexc" target="_blank">https://www.youtube.com/watch?v=1WnGv-DPexc</a></p>
+<p><img src="img8.png" alt="img8.png"></p>
+<p><strong>Cara Kerja Motor Servo</strong></p>
+<p>Cara kerja motor servo bergantung lebar pada sinyal modulasi yang memakai sistem kontrol. Lebar sinyal tersebut nantinya yang akan menjadi penentu bagaimana posisi dari sudut putaran yang ada pada bagian poros motor.</p>
+<p>Motor servo biasa digunakan pada projek yang membutuhkan mekanisme gerakan mekanik dengan besar sudut tertentu.</p>
+<p><strong>Contoh servo SG90</strong></p>
+<p>Sesuai dengan datasheet servo SG90, untuk dapat bekerja, servo membutuhkan sinyal PWM dengan ketentuan sebagai berikut : </p>
+<ul>
+<li>Rotational Range: 180&#xB0; </li>
+<li>Pulse Cycle: ca. 20 ms </li>
+<li>Pulse Width: 500-2400 &#x3BC;s </li>
+</ul>
+<p>Untuk itu, perlu dicari nilai konversi dari satuan waktu (ms) ke nilai 16 bit untuk dapat menggerakkan servo ke sudut yang diinginkan. Caranya seperti berikut ini : </p>
+<ul>
+<li>Time(t)=1detik=1000ms </li>
+<li>Untuk mendapatkan pulse cycle (pc) sebesar 20 ms maka dibutuhkan frekuensi (freq) 
+sebesar 50 Hz, perhitungannya : pc = t / freq 
+pc = 1000 / 50 pc = 20 ms</li>
+</ul>
+<ul>
+<li><p>Untuk sudut 0&#xB0; membutuhkan pulse width (pw) sebesar 500 &#x3BC;s, maka duty cycle (dc) nya sebesar :
+dc = pw / pc
+dc = 500 &#x3BC;s / 20 ms = 500 &#x3BC;s / 20000 &#x3BC;s dc = 0.025 = 2.5%</p>
+</li>
+<li><p>Untuk sudut 180&#xB0; membutuhkan pulse width (pw) sebesar 2400 &#x3BC;s, maka duty cycle (dc) nya sebesar :
+dc = pw / pc
+dc = 2400 &#x3BC;s / 20 ms = 2400 &#x3BC;s / 20000 &#x3BC;s dc = 0.12 = 12%</p>
+</li>
+<li><p>Merubah nilai duty cycle (dc) ke integer 16-bit
+&#x2022; Sudut 0&#xB0; = duty cycle 2.5%
+&#x2022; Sudut 180&#xB0; = duty cycle 12%
+= 0.0250<em>65536 = 1638 = 0.1200</em>65536 = 7864</p>
+</li>
+</ul>
+<p><img src="img9.png" alt="img9.png"></p>
+<h2 id="praktikum-1-praktik-arduino-buzzer">Praktikum 1: Praktik Arduino, Buzzer</h2>
+<p>Selesaikan langkah-langkah praktikum berikut ini menggunakan Wokwi di browser Anda.</p>
+<ol>
+<li>Masuk ke Wokwi. Klik New Projects untuk membuat projek baru. Pilih Arduino UNO.</li>
+</ol>
+<p><img src="img10.png" alt="img10.png"> </p>
+<ol>
+<li>Tambahkan komponen baru dengan klik Add (+). Tambahkan buzzer.</li>
+</ol>
+<p><img src="img11.png" alt="img11.png"> </p>
+<ol>
+<li><p>Hubungkan seluruh komponen sebagai berikut.</p>
+</li>
+<li><ul>
+<li>-&gt; 7</li>
+</ul>
+</li>
+<li><ul>
+<li>-&gt; GND</li>
+</ul>
+</li>
+</ol>
+<p><img src="img12.png" alt="img12.png"> </p>
+<ol>
+<li>Buatlah program seperti ditunjukan pada gambar.
+Program tersebut digunakan untuk memberikan sinyal kepada buzzer agar menghasilkan suara.
+Suara yang dihasilkan dapat bervariasi tergantung frekuensi yang diberikan pada program.</li>
+</ol>
+<p>Klik Start Simulation untuk memulai simulasi.</p>
+<p><img src="img13.png" alt="img13.png"> </p>
+<pre><code class="lang-cpp"><span class="hljs-keyword">int</span> buzzerPin = <span class="hljs-number">7</span>;
+
+<span class="hljs-function"><span class="hljs-keyword">void</span> <span class="hljs-title">setup</span><span class="hljs-params">()</span></span>{
+  pinMode(buzzerPin, OUTPUT);
+}
+
+<span class="hljs-function"><span class="hljs-keyword">void</span> <span class="hljs-title">loop</span><span class="hljs-params">()</span></span>{
+  tone(buzzerPin, <span class="hljs-number">150</span>);
+  delay(<span class="hljs-number">1000</span>);
+
+  noTone(buzzerPin);
+
+  delay(<span class="hljs-number">1000</span>);
+
+  tone(buzzerPin, <span class="hljs-number">100</span>,<span class="hljs-number">1000</span>);
+  delay(<span class="hljs-number">2000</span>);
+
+}
+</code></pre>
+<ol>
+<li>Buzzer akan otomatis menyala/menghasilkan suara sesuai dengan program yang sudah dibuat.</li>
+</ol>
+<p>Klik Stop Simulation untuk menghentikan simulasi</p>
+<p><img src="img14.png" alt="img14.png"> </p>
+<h2 id="praktikum-2-praktik-arduino-servo-dan-potensiometer">Praktikum 2: Praktik Arduino, Servo dan Potensiometer</h2>
+<p>Selesaikan langkah-langkah praktikum berikut ini menggunakan Wokwi di browser Anda.</p>
+<ol>
+<li>Masuk ke Wokwi. Klik New Projects untuk membuat projek baru. Pilih Arduino UNO.</li>
+</ol>
+<p><img src="img10.png" alt="img10.png"> </p>
+<ol>
+<li>Tambahkan komponen baru dengan klik Add (+). Tambahkan library Servo pada Library manager. Tambahkan Servo dan Potensiometer.</li>
+</ol>
+<p><img src="img11.png" alt="img11.png"> </p>
+<ol>
+<li>Hubungkan seluruh komponen sebagai berikut.</li>
+</ol>
+<p><img src="img15.png" alt="img15.png"> 
+<img src="img16.png" alt="img16.png"> </p>
+<ol>
+<li>Buatlah program seperti ditunjukan pada gambar. Program tersebut digunakan untuk memutar/menggerakka sudut servo sesuai dengan input potensiometer. Klik Start Simulation untuk memulai simulasi.</li>
+</ol>
+<p><img src="img17.png" alt="img17.png"> </p>
+<pre><code class="lang-cpp"><span class="hljs-meta">#<span class="hljs-meta-keyword">include</span> <span class="hljs-meta-string">&lt;Servo.h&gt;</span></span>
+
+Servo myservo;
+
+
+<span class="hljs-keyword">int</span> potpin = <span class="hljs-number">0</span>;
+<span class="hljs-keyword">int</span> val;
+
+<span class="hljs-function"><span class="hljs-keyword">void</span> <span class="hljs-title">setup</span><span class="hljs-params">()</span></span>{
+ myservo.attach(<span class="hljs-number">9</span>);
+}
+
+<span class="hljs-function"><span class="hljs-keyword">void</span> <span class="hljs-title">loop</span><span class="hljs-params">()</span></span>{
+ val = analogRead(potpin);
+ val = <span class="hljs-built_in">map</span>(val, <span class="hljs-number">0</span>, <span class="hljs-number">1023</span>, <span class="hljs-number">0</span>, <span class="hljs-number">180</span>);
+ myservo.write(val);
+ delay(<span class="hljs-number">15</span>);
+}
+</code></pre>
+<ol>
+<li>Klik Potensiometer untuk mengatur nilai potensiometer. Atur arah sesuai dengan keinginan. Servo akan bergerak sesuai dengan input potensiometer. Klik Stop Simulation untuk menghentikan simulasi.</li>
+</ol>
+<p>   <img src="img18.png" alt="img18.png"></p>
+<h2 id="praktikum-3-project-palang-mall">Praktikum 3: Project Palang Mall</h2>
+<p>Selesaikan langkah-langkah praktikum berikut ini menggunakan Wokwi di browser Anda.</p>
+<ol>
+<li>Masuk ke Wokwi. Klik New Projects untuk membuat projek baru. Pilih Arduino UNO.</li>
+</ol>
+<p><img src="img10.png" alt="img10.png"> </p>
+<ol>
+<li>Tambahkan komponen baru dengan klik Add (+). Tambahkan Sensor HC-SR04 Ultrasonic. Tambahkan Servo. Tambahkan Buzzer.</li>
+</ol>
+<p><img src="img11.png" alt="img11.png"> </p>
+<ol>
+<li>Hubungkan seluruh komponen sebagai berikut.</li>
+</ol>
+<p><img src="img19.png" alt="img19.png"> 
+<img src="img20.png" alt="img20.png"> </p>
+<ol>
+<li>Buatlah program seperti ditunjukan pada gambar. Program tersebut digunakan untuk mengatur sudut servo apabila input sensor ultrasonik menunjukkan kurang dari 100 maka servo akan bergerak. Saat servo bergerak, diikuti dengan suara buzzer.</li>
+</ol>
+<p><img src="img21.png" alt="img21.png"> </p>
+<ol>
+<li>Klik Sensor Ultrasonic untuk melakukan simulasi adanya objek yang mendekat. Jika jarak kurang dari 100 maka servo (palang) akan tertutup dan menyalakan buzzer (sirine). Servo akan tertutup selama jarak masih kurang dari 100. Klik Stop Simulation untuk menghentikan simulasi.</li>
+</ol>
+<p><img src="img22.png" alt="img22.png"> </p>
+<h2 id="praktikum-4-praktik-servo-dengan-esp32-micropython">Praktikum 4: Praktik Servo dengan ESP32 Micropython</h2>
+<p>Selesaikan langkah-langkah praktikum berikut ini menggunakan Wokwi di browser Anda.</p>
+<ol>
+<li>Masuk ke Wokwi. Klik New Projects untuk membuat projek baru.</li>
+</ol>
+<p><a href="https://wokwi.com/projects/new/micropython-esp32" target="_blank">https://wokwi.com/projects/new/micropython-esp32</a></p>
+<ol>
+<li>Buat skenario seperti gambar. Hubungkan pin pwm ke D15 pada esp32.</li>
+</ol>
+<p><img src="img23.png" alt="img23.png"> </p>
+<ol>
+<li>Kode program sebagai berikut.</li>
+</ol>
+<pre><code class="lang-python"><span class="hljs-keyword">from</span> machine <span class="hljs-keyword">import</span> Pin, PWM 
+<span class="hljs-keyword">from</span> utime <span class="hljs-keyword">import</span> sleep_ms
+
+servo = PWM(Pin(<span class="hljs-number">15</span>)) 
+servo.freq(<span class="hljs-number">50</span>) 
+servo.duty_u16(<span class="hljs-number">1638</span>)
+
+<span class="hljs-keyword">while</span> <span class="hljs-keyword">True</span>:
+  servo.duty_u16(<span class="hljs-number">1638</span>) 
+  sleep_ms(<span class="hljs-number">1000</span>) 
+  servo.duty_u16(<span class="hljs-number">7864</span>) 
+  sleep_ms(<span class="hljs-number">1000</span>)
+</code></pre>
+<ol>
+<li>Jalankan program dengan klik play simulasi, anda dapat merubah sudut perputaran servo dengan menyesuaikan duty cycle ke int 16-bit </li>
+</ol>
+<h2 id="tugas-mandiri">Tugas Mandiri</h2>
+<p>Selesaikan langkah-langkah praktikum berikut ini menggunakan Wokwi di browser Anda.</p>
+<p><strong>Tugas 1</strong></p>
+<p>Buat program agar servo turun secara bertahap dan perlahan seperti pada persimpangan Mall yang asli. Pada saat yang sama Ketika servo turun perlahan, buzzer terus berbunyi dan LED berkedip</p>
+<p><img src="img24.png" alt="img24.png"></p>
+<p><strong>Tugas 2</strong></p>
+<p>Buat program memanfaatkan servo, sensor ultrasonic, LED dan buzzer
+Jika orang mendekat pada jarak tertentu, maka buzzer akan berbunyi dan servo akan terbuka
+Setelah orang tersebut lewat, maka servo akan kembali tertutup dan lampu LED akan menyala
+Buat keterangan pada tiap state nya pada serial monitor</p>
+
+                                
+                                </section>
+                            
+    </div>
+    <div class="search-results">
+        <div class="has-results">
+            
+            <h1 class="search-results-title"><span class='search-results-count'></span> hasil yang cocok "<span class='search-query'></span>"</h1>
+            <ul class="search-results-list"></ul>
+            
+        </div>
+        <div class="no-results">
+            
+            <h1 class="search-results-title">Tidak ada hasil yang cocok "<span class='search-query'></span>"</h1>
+            
+        </div>
+    </div>
+</div>
+
+                        </div>
+                    </div>
+                
+            </div>
+
+            
+                
+                <a href="../0l/0l.pertemuan14.html" class="navigation navigation-prev navigation-unique" aria-label="Previous page: 12. Praktik Aktuator LED dan Relay">
+                    <i class="fa fa-angle-left"></i>
+                </a>
+                
+                
+            
+        
+    </div>
+
+    <script>
+        var gitbook = gitbook || [];
+        gitbook.push(function() {
+            gitbook.page.hasChanged({"page":{"title":"13. Praktik Aktuator Buzzer dan Servo","level":"1.15","depth":1,"previous":{"title":"12. Praktik Aktuator LED dan Relay","level":"1.14","depth":1,"path":"0l/0l.pertemuan14.md","ref":"0l/0l.pertemuan14.md","articles":[]},"dir":"ltr"},"config":{"plugins":[],"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"pluginsConfig":{"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"theme":"default","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"language":"id","gitbook":"*"},"file":{"path":"0m/0m.pertemuan16.md","mtime":"2024-08-04T15:06:20.902Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2024-08-04T15:07:11.903Z"},"basePath":"..","book":{"language":""}});
+        });
+    </script>
+</div>
+
+        
+    <script src="../gitbook/gitbook.js"></script>
+    <script src="../gitbook/theme.js"></script>
+    
+        
+        <script src="../gitbook/gitbook-plugin-search/search-engine.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-search/search.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-lunr/lunr.min.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-lunr/search-lunr.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-sharing/buttons.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-fontsettings/fontsettings.js"></script>
+        
+    
+
+    </body>
+</html>
+
