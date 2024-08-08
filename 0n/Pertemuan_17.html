@@ -573,35 +573,42 @@ Website: <a href="https://aws.amazon.com/iot/" target="_blank">https://aws.amazo
 <li><img src="image14-1.png" alt="alt text"></li>
 </ul>
 </li>
-<li><p>Setelah itu, pada sketch, copy-kan firmware configuration yang tadi anda dapatkan dari Blynk dan lanjutkan dengan menuliskan baris kode seperti berikut ini.
-```cpp</p>
-<h1 id="define-blynktemplateid-tmpl6bpryvnxn">define BLYNK_TEMPLATE_ID &quot;TMPL6bpRYvnXn&quot;</h1>
-<h1 id="define-blynktemplatename-led-controller">define BLYNK_TEMPLATE_NAME &quot;Led Controller&quot;</h1>
-<h1 id="define-blynkauthtoken-l044itu2wi9vclexvx93ohsj1zsmxxx">define BLYNK_AUTH_TOKEN &quot;_l044ITu2wI9vCLexvx93oHsJ1zsmXXX&quot;</h1>
+<li><p>Setelah itu, pada sketch, copy-kan firmware configuration yang tadi anda dapatkan dari Blynk dan lanjutkan dengan menuliskan baris kode seperti berikut ini.</p>
 </li>
 </ol>
-<h1 id="include-">include <wifi.h></wifi.h></h1>
-<h1 id="include-">include <blynksimpleesp32.h></blynksimpleesp32.h></h1>
-<h1 id="define-ledpin-23">define led_pin 23</h1>
-<p>char ssid[] = &quot;Wokwi-GUEST&quot;;
-char pass[] = &quot;&quot;;</p>
-<h1 id="define-blynkprint-serial">define BLYNK_PRINT Serial</h1>
-<p>BLYNK_WRITE(V0){
-  int value = param.asInt();
+<pre><code class="lang-cpp"><span class="hljs-meta">#<span class="hljs-meta-keyword">define</span> BLYNK_TEMPLATE_ID <span class="hljs-string">&quot;TMPL6bpRYvnXn&quot;</span></span>
+<span class="hljs-meta">#<span class="hljs-meta-keyword">define</span> BLYNK_TEMPLATE_NAME <span class="hljs-string">&quot;Led Controller&quot;</span></span>
+<span class="hljs-meta">#<span class="hljs-meta-keyword">define</span> BLYNK_AUTH_TOKEN <span class="hljs-string">&quot;_l044ITu2wI9vCLexvx93oHsJ1zsmXXX&quot;</span></span>
+
+<span class="hljs-meta">#<span class="hljs-meta-keyword">include</span> <span class="hljs-meta-string">&lt;WiFi.h&gt;</span></span>
+<span class="hljs-meta">#<span class="hljs-meta-keyword">include</span> <span class="hljs-meta-string">&lt;BlynkSimpleEsp32.h&gt;</span></span>
+
+<span class="hljs-meta">#<span class="hljs-meta-keyword">define</span> led_pin 23</span>
+
+<span class="hljs-keyword">char</span> ssid[] = <span class="hljs-string">&quot;Wokwi-GUEST&quot;</span>;
+<span class="hljs-keyword">char</span> pass[] = <span class="hljs-string">&quot;&quot;</span>;
+
+<span class="hljs-meta">#<span class="hljs-meta-keyword">define</span> BLYNK_PRINT Serial</span>
+
+BLYNK_WRITE(V0){
+  <span class="hljs-keyword">int</span> value = param.asInt();
   digitalWrite(led_pin, value);
-  Serial.print(&quot;Data from blynk : &quot;);
+  Serial.print(<span class="hljs-string">&quot;Data from blynk : &quot;</span>);
   Serial.println(value);
-}</p>
-<p>void setup(){
-  pinMode(led_pin, OUTPUT);</p>
-<p>  Blynk.begin(BLYNK_AUTH_TOKEN, ssid, pass);
-  Serial.begin(115200);
-  Serial.println(&quot;System started ...&quot;);
-}</p>
-<p>void loop(){
+}
+
+<span class="hljs-function"><span class="hljs-keyword">void</span> <span class="hljs-title">setup</span><span class="hljs-params">()</span></span>{
+  pinMode(led_pin, OUTPUT);
+
+  Blynk.begin(BLYNK_AUTH_TOKEN, ssid, pass);
+  Serial.begin(<span class="hljs-number">115200</span>);
+  Serial.println(<span class="hljs-string">&quot;System started ...&quot;</span>);
+}
+
+<span class="hljs-function"><span class="hljs-keyword">void</span> <span class="hljs-title">loop</span><span class="hljs-params">()</span></span>{
   Blynk.run();
 }
-```</p>
+</code></pre>
 <ol>
 <li>Compile dan jalankan project Wokwi anda</li>
 <li><p>Cobalah kendalikan lampu LED melalui Blynk dengan mematikan/menghidupkan LED melalui switch. Cek dulu apakah Blynk anda sudah dalam status Online, apabila belum cobalah refresh browser anda seperti ditunjukkan oleh Gambar.</p>
@@ -657,7 +664,7 @@ char pass[] = &quot;&quot;;</p>
     <script>
         var gitbook = gitbook || [];
         gitbook.push(function() {
-            gitbook.page.hasChanged({"page":{"title":"14. Pengenalan Macam-Macam Platform IoT dan Koneksi W-LAN","level":"1.16","depth":1,"next":{"title":"16. Praktik Update Firmware OTA","level":"1.17","depth":1,"path":"0p/Pertemuan_19.md","ref":"0p/Pertemuan_19.md","articles":[]},"previous":{"title":"13. Praktik Aktuator Buzzer dan Servo","level":"1.15","depth":1,"path":"0m/0m.pertemuan16.md","ref":"0m/0m.pertemuan16.md","articles":[]},"dir":"ltr"},"config":{"plugins":[],"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"pluginsConfig":{"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"theme":"default","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"language":"id","gitbook":"*"},"file":{"path":"0n/Pertemuan_17.md","mtime":"2024-08-08T06:47:01.476Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2024-08-08T06:47:51.190Z"},"basePath":"..","book":{"language":""}});
+            gitbook.page.hasChanged({"page":{"title":"14. Pengenalan Macam-Macam Platform IoT dan Koneksi W-LAN","level":"1.16","depth":1,"next":{"title":"16. Praktik Update Firmware OTA","level":"1.17","depth":1,"path":"0p/Pertemuan_19.md","ref":"0p/Pertemuan_19.md","articles":[]},"previous":{"title":"13. Praktik Aktuator Buzzer dan Servo","level":"1.15","depth":1,"path":"0m/0m.pertemuan16.md","ref":"0m/0m.pertemuan16.md","articles":[]},"dir":"ltr"},"config":{"plugins":[],"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"pluginsConfig":{"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"theme":"default","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"language":"id","gitbook":"*"},"file":{"path":"0n/Pertemuan_17.md","mtime":"2024-08-08T06:56:15.535Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2024-08-08T06:57:03.605Z"},"basePath":"..","book":{"language":""}});
         });
     </script>
 </div>
