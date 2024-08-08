@@ -416,6 +416,175 @@ Lebih mudah memperbarui perangkat lunak pada perangkat yang sulit diakses</li>
 </li>
 <li><p>Tuliskan kode program yang menyertakan web updater ke file sketch dan beri nama sesuai kehendak anda. Kode ini menyertakan akses ke jaringan WiFi anda.</p>
 </li>
+</ol>
+<pre><code class="lang-cpp"><span class="hljs-meta">#<span class="hljs-meta-keyword">include</span> <span class="hljs-meta-string">&lt;WiFi.h&gt;</span></span>
+<span class="hljs-meta">#<span class="hljs-meta-keyword">include</span> <span class="hljs-meta-string">&lt;WiFiClient.h&gt;</span></span>
+<span class="hljs-meta">#<span class="hljs-meta-keyword">include</span> <span class="hljs-meta-string">&lt;WebServer.h&gt;</span></span>
+<span class="hljs-meta">#<span class="hljs-meta-keyword">include</span> <span class="hljs-meta-string">&lt;ESPmDNS.h&gt;</span></span>
+<span class="hljs-meta">#<span class="hljs-meta-keyword">include</span> <span class="hljs-meta-string">&lt;Update.h&gt;</span></span>
+
+<span class="hljs-keyword">const</span> <span class="hljs-keyword">char</span>* host = <span class="hljs-string">&quot;esp32&quot;</span>;
+<span class="hljs-keyword">const</span> <span class="hljs-keyword">char</span>* ssid = <span class="hljs-string">&quot;GANTI DENGAN SSID ANDA&quot;</span>;
+<span class="hljs-keyword">const</span> <span class="hljs-keyword">char</span>* password = <span class="hljs-string">&quot;GANTI PASSWORD WIFI&quot;</span>;
+
+<span class="hljs-function">WebServer <span class="hljs-title">server</span><span class="hljs-params">(<span class="hljs-number">80</span>)</span></span>;
+
+<span class="hljs-comment">/*
+ * Login page
+ */</span>
+<span class="hljs-keyword">const</span> <span class="hljs-keyword">char</span>* loginIndex = 
+ <span class="hljs-string">&quot;&lt;form name=&apos;loginForm&apos;&gt;&quot;</span>
+    <span class="hljs-string">&quot;&lt;table width=&apos;20%&apos; bgcolor=&apos;A09F9F&apos; align=&apos;center&apos;&gt;&quot;</span>
+        <span class="hljs-string">&quot;&lt;tr&gt;&quot;</span>
+            <span class="hljs-string">&quot;&lt;td colspan=2&gt;&quot;</span>
+                <span class="hljs-string">&quot;&lt;center&gt;&lt;font size=4&gt;&lt;b&gt;HALAMAN LOGIN ESP32&lt;/b&gt;&lt;/font&gt;&lt;/center&gt;&quot;</span>
+                <span class="hljs-string">&quot;&lt;br&gt;&quot;</span>
+            <span class="hljs-string">&quot;&lt;/td&gt;&quot;</span>
+            <span class="hljs-string">&quot;&lt;br&gt;&quot;</span>
+            <span class="hljs-string">&quot;&lt;br&gt;&quot;</span>
+        <span class="hljs-string">&quot;&lt;/tr&gt;&quot;</span>
+        <span class="hljs-string">&quot;&lt;td&gt;Username:&lt;/td&gt;&quot;</span>
+        <span class="hljs-string">&quot;&lt;td&gt;&lt;input type=&apos;text&apos; size=25 name=&apos;userid&apos;&gt;&lt;br&gt;&lt;/td&gt;&quot;</span>
+        <span class="hljs-string">&quot;&lt;/tr&gt;&quot;</span>
+        <span class="hljs-string">&quot;&lt;br&gt;&quot;</span>
+        <span class="hljs-string">&quot;&lt;br&gt;&quot;</span>
+        <span class="hljs-string">&quot;&lt;tr&gt;&quot;</span>
+            <span class="hljs-string">&quot;&lt;td&gt;Password:&lt;/td&gt;&quot;</span>
+            <span class="hljs-string">&quot;&lt;td&gt;&lt;input type=&apos;Password&apos; size=25 name=&apos;pwd&apos;&gt;&lt;br&gt;&lt;/td&gt;&quot;</span>
+            <span class="hljs-string">&quot;&lt;br&gt;&quot;</span>
+            <span class="hljs-string">&quot;&lt;br&gt;&quot;</span>
+        <span class="hljs-string">&quot;&lt;/tr&gt;&quot;</span>
+        <span class="hljs-string">&quot;&lt;tr&gt;&quot;</span>
+            <span class="hljs-string">&quot;&lt;td&gt;&lt;input type=&apos;submit&apos; onclick=&apos;check(this.form)&apos; value=&apos;Login&apos;&gt;&lt;/td&gt;&quot;</span>
+        <span class="hljs-string">&quot;&lt;/tr&gt;&quot;</span>
+    <span class="hljs-string">&quot;&lt;/table&gt;&quot;</span>
+<span class="hljs-string">&quot;&lt;/form&gt;&quot;</span>
+<span class="hljs-string">&quot;&lt;script&gt;&quot;</span>
+    <span class="hljs-string">&quot;function check(form)&quot;</span>
+    <span class="hljs-string">&quot;{&quot;</span>
+    <span class="hljs-string">&quot;if(form.userid.value==&apos;admin&apos; &amp;&amp; form.pwd.value==&apos;admin&apos;)&quot;</span>
+    <span class="hljs-string">&quot;{&quot;</span>
+    <span class="hljs-string">&quot;window.open(&apos;/serverIndex&apos;)&quot;</span>
+    <span class="hljs-string">&quot;}&quot;</span>
+    <span class="hljs-string">&quot;else&quot;</span>
+    <span class="hljs-string">&quot;{&quot;</span>
+    <span class="hljs-string">&quot; alert(&apos;Error Password or Username&apos;)/*displays error message*/&quot;</span>
+    <span class="hljs-string">&quot;}&quot;</span>
+    <span class="hljs-string">&quot;}&quot;</span>
+<span class="hljs-string">&quot;&lt;/script&gt;&quot;</span>;
+
+<span class="hljs-comment">/*
+ * Server Index Page
+ */</span>
+
+<span class="hljs-keyword">const</span> <span class="hljs-keyword">char</span>* serverIndex = 
+<span class="hljs-string">&quot;&lt;script src=&apos;https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js&apos;&gt;&lt;/script&gt;&quot;</span>
+<span class="hljs-string">&quot;&lt;form method=&apos;POST&apos; action=&apos;#&apos; enctype=&apos;multipart/form-data&apos; id=&apos;upload_form&apos;&gt;&quot;</span>
+   <span class="hljs-string">&quot;&lt;input type=&apos;file&apos; name=&apos;update&apos;&gt;&quot;</span>
+        <span class="hljs-string">&quot;&lt;input type=&apos;submit&apos; value=&apos;Update&apos;&gt;&quot;</span>
+    <span class="hljs-string">&quot;&lt;/form&gt;&quot;</span>
+ <span class="hljs-string">&quot;&lt;div id=&apos;prg&apos;&gt;progress: 0%&lt;/div&gt;&quot;</span>
+ <span class="hljs-string">&quot;&lt;script&gt;&quot;</span>
+  <span class="hljs-string">&quot;$(&apos;form&apos;).submit(function(e){&quot;</span>
+  <span class="hljs-string">&quot;e.preventDefault();&quot;</span>
+  <span class="hljs-string">&quot;var form = $(&apos;#upload_form&apos;)[0];&quot;</span>
+  <span class="hljs-string">&quot;var data = new FormData(form);&quot;</span>
+  <span class="hljs-string">&quot; $.ajax({&quot;</span>
+  <span class="hljs-string">&quot;url: &apos;/update&apos;,&quot;</span>
+  <span class="hljs-string">&quot;type: &apos;POST&apos;,&quot;</span>
+  <span class="hljs-string">&quot;data: data,&quot;</span>
+  <span class="hljs-string">&quot;contentType: false,&quot;</span>
+  <span class="hljs-string">&quot;processData:false,&quot;</span>
+  <span class="hljs-string">&quot;xhr: function() {&quot;</span>
+  <span class="hljs-string">&quot;var xhr = new window.XMLHttpRequest();&quot;</span>
+  <span class="hljs-string">&quot;xhr.upload.addEventListener(&apos;progress&apos;, function(evt) {&quot;</span>
+  <span class="hljs-string">&quot;if (evt.lengthComputable) {&quot;</span>
+  <span class="hljs-string">&quot;var per = evt.loaded / evt.total;&quot;</span>
+  <span class="hljs-string">&quot;$(&apos;#prg&apos;).html(&apos;progress: &apos; + Math.round(per*100) + &apos;%&apos;);&quot;</span>
+  <span class="hljs-string">&quot;}&quot;</span>
+  <span class="hljs-string">&quot;}, false);&quot;</span>
+  <span class="hljs-string">&quot;return xhr;&quot;</span>
+  <span class="hljs-string">&quot;},&quot;</span>
+  <span class="hljs-string">&quot;success:function(d, s) {&quot;</span>
+  <span class="hljs-string">&quot;console.log(&apos;success!&apos;)&quot;</span> 
+ <span class="hljs-string">&quot;},&quot;</span>
+ <span class="hljs-string">&quot;error: function (a, b, c) {&quot;</span>
+ <span class="hljs-string">&quot;}&quot;</span>
+ <span class="hljs-string">&quot;});&quot;</span>
+ <span class="hljs-string">&quot;});&quot;</span>
+ <span class="hljs-string">&quot;&lt;/script&gt;&quot;</span>;
+
+<span class="hljs-comment">/*
+ * setup function
+ */</span>
+<span class="hljs-function"><span class="hljs-keyword">void</span> <span class="hljs-title">setup</span><span class="hljs-params">(<span class="hljs-keyword">void</span>)</span> </span>{
+  Serial.begin(<span class="hljs-number">115200</span>);
+
+  <span class="hljs-comment">// KONEK KE JARINGAN WIFI</span>
+  WiFi.begin(ssid, password);
+  Serial.println(<span class="hljs-string">&quot;&quot;</span>);
+
+  <span class="hljs-comment">// MENUNGGU KONEKSI</span>
+  <span class="hljs-keyword">while</span> (WiFi.status() != WL_CONNECTED) {
+    delay(<span class="hljs-number">500</span>);
+    Serial.print(<span class="hljs-string">&quot;.&quot;</span>);
+  }
+  Serial.println(<span class="hljs-string">&quot;&quot;</span>);
+  Serial.print(<span class="hljs-string">&quot;Terhubung ke : &quot;</span>);
+  Serial.println(ssid);
+  Serial.print(<span class="hljs-string">&quot;Alamat IP : &quot;</span>);
+  Serial.println(WiFi.localIP());
+
+  <span class="hljs-comment">/*menggunakan MDNS untuk memberi nama host*/</span>
+  <span class="hljs-keyword">if</span> (!MDNS.begin(host)) { <span class="hljs-comment">//http://esp32.local</span>
+    Serial.println(<span class="hljs-string">&quot;Error mengkonfigurasi MDNS responder!&quot;</span>);
+    <span class="hljs-keyword">while</span> (<span class="hljs-number">1</span>) {
+      delay(<span class="hljs-number">1000</span>);
+    }
+  }
+  Serial.println(<span class="hljs-string">&quot;mDNS responder berjalan&quot;</span>);
+  server.on(<span class="hljs-string">&quot;/&quot;</span>, HTTP_GET, []() {
+    server.sendHeader(<span class="hljs-string">&quot;Connection&quot;</span>, <span class="hljs-string">&quot;close&quot;</span>);
+    server.send(<span class="hljs-number">200</span>, <span class="hljs-string">&quot;text/html&quot;</span>, loginIndex);
+  });
+  server.on(<span class="hljs-string">&quot;/serverIndex&quot;</span>, HTTP_GET, []() {
+    server.sendHeader(<span class="hljs-string">&quot;Connection&quot;</span>, <span class="hljs-string">&quot;close&quot;</span>);
+    server.send(<span class="hljs-number">200</span>, <span class="hljs-string">&quot;text/html&quot;</span>, serverIndex);
+  });
+  <span class="hljs-comment">/*menghandle proses upload file update */</span>
+  server.on(<span class="hljs-string">&quot;/update&quot;</span>, HTTP_POST, []() {
+    server.sendHeader(<span class="hljs-string">&quot;Connection&quot;</span>, <span class="hljs-string">&quot;close&quot;</span>);
+    server.send(<span class="hljs-number">200</span>, <span class="hljs-string">&quot;text/plain&quot;</span>, (Update.hasError()) ? <span class="hljs-string">&quot;FAIL&quot;</span> : <span class="hljs-string">&quot;OK&quot;</span>);
+    ESP.restart();
+  }, []() {
+    HTTPUpload&amp; upload = server.upload();
+    <span class="hljs-keyword">if</span> (upload.status == UPLOAD_FILE_START) {
+      Serial.<span class="hljs-built_in">printf</span>(<span class="hljs-string">&quot;Update: %s\n&quot;</span>, upload.filename.c_str());
+      <span class="hljs-keyword">if</span> (!Update.begin(UPDATE_SIZE_UNKNOWN)) { 
+        Update.printError(Serial);
+      }
+    } <span class="hljs-keyword">else</span> <span class="hljs-keyword">if</span> (upload.status == UPLOAD_FILE_WRITE) {
+      <span class="hljs-comment">/* flashing firmware ke ESP*/</span>
+      <span class="hljs-keyword">if</span> (Update.write(upload.buf, upload.currentSize) != upload.currentSize) {
+        Update.printError(Serial);
+      }
+    } <span class="hljs-keyword">else</span> <span class="hljs-keyword">if</span> (upload.status == UPLOAD_FILE_END) {
+      <span class="hljs-keyword">if</span> (Update.end(<span class="hljs-literal">true</span>)) { <span class="hljs-comment">//true to set the size to the current progress</span>
+        Serial.<span class="hljs-built_in">printf</span>(<span class="hljs-string">&quot;Update sukses: %u\nRebooting...\n&quot;</span>, upload.totalSize);
+      } <span class="hljs-keyword">else</span> {
+        Update.printError(Serial);
+      }
+    }
+  });
+  server.begin();
+}
+
+<span class="hljs-function"><span class="hljs-keyword">void</span> <span class="hljs-title">loop</span><span class="hljs-params">(<span class="hljs-keyword">void</span>)</span> </span>{
+  server.handleClient();
+  delay(<span class="hljs-number">1</span>);
+}
+</code></pre>
+<ol>
 <li>Compile dan upload kode program tersebut ke ESP32 anda.</li>
 <li><p>Segera setelah proses upload berhasil, bukalah Serial Monitor pada Arduino IDE dengan baud rate 115200, dan copy-lah alamat IP ESP32 yang tampil di terminal seperti ditunjukkan oleh gambar dibawah ini. Apabila belum muncul, maka matikan terus hidupkan lagi ESP32 anda</p>
 <ul>
@@ -506,7 +675,7 @@ Lebih mudah memperbarui perangkat lunak pada perangkat yang sulit diakses</li>
     <script>
         var gitbook = gitbook || [];
         gitbook.push(function() {
-            gitbook.page.hasChanged({"page":{"title":"16. Praktik Update Firmware OTA","level":"1.16","depth":1,"previous":{"title":"13. Praktik Aktuator Buzzer dan Servo","level":"1.15","depth":1,"path":"0m/0m.pertemuan16.md","ref":"0m/0m.pertemuan16.md","articles":[]},"dir":"ltr"},"config":{"plugins":[],"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"pluginsConfig":{"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"theme":"default","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"language":"id","gitbook":"*"},"file":{"path":"0p/Pertemuan_19.md","mtime":"2024-08-08T00:44:25.132Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2024-08-08T00:45:20.527Z"},"basePath":"..","book":{"language":""}});
+            gitbook.page.hasChanged({"page":{"title":"16. Praktik Update Firmware OTA","level":"1.16","depth":1,"previous":{"title":"13. Praktik Aktuator Buzzer dan Servo","level":"1.15","depth":1,"path":"0m/0m.pertemuan16.md","ref":"0m/0m.pertemuan16.md","articles":[]},"dir":"ltr"},"config":{"plugins":[],"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"pluginsConfig":{"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"theme":"default","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"language":"id","gitbook":"*"},"file":{"path":"0p/Pertemuan_19.md","mtime":"2024-08-08T00:52:30.988Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2024-08-08T00:53:22.691Z"},"basePath":"..","book":{"language":""}});
         });
     </script>
 </div>
