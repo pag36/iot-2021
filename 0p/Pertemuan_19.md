@@ -1,5 +1,6 @@
 # Pertemuan ke 19 : Update Over the Air (OTA)
 
+
 ## Topik Bahasan
 Mempelajari tentang apa itu update OTA, sejarah awal tentang update OTA, mekanisme update melalui OTA, kelebihan dan kekurangan update OTA, dan praktik update software melalui OTA
 
@@ -71,6 +72,176 @@ Lebih mudah memperbarui perangkat lunak pada perangkat yang sulit diakses
     - ![14](2024-08-08_034732.png)
 
 7. Tuliskan kode program yang menyertakan web updater ke file sketch dan beri nama sesuai kehendak anda. Kode ini menyertakan akses ke jaringan WiFi anda.
+
+```cpp 
+#include <WiFi.h>
+#include <WiFiClient.h>
+#include <WebServer.h>
+#include <ESPmDNS.h>
+#include <Update.h>
+
+const char* host = "esp32";
+const char* ssid = "GANTI DENGAN SSID ANDA";
+const char* password = "GANTI PASSWORD WIFI";
+
+WebServer server(80);
+
+/*
+ * Login page
+ */
+const char* loginIndex = 
+ "<form name='loginForm'>"
+    "<table width='20%' bgcolor='A09F9F' align='center'>"
+        "<tr>"
+            "<td colspan=2>"
+                "<center><font size=4><b>HALAMAN LOGIN ESP32</b></font></center>"
+                "<br>"
+            "</td>"
+            "<br>"
+            "<br>"
+        "</tr>"
+        "<td>Username:</td>"
+        "<td><input type='text' size=25 name='userid'><br></td>"
+        "</tr>"
+        "<br>"
+        "<br>"
+        "<tr>"
+            "<td>Password:</td>"
+            "<td><input type='Password' size=25 name='pwd'><br></td>"
+            "<br>"
+            "<br>"
+        "</tr>"
+        "<tr>"
+            "<td><input type='submit' onclick='check(this.form)' value='Login'></td>"
+        "</tr>"
+    "</table>"
+"</form>"
+"<script>"
+    "function check(form)"
+    "{"
+    "if(form.userid.value=='admin' && form.pwd.value=='admin')"
+    "{"
+    "window.open('/serverIndex')"
+    "}"
+    "else"
+    "{"
+    " alert('Error Password or Username')/*displays error message*/"
+    "}"
+    "}"
+"</script>";
+ 
+/*
+ * Server Index Page
+ */
+ 
+const char* serverIndex = 
+"<script src='https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js'></script>"
+"<form method='POST' action='#' enctype='multipart/form-data' id='upload_form'>"
+   "<input type='file' name='update'>"
+        "<input type='submit' value='Update'>"
+    "</form>"
+ "<div id='prg'>progress: 0%</div>"
+ "<script>"
+  "$('form').submit(function(e){"
+  "e.preventDefault();"
+  "var form = $('#upload_form')[0];"
+  "var data = new FormData(form);"
+  " $.ajax({"
+  "url: '/update',"
+  "type: 'POST',"
+  "data: data,"
+  "contentType: false,"
+  "processData:false,"
+  "xhr: function() {"
+  "var xhr = new window.XMLHttpRequest();"
+  "xhr.upload.addEventListener('progress', function(evt) {"
+  "if (evt.lengthComputable) {"
+  "var per = evt.loaded / evt.total;"
+  "$('#prg').html('progress: ' + Math.round(per*100) + '%');"
+  "}"
+  "}, false);"
+  "return xhr;"
+  "},"
+  "success:function(d, s) {"
+  "console.log('success!')" 
+ "},"
+ "error: function (a, b, c) {"
+ "}"
+ "});"
+ "});"
+ "</script>";
+
+/*
+ * setup function
+ */
+void setup(void) {
+  Serial.begin(115200);
+
+  // KONEK KE JARINGAN WIFI
+  WiFi.begin(ssid, password);
+  Serial.println("");
+
+  // MENUNGGU KONEKSI
+  while (WiFi.status() != WL_CONNECTED) {
+    delay(500);
+    Serial.print(".");
+  }
+  Serial.println("");
+  Serial.print("Terhubung ke : ");
+  Serial.println(ssid);
+  Serial.print("Alamat IP : ");
+  Serial.println(WiFi.localIP());
+
+  /*menggunakan MDNS untuk memberi nama host*/
+  if (!MDNS.begin(host)) { //http://esp32.local
+    Serial.println("Error mengkonfigurasi MDNS responder!");
+    while (1) {
+      delay(1000);
+    }
+  }
+  Serial.println("mDNS responder berjalan");
+  server.on("/", HTTP_GET, []() {
+    server.sendHeader("Connection", "close");
+    server.send(200, "text/html", loginIndex);
+  });
+  server.on("/serverIndex", HTTP_GET, []() {
+    server.sendHeader("Connection", "close");
+    server.send(200, "text/html", serverIndex);
+  });
+  /*menghandle proses upload file update */
+  server.on("/update", HTTP_POST, []() {
+    server.sendHeader("Connection", "close");
+    server.send(200, "text/plain", (Update.hasError()) ? "FAIL" : "OK");
+    ESP.restart();
+  }, []() {
+    HTTPUpload& upload = server.upload();
+    if (upload.status == UPLOAD_FILE_START) {
+      Serial.printf("Update: %s\n", upload.filename.c_str());
+      if (!Update.begin(UPDATE_SIZE_UNKNOWN)) { 
+        Update.printError(Serial);
+      }
+    } else if (upload.status == UPLOAD_FILE_WRITE) {
+      /* flashing firmware ke ESP*/
+      if (Update.write(upload.buf, upload.currentSize) != upload.currentSize) {
+        Update.printError(Serial);
+      }
+    } else if (upload.status == UPLOAD_FILE_END) {
+      if (Update.end(true)) { //true to set the size to the current progress
+        Serial.printf("Update sukses: %u\nRebooting...\n", upload.totalSize);
+      } else {
+        Update.printError(Serial);
+      }
+    }
+  });
+  server.begin();
+}
+
+void loop(void) {
+  server.handleClient();
+  delay(1);
+}
+```
+
 8. Compile dan upload kode program tersebut ke ESP32 anda.
 9. Segera setelah proses upload berhasil, bukalah Serial Monitor pada Arduino IDE dengan baud rate 115200, dan copy-lah alamat IP ESP32 yang tampil di terminal seperti ditunjukkan oleh gambar dibawah ini. Apabila belum muncul, maka matikan terus hidupkan lagi ESP32 anda
 
