@@ -1,0 +1,711 @@
+
+<!DOCTYPE HTML>
+<html lang="id" >
+    <head>
+        <meta charset="UTF-8">
+        <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+        <title>16. Praktik Update Firmware OTA · GitBook</title>
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="description" content="">
+        <meta name="generator" content="GitBook 3.2.3">
+        
+        
+        
+    
+    <link rel="stylesheet" href="../gitbook/style.css">
+
+    
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-highlight/website.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-search/search.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-fontsettings/website.css">
+                
+            
+        
+
+    
+
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+
+        
+    
+    
+    <meta name="HandheldFriendly" content="true"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <link rel="apple-touch-icon-precomposed" sizes="152x152" href="../gitbook/images/apple-touch-icon-precomposed-152.png">
+    <link rel="shortcut icon" href="../gitbook/images/favicon.ico" type="image/x-icon">
+
+    
+    
+    <link rel="prev" href="../0m/0m.pertemuan16.html" />
+    
+
+    </head>
+    <body>
+        
+<div class="book">
+    <div class="book-summary">
+        
+            
+<div id="book-search-input" role="search">
+    <input type="text" placeholder="Ketik untuk mencari" />
+</div>
+
+            
+                <nav role="navigation">
+                
+
+
+<ul class="summary">
+    
+    
+
+    
+
+    
+        
+        
+    
+        <li class="chapter " data-level="1.1" data-path="../">
+            
+                <a href="../">
+            
+                    
+                    Pendahuluan
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2" data-path="../00/kontrak.html">
+            
+                <a href="../00/kontrak.html">
+            
+                    
+                    Kontrak Kuliah
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3" data-path="../0a/0a.pertemuan1.html">
+            
+                <a href="../0a/0a.pertemuan1.html">
+            
+                    
+                    01. Memahami Konsep dan arsitektur IoT
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4" data-path="../0b/0b.pertemuan2.html">
+            
+                <a href="../0b/0b.pertemuan2.html">
+            
+                    
+                    02. Pengantar Elektronik
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5" data-path="../0c/0c.pertemuan3.html">
+            
+                <a href="../0c/0c.pertemuan3.html">
+            
+                    
+                    03. Pengenalan Jenis-Jenis dan Cara Kerja Sensor
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6" data-path="../0d/0d.pertemuan4.html">
+            
+                <a href="../0d/0d.pertemuan4.html">
+            
+                    
+                    04. Pengenalan Jenis-Jenis dan Cara Kerja Aktuator
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.7" data-path="../0e/0e.pertemuan6.html">
+            
+                <a href="../0e/0e.pertemuan6.html">
+            
+                    
+                    05. Jenis Elektronik Development Board
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.8" data-path="../0f/0f.pertemuan7.html">
+            
+                <a href="../0f/0f.pertemuan7.html">
+            
+                    
+                    06. Jenis Komunikasi Data
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.9" data-path="../0g/0f.pertemuan8.html">
+            
+                <a href="../0g/0f.pertemuan8.html">
+            
+                    
+                    07. Pengenalan Teknologi Smart Card
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.10" data-path="../0h/0h.pertemuan9.html">
+            
+                <a href="../0h/0h.pertemuan9.html">
+            
+                    
+                    08. Praktik Dasar Elektronika
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.11" data-path="../0i/0i.pertemuan11.html">
+            
+                <a href="../0i/0i.pertemuan11.html">
+            
+                    
+                    09. Praktik Pemrograman Microcontroller
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.12" data-path="../0j/0j.pertemuan12.html">
+            
+                <a href="../0j/0j.pertemuan12.html">
+            
+                    
+                    10. Praktik Sensor DHT11, LCD, dan RTC
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.13" data-path="../0k/0k.pertemuan13.html">
+            
+                <a href="../0k/0k.pertemuan13.html">
+            
+                    
+                    11. Praktik Sensor Ultrasonic PIR LDR
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.14" data-path="../0l/0l.pertemuan14.html">
+            
+                <a href="../0l/0l.pertemuan14.html">
+            
+                    
+                    12. Praktik Aktuator LED dan Relay
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.15" data-path="../0m/0m.pertemuan16.html">
+            
+                <a href="../0m/0m.pertemuan16.html">
+            
+                    
+                    13. Praktik Aktuator Buzzer dan Servo
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter active" data-level="1.16" data-path="Pertemuan_19.html">
+            
+                <a href="Pertemuan_19.html">
+            
+                    
+                    16. Praktik Update Firmware OTA
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+    
+
+    <li class="divider"></li>
+
+    <li>
+        <a href="https://www.gitbook.com" target="blank" class="gitbook-link">
+            Dipublikasikan dengan GitBook
+        </a>
+    </li>
+</ul>
+
+
+                </nav>
+            
+        
+    </div>
+
+    <div class="book-body">
+        
+            <div class="body-inner">
+                
+                    
+
+<div class="book-header" role="navigation">
+    
+
+    <!-- Title -->
+    <h1>
+        <i class="fa fa-circle-o-notch fa-spin"></i>
+        <a href=".." >16. Praktik Update Firmware OTA</a>
+    </h1>
+</div>
+
+
+
+
+                    <div class="page-wrapper" tabindex="-1" role="main">
+                        <div class="page-inner">
+                            
+<div id="book-search-results">
+    <div class="search-noresults">
+    
+                                <section class="normal markdown-section">
+                                
+                                <h1 id="pertemuan-ke-19--update-over-the-air-ota">Pertemuan ke 19 : Update Over the Air (OTA)</h1>
+<h2 id="topik-bahasan">Topik Bahasan</h2>
+<p>Mempelajari tentang apa itu update OTA, sejarah awal tentang update OTA, mekanisme update melalui OTA, kelebihan dan kekurangan update OTA, dan praktik update software melalui OTA</p>
+<h2 id="deskripsi">Deskripsi</h2>
+<ul>
+<li>Mampu menjelaskan dan mendeskripsikan tentang apa itu update OTA</li>
+<li>Mengetahui sejarah perkembangan update OTA</li>
+<li>Mampu menerapkan update OTA didalam perangkat IoT menggunakan web updater</li>
+</ul>
+<h2 id="teori-singkat">Teori Singkat</h2>
+<p>Over the air (OTA) merupakan pengiriman software, firmware, ataupun data lain menggunakan media nirkabel ke perangkat seperti mobile phones, set-top boxes, electric car, atau juga perlengkapan komunikasi secure voice.</p>
+<h2 id="sejarah-ota">Sejarah OTA</h2>
+<ul>
+<li>Operator seluler mengirim pembaruan OTA melalui SMS</li>
+<li>Mengkonfigurasi pembaruan data di kartu SIM;</li>
+<li>Mendistribusikan pembaruan sistem; </li>
+<li>Layanan akses, seperti protokol akses nirkabel (WAP) atau layanan pesan multimedia (MMS)</li>
+<li>Pembaruan OTA juga memungkinkan operator seluler untuk mengaktifkan langganan pengguna</li>
+<li>OEM dapat menggunakan pembaruan OTA untuk memperbaiki bug melalui firmware dan mengubah antarmuka pengguna</li>
+<li>Proliferasi IoT menggunakan update OTA untuk autonomous vehicle, smart home speaker, dan perangkat IoT yang lain.</li>
+<li>Frekuensi yang tidak berlisensi, seperti 868 MHz, dan penggunaan protokol transmisi kecepatan data rendah.</li>
+<li>Apple memperkenalkan pembaruan OTA ke perangkat iOS dengan rilis iOS 5.0.1</li>
+<li>Menghubungkan perangkat ke komputer menggunakan kabel USB dan memperbarui OS melalui iTunes</li>
+<li>Apple dapat mengirimkan pembaruan dari jarak jauh dalam file zip yang tidak terenkripsi</li>
+</ul>
+<p><img src="image8.png" alt="8"></p>
+<h2 id="cara-kerja-ota-manual">Cara Kerja OTA (Manual)</h2>
+<ul>
+<li>Pembaruan OTA manual memberi tahu pengguna tentang pembaruan yang tersedia</li>
+<li>Pengguna dapat menerima atau menolak mengunduh pembaruan di perangkat mereka</li>
+<li>Operator seluler juga dapat mengirim pesan SMS ke semua pengguna yang memiliki perangkat tertentu</li>
+<li>Meminta mereka untuk menghubungi nomor untuk menerima pembaruan perangkat lunak saat yang paling nyaman</li>
+</ul>
+<p><img src="image9.jpeg" alt="9"></p>
+<h2 id="cara-kerja-ota-otomatis">Cara Kerja OTA (Otomatis)</h2>
+<ul>
+<li>Sistem back-end operator seluler dapat mendorong pembaruan firmware ke perangkat pengguna</li>
+<li>Original Equipment Manufacturer (OEM) dapat menggunakan produk yang mengotomatiskan pembaruan OTA</li>
+<li>Perangkat yang berada di lokasi terpencil, seperti sensor IoT, atau perangkat yang tidak sering berhubungan dengan manusia</li>
+</ul>
+<p><img src="image10.jpeg" alt="10"></p>
+<h2 id="kelebihan-ota">Kelebihan OTA</h2>
+<ul>
+<li>Lebih efisien bagi OEM untuk memperbaiki bug dan memperbarui perangkat lunak</li>
+<li>Mengatasi masalah sebelum perangkat diluncurkan, yang dapat menghemat waktu dan uang OEM</li>
+<li>Mengurangi proses pengembangan perangkat lunak dan jaminan kualitas (QA)
+Lebih mudah memperbarui perangkat lunak pada perangkat yang sulit diakses</li>
+<li>Nyaman bagi pengguna akhir karena mencegah mereka dari keharusan pergi ke toko fisik</li>
+</ul>
+<p><img src="image11.jpeg" alt="11"></p>
+<h2 id="kekurangan-ota">Kekurangan OTA</h2>
+<ul>
+<li>Dapat memungkinkan peretas mengubah perangkat lunak perangkat</li>
+<li>Peretas dapat mendorong pembaruan tidak resmi yang memperkenalkan kerentanan keamanan.</li>
+<li>Memasang adware dan spyware untuk mengumpulkan informasi pribadi dari perangkat</li>
+</ul>
+<p><img src="image12.jpeg" alt="12"></p>
+<h2 id="praktikum-ota">Praktikum OTA</h2>
+<ol>
+<li>Praktikum ini adalah praktikum singkat yang bertujuan untuk menunjukkan bagaimana memprogram OTA memakai ESP32 dan web updater didalam Arduino IDE</li>
+<li><p>OTA web updater memungkinkan untuk mengupdate kode terbaru kedalam ESP32 menggunakan web browser tanpa membutuhkan koneksi serial antara ESP32 dan komputer</p>
+<ul>
+<li><img src="OTAWebUpdates_ESP32_thumbnail.webp" alt="13"></li>
+</ul>
+</li>
+<li><p>Sketch Arduino IDE pertama kali harus diupload ke ESP32 menggunakan serial port/USB. Sketch ini harus memiliki kode untuk web updater sehingga nantinya dapat digunakan untuk mengupload kode program yang baru melalui browser</p>
+</li>
+<li>Web updater akan membuat ESP32 menjadi web server sehingga memungkinkan untuk mengaksesnya untuk mengupload skecth baru melalui web browser</li>
+<li>Untuk setiap sketch baru yang akan diupload, harus memiliki rutin web updater, bila tidak maka anda tidak akan dapat mengakses web browser lagi dan tidak dapat melakukan update over-the-air</li>
+<li><p>Untuk memulai memprogram OTA, install dulu library ArduinoOTA seperti gambar dibawah ini</p>
+<ul>
+<li><img src="2024-08-08_034732.png" alt="14"></li>
+</ul>
+</li>
+<li><p>Tuliskan kode program yang menyertakan web updater ke file sketch dan beri nama sesuai kehendak anda. Kode ini menyertakan akses ke jaringan WiFi anda.
+```C </p>
+<h1 id="include-">include <wifi.h></wifi.h></h1>
+<h1 id="include-">include <wificlient.h></wificlient.h></h1>
+<h1 id="include-">include <webserver.h></webserver.h></h1>
+<h1 id="include-">include <espmdns.h></espmdns.h></h1>
+<h1 id="include-">include <update.h></update.h></h1>
+</li>
+</ol>
+<p>const char<em> host = &quot;esp32&quot;;
+const char</em> ssid = &quot;GANTI DENGAN SSID ANDA&quot;;
+const char* password = &quot;GANTI PASSWORD WIFI&quot;;</p>
+<p>WebServer server(80);</p>
+<p>/*</p>
+<ul>
+<li>Login page
+<em>/
+const char</em> loginIndex = 
+&quot;<form name="loginForm">&quot;
+ &quot;<table width="20%" bgcolor="A09F9F" align="center">&quot;<pre><code> &quot;&lt;tr&gt;&quot;
+     &quot;&lt;td colspan=2&gt;&quot;
+         &quot;&lt;center&gt;&lt;font size=4&gt;&lt;b&gt;HALAMAN LOGIN ESP32&lt;/b&gt;&lt;/font&gt;&lt;/center&gt;&quot;
+         &quot;&lt;br&gt;&quot;
+     &quot;&lt;/td&gt;&quot;
+     &quot;&lt;br&gt;&quot;
+     &quot;&lt;br&gt;&quot;
+ &quot;&lt;/tr&gt;&quot;
+ &quot;&lt;td&gt;Username:&lt;/td&gt;&quot;
+ &quot;&lt;td&gt;&lt;input type=&apos;text&apos; size=25 name=&apos;userid&apos;&gt;&lt;br&gt;&lt;/td&gt;&quot;
+ &quot;&lt;/tr&gt;&quot;
+ &quot;&lt;br&gt;&quot;
+ &quot;&lt;br&gt;&quot;
+ &quot;&lt;tr&gt;&quot;
+     &quot;&lt;td&gt;Password:&lt;/td&gt;&quot;
+     &quot;&lt;td&gt;&lt;input type=&apos;Password&apos; size=25 name=&apos;pwd&apos;&gt;&lt;br&gt;&lt;/td&gt;&quot;
+     &quot;&lt;br&gt;&quot;
+     &quot;&lt;br&gt;&quot;
+ &quot;&lt;/tr&gt;&quot;
+ &quot;&lt;tr&gt;&quot;
+     &quot;&lt;td&gt;&lt;input type=&apos;submit&apos; onclick=&apos;check(this.form)&apos; value=&apos;Login&apos;&gt;&lt;/td&gt;&quot;
+ &quot;&lt;/tr&gt;&quot;
+</code></pre> &quot;&lt;/table&gt;&quot;
+&quot;&lt;/form&gt;&quot;
+&quot;<script>"
+ "function check(form)"
+ "{"
+ "if(form.userid.value=='admin' && form.pwd.value=='admin')"
+ "{"
+ "window.open('/serverIndex')"
+ "}"
+ "else"
+ "{"
+ " alert('Error Password or Username')/*displays error message*/"
+ "}"
+ "}"
+"</script>&quot;;</table></form></li>
+</ul>
+<p>/*</p>
+<ul>
+<li>Server Index Page
+*/</li>
+</ul>
+<p>const char<em> serverIndex = 
+&quot;<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>&quot;
+&quot;<form method="POST" action="#" enctype="multipart/form-data" id="upload_form">&quot;
+   &quot;<input type="file" name="update">&quot;
+        &quot;<input type="submit" value="Update">&quot;
+    &quot;</form>&quot;
+ &quot;<div id="prg">progress: 0%</div>&quot;
+ &quot;<script>&quot;
+  &quot;$(&#39;form&#39;).submit(function(e){&quot;
+  &quot;e.preventDefault();&quot;
+  &quot;var form = $(&#39;#upload_form&#39;)[0];&quot;
+  &quot;var data = new FormData(form);&quot;
+  &quot; $.ajax({&quot;
+  &quot;url: &#39;/update&#39;,&quot;
+  &quot;type: &#39;POST&#39;,&quot;
+  &quot;data: data,&quot;
+  &quot;contentType: false,&quot;
+  &quot;processData:false,&quot;
+  &quot;xhr: function() {&quot;
+  &quot;var xhr = new window.XMLHttpRequest();&quot;
+  &quot;xhr.upload.addEventListener(&#39;progress&#39;, function(evt) {&quot;
+  &quot;if (evt.lengthComputable) {&quot;
+  &quot;var per = evt.loaded / evt.total;&quot;
+  &quot;$(&#39;#prg&#39;).html(&#39;progress: &#39; + Math.round(per</em>100) + &#39;%&#39;);&quot;
+  &quot;}&quot;
+  &quot;}, false);&quot;
+  &quot;return xhr;&quot;
+  &quot;},&quot;
+  &quot;success:function(d, s) {&quot;
+  &quot;console.log(&#39;success!&#39;)&quot; 
+ &quot;},&quot;
+ &quot;error: function (a, b, c) {&quot;
+ &quot;}&quot;
+ &quot;});&quot;
+ &quot;});&quot;
+ &quot;&lt;/script&gt;&quot;;</p>
+<p>/*</p>
+<ul>
+<li><p>setup function
+*/
+void setup(void) {
+Serial.begin(115200);</p>
+<p>// KONEK KE JARINGAN WIFI
+WiFi.begin(ssid, password);
+Serial.println(&quot;&quot;);</p>
+<p>// MENUNGGU KONEKSI
+while (WiFi.status() != WL_CONNECTED) {
+ delay(500);
+ Serial.print(&quot;.&quot;);
+}
+Serial.println(&quot;&quot;);
+Serial.print(&quot;Terhubung ke : &quot;);
+Serial.println(ssid);
+Serial.print(&quot;Alamat IP : &quot;);
+Serial.println(WiFi.localIP());</p>
+<p>/<em>menggunakan MDNS untuk memberi nama host</em>/
+if (!MDNS.begin(host)) { //<a href="http://esp32.local">http://esp32.local</a>
+ Serial.println(&quot;Error mengkonfigurasi MDNS responder!&quot;);
+ while (1) {
+   delay(1000);
+ }
+}
+Serial.println(&quot;mDNS responder berjalan&quot;);
+server.on(&quot;/&quot;, HTTP_GET, <a href=""></a> {
+ server.sendHeader(&quot;Connection&quot;, &quot;close&quot;);
+ server.send(200, &quot;text/html&quot;, loginIndex);
+});
+server.on(&quot;/serverIndex&quot;, HTTP_GET, <a href=""></a> {
+ server.sendHeader(&quot;Connection&quot;, &quot;close&quot;);
+ server.send(200, &quot;text/html&quot;, serverIndex);
+});
+/<em>menghandle proses upload file update </em>/
+server.on(&quot;/update&quot;, HTTP_POST, <a href=""></a> {
+ server.sendHeader(&quot;Connection&quot;, &quot;close&quot;);
+ server.send(200, &quot;text/plain&quot;, (Update.hasError()) ? &quot;FAIL&quot; : &quot;OK&quot;);
+ ESP.restart();
+}, <a href=""></a> {
+ HTTPUpload&amp; upload = server.upload();
+ if (upload.status == UPLOAD_FILE_START) {
+   Serial.printf(&quot;Update: %s\n&quot;, upload.filename.c_str());
+   if (!Update.begin(UPDATE_SIZE_UNKNOWN)) { </p>
+<pre><code> Update.printError(Serial);
+</code></pre><p>   }
+ } else if (upload.status == UPLOAD_FILE_WRITE) {
+   /<em> flashing firmware ke ESP</em>/
+   if (Update.write(upload.buf, upload.currentSize) != upload.currentSize) {</p>
+<pre><code> Update.printError(Serial);
+</code></pre><p>   }
+ } else if (upload.status == UPLOAD_FILE_END) {
+   if (Update.end(true)) { //true to set the size to the current progress</p>
+<pre><code> Serial.printf(&quot;Update sukses: %u\nRebooting...\n&quot;, upload.totalSize);
+</code></pre><p>   } else {</p>
+<pre><code> Update.printError(Serial);
+</code></pre><p>   }
+ }
+});
+server.begin();
+}</p>
+</li>
+</ul>
+<p>void loop(void) {
+  server.handleClient();
+  delay(1);
+}
+```</p>
+<ol>
+<li>Compile dan upload kode program tersebut ke ESP32 anda.</li>
+<li><p>Segera setelah proses upload berhasil, bukalah Serial Monitor pada Arduino IDE dengan baud rate 115200, dan copy-lah alamat IP ESP32 yang tampil di terminal seperti ditunjukkan oleh gambar dibawah ini. Apabila belum muncul, maka matikan terus hidupkan lagi ESP32 anda</p>
+<ul>
+<li><img src="2024-08-08_041816.png" alt="15"></li>
+</ul>
+</li>
+<li><p>Buka web browser pada komputer anda, dan isikan alamat IP ESP32 kedalam web browser sehingga muncul halaman login seperti gambar dibawah ini (pastikan komputer dan ESP32 anda terhubung ke jaringan yang sama). Untuk login, gunakan :</p>
+<ul>
+<li><strong>username</strong> : admin</li>
+<li><strong>password</strong> : admin</li>
+</ul>
+<p><strong>Note :</strong> Anda dapat mengganti username dan password didalam kode program</p>
+<ul>
+<li><img src="2024-08-08_043256.png" alt="16"></li>
+</ul>
+</li>
+<li><p>Untuk mengupdate kode program didalam ESP32 anda melalui update OTA (melalui web updater) maka anda perlu menyiapkan file binary baru dengan ekstensi <strong>.bin</strong> (file sketch baru yang sudah di-compile). Tambahkan kode program ini kedalam file sketch yang lama dimana tambahan kode program ini bertujuan untuk meng-update fungsionalitas dari kode program yang lama sehingga dapat membuat LED biru pada board ESP32 berkedip.</p>
+<ul>
+<li><img src="2024-08-08_044241.png" alt="17"></li>
+<li><img src="2024-08-08_044545-1.png" alt="18"></li>
+<li><img src="2024-08-08_044915.png" alt="19"></li>
+</ul>
+</li>
+<li><p>Compile kode program tersebut menjadi file binary melalui menu <strong>Sketch -&gt; Eksport Compiled Binary</strong> pada Arduino IDE seperti gambar dibawah ini</p>
+<ul>
+<li><img src="2024-08-08_045327.png" alt="20"></li>
+</ul>
+</li>
+<li><p>Kemudian, buka sketch folder anda melalu menu <strong>Sketch -&gt; Show sketch folder</strong> pada Arduino IDE seperti gambar dibawah ini</p>
+<ul>
+<li><img src="2024-08-08_050004.png" alt="21"></li>
+</ul>
+</li>
+<li><p>Didalam folder sketch, masuklah kedalam folder <strong>build</strong> dan cari file dengan ekstensi <strong>.bin</strong> seperti gambar dibawah ini. File ini yang nanti akan kita upload untuk mengupdate software didalam ESP32</p>
+<ul>
+<li><img src="2024-08-08_050259.png" alt="22"></li>
+</ul>
+</li>
+<li><p>Upload file tadi melalui web updater seperti ditunjukkan oleh gambar dibawah ini dan kemudian klik tombol <strong>update</strong> untuk melakukan proses updating hingga 100%</p>
+<ul>
+<li><img src="2024-08-08_050930.png" alt="23"></li>
+</ul>
+</li>
+<li><p>Bila proses update selesai, seharusnya saat ini anda dapat melihat pada ESP32 led biru berkedip yang menandakan bahwa proses update OTA berhasil</p>
+</li>
+</ol>
+<h2>Tugas Individu</h2>
+<ol>
+<li>Silakan mencari teknologi yang sudah menerapakan model update menggunakan OTA, deskripsikan model update tersebut baik software ataupun firmware seperti apa</li>
+<li>Cobalah cari contoh coding lainnya metode update OTA yang dapat diterapkan pada perangkat IoT</li>
+</ol>
+</script></em></p>
+                                
+                                </section>
+                            
+    </div>
+    <div class="search-results">
+        <div class="has-results">
+            
+            <h1 class="search-results-title"><span class='search-results-count'></span> hasil yang cocok "<span class='search-query'></span>"</h1>
+            <ul class="search-results-list"></ul>
+            
+        </div>
+        <div class="no-results">
+            
+            <h1 class="search-results-title">Tidak ada hasil yang cocok "<span class='search-query'></span>"</h1>
+            
+        </div>
+    </div>
+</div>
+
+                        </div>
+                    </div>
+                
+            </div>
+
+            
+                
+                <a href="../0m/0m.pertemuan16.html" class="navigation navigation-prev navigation-unique" aria-label="Previous page: 13. Praktik Aktuator Buzzer dan Servo">
+                    <i class="fa fa-angle-left"></i>
+                </a>
+                
+                
+            
+        
+    </div>
+
+    <script>
+        var gitbook = gitbook || [];
+        gitbook.push(function() {
+            gitbook.page.hasChanged({"page":{"title":"16. Praktik Update Firmware OTA","level":"1.16","depth":1,"previous":{"title":"13. Praktik Aktuator Buzzer dan Servo","level":"1.15","depth":1,"path":"0m/0m.pertemuan16.md","ref":"0m/0m.pertemuan16.md","articles":[]},"dir":"ltr"},"config":{"plugins":[],"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"pluginsConfig":{"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"theme":"default","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"language":"id","gitbook":"*"},"file":{"path":"0p/Pertemuan_19.md","mtime":"2024-08-08T00:29:59.855Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2024-08-08T00:30:55.926Z"},"basePath":"..","book":{"language":""}});
+        });
+    </script>
+</div>
+
+        
+    <script src="../gitbook/gitbook.js"></script>
+    <script src="../gitbook/theme.js"></script>
+    
+        
+        <script src="../gitbook/gitbook-plugin-search/search-engine.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-search/search.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-lunr/lunr.min.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-lunr/search-lunr.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-sharing/buttons.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-fontsettings/fontsettings.js"></script>
+        
+    
+
+    </body>
+</html>
+
