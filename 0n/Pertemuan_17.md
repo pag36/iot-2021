@@ -218,6 +218,7 @@ ESP32 dan ESP8266 memungkin kan untuk digunakan atau bertindak sebagai web serve
     - ![alt text](image14-1.png)
 
 18.	Setelah itu, pada sketch, copy-kan firmware configuration yang tadi anda dapatkan dari Blynk dan lanjutkan dengan menuliskan baris kode seperti berikut ini.
+
 ```cpp
 #define BLYNK_TEMPLATE_ID "TMPL6bpRYvnXn"
 #define BLYNK_TEMPLATE_NAME "Led Controller"
@@ -252,6 +253,7 @@ void loop(){
   Blynk.run();
 }
 ```
+
 19.	Compile dan jalankan project Wokwi anda
 20.	Cobalah kendalikan lampu LED melalui Blynk dengan mematikan/menghidupkan LED melalui switch. Cek dulu apakah Blynk anda sudah dalam status Online, apabila belum cobalah refresh browser anda seperti ditunjukkan oleh Gambar.
 
