@@ -1,0 +1,702 @@
+
+<!DOCTYPE HTML>
+<html lang="id" >
+    <head>
+        <meta charset="UTF-8">
+        <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+        <title>15. Pengenalan LPWAN, LoRa, dan NB-IoT · GitBook</title>
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="description" content="">
+        <meta name="generator" content="GitBook 3.2.3">
+        
+        
+        
+    
+    <link rel="stylesheet" href="../gitbook/style.css">
+
+    
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-highlight/website.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-search/search.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-fontsettings/website.css">
+                
+            
+        
+
+    
+
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+
+        
+    
+    
+    <meta name="HandheldFriendly" content="true"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <link rel="apple-touch-icon-precomposed" sizes="152x152" href="../gitbook/images/apple-touch-icon-precomposed-152.png">
+    <link rel="shortcut icon" href="../gitbook/images/favicon.ico" type="image/x-icon">
+
+    
+    <link rel="next" href="../0p/Pertemuan_19.html" />
+    
+    
+    <link rel="prev" href="../0n/Pertemuan_17.html" />
+    
+
+    </head>
+    <body>
+        
+<div class="book">
+    <div class="book-summary">
+        
+            
+<div id="book-search-input" role="search">
+    <input type="text" placeholder="Ketik untuk mencari" />
+</div>
+
+            
+                <nav role="navigation">
+                
+
+
+<ul class="summary">
+    
+    
+
+    
+
+    
+        
+        
+    
+        <li class="chapter " data-level="1.1" data-path="../">
+            
+                <a href="../">
+            
+                    
+                    Pendahuluan
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2" data-path="../00/kontrak.html">
+            
+                <a href="../00/kontrak.html">
+            
+                    
+                    Kontrak Kuliah
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3" data-path="../0a/0a.pertemuan1.html">
+            
+                <a href="../0a/0a.pertemuan1.html">
+            
+                    
+                    01. Memahami Konsep dan arsitektur IoT
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4" data-path="../0b/0b.pertemuan2.html">
+            
+                <a href="../0b/0b.pertemuan2.html">
+            
+                    
+                    02. Pengantar Elektronik
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5" data-path="../0c/0c.pertemuan3.html">
+            
+                <a href="../0c/0c.pertemuan3.html">
+            
+                    
+                    03. Pengenalan Jenis-Jenis dan Cara Kerja Sensor
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6" data-path="../0d/0d.pertemuan4.html">
+            
+                <a href="../0d/0d.pertemuan4.html">
+            
+                    
+                    04. Pengenalan Jenis-Jenis dan Cara Kerja Aktuator
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.7" data-path="../0e/0e.pertemuan6.html">
+            
+                <a href="../0e/0e.pertemuan6.html">
+            
+                    
+                    05. Jenis Elektronik Development Board
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.8" data-path="../0f/0f.pertemuan7.html">
+            
+                <a href="../0f/0f.pertemuan7.html">
+            
+                    
+                    06. Jenis Komunikasi Data
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.9" data-path="../0g/0f.pertemuan8.html">
+            
+                <a href="../0g/0f.pertemuan8.html">
+            
+                    
+                    07. Pengenalan Teknologi Smart Card
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.10" data-path="../0h/0h.pertemuan9.html">
+            
+                <a href="../0h/0h.pertemuan9.html">
+            
+                    
+                    08. Praktik Dasar Elektronika
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.11" data-path="../0i/0i.pertemuan11.html">
+            
+                <a href="../0i/0i.pertemuan11.html">
+            
+                    
+                    09. Praktik Pemrograman Microcontroller
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.12" data-path="../0j/0j.pertemuan12.html">
+            
+                <a href="../0j/0j.pertemuan12.html">
+            
+                    
+                    10. Praktik Sensor DHT11, LCD, dan RTC
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.13" data-path="../0k/0k.pertemuan13.html">
+            
+                <a href="../0k/0k.pertemuan13.html">
+            
+                    
+                    11. Praktik Sensor Ultrasonic PIR LDR
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.14" data-path="../0l/0l.pertemuan14.html">
+            
+                <a href="../0l/0l.pertemuan14.html">
+            
+                    
+                    12. Praktik Aktuator LED dan Relay
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.15" data-path="../0m/0m.pertemuan16.html">
+            
+                <a href="../0m/0m.pertemuan16.html">
+            
+                    
+                    13. Praktik Aktuator Buzzer dan Servo
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.16" data-path="../0n/Pertemuan_17.html">
+            
+                <a href="../0n/Pertemuan_17.html">
+            
+                    
+                    14. Pengenalan Macam-Macam Platform IoT dan Koneksi W-LAN
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter active" data-level="1.17" data-path="Pertemuan_18.html">
+            
+                <a href="Pertemuan_18.html">
+            
+                    
+                    15. Pengenalan LPWAN, LoRa, dan NB-IoT
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.18" data-path="../0p/Pertemuan_19.html">
+            
+                <a href="../0p/Pertemuan_19.html">
+            
+                    
+                    16. Praktik Update Firmware OTA
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+    
+
+    <li class="divider"></li>
+
+    <li>
+        <a href="https://www.gitbook.com" target="blank" class="gitbook-link">
+            Dipublikasikan dengan GitBook
+        </a>
+    </li>
+</ul>
+
+
+                </nav>
+            
+        
+    </div>
+
+    <div class="book-body">
+        
+            <div class="body-inner">
+                
+                    
+
+<div class="book-header" role="navigation">
+    
+
+    <!-- Title -->
+    <h1>
+        <i class="fa fa-circle-o-notch fa-spin"></i>
+        <a href=".." >15. Pengenalan LPWAN, LoRa, dan NB-IoT</a>
+    </h1>
+</div>
+
+
+
+
+                    <div class="page-wrapper" tabindex="-1" role="main">
+                        <div class="page-inner">
+                            
+<div id="book-search-results">
+    <div class="search-noresults">
+    
+                                <section class="normal markdown-section">
+                                
+                                <h1 id="pertemuan-ke-18--pengenalan-dan-demo-lpwan---lora-nb-iot">Pertemuan ke 18 : Pengenalan dan Demo LPWAN - LoRa, NB-IoT</h1>
+<h2 id="topik-bahasan">Topik Bahasan</h2>
+<p>Mengenal berbagai macam teknologi komunikasi nirkabel jarak jauh daya rendah yang dapat diimplementasikan didalam proyek IoT seperti teknologi LPWAN, LoRa, dan IoT serta dapat mengimplementasikan dan menguji coba teknologi komunikasi tersebut</p>
+<h2 id="deskripsi">Deskripsi</h2>
+<ul>
+<li>Mengenal dan mampu menjelaskan berbagai macam teknologi komunikasi nirkabel daya rendah yang dapat diimplementasikan dalam perangkat IoT</li>
+<li>Mampu untuk mengimplementasikan komunikasi nirkabel daya rendah didalam proyek IoT yang dibuat</li>
+</ul>
+<h2 id="teori-singkat">Teori Singkat</h2>
+<p>Teknologi nirkabel berdaya rendah menyediakan komunikasi antar objek dalam jarak jauh, tetapi kecepatan transfer data di antara objek tersebut relatif rendah (50 kbit/detik atau kurang). Perangkat dengan jenis komunikasi ini mengonsumsi lebih sedikit energi, menggunakannya lebih lambat, dan dapat bekerja tanpa perlu mengisi ulang daya dalam waktu lama. Perangkat IoT, seperti peralatan untuk rumah dan kota pintar, adalah contoh terbaik penggunaan komunikasi nirkabel dengan konsumsi daya rendah. Teknologi ini diterapkan dalam sistem pencahayaan, pasokan air, pengawasan video, pemanas, dan pengendalian lingkungan. Bidang aplikasi populer lainnya adalah meteran pintar, mesin pembayaran, dan berbagai sensor. Ada banyak solusi teknologi nirkabel berdaya rendah, yang akan membuat bingung dalam memilihnya. Berikut ini adalah beberapa teknologi yang populer yang telah dimanfaatkan dan diproduksi secara massal untuk jaringan telekomunikasi, otomasi industri, dan pasar konsumen:</p>
+<ul>
+<li>LPWAN;</li>
+<li>LoRa</li>
+<li>NB-IOT;</li>
+<li>Z-Wave;</li>
+<li>Zigbee;</li>
+<li>Bluetooth Low-Energy;</li>
+<li>Wi-Fi HaLow;</li>
+<li>Sigfox;</li>
+<li>LTE-M.</li>
+</ul>
+<h2 id="lpwan">LPWAN</h2>
+<p>LPWAN (Low Power Wide Area Network) merupakan jenis telekomunikasi nirkabel jaringan area luas yang dirancang untuk memungkinkan komunikasi jarak jauh pada rendah sedikit menilai antara hal - hal (objek yang terhubung), seperti sensor dioperasikan pada baterai. </p>
+<ul>
+<li><img src="image25-1.png" alt="alt text"></li>
+</ul>
+<p>LPWAN adalah sebuah teknologi nirkabel yang sangat sesuai dengan kebutuhan spesifik perangkat machine-to-machine (M2M) dan IoT. Penggunaan LPWAN biasanya untuk smart city dan sektor industri yang tidak memerlukan kecepatan dan bandwidth yang sama dengan perangkat seluler konsumen. </p>
+<p>Teknologi LPWAN mendukung transfer data dalam paket data kecil dengan ukuran mulai dari 10 hingga 1000 byte. Hal ini memungkinkan peningkatan efisiensi dan kecepatan yang dioptimalkan mulai dari 3 Kbps hingga 375 Kbps. </p>
+<p>Karena Jaringan LPWAN beroperasi dengan efisiensi daya dan bandwidth yang lebih tinggi serta pada area yang lebih luas, infrastruktur dan perangkat keras yang dibutuhkan pun lebih sedikit, sehigga terjadi efisiensi biaya.
+Contoh: perangkat untuk pemantauan kualitas udara, deteksi hunian, pelacakan aset, dan pemantauan lingkungan, dll.</p>
+<ul>
+<li><img src="image12.png" alt="alt text"></li>
+</ul>
+<p>Penggunaan salah satu LPWAN yaitu LoRaWAN pada pendeteksi lingkungan seperti persediaan air, kapasitas sampah, vending machine, deteksi api, dll yang terhubung ke gateway yang kemudian akan dikirimkan ke internet.</p>
+<h3 id="keunggulan-lpwan">Keunggulan LPWAN</h3>
+<ol>
+<li><p><strong>Long range.</strong> LPWAN mendukung konektivitas yang sangat jauh bahkan hingga 10 Km, bahkan bisa menembus bawah tanah. Jangkauan biasanya diukur dengan sensitivitas sinyal penerima, LPWAN bahkan bisa mencapai -130 dBm untuk dapat bertukar data.</p>
+<ul>
+<li><img src="image25.png" alt="alt text"></li>
+</ul>
+</li>
+<li><p><strong>Long power.</strong> Sistem LPWAN mengadopsi beberapa pendekatan untuk mengoptimalkan efisiensi daya, sehingga baterai dapat bertahan selama bertahun-tahun pada perangkat. Perangkat dapat diatur menjadi deep sleep (tidur) saat tidak melakukan transmisi data. Selanjutnya, protokol pada Akses Kontrol Layer dapat meminimalkan overhead data.</p>
+<ul>
+<li><img src="image26.png" alt="alt text"></li>
+</ul>
+</li>
+<li><p><strong>Low cost.</strong> Protokol LPWAN yang disederhanakan, bandwith yang diturunkan, dan transfer data yang ringan dapat menurunkan biaya pemasangan infrastruktur dan perangkat keras yang diperlukan.</p>
+<ul>
+<li><img src="image28.png" alt="alt text"></li>
+</ul>
+</li>
+</ol>
+<h2 id="lora-long-range">LoRa (Long Range)</h2>
+<p>LoRa merupakan sistem komunikasi wireless untuk Internet of Things, menawarkan komunikasi jarak jauh ( &gt; 15 km di remote area) dan berdaya rendah (5&#x2013;10 tahun). LoRa merupakan teknologi IoT yang di bangun oleh Cycleo of Grenoble (Prancis), lalu di akuisisi oleh Semtech pada 2012 dengan menggunakan frekuensi 433, 868, 915, dan 923 MHz tergantung regulasi negara.</p>
+<p>Indonesia oleh Kominfo akan mengikuti standar frekuensi LoRa yang ditetapkan oleh LoRa Alliance untuk kawasan Asia yaitu pada frekuensi 923&#x2013;925 MHz (AS923). </p>
+<ul>
+<li><img src="image29.png" alt="alt text"></li>
+</ul>
+<h3 id="keunggulan-lora">Keunggulan LoRa</h3>
+<ol>
+<li>Geolocation, memungkinkan mendeteksi lokasi keberadaan suatu benda tanpa biaya alias gratis. </li>
+<li>Biaya Rendah, dapat mengurangi biaya dengan mengurangi biaya infrastruktur, biaya operasional dan sensor-sensor yang mempunyai jaringan nya sendiri.</li>
+<li>Terstandar, dibuat agar dapat berinteraksi den berfungsi dengan produk atau sistem lain.</li>
+<li>Daya Rendah, dengan konsumsi daya yang dibutuhkan hanya berkisar dari 13 ma hingga 15 ma. Sehingga baterai dapat bertahan 20 tahun. </li>
+<li>Jarak Jauh, LoRa dapat memancarkan hingga 100km. </li>
+<li>Aman, Tertanam end-to end enkripsi AES128 </li>
+<li>Kapasitas Tinggi, Mendukung jutaan pesan per base station, ideal untuk operator jaringan publik yang melayani banyak pelanggan</li>
+</ol>
+<h3 id="penggunaan-lora">Penggunaan LoRa</h3>
+<p>LoRa diterapkan untuk pengiriman data dari sensor ke gateway yang berupa LoRaWAN atau LoRa Gateway. Gateway tersebut dapat terhubung ke Platform IoT seperti Thingsboard, Blynk, atau AWS IoT</p>
+<ul>
+<li><img src="image31.png" alt="alt text"></li>
+</ul>
+<p>Salah satu perangkat LoRa yang dapat diterapkan di Indonesia adalah Modul LoRa SX1276 dengan frekuensi 915 MHz. </p>
+<ul>
+<li><img src="download.jpg" alt="alt text"></li>
+</ul>
+<p>Spesifikasi:</p>
+<ul>
+<li><img src="image33.png" alt="alt text"></li>
+</ul>
+<h2 id="nb-iot">NB-IoT</h2>
+<p>NB-IoT (Narrowband Internet of Things) merupakan teknologi telekomunikasi Low Power Wide Area Network (LPWAN) bagian dari roadmap teknologi 5G yang dirancang secara khusus agar komunikasi antar mesin semakin masif dengan cakupan jaringan konektivitas yang lebih luas hingga dua kali dari teknologi GSM. Teknologi NB-IoT juga mampu menghasilkan ketahanan baterai dari perangkat hingga 10 tahun dan dapat menghemat cost dengan biaya modul yang rendah.</p>
+<ul>
+<li><img src="image50.png" alt="alt text"></li>
+</ul>
+<p>NB-IoT menggunakan subset (bagian) dari standar jaringan LTE, tetapi membatasi bandwidth menjadi satu pita sempit 200kHz. Atau dapat dibilang bahwa NB-IoT menumpang pada frekuensi jaringan GSM yang sudah ada. Ia menggunakan modulasi OFDM untuk komunikasi downlink dan SC-FDMA untuk komunikasi uplink. NB-IoT juga dapat beroperasi menggunakan pita 200 KHz yang tidak digunakan yang sebelumnya digunakan oleh GSM.</p>
+<ul>
+<li><img src="image51.png" alt="alt text"></li>
+</ul>
+<p>NB-IoT saat ini banyak dikembangkan oleh perusahaan telekomunikasi yang sebelumnya sudah membangun infrastruktur komunikasi GSM, LTE, dll. dengan menggunakan frekuensi berlisensi. Maka dari itu untuk dapat terhubung melalui jaringan NB-IoT kita harus membayar layanan tersebut menggunakan SIM Card layaknya penggunaan jaringan LTE pada ponsel.</p>
+<ul>
+<li><img src="image52.png" alt="alt text"> <img src="image54-1.png" alt="alt text"></li>
+</ul>
+<p>Contoh komponen NB-IoT yaitu modul SIM7000E, SIM7000C, dan SIM7020C </p>
+<p>Spesifikasi SIM7000E</p>
+<ul>
+<li><img src="image53.png" alt="alt text"></li>
+</ul>
+<h2 id="praktik-implementasi-lora">Praktik Implementasi LoRa</h2>
+<ol>
+<li><p>Buatlah dua buah perangkat IoT dengan masing-masing perangkat memiliki skema seperti gambar berikut </p>
+<ul>
+<li><img src="LoRa_ESP32_Wiring.webp" alt="alt text"></li>
+</ul>
+</li>
+<li><p>Tergantung dari frekuensi yang anda gunakan, untuk panjang antena harus disesuaikan dengan frekuensi yang digunakan agar sinyal LoRa dapat dipancarkan/dikirim secara optimal dengan ketentuan :</p>
+<ul>
+<li>915 MHz: 81,9 mm</li>
+<li>868 MHz: 86,3 mm</li>
+<li>915 MHz: 81,9 mm</li>
+</ul>
+</li>
+<li><p>Install library LoRa pada Arduino IDE seperti gambar berikut ini</p>
+<ul>
+<li><img src="install-lora-library.webp" alt="alt text"></li>
+</ul>
+</li>
+<li><p>Tuliskan dua buah kode program/sketch, yaitu sketch untuk sender, dan sketch untuk receiver. Berikut ini kodenya :</p>
+<p> <strong>sender.ino</strong></p>
+<pre><code class="lang-cpp">
+   <span class="hljs-meta">#<span class="hljs-meta-keyword">include</span> <span class="hljs-meta-string">&lt;SPI.h&gt;</span></span>
+   <span class="hljs-meta">#<span class="hljs-meta-keyword">include</span> <span class="hljs-meta-string">&lt;LoRa.h&gt;</span></span>
+
+   <span class="hljs-comment">//define the pins used by the transceiver module</span>
+   <span class="hljs-meta">#<span class="hljs-meta-keyword">define</span> ss 5</span>
+   <span class="hljs-meta">#<span class="hljs-meta-keyword">define</span> rst 14</span>
+   <span class="hljs-meta">#<span class="hljs-meta-keyword">define</span> dio0 2</span>
+
+   <span class="hljs-keyword">int</span> counter = <span class="hljs-number">0</span>;
+
+   <span class="hljs-function"><span class="hljs-keyword">void</span> <span class="hljs-title">setup</span><span class="hljs-params">()</span> </span>{
+     <span class="hljs-comment">//initialize Serial Monitor</span>
+     Serial.begin(<span class="hljs-number">115200</span>);
+     <span class="hljs-keyword">while</span> (!Serial);
+     Serial.println(<span class="hljs-string">&quot;LoRa Sender&quot;</span>);
+
+     <span class="hljs-comment">//setup LoRa transceiver module</span>
+     LoRa.setPins(ss, rst, dio0);
+
+     <span class="hljs-comment">//replace the LoRa.begin(---E-) argument with your location&apos;s frequency </span>
+     <span class="hljs-comment">//433E6 for Asia</span>
+     <span class="hljs-comment">//868E6 for Europe</span>
+     <span class="hljs-comment">//915E6 for North America</span>
+     <span class="hljs-keyword">while</span> (!LoRa.begin(<span class="hljs-number">868E6</span>)) {
+       Serial.println(<span class="hljs-string">&quot;.&quot;</span>);
+       delay(<span class="hljs-number">500</span>);
+     }
+     <span class="hljs-comment">// Change sync word (0xF3) to match the receiver</span>
+     <span class="hljs-comment">// The sync word assures you don&apos;t get LoRa messages from other LoRa transceivers</span>
+     <span class="hljs-comment">// ranges from 0-0xFF</span>
+     LoRa.setSyncWord(<span class="hljs-number">0xF3</span>);
+     Serial.println(<span class="hljs-string">&quot;LoRa Initializing OK!&quot;</span>);
+   }
+
+   <span class="hljs-function"><span class="hljs-keyword">void</span> <span class="hljs-title">loop</span><span class="hljs-params">()</span> </span>{
+     Serial.print(<span class="hljs-string">&quot;Sending packet: &quot;</span>);
+     Serial.println(counter);
+
+     <span class="hljs-comment">//Send LoRa packet to receiver</span>
+     LoRa.beginPacket();
+     LoRa.print(<span class="hljs-string">&quot;hello &quot;</span>);
+     LoRa.print(counter);
+     LoRa.endPacket();
+
+     counter++;
+
+     delay(<span class="hljs-number">10000</span>);
+   }
+</code></pre>
+<p> <strong>receiver.ino</strong></p>
+<pre><code class="lang-cpp">   <span class="hljs-meta">#<span class="hljs-meta-keyword">include</span> <span class="hljs-meta-string">&lt;SPI.h&gt;</span></span>
+   <span class="hljs-meta">#<span class="hljs-meta-keyword">include</span> <span class="hljs-meta-string">&lt;LoRa.h&gt;</span></span>
+
+   <span class="hljs-comment">//define the pins used by the transceiver module</span>
+   <span class="hljs-meta">#<span class="hljs-meta-keyword">define</span> ss 5</span>
+   <span class="hljs-meta">#<span class="hljs-meta-keyword">define</span> rst 14</span>
+   <span class="hljs-meta">#<span class="hljs-meta-keyword">define</span> dio0 2</span>
+
+   <span class="hljs-function"><span class="hljs-keyword">void</span> <span class="hljs-title">setup</span><span class="hljs-params">()</span> </span>{
+     <span class="hljs-comment">//initialize Serial Monitor</span>
+     Serial.begin(<span class="hljs-number">115200</span>);
+     <span class="hljs-keyword">while</span> (!Serial);
+     Serial.println(<span class="hljs-string">&quot;LoRa Receiver&quot;</span>);
+
+     <span class="hljs-comment">//setup LoRa transceiver module</span>
+     LoRa.setPins(ss, rst, dio0);
+
+     <span class="hljs-comment">//replace the LoRa.begin(---E-) argument with your location&apos;s frequency </span>
+     <span class="hljs-comment">//433E6 for Asia</span>
+     <span class="hljs-comment">//868E6 for Europe</span>
+     <span class="hljs-comment">//915E6 for North America</span>
+     <span class="hljs-keyword">while</span> (!LoRa.begin(<span class="hljs-number">868E6</span>)) {
+       Serial.println(<span class="hljs-string">&quot;.&quot;</span>);
+       delay(<span class="hljs-number">500</span>);
+     }
+     <span class="hljs-comment">// Change sync word (0xF3) to match the receiver</span>
+     <span class="hljs-comment">// The sync word assures you don&apos;t get LoRa messages from other LoRa transceivers</span>
+     <span class="hljs-comment">// ranges from 0-0xFF</span>
+     LoRa.setSyncWord(<span class="hljs-number">0xF3</span>);
+     Serial.println(<span class="hljs-string">&quot;LoRa Initializing OK!&quot;</span>);
+   }
+
+   <span class="hljs-function"><span class="hljs-keyword">void</span> <span class="hljs-title">loop</span><span class="hljs-params">()</span> </span>{
+     <span class="hljs-comment">// try to parse packet</span>
+     <span class="hljs-keyword">int</span> packetSize = LoRa.parsePacket();
+     <span class="hljs-keyword">if</span> (packetSize) {
+       <span class="hljs-comment">// received a packet</span>
+       Serial.print(<span class="hljs-string">&quot;Received packet &apos;&quot;</span>);
+
+       <span class="hljs-comment">// read packet</span>
+       <span class="hljs-keyword">while</span> (LoRa.available()) {
+         String LoRaData = LoRa.readString();
+         Serial.print(LoRaData); 
+       }
+
+       <span class="hljs-comment">// print RSSI of packet</span>
+       Serial.print(<span class="hljs-string">&quot;&apos; with RSSI &quot;</span>);
+       Serial.println(LoRa.packetRssi());
+     }
+   }
+</code></pre>
+</li>
+<li><p>Jalankan kedua buah perangkat IoT tersebut dan perhatikan data yang ditransmisikan melalui serial monitor pada Arduino IDE. Hasilnya kurang lebih seperti ditunjukkan oleh gambar berikut ini</p>
+<p> <strong>sender</strong></p>
+<ul>
+<li><p><img src="lora-sender-serial-monitor-Copy.webp" alt="alt text"></p>
+<p><strong>receiver</strong></p>
+</li>
+<li><img src="lora-receiverserial-monitor-esp32.webp" alt="alt text"></li>
+</ul>
+</li>
+</ol>
+<h2 id="tugas-kelompok">Tugas Kelompok</h2>
+<ol>
+<li>Cari lah jurnal yang memanfaatkan Lora dan NB-IOT Masing-masing 1 jurnal<ul>
+<li>Buat Rangkumannya dalam bentuk Slide Presentasi</li>
+<li>Jelaskan</li>
+</ul>
+</li>
+</ol>
+<h2 id="tugas-individu">Tugas Individu</h2>
+<ol>
+<li>Rancanglah suatu system IoT yang memanfaatkan Lora atau NB-IOT<ul>
+<li>Terdapat Tujuan sistem</li>
+<li>Sensor dan Aktuator yang digunakan</li>
+<li>Visualisasi Rancangan Sistem </li>
+<li>Perkiraan Biaya pembuatan Sistem</li>
+</ul>
+</li>
+<li>Buat dalam bentuk slide </li>
+</ol>
+
+                                
+                                </section>
+                            
+    </div>
+    <div class="search-results">
+        <div class="has-results">
+            
+            <h1 class="search-results-title"><span class='search-results-count'></span> hasil yang cocok "<span class='search-query'></span>"</h1>
+            <ul class="search-results-list"></ul>
+            
+        </div>
+        <div class="no-results">
+            
+            <h1 class="search-results-title">Tidak ada hasil yang cocok "<span class='search-query'></span>"</h1>
+            
+        </div>
+    </div>
+</div>
+
+                        </div>
+                    </div>
+                
+            </div>
+
+            
+                
+                <a href="../0n/Pertemuan_17.html" class="navigation navigation-prev " aria-label="Previous page: 14. Pengenalan Macam-Macam Platform IoT dan Koneksi W-LAN">
+                    <i class="fa fa-angle-left"></i>
+                </a>
+                
+                
+                <a href="../0p/Pertemuan_19.html" class="navigation navigation-next " aria-label="Next page: 16. Praktik Update Firmware OTA">
+                    <i class="fa fa-angle-right"></i>
+                </a>
+                
+            
+        
+    </div>
+
+    <script>
+        var gitbook = gitbook || [];
+        gitbook.push(function() {
+            gitbook.page.hasChanged({"page":{"title":"15. Pengenalan LPWAN, LoRa, dan NB-IoT","level":"1.17","depth":1,"next":{"title":"16. Praktik Update Firmware OTA","level":"1.18","depth":1,"path":"0p/Pertemuan_19.md","ref":"0p/Pertemuan_19.md","articles":[]},"previous":{"title":"14. Pengenalan Macam-Macam Platform IoT dan Koneksi W-LAN","level":"1.16","depth":1,"path":"0n/Pertemuan_17.md","ref":"0n/Pertemuan_17.md","articles":[]},"dir":"ltr"},"config":{"plugins":[],"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"pluginsConfig":{"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"theme":"default","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"language":"id","gitbook":"*"},"file":{"path":"0o/Pertemuan_18.md","mtime":"2024-08-09T00:42:51.200Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2024-08-09T00:43:46.776Z"},"basePath":"..","book":{"language":""}});
+        });
+    </script>
+</div>
+
+        
+    <script src="../gitbook/gitbook.js"></script>
+    <script src="../gitbook/theme.js"></script>
+    
+        
+        <script src="../gitbook/gitbook-plugin-search/search-engine.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-search/search.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-lunr/lunr.min.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-lunr/search-lunr.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-sharing/buttons.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-fontsettings/fontsettings.js"></script>
+        
+    
+
+    </body>
+</html>
+
