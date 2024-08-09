@@ -16,6 +16,7 @@
 - [12. Praktik Aktuator LED dan Relay](0l/0l.pertemuan14.md)
 - [13. Praktik Aktuator Buzzer dan Servo](0m/0m.pertemuan16.md)
 - [14. Pengenalan Macam-Macam Platform IoT dan Koneksi W-LAN](0n/Pertemuan_17.md)
+- [15. Pengenalan LPWAN, LoRa, dan NB-IoT](0o/Pertemuan_18.md)
 - [16. Praktik Update Firmware OTA](0p/Pertemuan_19.md)
 
 [comment]: <> (- [05. DHT11]&#40;03/03-dht11.md&#41;)
