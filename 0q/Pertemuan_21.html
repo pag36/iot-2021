@@ -4,7 +4,7 @@
     <head>
         <meta charset="UTF-8">
         <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
-        <title>03. Pengenalan Jenis-Jenis dan Cara Kerja Sensor · GitBook</title>
+        <title>17. Pengenalan Komunikasi Protokol HTTP · GitBook</title>
         <meta http-equiv="X-UA-Compatible" content="IE=edge" />
         <meta name="description" content="">
         <meta name="generator" content="GitBook 3.2.3">
@@ -57,10 +57,8 @@
     <link rel="shortcut icon" href="../gitbook/images/favicon.ico" type="image/x-icon">
 
     
-    <link rel="next" href="../0d/0d.pertemuan4.html" />
     
-    
-    <link rel="prev" href="../0b/0b.pertemuan2.html" />
+    <link rel="prev" href="../0p/Pertemuan_19.html" />
     
 
     </head>
@@ -141,9 +139,9 @@
             
         </li>
     
-        <li class="chapter active" data-level="1.5" data-path="0c.pertemuan3.html">
+        <li class="chapter " data-level="1.5" data-path="../0c/0c.pertemuan3.html">
             
-                <a href="0c.pertemuan3.html">
+                <a href="../0c/0c.pertemuan3.html">
             
                     
                     03. Pengenalan Jenis-Jenis dan Cara Kerja Sensor
@@ -323,9 +321,9 @@
             
         </li>
     
-        <li class="chapter " data-level="1.19" data-path="../0q/Pertemuan_21.html">
+        <li class="chapter active" data-level="1.19" data-path="Pertemuan_21.html">
             
-                <a href="../0q/Pertemuan_21.html">
+                <a href="Pertemuan_21.html">
             
                     
                     17. Pengenalan Komunikasi Protokol HTTP
@@ -366,7 +364,7 @@
     <!-- Title -->
     <h1>
         <i class="fa fa-circle-o-notch fa-spin"></i>
-        <a href=".." >03. Pengenalan Jenis-Jenis dan Cara Kerja Sensor</a>
+        <a href=".." >17. Pengenalan Komunikasi Protokol HTTP</a>
     </h1>
 </div>
 
@@ -381,120 +379,130 @@
     
                                 <section class="normal markdown-section">
                                 
-                                <h1 id="pertemuan-ke-3-pengenalan-jenis-jenis-dan-cara-kerja-sensor">Pertemuan ke 3: Pengenalan Jenis-Jenis dan Cara Kerja Sensor</h1>
+                                <h1 id="pertemuan-ke-21--komunikasi-protokol-http">Pertemuan ke 21 : Komunikasi Protokol HTTP</h1>
 <h2 id="topik-bahasan">Topik Bahasan</h2>
-<p>Pengenalan Elektronika Dasar(Pengantar IoT, Pengantar Elektronik, Pengenalan jenis-jenis &amp; Cara Kerja Sensor, Pengenalan
-jenis-jenis &amp; Cara Kerja Aktuator)</p>
+<p>Mempelajari tentang protokol HTTP dan pemanfaatannya didalam pengembangan proyek IoT</p>
 <h2 id="deskripsi">Deskripsi</h2>
+<h2 id="teori-singkat">Teori Singkat</h2>
+<p>Hypertext Transfer Protocol (HTTP) adalah sebuah protokol jaringan lapisan aplikasi yang digunakan untuk sistem informasi terdistribusi, kolaboratif, dan menggunakan hipermedia. HTTP adalah dasar dari World Wide Web (WWW) yang digunakan untuk memuat halaman web menggunakan tautan hypertext. Saat ini HTTP sudah banyak berkembang sehingga memiliki banyak kegunaan yaitu tidak hanya untuk mengambil dokumen hypertext, tetapi juga gambar dan video atau untuk mengirim konten ke server, misalnya hasil formulir HTML.</p>
+<p><img src="HTTP_logo.svg.png" alt="alt text"></p>
+<h2 id="sejarah-http">Sejarah HTTP</h2>
+<p>HTTP pertama kali digunakan sekitar tahun 1990. Pada saat itu, protokol HTTP yang berkembang adalah versi 0.9. Saat itu HTTP hanya bisa melakukan transfer data dengan data mentah yang dikirimkan dan tidak bisa melihat tipe dari dokumen itu sendiri. </p>
 <ul>
-<li>Memahami pengertian, peluang, revolusi industri 4.0, dan potensi IoT</li>
-<li>Memahami dan mampu menjelaskan rangkaian elektronika, alat ukur (Multimeter), alat-alat pendukung elektronika (
-Solder,Screw Driver, Pinset dll), dan K3 (Keselamatan dan Kesehatan Kerja).</li>
-<li>Memahami jenis-jenis dan cara kerja sensor seperti: ECG sensor, heart rate sensor, sensor temperatur, sensor
-kelembaban udara, ultrasonic sensor, sensor cahaya, sensor suara, sensor kelembaban tanah, pir sensor, sensor
-pendeteksi gas, dan sensor pendeteksi hujan.</li>
-<li>Pengenalan jenis-jenis &amp; Cara Kerja Aktuator</li>
+<li>Tahun 1996 - HTTP versi 1.0. Terdapat perubahan yang bertujuan untuk memfasilitasi tipe dokumen yang akan di kirim beserta dengan endkoding yang digunakan dalam pengiriman data dokumen tersebut.</li>
+<li>Tahun 1999 - HTTP versi 1.1 terdapat perubahan untuk memfasilitasi proxy, cache dan koneksi yang persisten.</li>
+<li>Tahun 2015 &#x2013; HTTP versi 2.0 diterbitkan yang mendukung keamanan dengan TLS (Transport Layer Security)</li>
+<li>Tahun 2018 &#x2013; HTTP versi 3.0 dengan menggunakan protokol UDP (User Datagram Protocol)</li>
 </ul>
-<h2 id="praktikum">Praktikum</h2>
-<p>Berikut adalah langkah-langkah untuk mendemonstrasikan penggunaan sensor ultrasonik dengan menggunakan Tinkercad,
-lengkap dengan tangkapan layar:</p>
-<h3 id="langkah-langkah">Langkah-langkah:</h3>
+<p><img src="image10.png" alt="alt text"></p>
+<h2 id="cara-kerja-http">Cara Kerja HTTP</h2>
+<p>HTTP membantu user dalam mengakses berbagai web resources seperti halaman website, dokumen, video, dll. pada web server. User menggunakan browser agar dapat mengakses berbagai macam resource di dalam web server dengan menggunakan URL. Protokol HTTP membantu koneksi yang membantu user untuk web server dengan URL tersebut.</p>
+<p><img src="image11.png" alt="alt text"></p>
+<p>Contoh penggunaan http adalah saat kita mengunjungi <a href="https://tsavsga.co.id/blog/monitoring-suhu-air-tambak-udang-berbasis-iot/" target="_blank">https://tsavsga.co.id/blog/monitoring-suhu-air-tambak-udang-berbasis-iot/</a>  </p>
+<p><img src="2024-08-10_213955.png" alt="alt text"></p>
+<p>Melalui URL tersebut, protokol HTTP bertugas untuk mengirimkan permintaan (request) dan memberikan respon (response) dari request URL yang diberikan. Contohnya seperti menghapus (deleted), memperbarui (update), atau mengganti (replace) file yang ada di dalam server.</p>
+<p><img src="image13.png" alt="alt text"></p>
+<h3 id="http-request">HTTP Request</h3>
+<p>HTTP request merupakan aktivitas dimana client meminta data kepada server melalui alamat URL tertentu. Biasanya proses request dilakukan oleh client melalui web browser seperti Chrome,  Firefox, Safari, dll. </p>
+<h3 id="http-response">HTTP Response</h3>
+<p>HTTP Response merupakan sebuah aktivitas dimana server memberikan jawaban terhadap request yang dikirim oleh client sebelumnya. Respon yang diberikan oleh server setelah mengirimkan data yang diinginkan adalah mengirimkan status line atau response header. Berikut ini adalah beberapa status header : </p>
+<ul>
+<li>1xx, artinya request dari client diterima server, dan dilanjutkan dengan memberikan tindakan selanjutnya dari client</li>
+<li>2xx, artinya server berhasil merespon permintaan client</li>
+<li>3xx, artinya adanya redirection (pengalihan permintaan client)</li>
+<li>4xx, artinya error pada client. Sehingga server tidak dapat membaca dan memproses permintaan client (kesalahan sintak HTML, atau sintak yang ditulis tidak full)</li>
+<li>5xx, artinya terdapat kesalahan internal, biasanya berasal dari kesalahan pada database server.</li>
+</ul>
+<h2 id="praktik-komunikasi-http">Praktik Komunikasi HTTP</h2>
+<h3 id="wokwi-dan-blynk">Wokwi dan Blynk</h3>
 <ol>
-<li><p><strong>Buka Tinkercad:</strong></p>
-</li>
-<li><p>Kunjungi <a href="https://www.tinkercad.com" target="_blank">Tinkercad</a> dan masuk dengan akun Anda.</p>
-</li>
-<li><p>Klik &quot;Circuits&quot; di dashboard dan pilih &quot;Create new Circuit.&quot;</p>
-</li>
-<li><p><strong>Tambahkan Komponen:</strong></p>
-</li>
-<li><p>Dari panel komponen di sebelah kanan, tambahkan komponen berikut ke kanvas:</p>
+<li>Buka kembali proyek aplikasi IoT yang telah dibuat di <a href="https://aioti.sinaungoding.com/0n/Pertemuan_17.html" target="_blank">Pertemuan 17</a>, baik yang di Blynk maupun di Wokwi</li>
+<li><p>Pada Templates yang telah anda buat pada materi sebelumnya, tambahkan Datastreams seperti ditunjukkan oleh gambar berikut ini</p>
 <ul>
-<li>Breadboard</li>
-<li>Arduino Uno R3</li>
-<li>Sensor Ultrasonik HC-SR04</li>
-<li>Resistor 220 ohm</li>
-<li>LED</li>
-<li>Jumper wires</li>
+<li><img src="2024-08-11_212845.png" alt="alt text"></li>
 </ul>
+</li>
+<li><p>Klik tombol <img src="2024-08-11_213235.png" alt="alt text"> untuk mengaktifkan mode Edit datastream (ubah/hapus/tambah) </p>
+</li>
+<li><p>Tambahkan dua buah datastream berupa <strong>virtual pin</strong> dengan melakukan klik pada tombol <img src="2024-08-11_213528.png" alt="alt text"> dengan masing-masing datastream memakai parameter seperti ditunjukkan oleh gambar</p>
+<ul>
+<li><img src="2024-08-11_213823.png" alt="alt text"></li>
+<li><img src="2024-08-11_213955.png" alt="alt text"></li>
+</ul>
+</li>
+<li><p>Edit tampilan dashboard pada Blynk dengan menambahkan dua buah gauge untuk menampilkan suhu dan kelembapan dari datastream yang tadi telah dibuat seperti terlihat pada gambar dibawah ini</p>
+<ul>
+<li><img src="2024-08-11_214221.png" alt="alt text"></li>
+</ul>
+</li>
+<li><p>Setelah semua tahap di Blynk selesai dikerjakan, selanjutnya buka kembali proyek IoT di Wokwi dan tambahkan skema rangkaian dengan sensor DHT22 seperti ditunjukkan oleh gambar berikut ini</p>
+<ul>
+<li><img src="2024-08-11_215420.png" alt="alt text"></li>
+</ul>
+</li>
+<li><p>Pada Wokwi, jangan lupa untuk menambahkan library DHTesp seperti ditunjukkan oleh gambar dibawah ini</p>
+<ul>
+<li><img src="2024-08-11_220653.png" alt="alt text"></li>
+</ul>
+</li>
+<li><p>Tuliskan kode program berikut ini ke Wokwi
+```cpp
+//ganti dengan template id Blynk anda</p>
+<h1 id="define-blynktemplateid-tmpl6bpryvnxn">define BLYNK_TEMPLATE_ID &quot;TMPL6bpRYvnXn&quot;</h1>
+<p>//ganti dengan template name Blynk anda</p>
+<h1 id="define-blynktemplatename-led-controller">define BLYNK_TEMPLATE_NAME &quot;Led Controller&quot;</h1>
+<p>//ganti dengan token Blynk anda</p>
+<h1 id="define-blynkauthtoken-l044itu2wi9vclexvx93ohsj1zsmxxx">define BLYNK_AUTH_TOKEN &quot;_l044ITu2wI9vCLexvx93oHsJ1zsmXXX&quot;</h1>
 </li>
 </ol>
-<p><img src="img.png" alt="img.png"></p>
-<ol>
-<li><p><strong>Rangkai Komponen:</strong></p>
-</li>
-<li><p><strong>Sensor Ultrasonik HC-SR04:</strong></p>
-<ul>
-<li>Hubungkan pin VCC sensor ke 5V pada Arduino.</li>
-<li>Hubungkan pin GND sensor ke GND pada Arduino.</li>
-<li>Hubungkan pin TRIG sensor ke pin digital 9 pada Arduino.</li>
-<li>Hubungkan pin ECHO sensor ke pin digital 10 pada Arduino.</li>
-</ul>
-</li>
-<li><p><strong>LED:</strong></p>
-<ul>
-<li>Hubungkan anoda LED (kaki panjang) ke salah satu pin digital (misalnya, pin 13) pada Arduino melalui resistor 220
-ohm.</li>
-<li>Hubungkan katoda LED (kaki pendek) ke GND pada breadboard.</li>
-</ul>
-</li>
-<li><p><strong>Menambahkan Kode Program:</strong></p>
-</li>
-<li><p>Klik pada Arduino Uno R3 dan pilih opsi &quot;Code.&quot;</p>
-</li>
-<li>Pilih bahasa pemrograman &quot;Blocks + Text&quot; untuk mempermudah pengkodean.</li>
-<li>Tambahkan kode berikut ke editor:</li>
-</ol>
-<pre><code class="lang-cpp"><span class="hljs-meta">#<span class="hljs-meta-keyword">define</span> trigPin 9</span>
-<span class="hljs-meta">#<span class="hljs-meta-keyword">define</span> echoPin 10</span>
-<span class="hljs-meta">#<span class="hljs-meta-keyword">define</span> ledPin 13</span>
-
-<span class="hljs-function"><span class="hljs-keyword">void</span> <span class="hljs-title">setup</span><span class="hljs-params">()</span> </span>{
-  pinMode(trigPin, OUTPUT);
-  pinMode(echoPin, INPUT);
-  pinMode(ledPin, OUTPUT);
-  Serial.begin(<span class="hljs-number">9600</span>);
+<h1 id="include-">include <wifi.h></wifi.h></h1>
+<h1 id="include-">include <blynksimpleesp32.h></blynksimpleesp32.h></h1>
+<h1 id="include-">include <dhtesp.h></dhtesp.h></h1>
+<h1 id="define-ledpin-23">define led_pin 23</h1>
+<h1 id="define-dhtpin-16">define dht_pin 16</h1>
+<p>DHTesp dht;
+BlynkTimer timer;</p>
+<p>float tem = 0.0f;
+float hum = 0.0f;
+char ssid[] = &quot;Wokwi-GUEST&quot;;
+char pass[] = &quot;&quot;;</p>
+<p>//fungsi ini untuk membaca data yang berasal dari blynk
+BLYNK_WRITE(V0){
+  int value = param.asInt();
+  digitalWrite(led_pin, value);
+  Serial.print(&quot;Data from blynk : &quot;);
+  Serial.println(value);
+}</p>
+<p>//fungsi yang dijalankan oleh timer-nya blynk
+void blynkTimer(){
+  tem = dht.getTemperature();
+  hum = dht.getHumidity();
+  Serial.print(&quot;Temperature = &quot;);
+  Serial.print(String(tem,2));
+  Serial.print(&quot;, Humidity = &quot;);
+  Serial.println(String(hum,2));
+  Blynk.virtualWrite(V1,tem);
+  Blynk.virtualWrite(V2,hum);
+}</p>
+<p>void setup(){
+  pinMode(led_pin, OUTPUT);
+  dht.setup(dht_pin, DHTesp::DHT22);</p>
+<p>  //connect ke server blynk
+  Blynk.begin(BLYNK_AUTH_TOKEN, ssid, pass);
+  //set timer blynk agar berjalan setiap 1000 ms
+  timer.setInterval(1000L,blynkTimer);</p>
+<p>  Serial.begin(115200);
+  Serial.println(&quot;System started ...&quot;);
+}</p>
+<p>void loop(){
+  Blynk.run();
+  timer.run();
 }
-
-<span class="hljs-function"><span class="hljs-keyword">void</span> <span class="hljs-title">loop</span><span class="hljs-params">()</span> </span>{
-  <span class="hljs-keyword">long</span> duration, distance;
-  digitalWrite(trigPin, LOW);
-  delayMicroseconds(<span class="hljs-number">2</span>);
-  digitalWrite(trigPin, HIGH);
-  delayMicroseconds(<span class="hljs-number">10</span>);
-  digitalWrite(trigPin, LOW);
-
-  duration = pulseIn(echoPin, HIGH);
-  distance = (duration / <span class="hljs-number">2</span>) / <span class="hljs-number">29.1</span>;
-
-  <span class="hljs-keyword">if</span> (distance &lt; <span class="hljs-number">20</span>) {
-    digitalWrite(ledPin, HIGH);
-  } <span class="hljs-keyword">else</span> {
-    digitalWrite(ledPin, LOW);
-  }
-
-  Serial.print(distance);
-  Serial.println(<span class="hljs-string">&quot; cm&quot;</span>);
-  delay(<span class="hljs-number">500</span>);
-}
-</code></pre>
+```</p>
 <ol>
-<li><p><strong>Menjalankan Simulasi:</strong></p>
-</li>
-<li><p>Klik tombol &quot;Start Simulation&quot; di Tinkercad.</p>
-</li>
-<li>Pada jendela serial monitor, Anda akan melihat jarak yang terukur oleh sensor ultrasonik.</li>
-<li>LED akan menyala jika objek berada dalam jarak kurang dari 20 cm dari sensor.</li>
+<li>Compile dan jalankan program di Wokwi. Kemudian, amati perubahan gauge di Blynk ketika anda merubah nilai temperature dan humidity di Wokwi.</li>
+<li>Selamat, anda telah dapat membuat aplikasi monitoring and controlling perangkat IoT menggunakan Blynk</li>
 </ol>
-<p><img src="img_1.png" alt="img_1.png"></p>
-<h3 id="tugas-praktikum">Tugas Praktikum</h3>
-<ol>
-<li>Silakan ubah jarak benda(objek warna hijau) menjadi &lt; 20 cm apa yang terjadi? Mengapa bisa demikian?</li>
-<li>Silakan disesuaikan jarak &gt; 30 cm dengan objek sehingga LED bisanya menyala!</li>
-</ol>
-<h2 id="tugas-mandiri">Tugas Mandiri</h2>
-<p>Dengan menggunakan tingkercad silakan mensimulasikan menggunakan sensor yang lain, misalkan LDR, DHT11, sensor motion,
-atau yang lain. Akan lebih baik menggabungkan dari sensor-sensor tersebut. :)</p>
 
                                 
                                 </section>
@@ -522,14 +530,10 @@ atau yang lain. Akan lebih baik menggabungkan dari sensor-sensor tersebut. :)</p
 
             
                 
-                <a href="../0b/0b.pertemuan2.html" class="navigation navigation-prev " aria-label="Previous page: 02. Pengantar Elektronik">
+                <a href="../0p/Pertemuan_19.html" class="navigation navigation-prev navigation-unique" aria-label="Previous page: 16. Praktik Update Firmware OTA">
                     <i class="fa fa-angle-left"></i>
                 </a>
                 
-                
-                <a href="../0d/0d.pertemuan4.html" class="navigation navigation-next " aria-label="Next page: 04. Pengenalan Jenis-Jenis dan Cara Kerja Aktuator">
-                    <i class="fa fa-angle-right"></i>
-                </a>
                 
             
         
@@ -538,7 +542,7 @@ atau yang lain. Akan lebih baik menggabungkan dari sensor-sensor tersebut. :)</p
     <script>
         var gitbook = gitbook || [];
         gitbook.push(function() {
-            gitbook.page.hasChanged({"page":{"title":"03. Pengenalan Jenis-Jenis dan Cara Kerja Sensor","level":"1.5","depth":1,"next":{"title":"04. Pengenalan Jenis-Jenis dan Cara Kerja Aktuator","level":"1.6","depth":1,"path":"0d/0d.pertemuan4.md","ref":"0d/0d.pertemuan4.md","articles":[]},"previous":{"title":"02. Pengantar Elektronik","level":"1.4","depth":1,"path":"0b/0b.pertemuan2.md","ref":"0b/0b.pertemuan2.md","articles":[]},"dir":"ltr"},"config":{"plugins":[],"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"pluginsConfig":{"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"theme":"default","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"language":"id","gitbook":"*"},"file":{"path":"0c/0c.pertemuan3.md","mtime":"2024-08-12T01:18:04.311Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2024-08-12T01:18:55.756Z"},"basePath":"..","book":{"language":""}});
+            gitbook.page.hasChanged({"page":{"title":"17. Pengenalan Komunikasi Protokol HTTP","level":"1.19","depth":1,"previous":{"title":"16. Praktik Update Firmware OTA","level":"1.18","depth":1,"path":"0p/Pertemuan_19.md","ref":"0p/Pertemuan_19.md","articles":[]},"dir":"ltr"},"config":{"plugins":[],"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"pluginsConfig":{"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"theme":"default","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"language":"id","gitbook":"*"},"file":{"path":"0q/Pertemuan_21.md","mtime":"2024-08-12T01:18:04.447Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2024-08-12T01:18:55.756Z"},"basePath":"..","book":{"language":""}});
         });
     </script>
 </div>
