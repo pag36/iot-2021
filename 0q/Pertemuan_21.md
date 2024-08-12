@@ -5,6 +5,11 @@
 Mempelajari tentang protokol HTTP dan pemanfaatannya didalam pengembangan proyek IoT
 
 ## Deskripsi
+- Mengetahui sejarah HTTP
+- Mengetahui karakteristik protokol HTTP
+- Mengetahui cara kerja protokol HTTP
+- Mampu mengimplementasikan protokol HTTP untuk membangun konektivitas antara perangkat IoT dengan Blynk
+- Mampu mempraktikkan cara mengambil/meng-update data di Blynk menggunakan Blynk HTTPS API
 
 ## Teori Singkat
 Hypertext Transfer Protocol (HTTP) adalah sebuah protokol jaringan lapisan aplikasi yang digunakan untuk sistem informasi terdistribusi, kolaboratif, dan menggunakan hipermedia. HTTP adalah dasar dari World Wide Web (WWW) yang digunakan untuk memuat halaman web menggunakan tautan hypertext. Saat ini HTTP sudah banyak berkembang sehingga memiliki banyak kegunaan yaitu tidak hanya untuk mengambil dokumen hypertext, tetapi juga gambar dan video atau untuk mengirim konten ke server, misalnya hasil formulir HTML.
