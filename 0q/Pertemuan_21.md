@@ -70,6 +70,7 @@ HTTP Response merupakan sebuah aktivitas dimana server memberikan jawaban terhad
     - ![alt text](2024-08-11_220653.png)
 
 8. Tuliskan kode program berikut ini ke Wokwi
+
 ```cpp
 //ganti dengan template id Blynk anda
 #define BLYNK_TEMPLATE_ID "TMPL6bpRYvnXn"
@@ -131,6 +132,7 @@ void loop(){
   timer.run();
 }
 ```
+
 9. Compile dan jalankan program di Wokwi. Kemudian, amati perubahan gauge di Blynk ketika anda merubah nilai temperature dan humidity di Wokwi.
 10. Selamat, anda telah dapat membuat aplikasi monitoring and controlling perangkat IoT menggunakan Blynk
 
