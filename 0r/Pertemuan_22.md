@@ -112,6 +112,7 @@ urlWeb3 = "https://GANTI_DENGAN_ALAMAT_SERVER_FIREBASE_ANDA/control_led"
 ssid = "Wokwi-GUEST"
 passwd = ""
 
+gc.enable()
 station = network.WLAN(network.STA_IF)
 while station.isconnected() == False:
     station.active(True)
