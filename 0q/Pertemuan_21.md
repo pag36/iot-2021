@@ -132,6 +132,81 @@ void loop(){
   timer.run();
 }
 ```
-   
+
 9. Compile dan jalankan program di Wokwi. Kemudian, amati perubahan gauge di Blynk ketika anda merubah nilai temperature dan humidity di Wokwi.
 10. Selamat, anda telah dapat membuat aplikasi monitoring and controlling perangkat IoT menggunakan Blynk
+
+### Operasi Read dan Update Data di Blynk Menggunakan HTTPS API
+Blynk menyediakan HTTPS API agar platform lain (misal, aplikasi mobile, desktop, web) dapat memanfaatkan data yang tersedia di Blynk untuk kebutuhan lain yang dapat mendukung fungsionalitas dari perangkat IoT yang telah dikembangkan. Contoh penggunaan API yang dimiliki Blynk sebagai berikut :
+1. Mengambil nilai dari datastream tertentu
+
+    Syntax
+
+    ```
+    https://{server_address}/external/api/get?token={token}&{pin}
+    ```
+
+    Contoh penggunaan 
+    
+    ```
+    https://blynk.cloud/external/api/get?token=_l044ITu2wI9vCLexvx93oHsJ1zsms1p&V1
+    ```
+
+    Hasil
+    
+    ![alt text](<Screenshot 2024-08-12 201541.png>)
+
+2. Mengambil nilai dari beberapa datastream 
+
+    Syntax
+    
+    ```
+    https://{server_address}/external/api/get?token={token}&{pin}&{pinX}
+    ```
+
+    Contoh penggunaan
+
+    ```
+    https://blynk.cloud/external/api/get?token=_l044ITu2wI9vCLexvx93oHsJ1zsms1p&V1&V2
+    ```
+
+    Hasil
+
+    ![alt text](<Screenshot 2024-08-12 202038.png>)
+
+3. Meng-update beberapa nilai datastream secara bersamaan
+
+    Syntax
+    
+    ```
+    https://{server_address}/external/api/batch/update?token={token}&{pin1}={value1}&{pin2}={value2}
+    ```
+
+    Contoh penggunaan
+
+    ```
+    https://blynk.cloud/external/api/batch/update?token=_l044ITu2wI9vCLexvx93oHsJ1zsms1p&V1=50&V2=75
+    ```
+
+    Hasil
+
+    ![alt text](<Screenshot 2024-08-12 202616.png>)
+
+## Tugas Kelompok
+1. Modifikasilah perangkat IoT/proyek IoT kelompok kalian yang ada di Wokwi agar terhubung ke Blynk dengan menambahkan fungsionalitas monitoring dan controlling.
+
+2. Demokan juga, cara manipulasi nilai yang ditampilkan di dashboard blynk dengan menggunakan HTTPS API 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
