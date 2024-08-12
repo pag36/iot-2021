@@ -512,6 +512,41 @@ BLYNK_WRITE(V0){
 <li>Compile dan jalankan program di Wokwi. Kemudian, amati perubahan gauge di Blynk ketika anda merubah nilai temperature dan humidity di Wokwi.</li>
 <li>Selamat, anda telah dapat membuat aplikasi monitoring and controlling perangkat IoT menggunakan Blynk</li>
 </ol>
+<h3 id="operasi-read-dan-update-data-di-blynk-menggunakan-https-api">Operasi Read dan Update Data di Blynk Menggunakan HTTPS API</h3>
+<p>Blynk menyediakan HTTPS API agar platform lain (misal, aplikasi mobile, desktop, web) dapat memanfaatkan data yang tersedia di Blynk untuk kebutuhan lain yang dapat mendukung fungsionalitas dari perangkat IoT yang telah dikembangkan. Contoh penggunaan API yang dimiliki Blynk sebagai berikut :</p>
+<ol>
+<li><p>Mengambil nilai dari datastream tertentu</p>
+<p> Syntax</p>
+<pre><code> https://{server_address}/external/api/get?token={token}&amp;{pin}
+</code></pre><p> Contoh penggunaan </p>
+<pre><code> https://blynk.cloud/external/api/get?token=_l044ITu2wI9vCLexvx93oHsJ1zsms1p&amp;V1
+</code></pre><p> Hasil</p>
+<p> <img src="Screenshot 2024-08-12 201541.png" alt="alt text"></p>
+</li>
+<li><p>Mengambil nilai dari beberapa datastream </p>
+<p> Syntax</p>
+<pre><code> https://{server_address}/external/api/get?token={token}&amp;{pin}&amp;{pinX}
+</code></pre><p> Contoh penggunaan</p>
+<pre><code> https://blynk.cloud/external/api/get?token=_l044ITu2wI9vCLexvx93oHsJ1zsms1p&amp;V1&amp;V2
+</code></pre><p> Hasil</p>
+<p> <img src="Screenshot 2024-08-12 202038.png" alt="alt text"></p>
+</li>
+<li><p>Meng-update beberapa nilai datastream secara bersamaan</p>
+<p> Syntax</p>
+<pre><code> https://{server_address}/external/api/batch/update?token={token}&amp;{pin1}={value1}&amp;{pin2}={value2}
+</code></pre><p> Contoh penggunaan</p>
+<pre><code> https://blynk.cloud/external/api/batch/update?token=_l044ITu2wI9vCLexvx93oHsJ1zsms1p&amp;V1=50&amp;V2=75
+</code></pre><p> Hasil</p>
+<p> <img src="Screenshot 2024-08-12 202616.png" alt="alt text"></p>
+</li>
+</ol>
+<h2 id="tugas-kelompok">Tugas Kelompok</h2>
+<ol>
+<li><p>Modifikasilah perangkat IoT/proyek IoT kelompok kalian yang ada di Wokwi agar terhubung ke Blynk dengan menambahkan fungsionalitas monitoring dan controlling.</p>
+</li>
+<li><p>Demokan juga, cara manipulasi nilai yang ditampilkan di dashboard blynk dengan menggunakan HTTPS API </p>
+</li>
+</ol>
 
                                 
                                 </section>
@@ -551,7 +586,7 @@ BLYNK_WRITE(V0){
     <script>
         var gitbook = gitbook || [];
         gitbook.push(function() {
-            gitbook.page.hasChanged({"page":{"title":"17. Pengenalan Komunikasi Protokol HTTP","level":"1.19","depth":1,"previous":{"title":"16. Praktik Update Firmware OTA","level":"1.18","depth":1,"path":"0p/Pertemuan_19.md","ref":"0p/Pertemuan_19.md","articles":[]},"dir":"ltr"},"config":{"plugins":[],"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"pluginsConfig":{"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"theme":"default","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"language":"id","gitbook":"*"},"file":{"path":"0q/Pertemuan_21.md","mtime":"2024-08-12T12:45:17.564Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2024-08-12T12:46:06.033Z"},"basePath":"..","book":{"language":""}});
+            gitbook.page.hasChanged({"page":{"title":"17. Pengenalan Komunikasi Protokol HTTP","level":"1.19","depth":1,"previous":{"title":"16. Praktik Update Firmware OTA","level":"1.18","depth":1,"path":"0p/Pertemuan_19.md","ref":"0p/Pertemuan_19.md","articles":[]},"dir":"ltr"},"config":{"plugins":[],"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"pluginsConfig":{"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"theme":"default","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"language":"id","gitbook":"*"},"file":{"path":"0q/Pertemuan_21.md","mtime":"2024-08-12T13:33:00.353Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2024-08-12T13:33:53.150Z"},"basePath":"..","book":{"language":""}});
         });
     </script>
 </div>
