@@ -445,60 +445,69 @@
 <li><img src="2024-08-11_220653.png" alt="alt text"></li>
 </ul>
 </li>
-<li><p>Tuliskan kode program berikut ini ke Wokwi
-```cpp
-//ganti dengan template id Blynk anda</p>
-<h1 id="define-blynktemplateid-tmpl6bpryvnxn">define BLYNK_TEMPLATE_ID &quot;TMPL6bpRYvnXn&quot;</h1>
-<p>//ganti dengan template name Blynk anda</p>
-<h1 id="define-blynktemplatename-led-controller">define BLYNK_TEMPLATE_NAME &quot;Led Controller&quot;</h1>
-<p>//ganti dengan token Blynk anda</p>
-<h1 id="define-blynkauthtoken-l044itu2wi9vclexvx93ohsj1zsmxxx">define BLYNK_AUTH_TOKEN &quot;_l044ITu2wI9vCLexvx93oHsJ1zsmXXX&quot;</h1>
+<li><p>Tuliskan kode program berikut ini ke Wokwi</p>
 </li>
 </ol>
-<h1 id="include-">include <wifi.h></wifi.h></h1>
-<h1 id="include-">include <blynksimpleesp32.h></blynksimpleesp32.h></h1>
-<h1 id="include-">include <dhtesp.h></dhtesp.h></h1>
-<h1 id="define-ledpin-23">define led_pin 23</h1>
-<h1 id="define-dhtpin-16">define dht_pin 16</h1>
-<p>DHTesp dht;
-BlynkTimer timer;</p>
-<p>float tem = 0.0f;
-float hum = 0.0f;
-char ssid[] = &quot;Wokwi-GUEST&quot;;
-char pass[] = &quot;&quot;;</p>
-<p>//fungsi ini untuk membaca data yang berasal dari blynk
+<pre><code class="lang-cpp"><span class="hljs-comment">//ganti dengan template id Blynk anda</span>
+<span class="hljs-meta">#<span class="hljs-meta-keyword">define</span> BLYNK_TEMPLATE_ID <span class="hljs-string">&quot;TMPL6bpRYvnXn&quot;</span></span>
+<span class="hljs-comment">//ganti dengan template name Blynk anda</span>
+<span class="hljs-meta">#<span class="hljs-meta-keyword">define</span> BLYNK_TEMPLATE_NAME <span class="hljs-string">&quot;Led Controller&quot;</span></span>
+<span class="hljs-comment">//ganti dengan token Blynk anda</span>
+<span class="hljs-meta">#<span class="hljs-meta-keyword">define</span> BLYNK_AUTH_TOKEN <span class="hljs-string">&quot;_l044ITu2wI9vCLexvx93oHsJ1zsmXXX&quot;</span></span>
+
+<span class="hljs-meta">#<span class="hljs-meta-keyword">include</span> <span class="hljs-meta-string">&lt;WiFi.h&gt;</span></span>
+<span class="hljs-meta">#<span class="hljs-meta-keyword">include</span> <span class="hljs-meta-string">&lt;BlynkSimpleEsp32.h&gt;</span></span>
+<span class="hljs-meta">#<span class="hljs-meta-keyword">include</span> <span class="hljs-meta-string">&lt;DHTesp.h&gt;</span></span>
+
+<span class="hljs-meta">#<span class="hljs-meta-keyword">define</span> led_pin 23</span>
+<span class="hljs-meta">#<span class="hljs-meta-keyword">define</span> dht_pin 16</span>
+
+DHTesp dht;
+BlynkTimer timer;
+
+<span class="hljs-keyword">float</span> tem = <span class="hljs-number">0.0f</span>;
+<span class="hljs-keyword">float</span> hum = <span class="hljs-number">0.0f</span>;
+<span class="hljs-keyword">char</span> ssid[] = <span class="hljs-string">&quot;Wokwi-GUEST&quot;</span>;
+<span class="hljs-keyword">char</span> pass[] = <span class="hljs-string">&quot;&quot;</span>;
+
+<span class="hljs-comment">//fungsi ini untuk membaca data yang berasal dari blynk</span>
 BLYNK_WRITE(V0){
-  int value = param.asInt();
+  <span class="hljs-keyword">int</span> value = param.asInt();
   digitalWrite(led_pin, value);
-  Serial.print(&quot;Data from blynk : &quot;);
+  Serial.print(<span class="hljs-string">&quot;Data from blynk : &quot;</span>);
   Serial.println(value);
-}</p>
-<p>//fungsi yang dijalankan oleh timer-nya blynk
-void blynkTimer(){
+}
+
+<span class="hljs-comment">//fungsi yang dijalankan oleh timer-nya blynk</span>
+<span class="hljs-function"><span class="hljs-keyword">void</span> <span class="hljs-title">blynkTimer</span><span class="hljs-params">()</span></span>{
   tem = dht.getTemperature();
   hum = dht.getHumidity();
-  Serial.print(&quot;Temperature = &quot;);
-  Serial.print(String(tem,2));
-  Serial.print(&quot;, Humidity = &quot;);
-  Serial.println(String(hum,2));
+  Serial.print(<span class="hljs-string">&quot;Temperature = &quot;</span>);
+  Serial.print(String(tem,<span class="hljs-number">2</span>));
+  Serial.print(<span class="hljs-string">&quot;, Humidity = &quot;</span>);
+  Serial.println(String(hum,<span class="hljs-number">2</span>));
   Blynk.virtualWrite(V1,tem);
   Blynk.virtualWrite(V2,hum);
-}</p>
-<p>void setup(){
+}
+
+<span class="hljs-function"><span class="hljs-keyword">void</span> <span class="hljs-title">setup</span><span class="hljs-params">()</span></span>{
   pinMode(led_pin, OUTPUT);
-  dht.setup(dht_pin, DHTesp::DHT22);</p>
-<p>  //connect ke server blynk
+  dht.setup(dht_pin, DHTesp::DHT22);
+
+  <span class="hljs-comment">//connect ke server blynk</span>
   Blynk.begin(BLYNK_AUTH_TOKEN, ssid, pass);
-  //set timer blynk agar berjalan setiap 1000 ms
-  timer.setInterval(1000L,blynkTimer);</p>
-<p>  Serial.begin(115200);
-  Serial.println(&quot;System started ...&quot;);
-}</p>
-<p>void loop(){
+  <span class="hljs-comment">//set timer blynk agar berjalan setiap 1000 ms</span>
+  timer.setInterval(<span class="hljs-number">1000L</span>,blynkTimer);
+
+  Serial.begin(<span class="hljs-number">115200</span>);
+  Serial.println(<span class="hljs-string">&quot;System started ...&quot;</span>);
+}
+
+<span class="hljs-function"><span class="hljs-keyword">void</span> <span class="hljs-title">loop</span><span class="hljs-params">()</span></span>{
   Blynk.run();
   timer.run();
 }
-```</p>
+</code></pre>
 <ol>
 <li>Compile dan jalankan program di Wokwi. Kemudian, amati perubahan gauge di Blynk ketika anda merubah nilai temperature dan humidity di Wokwi.</li>
 <li>Selamat, anda telah dapat membuat aplikasi monitoring and controlling perangkat IoT menggunakan Blynk</li>
@@ -542,7 +551,7 @@ void blynkTimer(){
     <script>
         var gitbook = gitbook || [];
         gitbook.push(function() {
-            gitbook.page.hasChanged({"page":{"title":"17. Pengenalan Komunikasi Protokol HTTP","level":"1.19","depth":1,"previous":{"title":"16. Praktik Update Firmware OTA","level":"1.18","depth":1,"path":"0p/Pertemuan_19.md","ref":"0p/Pertemuan_19.md","articles":[]},"dir":"ltr"},"config":{"plugins":[],"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"pluginsConfig":{"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"theme":"default","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"language":"id","gitbook":"*"},"file":{"path":"0q/Pertemuan_21.md","mtime":"2024-08-12T01:18:04.447Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2024-08-12T01:18:55.756Z"},"basePath":"..","book":{"language":""}});
+            gitbook.page.hasChanged({"page":{"title":"17. Pengenalan Komunikasi Protokol HTTP","level":"1.19","depth":1,"previous":{"title":"16. Praktik Update Firmware OTA","level":"1.18","depth":1,"path":"0p/Pertemuan_19.md","ref":"0p/Pertemuan_19.md","articles":[]},"dir":"ltr"},"config":{"plugins":[],"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"pluginsConfig":{"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"theme":"default","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"language":"id","gitbook":"*"},"file":{"path":"0q/Pertemuan_21.md","mtime":"2024-08-12T12:37:29.746Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2024-08-12T12:38:23.166Z"},"basePath":"..","book":{"language":""}});
         });
     </script>
 </div>
