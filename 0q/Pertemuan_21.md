@@ -132,7 +132,6 @@ void loop(){
   timer.run();
 }
 ```
-
+   
 9. Compile dan jalankan program di Wokwi. Kemudian, amati perubahan gauge di Blynk ketika anda merubah nilai temperature dan humidity di Wokwi.
 10. Selamat, anda telah dapat membuat aplikasi monitoring and controlling perangkat IoT menggunakan Blynk
-
