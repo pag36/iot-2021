@@ -1,0 +1,637 @@
+
+<!DOCTYPE HTML>
+<html lang="id" >
+    <head>
+        <meta charset="UTF-8">
+        <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+        <title>18. Pengenalan dan Praktik REST API · GitBook</title>
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="description" content="">
+        <meta name="generator" content="GitBook 3.2.3">
+        
+        
+        
+    
+    <link rel="stylesheet" href="../gitbook/style.css">
+
+    
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-highlight/website.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-search/search.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-fontsettings/website.css">
+                
+            
+        
+
+    
+
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+
+        
+    
+    
+    <meta name="HandheldFriendly" content="true"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <link rel="apple-touch-icon-precomposed" sizes="152x152" href="../gitbook/images/apple-touch-icon-precomposed-152.png">
+    <link rel="shortcut icon" href="../gitbook/images/favicon.ico" type="image/x-icon">
+
+    
+    
+    <link rel="prev" href="../0q/Pertemuan_21.html" />
+    
+
+    </head>
+    <body>
+        
+<div class="book">
+    <div class="book-summary">
+        
+            
+<div id="book-search-input" role="search">
+    <input type="text" placeholder="Ketik untuk mencari" />
+</div>
+
+            
+                <nav role="navigation">
+                
+
+
+<ul class="summary">
+    
+    
+
+    
+
+    
+        
+        
+    
+        <li class="chapter " data-level="1.1" data-path="../">
+            
+                <a href="../">
+            
+                    
+                    Pendahuluan
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2" data-path="../00/kontrak.html">
+            
+                <a href="../00/kontrak.html">
+            
+                    
+                    Kontrak Kuliah
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3" data-path="../0a/0a.pertemuan1.html">
+            
+                <a href="../0a/0a.pertemuan1.html">
+            
+                    
+                    01. Memahami Konsep dan arsitektur IoT
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4" data-path="../0b/0b.pertemuan2.html">
+            
+                <a href="../0b/0b.pertemuan2.html">
+            
+                    
+                    02. Pengantar Elektronik
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5" data-path="../0c/0c.pertemuan3.html">
+            
+                <a href="../0c/0c.pertemuan3.html">
+            
+                    
+                    03. Pengenalan Jenis-Jenis dan Cara Kerja Sensor
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6" data-path="../0d/0d.pertemuan4.html">
+            
+                <a href="../0d/0d.pertemuan4.html">
+            
+                    
+                    04. Pengenalan Jenis-Jenis dan Cara Kerja Aktuator
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.7" data-path="../0e/0e.pertemuan6.html">
+            
+                <a href="../0e/0e.pertemuan6.html">
+            
+                    
+                    05. Jenis Elektronik Development Board
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.8" data-path="../0f/0f.pertemuan7.html">
+            
+                <a href="../0f/0f.pertemuan7.html">
+            
+                    
+                    06. Jenis Komunikasi Data
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.9" data-path="../0g/0f.pertemuan8.html">
+            
+                <a href="../0g/0f.pertemuan8.html">
+            
+                    
+                    07. Pengenalan Teknologi Smart Card
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.10" data-path="../0h/0h.pertemuan9.html">
+            
+                <a href="../0h/0h.pertemuan9.html">
+            
+                    
+                    08. Praktik Dasar Elektronika
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.11" data-path="../0i/0i.pertemuan11.html">
+            
+                <a href="../0i/0i.pertemuan11.html">
+            
+                    
+                    09. Praktik Pemrograman Microcontroller
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.12" data-path="../0j/0j.pertemuan12.html">
+            
+                <a href="../0j/0j.pertemuan12.html">
+            
+                    
+                    10. Praktik Sensor DHT11, LCD, dan RTC
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.13" data-path="../0k/0k.pertemuan13.html">
+            
+                <a href="../0k/0k.pertemuan13.html">
+            
+                    
+                    11. Praktik Sensor Ultrasonic PIR LDR
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.14" data-path="../0l/0l.pertemuan14.html">
+            
+                <a href="../0l/0l.pertemuan14.html">
+            
+                    
+                    12. Praktik Aktuator LED dan Relay
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.15" data-path="../0m/0m.pertemuan16.html">
+            
+                <a href="../0m/0m.pertemuan16.html">
+            
+                    
+                    13. Praktik Aktuator Buzzer dan Servo
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.16" data-path="../0n/Pertemuan_17.html">
+            
+                <a href="../0n/Pertemuan_17.html">
+            
+                    
+                    14. Pengenalan Macam-Macam Platform IoT dan Koneksi W-LAN
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.17" data-path="../0o/Pertemuan_18.html">
+            
+                <a href="../0o/Pertemuan_18.html">
+            
+                    
+                    15. Pengenalan LPWAN, LoRa, dan NB-IoT
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.18" data-path="../0p/Pertemuan_19.html">
+            
+                <a href="../0p/Pertemuan_19.html">
+            
+                    
+                    16. Praktik Update Firmware OTA
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.19" data-path="../0q/Pertemuan_21.html">
+            
+                <a href="../0q/Pertemuan_21.html">
+            
+                    
+                    17. Pengenalan Komunikasi Protokol HTTP
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter active" data-level="1.20" data-path="Pertemuan_22.html">
+            
+                <a href="Pertemuan_22.html">
+            
+                    
+                    18. Pengenalan dan Praktik REST API
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+    
+
+    <li class="divider"></li>
+
+    <li>
+        <a href="https://www.gitbook.com" target="blank" class="gitbook-link">
+            Dipublikasikan dengan GitBook
+        </a>
+    </li>
+</ul>
+
+
+                </nav>
+            
+        
+    </div>
+
+    <div class="book-body">
+        
+            <div class="body-inner">
+                
+                    
+
+<div class="book-header" role="navigation">
+    
+
+    <!-- Title -->
+    <h1>
+        <i class="fa fa-circle-o-notch fa-spin"></i>
+        <a href=".." >18. Pengenalan dan Praktik REST API</a>
+    </h1>
+</div>
+
+
+
+
+                    <div class="page-wrapper" tabindex="-1" role="main">
+                        <div class="page-inner">
+                            
+<div id="book-search-results">
+    <div class="search-noresults">
+    
+                                <section class="normal markdown-section">
+                                
+                                <h1 id="pertemuan-ke-22--pengenalan-dan-praktik-rest-api">Pertemuan ke 22 : Pengenalan dan Praktik REST API</h1>
+<h2 id="topik-bahasan">Topik Bahasan</h2>
+<p>Mengenal REST API sebagai sebuah antarmuka pemrograman aplikasi yang memungkinkan komunikasi dan pertukaran data antara berbagai perangkat lunak atau sistem melalui protokol HTPP</p>
+<h2 id="deskripsi">Deskripsi</h2>
+<ul>
+<li>Memahami landasan teori REST API</li>
+<li>Mampu menjelaskan macam-macam verbs yang digunakan dalam REST API</li>
+<li>Mampu menggunakan HTTP verbs didalam REST API untuk keperluan untuk mengambil dan mengirim data. </li>
+<li>Mampu menjelaskan mengenai HTTP response code dari REST API</li>
+<li>Mampu mengimplementasikan REST API dalam komunikasi data antara perangkat IoT dengan web service / REST API pada Firebase</li>
+</ul>
+<h2 id="teori-singkat">Teori Singkat</h2>
+<h3 id="api">API</h3>
+<p>API (Application Programming Interface) yaitu sebuah software yang memungkinkan para developer untuk mengintegrasikan dan mengizinkan dua aplikasi yang berbeda secara bersamaan untuk saling terhubung satu sama lain dan bertukar data. Penggunaan API bertujuan untuk saling berbagi data antar aplikasi yang berbeda, mempercepat proses pengembangan aplikasi dengan cara menyediakan sebuah function yang terpisah.</p>
+<p><img src="image1.png" alt="alt text"></p>
+<p><strong>Cara Kerja API</strong>
+API secara eksplisit memanfaatkan metodologi HTTP yang ditentukan oleh protokol RFC 2616. Permintaan ke API bisa menggunakan method GET untuk mengambil sumber daya, PUT untuk mengubah status atau memperbarui sumber daya, yang dapat berupa objek, file, atau blok, POST untuk membuat sumber daya itu, dan DELETE untuk menghapusnya.</p>
+<p><img src="image2.png" alt="alt text"></p>
+<h3 id="rest-api">REST API</h3>
+<p>REST API (Representational State Transfer Application Programming Interface) adalah sebuah antarmuka pemrograman aplikasi yang memungkinkan komunikasi dan pertukaran data antara berbagai perangkat lunak atau sistem melalui protokol HTTP. </p>
+<p>REST API mengikuti prinsip-prinsip desain arsitektur REST, yang membuatnya fleksibel dan ringan untuk mengintegrasikan aplikasi dan menghubungkan komponen dalam arsitektur layanan mikro.</p>
+<p>REST API sering digunakan dalam pengembangan aplikasi berbasis web karena kemampuannya untuk menangani berbagai jenis permintaan HTTP seperti GET, POST, PUT, dan DELETE. Ini memungkinkan aplikasi untuk berinteraksi dengan server dan mengakses, mengambil, serta menggunakan data secara efisien.</p>
+<p><img src="image3.png" alt="alt text"></p>
+<p><strong>Komponen dalam REST API</strong>
+Rest API memilki komponen penting untuk dapat bekerja yaitu:</p>
+<ol>
+<li><p><strong>URL Design</strong></p>
+<p>   RESTful API diakses menggunakan protokol HTTP. Penamaan dan struktur URL yang konsisten akan menghasilkan API yang baik dan mudah untuk dimengerti developer. URL API biasa disebut endpoint dalam pemanggilannya.</p>
+<p>   <img src="image4.png" alt="alt text"></p>
+</li>
+<li><p><strong>HTTP Verbs</strong></p>
+<p> Setiap request yang dilakukan terdapat metode yang dipakai agar server mengerti apa yang sedang di request client:</p>
+<ul>
+<li><strong>GET</strong> adalah metode HTTP Request yang paling mudah, metode ini digunakan untuk membaca atau mendapatkan data dari sumber.</li>
+<li><strong>POST</strong> adalah metode HTTP Request yang digunakan untuk membuat data baru dengan menyisipkan data dalam body saat request dilakukan</li>
+<li><strong>PUT</strong> adalah metode HTTP Request yang biasanya digunakan untuk melakukan update data resource.</li>
+<li><strong>DELETE</strong> adalah metode HTTP Request yang digunakan untuk menghapus suatu data pada resource.</li>
+<li><strong>PATCH</strong> dalam HTTP verbs digunakan untuk melakukan modifikasi parsial pada sumber daya yang ada di server. Berbeda dengan metode PUT yang menggantikan seluruh sumber daya dengan data baru, PATCH hanya mengirimkan perubahan yang ingin dilakukan, bukan seluruh data sumber daya</li>
+</ul>
+</li>
+<li><p><strong>HTTP Response Code</strong></p>
+<p> HTTP Response Code adalah kode standarisasi dalam menginformasikan hasil request kepada client. Secara umum terdapat 5 kelompok yang biasa kita jumpai pada RESTful API yaitu :</p>
+<ul>
+<li><strong>1xx,</strong> artinya request dari client diterima server, dan dilanjutkan dengan memberikan tindakan selanjutnya dari client</li>
+<li><strong>2xx,</strong> artinya server berhasil merespon permintaan client</li>
+<li><strong>3xx,</strong> artinya adanya redirection (pengalihan permintaan client)</li>
+<li><strong>4xx,</strong> artinya error pada client. Sehingga server tidak dapat membaca dan memproses permintaan client (kesalahan sintak HTML, atau sintak yang ditulis tidak full)</li>
+<li><p><strong>5xx,</strong> artinya terdapat kesalahan internal, biasanya berasal dari kesalahan pada database server.</p>
+<p><img src="image5.png" alt="alt text"></p>
+</li>
+</ul>
+</li>
+<li><p><strong>Format Response</strong></p>
+<p> Setiap request yang dilakukan client akan menerima data response dari server, response tersebut biasanya berupa data XML (Extensible Markup Language) ataupun JSON (JavaScript Object Notation). Setelah mendapatkan data response tersebut barulah client bisa menggunakannya dengan cara memparsing data tersebut dan diolah sesuai kebutuhan.</p>
+<p> <img src="image6.png" alt="alt text"></p>
+</li>
+</ol>
+<h2 id="praktik-rest-api-menggunakan-firebase-realtime-database">Praktik REST API Menggunakan Firebase Realtime Database</h2>
+<h3 id="mendaftar-dan-konfigurasi-firebase">Mendaftar dan Konfigurasi Firebase</h3>
+<ol>
+<li>Buka halaman web Firebase di <a href="https://firebase.google.com" target="_blank">https://firebase.google.com</a>. Apabila anda belum memiliki account Firebase daftarlah terlebih dulu menggunakan account Google anda.</li>
+<li><p>Didalam halaman console firebase <a href="https://console.firebase.google.com" target="_blank">https://console.firebase.google.com</a>, buatlah sebuah proyek baru di firebase dengan nama <strong>IoT TSA VSGA</strong> dengan langkah-langkah seperti ditunjukkan oleh gambar dibawah ini. Tunggu hingga proses pembuatan proyek selesai.</p>
+<p> <img src="2024-08-12_215630.png" alt="alt text"></p>
+</li>
+<li><p>Pada halaman dashboard console Firebase buatlah Firebase Realtime Database dengan mengikuti langkah-langkah seperti di gambar</p>
+<p> <img src="2024-08-12_220939.png" alt="alt text"></p>
+</li>
+<li><p>Tambahkan sebuah node baru pada root dengan nama node <strong>control_led</strong> dengan child bernama <strong>led</strong> dengan nilai <strong>off</strong> seperti gambar dibawah ini</p>
+<p> <img src="2024-08-12_230919.png" alt="alt text"></p>
+</li>
+</ol>
+<h3 id="mempersiapkan-perangkat-iot">Mempersiapkan Perangkat IoT</h3>
+<ol>
+<li><p>Buatlah sebuah proyek baru di Wokwi menggunakan ESP32 dan bahasa pemrograman Micropython seperti ditunjukkan oleh gambar dibawah ini</p>
+<p> <img src="2024-08-12_235606.png" alt="alt text"></p>
+</li>
+<li><p>Tuliskan kode program dalam micropython seperti berikut ini dan simpan dengan nama <strong>main.py</strong> (di Wokwi, otomatis tersimpan dengan nama main.py)</p>
+</li>
+</ol>
+<pre><code class="lang-python"><span class="hljs-keyword">from</span> utime <span class="hljs-keyword">import</span> ticks_ms, sleep
+<span class="hljs-keyword">from</span> machine <span class="hljs-keyword">import</span> Pin, Timer
+<span class="hljs-keyword">import</span> time
+<span class="hljs-keyword">import</span> ntptime
+<span class="hljs-keyword">import</span> urequests <span class="hljs-keyword">as</span> urlReq
+<span class="hljs-keyword">import</span> network
+<span class="hljs-keyword">import</span> json
+<span class="hljs-keyword">import</span> gc
+<span class="hljs-keyword">import</span> dht
+
+dht22 = dht.DHT22(Pin(<span class="hljs-number">12</span>))
+led2 = Pin(<span class="hljs-number">14</span>,Pin.OUT)
+trying = <span class="hljs-number">0</span>
+
+<span class="hljs-comment">#ganti alamat database server ini dengan alamat URL yang sesuai dengan milik anda</span>
+urlWeb1 = <span class="hljs-string">&quot;https://GANTI_DENGAN_ALAMAT_SERVER_FIREBASE_ANDA/current_suhu_dan_humidity&quot;</span>
+urlWeb2 = <span class="hljs-string">&quot;https://GANTI_DENGAN_ALAMAT_SERVER_FIREBASE_ANDA/history_suhu_dan_humidity&quot;</span>
+urlWeb3 = <span class="hljs-string">&quot;https://GANTI_DENGAN_ALAMAT_SERVER_FIREBASE_ANDA/control_led&quot;</span>
+
+ssid = <span class="hljs-string">&quot;Wokwi-GUEST&quot;</span>
+passwd = <span class="hljs-string">&quot;&quot;</span>
+
+station = network.WLAN(network.STA_IF)
+<span class="hljs-keyword">while</span> station.isconnected() == <span class="hljs-keyword">False</span>:
+    station.active(<span class="hljs-keyword">True</span>)
+    <span class="hljs-keyword">try</span>:
+        station.connect(ssid,passwd)
+    <span class="hljs-keyword">except</span>:
+        print(<span class="hljs-string">&quot;Connecting ...&quot;</span>)
+        trying+=<span class="hljs-number">1</span>
+        sleep(<span class="hljs-number">5</span>)
+    <span class="hljs-keyword">if</span> trying == <span class="hljs-number">5</span>:
+        print(<span class="hljs-string">&quot;Tidak dapat terhubung ke jaringan ...&quot;</span>)
+    <span class="hljs-keyword">break</span>
+
+<span class="hljs-comment">#mendapatkan data dari control_led dalam bentuk JSON</span>
+<span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">t1</span><span class="hljs-params">(t)</span>:</span>
+    <span class="hljs-keyword">global</span> led2
+    res = urlReq.get(urlWeb3+<span class="hljs-string">&quot;.json&quot;</span>).json()
+    <span class="hljs-keyword">if</span> res[<span class="hljs-string">&apos;led&apos;</span>] == <span class="hljs-string">&apos;on&apos;</span>:
+        led2.value(<span class="hljs-number">1</span>)
+    <span class="hljs-keyword">else</span>:
+        led2.value(<span class="hljs-number">0</span>)
+    print(res[<span class="hljs-string">&apos;led&apos;</span>])
+
+<span class="hljs-comment">#menyimpan history suhu dan tekanan</span>
+<span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">t2</span><span class="hljs-params">(t)</span>:</span>
+    <span class="hljs-keyword">global</span> dht22
+    dht22.measure()
+    tem = dht22.temperature()
+    hum = dht22.humidity()
+    <span class="hljs-comment">#sinkronisasi dengan time server</span>
+    ntptime.settime()
+    (y,m,d,h,mn,s,wd,yd) = time.localtime()
+    <span class="hljs-comment">#menyiapkan data yang akan dikirim</span>
+    payload = { <span class="hljs-string">&quot;suhu&quot;</span>:<span class="hljs-string">&quot;{0:.2f}&quot;</span>.format(tem),<span class="hljs-string">&quot;tekanan&quot;</span>:<span class="hljs-string">&quot;{0:.2f}&quot;</span>.format(hum),\
+    <span class="hljs-string">&quot;datetime&quot;</span>:<span class="hljs-string">&quot;{}-{}-{} {}:{}:{}&quot;</span>.format(y,m,d,h,mn,s)}        
+    <span class="hljs-comment">#data diformat ke dalam bentuk json</span>
+    data = (json.dumps(payload)).encode()    
+    <span class="hljs-comment">#mengirim data untuk pembacaan suhu dan humidity saat ini</span>
+    res = urlReq.patch(url=urlWeb1+<span class="hljs-string">&quot;/data.json&quot;</span>, data=data).json()
+    <span class="hljs-comment">#mengirim data untuk disimpan sebagai log/history</span>
+    res = urlReq.put(url=urlWeb2+<span class="hljs-string">&quot;/{}.json&quot;</span>.format(ticks_ms()), data=data).json()
+    print(<span class="hljs-string">&apos;terkirim : &apos;</span>,res)
+
+<span class="hljs-keyword">if</span> trying&lt;<span class="hljs-number">5</span>:
+    ip, mask, gw, dns = station.ifconfig()
+    print(<span class="hljs-string">&quot;Terhubung ke jaringan&quot;</span>)
+    print(<span class="hljs-string">&quot;IP = {}\nNetmask = {}\nGateway = {}\nDNS = {}&quot;</span>.format(ip,mask,gw,dns))
+
+    <span class="hljs-comment">#timer ke-1 akan dijalankan setiap 5 detik</span>
+    process1 = Timer(<span class="hljs-number">0</span>,mode=Timer.PERIODIC,period=<span class="hljs-number">4999</span>,callback=t1)
+    <span class="hljs-comment">#timer ke-2 akan dijalankan setiap 5 detik</span>
+    process2 = Timer(<span class="hljs-number">1</span>,mode=Timer.PERIODIC,period=<span class="hljs-number">5000</span>,callback=t2)
+</code></pre>
+<ol>
+<li><p>Jalankan simulasi di Wokwi, maka anda akan melihat terminal menampilkan informasi seperti gambar berikut ini</p>
+<p> <img src="2024-08-13_000935.png" alt="alt text"></p>
+</li>
+<li><p>Kemudian, di console Firebase anda, anda akan dapat melihat bahwa data yang dikirimkan dari ESP32 menggunakan REST API akan masuk ke Realtime Database milik anda seperti diperlihatkan oleh gambar dibawah ini</p>
+<p> <img src="2024-08-13_001233.png" alt="alt text"></p>
+</li>
+<li><p>Anda dapat mematikan/menghidupkan LED pada ESP32 dengan mengganti nilai LED pada firebase menjadi <strong>on</strong> atau <strong>off</strong> seperti gambar berikut</p>
+<p> <img src="2024-08-13_001840.png" alt="alt text"></p>
+</li>
+</ol>
+<h2 id="tugas-kelompok">Tugas Kelompok</h2>
+<p>Dari contoh yang sudah ditampilkan, coba tambahkan servo motor dan sensor ultrasonic ke dalam rangkaian ESP tersebut. Buat agar data dari sensor ultrasonic dapat terkirim ke Firebase Realtime Database. Selain itu, coba kendalikan servo motor dari Firebase Realtime Database. Atau, anda dapat berkreasi dengan ide-ide yang lain.</p>
+
+                                
+                                </section>
+                            
+    </div>
+    <div class="search-results">
+        <div class="has-results">
+            
+            <h1 class="search-results-title"><span class='search-results-count'></span> hasil yang cocok "<span class='search-query'></span>"</h1>
+            <ul class="search-results-list"></ul>
+            
+        </div>
+        <div class="no-results">
+            
+            <h1 class="search-results-title">Tidak ada hasil yang cocok "<span class='search-query'></span>"</h1>
+            
+        </div>
+    </div>
+</div>
+
+                        </div>
+                    </div>
+                
+            </div>
+
+            
+                
+                <a href="../0q/Pertemuan_21.html" class="navigation navigation-prev navigation-unique" aria-label="Previous page: 17. Pengenalan Komunikasi Protokol HTTP">
+                    <i class="fa fa-angle-left"></i>
+                </a>
+                
+                
+            
+        
+    </div>
+
+    <script>
+        var gitbook = gitbook || [];
+        gitbook.push(function() {
+            gitbook.page.hasChanged({"page":{"title":"18. Pengenalan dan Praktik REST API","level":"1.20","depth":1,"previous":{"title":"17. Pengenalan Komunikasi Protokol HTTP","level":"1.19","depth":1,"path":"0q/Pertemuan_21.md","ref":"0q/Pertemuan_21.md","articles":[]},"dir":"ltr"},"config":{"plugins":[],"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"pluginsConfig":{"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"theme":"default","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"language":"id","gitbook":"*"},"file":{"path":"0r/Pertemuan_22.md","mtime":"2024-08-12T17:39:18.917Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2024-08-12T17:40:09.411Z"},"basePath":"..","book":{"language":""}});
+        });
+    </script>
+</div>
+
+        
+    <script src="../gitbook/gitbook.js"></script>
+    <script src="../gitbook/theme.js"></script>
+    
+        
+        <script src="../gitbook/gitbook-plugin-search/search-engine.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-search/search.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-lunr/lunr.min.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-lunr/search-lunr.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-sharing/buttons.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-fontsettings/fontsettings.js"></script>
+        
+    
+
+    </body>
+</html>
+
