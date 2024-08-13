@@ -2,10 +2,13 @@
 
 
 ## Topik Bahasan
-Mengenal protokol MQTT sebagai protokol komunikasi ....
+Mengenal protokol MQTT sebagai protokol komunikasi yang digunakan di internet-of-things dan mempraktikkan komunikasi antara dua perangkat IoT melalui broker MQTT
 
 ## Deskripsi
-asdasd
+- Mengenal sejarah MQTT
+- Mengetahui konsep dan cara kerja MQTT
+- Mengetahui fungsi broker, subscribe, publish, dan topic didalam protokol komunikasi MQTT
+- Mampu untuk merancang dan mempraktikkan komunikasi antara beberapa perangkat IoT menggunakan protokol komunikasi MQTT
 
 
 ## Teori Singkat
