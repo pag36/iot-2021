@@ -1,0 +1,744 @@
+
+<!DOCTYPE HTML>
+<html lang="id" >
+    <head>
+        <meta charset="UTF-8">
+        <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+        <title>19. Pengenalan dan Praktik MQTT · GitBook</title>
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="description" content="">
+        <meta name="generator" content="GitBook 3.2.3">
+        
+        
+        
+    
+    <link rel="stylesheet" href="../gitbook/style.css">
+
+    
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-highlight/website.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-search/search.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-fontsettings/website.css">
+                
+            
+        
+
+    
+
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+
+        
+    
+    
+    <meta name="HandheldFriendly" content="true"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <link rel="apple-touch-icon-precomposed" sizes="152x152" href="../gitbook/images/apple-touch-icon-precomposed-152.png">
+    <link rel="shortcut icon" href="../gitbook/images/favicon.ico" type="image/x-icon">
+
+    
+    
+    <link rel="prev" href="../0r/Pertemuan_22.html" />
+    
+
+    </head>
+    <body>
+        
+<div class="book">
+    <div class="book-summary">
+        
+            
+<div id="book-search-input" role="search">
+    <input type="text" placeholder="Ketik untuk mencari" />
+</div>
+
+            
+                <nav role="navigation">
+                
+
+
+<ul class="summary">
+    
+    
+
+    
+
+    
+        
+        
+    
+        <li class="chapter " data-level="1.1" data-path="../">
+            
+                <a href="../">
+            
+                    
+                    Pendahuluan
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2" data-path="../00/kontrak.html">
+            
+                <a href="../00/kontrak.html">
+            
+                    
+                    Kontrak Kuliah
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3" data-path="../0a/0a.pertemuan1.html">
+            
+                <a href="../0a/0a.pertemuan1.html">
+            
+                    
+                    01. Memahami Konsep dan arsitektur IoT
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4" data-path="../0b/0b.pertemuan2.html">
+            
+                <a href="../0b/0b.pertemuan2.html">
+            
+                    
+                    02. Pengantar Elektronik
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5" data-path="../0c/0c.pertemuan3.html">
+            
+                <a href="../0c/0c.pertemuan3.html">
+            
+                    
+                    03. Pengenalan Jenis-Jenis dan Cara Kerja Sensor
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6" data-path="../0d/0d.pertemuan4.html">
+            
+                <a href="../0d/0d.pertemuan4.html">
+            
+                    
+                    04. Pengenalan Jenis-Jenis dan Cara Kerja Aktuator
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.7" data-path="../0e/0e.pertemuan6.html">
+            
+                <a href="../0e/0e.pertemuan6.html">
+            
+                    
+                    05. Jenis Elektronik Development Board
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.8" data-path="../0f/0f.pertemuan7.html">
+            
+                <a href="../0f/0f.pertemuan7.html">
+            
+                    
+                    06. Jenis Komunikasi Data
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.9" data-path="../0g/0f.pertemuan8.html">
+            
+                <a href="../0g/0f.pertemuan8.html">
+            
+                    
+                    07. Pengenalan Teknologi Smart Card
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.10" data-path="../0h/0h.pertemuan9.html">
+            
+                <a href="../0h/0h.pertemuan9.html">
+            
+                    
+                    08. Praktik Dasar Elektronika
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.11" data-path="../0i/0i.pertemuan11.html">
+            
+                <a href="../0i/0i.pertemuan11.html">
+            
+                    
+                    09. Praktik Pemrograman Microcontroller
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.12" data-path="../0j/0j.pertemuan12.html">
+            
+                <a href="../0j/0j.pertemuan12.html">
+            
+                    
+                    10. Praktik Sensor DHT11, LCD, dan RTC
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.13" data-path="../0k/0k.pertemuan13.html">
+            
+                <a href="../0k/0k.pertemuan13.html">
+            
+                    
+                    11. Praktik Sensor Ultrasonic PIR LDR
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.14" data-path="../0l/0l.pertemuan14.html">
+            
+                <a href="../0l/0l.pertemuan14.html">
+            
+                    
+                    12. Praktik Aktuator LED dan Relay
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.15" data-path="../0m/0m.pertemuan16.html">
+            
+                <a href="../0m/0m.pertemuan16.html">
+            
+                    
+                    13. Praktik Aktuator Buzzer dan Servo
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.16" data-path="../0n/Pertemuan_17.html">
+            
+                <a href="../0n/Pertemuan_17.html">
+            
+                    
+                    14. Pengenalan Macam-Macam Platform IoT dan Koneksi W-LAN
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.17" data-path="../0o/Pertemuan_18.html">
+            
+                <a href="../0o/Pertemuan_18.html">
+            
+                    
+                    15. Pengenalan LPWAN, LoRa, dan NB-IoT
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.18" data-path="../0p/Pertemuan_19.html">
+            
+                <a href="../0p/Pertemuan_19.html">
+            
+                    
+                    16. Praktik Update Firmware OTA
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.19" data-path="../0q/Pertemuan_21.html">
+            
+                <a href="../0q/Pertemuan_21.html">
+            
+                    
+                    17. Pengenalan Komunikasi Protokol HTTP
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.20" data-path="../0r/Pertemuan_22.html">
+            
+                <a href="../0r/Pertemuan_22.html">
+            
+                    
+                    18. Pengenalan dan Praktik REST API
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter active" data-level="1.21" data-path="Pertemuan_23.html">
+            
+                <a href="Pertemuan_23.html">
+            
+                    
+                    19. Pengenalan dan Praktik MQTT
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+    
+
+    <li class="divider"></li>
+
+    <li>
+        <a href="https://www.gitbook.com" target="blank" class="gitbook-link">
+            Dipublikasikan dengan GitBook
+        </a>
+    </li>
+</ul>
+
+
+                </nav>
+            
+        
+    </div>
+
+    <div class="book-body">
+        
+            <div class="body-inner">
+                
+                    
+
+<div class="book-header" role="navigation">
+    
+
+    <!-- Title -->
+    <h1>
+        <i class="fa fa-circle-o-notch fa-spin"></i>
+        <a href=".." >19. Pengenalan dan Praktik MQTT</a>
+    </h1>
+</div>
+
+
+
+
+                    <div class="page-wrapper" tabindex="-1" role="main">
+                        <div class="page-inner">
+                            
+<div id="book-search-results">
+    <div class="search-noresults">
+    
+                                <section class="normal markdown-section">
+                                
+                                <h1 id="pertemuan-ke-23--pengenalan-dan-praktikum-mqtt">Pertemuan ke 23 : Pengenalan dan Praktikum MQTT</h1>
+<h2 id="topik-bahasan">Topik Bahasan</h2>
+<p>Mengenal protokol MQTT sebagai protokol komunikasi ....</p>
+<h2 id="deskripsi">Deskripsi</h2>
+<p>asdasd</p>
+<h2 id="teori-singkat">Teori Singkat</h2>
+<h3 id="mqtt">MQTT</h3>
+<p>MQTT (Message Queuing Telemetry Transport) adalah protokol komunikasi pengiriman pesan yang dibentuk dengan TCP/IP berdasarkan model messaging publish-subscribe dan dirancang khusus untuk machine to machine (M-2-M) yang tidak memiliki alamat khusus. </p>
+<p><img src="image8.png" alt="alt text"></p>
+<p>Publisher mengirim pesan ke broker, subscriber menerima pesan yang dibutuhkan dari broker, dan broker akan menyampaikan pesan yang diminta dari pengirim ke penerima. Publisher dan subscriber adalah klien MQTT yang hanya berkomunikasi dengan broker MQTT. Contoh publisher dan subscriber adalah mikrokontroller, komputer, smartphone, dll.</p>
+<h3 id="sejarah-mqtt">Sejarah MQTT</h3>
+<p>MQTT awalnya dikembangkan oleh Andy Stanford-Clark berkolaborasi dengan Arlen Nipper (sekarang CirrusLink) dalam merancang sebuah protokol untuk berkomunikasi dengan sistem SCADA di industri minyak dan gas. Sejak Internet of Things menjadi populer, MQTT juga melonjak. </p>
+<p><img src="image9.png" alt="Andy Stanford-Clark"></p>
+<ul>
+<li>2008 - Broker MQTT open-source pertama, Mosquitto diciptakan.</li>
+<li>2012 - Projek Eclipse Paho menyediakan library klien MQTT open-source untuk Java, C, JavaScript, dan Python dan dari sana daftar library klien MQTT telah bertambah.</li>
+<li>Akhir 2014 - MQTT versi 3.1.1 menjadi standar OASIS dan membuka jalan untuk MQTT untuk menjadi standar ISO.
+0 2017 &#x2013; MQTT banyak digunakan oleh perusahaan teknologi terkemuka seperti Amazon, Microsoft, IBM, dll.</li>
+</ul>
+<h3 id="broker-publish-subscribe-dan-topic">Broker, Publish, Subscribe dan Topic</h3>
+<p><strong>1. Broker</strong></p>
+<p>Broker pada MQTT berfungsi untuk mengorganisir data publish dan subscribe dari berbagai device. Broker bisa diibaratkan sebagai server data yang memiliki alamat IP khusus. Beberapa contoh dari Broker yang ada seperti Mosquitto, HiveMQ, dan Mosca.</p>
+<p><img src="2024-08-14_041512.png" alt="alt text"></p>
+<p><strong>2. Publish</strong></p>
+<p>Publish merupakan cara suatu perangkat untuk mengirimkan datanya ke subscribers. Pengirim data tersebut dinamakan publisher. Biasanya pada publisher adalah sebuah device yang terhubung dengan sensor tertentu. Contoh publisher adalah Arduino, ESP32, Raspberry Pi, Android, dll.</p>
+<p><img src="2024-08-14_041745.png" alt="alt text"></p>
+<p><strong>3. Subscribe</strong></p>
+<p>Subscribe merupakan cara suatu device untuk menerima berbagai macam data dari publisher melalui broker. Penerima data disebut subscriber. Subscriber dapat berupa aplikasi monitoring sensor dan sebagainya, subscriber ini yang nantinya akan meminta data dari publisher melalui broker.</p>
+<p><img src="2024-08-14_041930.png" alt="alt text"></p>
+<p><strong>4. Topic</strong></p>
+<p>Topic seperti halnya pengelompokan data disuatu kategori tertentu yang dibuat oleh user. Pada sistem kerja MQTT protokol ini, topic bersifat wajib untuk membedakan data satu dengan yang lainnya. Pada setiap transaksi data antara Publisher dan Subscriber harus memiliki suatu topic tertentu. Contoh penggunaan topic: &#x201C;temperature&#x201D;, &#x201C;humidity&#x201C;, dll.</p>
+<p><img src="2024-08-14_042049.png" alt="alt text"></p>
+<p><strong>5. Cara Kerja MQTT</strong></p>
+<p>MQTT sejak awal memang dirancang untuk komunkasi Machine-to-Machine. MQTT mengirim data sebagai byte array, yang mana ini menjadi kelebihan protokol MQTT karena data yang dikirimkan sangat kecil. Pada saat Protokol MQTT di uji dengan jaringan 3G, Protokol MQTT 93 kali lebih cepat daripada HTTP, karena paket headernya hanya 2 byte. Publisher mengirimkan data/messages dengan topic tertentu kepada broker. Pengiriman data dapat melalui WiFi, GSM, LTE, dll. Subcriber kemudian mengambil data/messages yang diperlukan dengan topik tertentu di broker.</p>
+<p><img src="image19.png" alt="alt text"></p>
+<p><strong>6. MQTT vs HTTP</strong></p>
+<p>Perbandingan MQTT dengan HTTP</p>
+<p><img src="image20.png" alt="alt text"></p>
+<p><strong>7. Mosquitto</strong></p>
+<p>Eclipse Mosquitto&#x2122; adalah Message broker yang mengimplementasikan protokol MQTT versi 3.1 dan 3.1.1. Broker Mosquitto cukup handal terutama dalam sistem internet of things karena sudah digunakan oleh banyak user. Mosquitto telah mendukung berbagai sistem operasi mulai dari Mac OS, Microsoft Windows, dan berbagai varian distro Linux. Website: <a href="https://mosquitto.org" target="_blank">https://mosquitto.org</a></p>
+<p><img src="image21.png" alt="alt text"></p>
+<p><strong>8. Keamanan Pada Mosquitto</strong></p>
+<p>Mosquitto mendukung keamanan dengan mengenkripsi port yang digunakan dalam transmisi data. Beberapa port yang dapat digunakan yaitu:</p>
+<ul>
+<li>1883 : MQTT, unencrypted, unauthenticated</li>
+<li>1884 : MQTT, unencrypted, authenticated</li>
+<li>8883 : MQTT, encrypted, unauthenticated</li>
+<li>8884 : MQTT, encrypted, client certificate required</li>
+<li>8885 : MQTT, encrypted, authenticated</li>
+<li>8886 : MQTT, encrypted, unauthenticated</li>
+<li>8887 : MQTT, encrypted, server certificate deliberately expired</li>
+<li>8080 : MQTT over WebSockets, unencrypted, unauthenticated</li>
+<li>8081 : MQTT over WebSockets, encrypted, unauthenticated</li>
+<li>8090 : MQTT over WebSockets, unencrypted, authenticated</li>
+<li>8091 : MQTT over WebSockets, encrypted, authenticated</li>
+</ul>
+<h2 id="praktik-mqtt-dengan-mosquitto">Praktik MQTT dengan Mosquitto</h2>
+<p>Praktik pengiriman data dari ESP32 ke Mosquitto, kemudian ESP32 tersebut mengambil data dari Mosquitto yang baru saja dikirim. Server Mosquitto yang dipakai ada pada alamat <a href="https://test.mosquitto.org/" target="_blank">https://test.mosquitto.org/</a> </p>
+<p><img src="2024-08-14_043012.png" alt="alt text"></p>
+<p><strong>1. Membuat publisher</strong></p>
+<p>Buat project di wokwi dengan nama <strong>mqtt_publisher</strong> dengan rangkaian dan kode sebagai berikut </p>
+<p><img src="2024-08-14_043355.png" alt="alt text"></p>
+<pre><code class="lang-cpp"><span class="hljs-meta">#<span class="hljs-meta-keyword">include</span> <span class="hljs-meta-string">&lt;WiFi.h&gt;</span></span>
+<span class="hljs-meta">#<span class="hljs-meta-keyword">include</span> <span class="hljs-meta-string">&lt;PubSubClient.h&gt;</span></span>
+<span class="hljs-meta">#<span class="hljs-meta-keyword">include</span> <span class="hljs-meta-string">&lt;DHTesp.h&gt;</span></span>
+
+<span class="hljs-meta">#<span class="hljs-meta-keyword">define</span> dht22_pin 27</span>
+<span class="hljs-meta">#<span class="hljs-meta-keyword">define</span> led_pin 12</span>
+<span class="hljs-comment">// #define MSG_BUFFER_SIZE    (50)</span>
+
+<span class="hljs-keyword">unsigned</span> <span class="hljs-keyword">long</span> lastMsg = <span class="hljs-number">0</span>;
+<span class="hljs-keyword">unsigned</span> <span class="hljs-keyword">long</span> now = <span class="hljs-number">0</span>;
+<span class="hljs-keyword">char</span> mqttServer[] = <span class="hljs-string">&quot;test.mosquitto.org&quot;</span>;
+<span class="hljs-keyword">char</span> ssid[] = <span class="hljs-string">&quot;Wokwi-GUEST&quot;</span>;
+<span class="hljs-keyword">char</span> pass[] = <span class="hljs-string">&quot;&quot;</span>;
+String tem=<span class="hljs-string">&quot;&quot;</span>, hum=<span class="hljs-string">&quot;&quot;</span>;
+
+DHTesp dht;
+TempAndHumidity dhtData;
+WiFiClient espClient;
+<span class="hljs-function">PubSubClient <span class="hljs-title">mqttClient</span><span class="hljs-params">(espClient)</span></span>; <span class="hljs-comment">//object client mqtt</span>
+
+<span class="hljs-comment">//koneksi ke wifi</span>
+<span class="hljs-function"><span class="hljs-keyword">void</span> <span class="hljs-title">wifiSetup</span><span class="hljs-params">()</span> </span>{
+  delay(<span class="hljs-number">10</span>);
+
+  Serial.println();
+  Serial.print(<span class="hljs-string">&quot;Connect to &quot;</span>);
+  Serial.println(ssid);
+
+  WiFi.mode(WIFI_STA);
+  WiFi.begin(ssid, pass);
+
+  <span class="hljs-keyword">while</span> (WiFi.status() != WL_CONNECTED) {
+    delay(<span class="hljs-number">500</span>);
+    Serial.print(<span class="hljs-string">&quot;.&quot;</span>);
+  }
+
+  randomSeed(micros());
+
+  Serial.println(<span class="hljs-string">&quot;&quot;</span>);
+  Serial.println(<span class="hljs-string">&quot;WiFi connected&quot;</span>);
+  Serial.println(<span class="hljs-string">&quot;IP address: &quot;</span>);
+  Serial.println(WiFi.localIP());
+}
+
+<span class="hljs-comment">//koneksi ke broker</span>
+<span class="hljs-function"><span class="hljs-keyword">void</span> <span class="hljs-title">mqttConnect</span><span class="hljs-params">()</span></span>{
+  digitalWrite(led_pin, LOW);
+  <span class="hljs-keyword">while</span>(!mqttClient.connected()){
+    Serial.println(<span class="hljs-string">&quot;Mencoba menghubungi broker MQTT ...&quot;</span>);
+
+    <span class="hljs-comment">//memberikan ID pada client secara random</span>
+    String mqttClientId = <span class="hljs-string">&quot;TSA-VSGA-24-&quot;</span>;
+    mqttClientId+=String(random(<span class="hljs-number">0xffff</span>),HEX);
+
+    <span class="hljs-comment">//mencoba koneksi ke broker</span>
+    <span class="hljs-keyword">if</span>(!mqttClient.connect(mqttClientId.c_str())){
+      Serial.print(<span class="hljs-string">&quot;Gagal terhubung, status = &quot;</span>);
+      Serial.print(mqttClient.state());
+      Serial.println(<span class="hljs-string">&quot;Coba lagi dalam 5 detik ...&quot;</span>);
+      delay(<span class="hljs-number">5000</span>);
+    }
+  }
+  digitalWrite(led_pin, HIGH);
+  Serial.print(<span class="hljs-string">&quot;Terhubung ke server : &quot;</span>);
+  Serial.println(mqttServer);
+  mqttClient.publish(<span class="hljs-string">&quot;/tsa_vsga/2024&quot;</span>, <span class="hljs-string">&quot;connected&quot;</span>);
+}
+
+<span class="hljs-function"><span class="hljs-keyword">void</span> <span class="hljs-title">setup</span><span class="hljs-params">()</span> </span>{
+  Serial.begin(<span class="hljs-number">115200</span>);
+  pinMode(<span class="hljs-number">12</span>, OUTPUT);
+  dht.setup(dht22_pin, DHTesp::DHT22);
+  wifiSetup();
+  mqttClient.setServer(mqttServer,<span class="hljs-number">1883</span>);
+}
+
+<span class="hljs-function"><span class="hljs-keyword">void</span> <span class="hljs-title">loop</span><span class="hljs-params">()</span> </span>{
+  <span class="hljs-keyword">if</span>(!mqttClient.connected()){
+    mqttConnect();
+  }
+  mqttClient.loop();
+  now = millis();
+
+  <span class="hljs-comment">//mode publisher</span>
+  <span class="hljs-comment">//mengatur agar pengiriman data terjadi tiap 2 detik</span>
+  <span class="hljs-keyword">if</span>(now-lastMsg &gt; <span class="hljs-number">2000</span>){
+    lastMsg = now;
+    dhtData = dht.getTempAndHumidity();
+    tem = String(dhtData.temperature,<span class="hljs-number">2</span>);
+    hum = String(dhtData.humidity,<span class="hljs-number">2</span>);
+    mqttClient.publish(<span class="hljs-string">&quot;/tsa_vsga/2024/suhu&quot;</span>,tem.c_str());
+    mqttClient.publish(<span class="hljs-string">&quot;/tsa_vsga/2024/humi&quot;</span>,hum.c_str());
+    Serial.println(<span class="hljs-string">&quot;Data : suhu = &quot;</span>+tem+<span class="hljs-string">&quot;, kelembapan = &quot;</span>+hum);
+  }
+}
+</code></pre>
+<p><strong>2. Membuat subscriber</strong></p>
+<p>Buat project di wokwi dengan nama <strong>mqtt_publisher</strong> dengan rangkaian dan kode sebagai berikut </p>
+<p><img src="2024-08-14_043952.png" alt="alt text"></p>
+<pre><code class="lang-cpp"><span class="hljs-meta">#<span class="hljs-meta-keyword">include</span> <span class="hljs-meta-string">&lt;WiFi.h&gt;</span></span>
+<span class="hljs-meta">#<span class="hljs-meta-keyword">include</span> <span class="hljs-meta-string">&lt;PubSubClient.h&gt;</span></span>
+
+<span class="hljs-meta">#<span class="hljs-meta-keyword">define</span> led_pin 12</span>
+
+<span class="hljs-keyword">unsigned</span> <span class="hljs-keyword">long</span> lastMsg = <span class="hljs-number">0</span>;
+<span class="hljs-keyword">unsigned</span> <span class="hljs-keyword">long</span> now = <span class="hljs-number">0</span>;
+<span class="hljs-keyword">char</span> mqttServer[] = <span class="hljs-string">&quot;test.mosquitto.org&quot;</span>;
+<span class="hljs-keyword">char</span> ssid[] = <span class="hljs-string">&quot;Wokwi-GUEST&quot;</span>;
+<span class="hljs-keyword">char</span> pass[] = <span class="hljs-string">&quot;&quot;</span>;
+
+WiFiClient espClient;
+<span class="hljs-function">PubSubClient <span class="hljs-title">mqttClient</span><span class="hljs-params">(espClient)</span></span>; <span class="hljs-comment">//object client mqtt</span>
+
+<span class="hljs-comment">//koneksi ke wifi</span>
+<span class="hljs-function"><span class="hljs-keyword">void</span> <span class="hljs-title">wifiSetup</span><span class="hljs-params">()</span> </span>{
+  delay(<span class="hljs-number">10</span>);
+
+  Serial.println();
+  Serial.print(<span class="hljs-string">&quot;Connect to &quot;</span>);
+  Serial.println(ssid);
+
+  WiFi.mode(WIFI_STA);
+  WiFi.begin(ssid, pass);
+
+  <span class="hljs-keyword">while</span> (WiFi.status() != WL_CONNECTED) {
+    delay(<span class="hljs-number">500</span>);
+    Serial.print(<span class="hljs-string">&quot;.&quot;</span>);
+  }
+
+  randomSeed(micros());
+
+  Serial.println(<span class="hljs-string">&quot;&quot;</span>);
+  Serial.println(<span class="hljs-string">&quot;WiFi connected&quot;</span>);
+  Serial.println(<span class="hljs-string">&quot;IP address: &quot;</span>);
+  Serial.println(WiFi.localIP());
+}
+
+<span class="hljs-comment">//koneksi ke broker</span>
+<span class="hljs-function"><span class="hljs-keyword">void</span> <span class="hljs-title">mqttConnect</span><span class="hljs-params">()</span></span>{
+  digitalWrite(led_pin, LOW);
+  <span class="hljs-keyword">while</span>(!mqttClient.connected()){
+    Serial.println(<span class="hljs-string">&quot;Mencoba menghubungi broker MQTT ...&quot;</span>);
+
+    <span class="hljs-comment">//memberikan ID pada client secara random</span>
+    String mqttClientId = <span class="hljs-string">&quot;TSA-VSGA-24-&quot;</span>;
+    mqttClientId+=String(random(<span class="hljs-number">0xffff</span>),HEX);
+
+    <span class="hljs-comment">//mencoba koneksi ke broker</span>
+    <span class="hljs-keyword">if</span>(!mqttClient.connect(mqttClientId.c_str())){
+      Serial.print(<span class="hljs-string">&quot;Gagal terhubung, status = &quot;</span>);
+      Serial.print(mqttClient.state());
+      Serial.println(<span class="hljs-string">&quot;Coba lagi dalam 5 detik ...&quot;</span>);
+      delay(<span class="hljs-number">5000</span>);
+    }
+  }
+  digitalWrite(led_pin, HIGH);
+  Serial.print(<span class="hljs-string">&quot;Terhubung ke server : &quot;</span>);
+  Serial.println(mqttServer);
+  mqttClient.subscribe(<span class="hljs-string">&quot;/tsa_vsga/2024/suhu&quot;</span>);
+  mqttClient.subscribe(<span class="hljs-string">&quot;/tsa_vsga/2024/humi&quot;</span>);
+}
+
+<span class="hljs-comment">//fungsi callback</span>
+<span class="hljs-function"><span class="hljs-keyword">void</span> <span class="hljs-title">callback</span><span class="hljs-params">(<span class="hljs-keyword">char</span>* topic, byte* payload, <span class="hljs-keyword">unsigned</span> <span class="hljs-keyword">int</span> length)</span> </span>{
+  String data = <span class="hljs-string">&quot;&quot;</span>;
+  Serial.print(<span class="hljs-string">&quot;Pesan dari [&quot;</span>);
+  Serial.print(topic);
+  Serial.print(<span class="hljs-string">&quot;] &quot;</span>);
+  <span class="hljs-keyword">for</span> (<span class="hljs-keyword">int</span> i = <span class="hljs-number">0</span>; i &lt; length; i++) {
+    data += (<span class="hljs-keyword">char</span>)payload[i];
+  }
+  Serial.println(data);
+}
+
+<span class="hljs-function"><span class="hljs-keyword">void</span> <span class="hljs-title">setup</span><span class="hljs-params">()</span> </span>{
+  Serial.begin(<span class="hljs-number">115200</span>);
+  pinMode(<span class="hljs-number">12</span>, OUTPUT);
+  wifiSetup();
+
+  <span class="hljs-comment">//memilih server yang akan dihubungi</span>
+  mqttClient.setServer(mqttServer,<span class="hljs-number">1883</span>);
+
+  <span class="hljs-comment">//memilih function yang berfungsi sebagai callback</span>
+  <span class="hljs-comment">//(yang menerima pesan masuk)</span>
+  mqttClient.setCallback(callback);
+}
+
+<span class="hljs-function"><span class="hljs-keyword">void</span> <span class="hljs-title">loop</span><span class="hljs-params">()</span> </span>{
+  <span class="hljs-keyword">if</span>(!mqttClient.connected()){
+    mqttConnect();
+  }
+  mqttClient.loop();
+}
+</code></pre>
+<p><strong>3. Menjalankan simulai</strong></p>
+<p>Jalankan publisher dan subscriber tersebut. Dari hasil percobaan dapat dilihat bahwa publisher dan subscriber sudah dapat berkomunikasi melalui broker dengan hasil : 1) publisher berhasil mengirim pesan ke broker dan mempublish suatu topik, dan 2) subscriber berhasil mendapatkan pesan dari broker berdasarkan topik yang dia subscribe</p>
+<p><img src="2024-08-14_044723.png" alt="alt text"></p>
+<h2 id="tugas-kelompok">Tugas Kelompok</h2>
+<p>Buatlah proyek MQTT dengan memanfaatkan dua buah ESP32 atau lebih. Pada setiap ESP32 tambahkan sensor dan/atau aktuator. Buat agar setiap ESP32 menjadi publisher dan sekaligus menjadi subscriber sehingga dapat mengirim dan menerima data dari sensor/aktuator antara satu sama lainnya.</p>
+
+                                
+                                </section>
+                            
+    </div>
+    <div class="search-results">
+        <div class="has-results">
+            
+            <h1 class="search-results-title"><span class='search-results-count'></span> hasil yang cocok "<span class='search-query'></span>"</h1>
+            <ul class="search-results-list"></ul>
+            
+        </div>
+        <div class="no-results">
+            
+            <h1 class="search-results-title">Tidak ada hasil yang cocok "<span class='search-query'></span>"</h1>
+            
+        </div>
+    </div>
+</div>
+
+                        </div>
+                    </div>
+                
+            </div>
+
+            
+                
+                <a href="../0r/Pertemuan_22.html" class="navigation navigation-prev navigation-unique" aria-label="Previous page: 18. Pengenalan dan Praktik REST API">
+                    <i class="fa fa-angle-left"></i>
+                </a>
+                
+                
+            
+        
+    </div>
+
+    <script>
+        var gitbook = gitbook || [];
+        gitbook.push(function() {
+            gitbook.page.hasChanged({"page":{"title":"19. Pengenalan dan Praktik MQTT","level":"1.21","depth":1,"previous":{"title":"18. Pengenalan dan Praktik REST API","level":"1.20","depth":1,"path":"0r/Pertemuan_22.md","ref":"0r/Pertemuan_22.md","articles":[]},"dir":"ltr"},"config":{"plugins":[],"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"pluginsConfig":{"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"theme":"default","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"language":"id","gitbook":"*"},"file":{"path":"0s/Pertemuan_23.md","mtime":"2024-08-13T22:02:44.600Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2024-08-13T22:03:36.303Z"},"basePath":"..","book":{"language":""}});
+        });
+    </script>
+</div>
+
+        
+    <script src="../gitbook/gitbook.js"></script>
+    <script src="../gitbook/theme.js"></script>
+    
+        
+        <script src="../gitbook/gitbook-plugin-search/search-engine.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-search/search.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-lunr/lunr.min.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-lunr/search-lunr.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-sharing/buttons.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-fontsettings/fontsettings.js"></script>
+        
+    
+
+    </body>
+</html>
+
