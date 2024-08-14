@@ -448,10 +448,15 @@
 <p><strong>6. MQTT vs HTTP</strong></p>
 <p>Perbandingan MQTT dengan HTTP</p>
 <p><img src="image20.png" alt="alt text"></p>
-<p><strong>7. Mosquitto</strong></p>
+<p><strong>7. Quality of Service (QoS)</strong>
+Dalam MQTT, ada 3 macam QoS, yaitu 0, 1, atau 2.</p>
+<p>Dalam QoS 0 : Sama dengan halnya kita melakukan fire-and-forget. Artinya tidak ada jaminan kalau pengiriman pesan tersebut akan sampai ke subscriber.</p>
+<p>Dalam QoS 1 : Pesan akan dijamin untuk sampai di minimal 1x ke subscriber yang sedang meng-subscribe.</p>
+<p>Dalam QoS 2 : Pesan akan dijamin untuk sampai tepat 1x ke subscriber yang sedang meng-subscribe.</p>
+<p><strong>8. Mosquitto</strong></p>
 <p>Eclipse Mosquitto&#x2122; adalah Message broker yang mengimplementasikan protokol MQTT versi 3.1 dan 3.1.1. Broker Mosquitto cukup handal terutama dalam sistem internet of things karena sudah digunakan oleh banyak user. Mosquitto telah mendukung berbagai sistem operasi mulai dari Mac OS, Microsoft Windows, dan berbagai varian distro Linux. Website: <a href="https://mosquitto.org" target="_blank">https://mosquitto.org</a></p>
 <p><img src="image21.png" alt="alt text"></p>
-<p><strong>8. Keamanan Pada Mosquitto</strong></p>
+<p><strong>9. Keamanan Pada Mosquitto</strong></p>
 <p>Mosquitto mendukung keamanan dengan mengenkripsi port yang digunakan dalam transmisi data. Beberapa port yang dapat digunakan yaitu:</p>
 <ul>
 <li>1883 : MQTT, unencrypted, unauthenticated</li>
@@ -710,7 +715,7 @@ WiFiClient espClient;
     <script>
         var gitbook = gitbook || [];
         gitbook.push(function() {
-            gitbook.page.hasChanged({"page":{"title":"19. Pengenalan dan Praktik MQTT","level":"1.21","depth":1,"previous":{"title":"18. Pengenalan dan Praktik REST API","level":"1.20","depth":1,"path":"0r/Pertemuan_22.md","ref":"0r/Pertemuan_22.md","articles":[]},"dir":"ltr"},"config":{"plugins":[],"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"pluginsConfig":{"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"theme":"default","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"language":"id","gitbook":"*"},"file":{"path":"0s/Pertemuan_23.md","mtime":"2024-08-13T22:12:22.645Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2024-08-13T22:13:13.888Z"},"basePath":"..","book":{"language":""}});
+            gitbook.page.hasChanged({"page":{"title":"19. Pengenalan dan Praktik MQTT","level":"1.21","depth":1,"previous":{"title":"18. Pengenalan dan Praktik REST API","level":"1.20","depth":1,"path":"0r/Pertemuan_22.md","ref":"0r/Pertemuan_22.md","articles":[]},"dir":"ltr"},"config":{"plugins":[],"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"pluginsConfig":{"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"theme":"default","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"language":"id","gitbook":"*"},"file":{"path":"0s/Pertemuan_23.md","mtime":"2024-08-14T00:35:14.994Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2024-08-14T00:36:05.947Z"},"basePath":"..","book":{"language":""}});
         });
     </script>
 </div>
