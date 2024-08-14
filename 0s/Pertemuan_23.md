@@ -67,13 +67,22 @@ Perbandingan MQTT dengan HTTP
 
 ![alt text](image20.png)
 
-**7. Mosquitto**
+**7. Quality of Service (QoS)**
+Dalam MQTT, ada 3 macam QoS, yaitu 0, 1, atau 2.
+
+Dalam QoS 0 : Sama dengan halnya kita melakukan fire-and-forget. Artinya tidak ada jaminan kalau pengiriman pesan tersebut akan sampai ke subscriber.
+
+Dalam QoS 1 : Pesan akan dijamin untuk sampai di minimal 1x ke subscriber yang sedang meng-subscribe.
+
+Dalam QoS 2 : Pesan akan dijamin untuk sampai tepat 1x ke subscriber yang sedang meng-subscribe.
+
+**8. Mosquitto**
 
 Eclipse Mosquitto™ adalah Message broker yang mengimplementasikan protokol MQTT versi 3.1 dan 3.1.1. Broker Mosquitto cukup handal terutama dalam sistem internet of things karena sudah digunakan oleh banyak user. Mosquitto telah mendukung berbagai sistem operasi mulai dari Mac OS, Microsoft Windows, dan berbagai varian distro Linux. Website: https://mosquitto.org
 
 ![alt text](image21.png)
 
-**8. Keamanan Pada Mosquitto**
+**9. Keamanan Pada Mosquitto**
 
 Mosquitto mendukung keamanan dengan mengenkripsi port yang digunakan dalam transmisi data. Beberapa port yang dapat digunakan yaitu:
 - 1883 : MQTT, unencrypted, unauthenticated
