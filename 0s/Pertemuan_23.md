@@ -68,13 +68,11 @@ Perbandingan MQTT dengan HTTP
 ![alt text](image20.png)
 
 **7. Quality of Service (QoS)**
+
 Dalam MQTT, ada 3 macam QoS, yaitu 0, 1, atau 2.
-
-Dalam QoS 0 : Sama dengan halnya kita melakukan fire-and-forget. Artinya tidak ada jaminan kalau pengiriman pesan tersebut akan sampai ke subscriber.
-
-Dalam QoS 1 : Pesan akan dijamin untuk sampai di minimal 1x ke subscriber yang sedang meng-subscribe.
-
-Dalam QoS 2 : Pesan akan dijamin untuk sampai tepat 1x ke subscriber yang sedang meng-subscribe.
+- Dalam **QoS 0** : Sama dengan halnya kita melakukan fire-and-forget. Artinya tidak ada jaminan kalau pengiriman pesan tersebut akan sampai ke subscriber.
+- Dalam **QoS 1** : Pesan akan dijamin untuk sampai di minimal 1x ke subscriber yang sedang meng-subscribe.
+- Dalam **QoS 2** : Pesan akan dijamin untuk sampai tepat 1x ke subscriber yang sedang meng-subscribe.
 
 **8. Mosquitto**
 
