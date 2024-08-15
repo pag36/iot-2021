@@ -230,7 +230,7 @@ void mqttConnect(){
   digitalWrite(led_pin, HIGH);
   Serial.print("Terhubung ke server : ");
   Serial.println(mqttServer);
-  mqttClient.publish("/tsa_vsga/2024", "connected");
+
 }
 
 void setup() {
