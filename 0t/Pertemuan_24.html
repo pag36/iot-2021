@@ -1,0 +1,711 @@
+
+<!DOCTYPE HTML>
+<html lang="id" >
+    <head>
+        <meta charset="UTF-8">
+        <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+        <title>20. Konsep, Strategi, dan Implementasi IoT dengan ThingsBoard · GitBook</title>
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="description" content="">
+        <meta name="generator" content="GitBook 3.2.3">
+        
+        
+        
+    
+    <link rel="stylesheet" href="../gitbook/style.css">
+
+    
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-highlight/website.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-search/search.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-fontsettings/website.css">
+                
+            
+        
+
+    
+
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+
+        
+    
+    
+    <meta name="HandheldFriendly" content="true"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <link rel="apple-touch-icon-precomposed" sizes="152x152" href="../gitbook/images/apple-touch-icon-precomposed-152.png">
+    <link rel="shortcut icon" href="../gitbook/images/favicon.ico" type="image/x-icon">
+
+    
+    
+    <link rel="prev" href="../0s/Pertemuan_23.html" />
+    
+
+    </head>
+    <body>
+        
+<div class="book">
+    <div class="book-summary">
+        
+            
+<div id="book-search-input" role="search">
+    <input type="text" placeholder="Ketik untuk mencari" />
+</div>
+
+            
+                <nav role="navigation">
+                
+
+
+<ul class="summary">
+    
+    
+
+    
+
+    
+        
+        
+    
+        <li class="chapter " data-level="1.1" data-path="../">
+            
+                <a href="../">
+            
+                    
+                    Pendahuluan
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2" data-path="../00/kontrak.html">
+            
+                <a href="../00/kontrak.html">
+            
+                    
+                    Kontrak Kuliah
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3" data-path="../0a/0a.pertemuan1.html">
+            
+                <a href="../0a/0a.pertemuan1.html">
+            
+                    
+                    01. Memahami Konsep dan arsitektur IoT
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4" data-path="../0b/0b.pertemuan2.html">
+            
+                <a href="../0b/0b.pertemuan2.html">
+            
+                    
+                    02. Pengantar Elektronik
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5" data-path="../0c/0c.pertemuan3.html">
+            
+                <a href="../0c/0c.pertemuan3.html">
+            
+                    
+                    03. Pengenalan Jenis-Jenis dan Cara Kerja Sensor
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6" data-path="../0d/0d.pertemuan4.html">
+            
+                <a href="../0d/0d.pertemuan4.html">
+            
+                    
+                    04. Pengenalan Jenis-Jenis dan Cara Kerja Aktuator
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.7" data-path="../0e/0e.pertemuan6.html">
+            
+                <a href="../0e/0e.pertemuan6.html">
+            
+                    
+                    05. Jenis Elektronik Development Board
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.8" data-path="../0f/0f.pertemuan7.html">
+            
+                <a href="../0f/0f.pertemuan7.html">
+            
+                    
+                    06. Jenis Komunikasi Data
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.9" data-path="../0g/0f.pertemuan8.html">
+            
+                <a href="../0g/0f.pertemuan8.html">
+            
+                    
+                    07. Pengenalan Teknologi Smart Card
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.10" data-path="../0h/0h.pertemuan9.html">
+            
+                <a href="../0h/0h.pertemuan9.html">
+            
+                    
+                    08. Praktik Dasar Elektronika
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.11" data-path="../0i/0i.pertemuan11.html">
+            
+                <a href="../0i/0i.pertemuan11.html">
+            
+                    
+                    09. Praktik Pemrograman Microcontroller
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.12" data-path="../0j/0j.pertemuan12.html">
+            
+                <a href="../0j/0j.pertemuan12.html">
+            
+                    
+                    10. Praktik Sensor DHT11, LCD, dan RTC
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.13" data-path="../0k/0k.pertemuan13.html">
+            
+                <a href="../0k/0k.pertemuan13.html">
+            
+                    
+                    11. Praktik Sensor Ultrasonic PIR LDR
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.14" data-path="../0l/0l.pertemuan14.html">
+            
+                <a href="../0l/0l.pertemuan14.html">
+            
+                    
+                    12. Praktik Aktuator LED dan Relay
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.15" data-path="../0m/0m.pertemuan16.html">
+            
+                <a href="../0m/0m.pertemuan16.html">
+            
+                    
+                    13. Praktik Aktuator Buzzer dan Servo
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.16" data-path="../0n/Pertemuan_17.html">
+            
+                <a href="../0n/Pertemuan_17.html">
+            
+                    
+                    14. Pengenalan Macam-Macam Platform IoT dan Koneksi W-LAN
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.17" data-path="../0o/Pertemuan_18.html">
+            
+                <a href="../0o/Pertemuan_18.html">
+            
+                    
+                    15. Pengenalan LPWAN, LoRa, dan NB-IoT
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.18" data-path="../0p/Pertemuan_19.html">
+            
+                <a href="../0p/Pertemuan_19.html">
+            
+                    
+                    16. Praktik Update Firmware OTA
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.19" data-path="../0q/Pertemuan_21.html">
+            
+                <a href="../0q/Pertemuan_21.html">
+            
+                    
+                    17. Pengenalan Komunikasi Protokol HTTP
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.20" data-path="../0r/Pertemuan_22.html">
+            
+                <a href="../0r/Pertemuan_22.html">
+            
+                    
+                    18. Pengenalan dan Praktik REST API
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.21" data-path="../0s/Pertemuan_23.html">
+            
+                <a href="../0s/Pertemuan_23.html">
+            
+                    
+                    19. Pengenalan dan Praktik MQTT
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter active" data-level="1.22" data-path="Pertemuan_24.html">
+            
+                <a href="Pertemuan_24.html">
+            
+                    
+                    20. Konsep, Strategi, dan Implementasi IoT dengan ThingsBoard
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+    
+
+    <li class="divider"></li>
+
+    <li>
+        <a href="https://www.gitbook.com" target="blank" class="gitbook-link">
+            Dipublikasikan dengan GitBook
+        </a>
+    </li>
+</ul>
+
+
+                </nav>
+            
+        
+    </div>
+
+    <div class="book-body">
+        
+            <div class="body-inner">
+                
+                    
+
+<div class="book-header" role="navigation">
+    
+
+    <!-- Title -->
+    <h1>
+        <i class="fa fa-circle-o-notch fa-spin"></i>
+        <a href=".." >20. Konsep, Strategi, dan Implementasi IoT dengan ThingsBoard</a>
+    </h1>
+</div>
+
+
+
+
+                    <div class="page-wrapper" tabindex="-1" role="main">
+                        <div class="page-inner">
+                            
+<div id="book-search-results">
+    <div class="search-noresults">
+    
+                                <section class="normal markdown-section">
+                                
+                                <h1 id="pertemuan-ke-24--konsep-strategi-dan-implementasi-iot-dengan-thingsboard">Pertemuan ke 24 : Konsep, Strategi, dan Implementasi IoT dengan ThingsBoard</h1>
+<h2 id="topik-bahasan">Topik Bahasan</h2>
+<p>ThingsBoard adalah salah satu platform IoT open-source untuk mengumpulkan data, pemrosesan, visualisasi data, dan manajemen perangkat device. Thingsboard ini mempunyai dua fungsi utama yakni sebagai broker dalam terminologi IoT (core services) dan sebagai web presentation atau penyaji data (web UI).</p>
+<h2 id="deskripsi">Deskripsi</h2>
+<ul>
+<li>Menjelaskan ThingsBoard sebagai salah satu platform IoT</li>
+<li>Menjelaskan implementasi IoT dengan ThingsBoard</li>
+</ul>
+<h2 id="teori-singkat">Teori Singkat</h2>
+<h3 id="konsep-iot">Konsep IoT</h3>
+<p>Internet of things merupakan sebuah konsep di mana suatu benda atau objek ditanamkan teknologi-teknologi seperti sensor dan software dengan tujuan untuk berkomunikasi, mengendalikan, menghubungkan, dan bertukar data melalui perangkat lain selama masih terhubung ke internet.</p>
+<p><img src="image1.png" alt="alt text"></p>
+<h3 id="strategi-membuat-solusi-iot">Strategi Membuat Solusi IoT</h3>
+<p>Dalam membuat sebuah solusi IoT maka diperlukan tiga buah pertimbangan. Secara sederhana solusi IoT membutuhkan beberapa pertimbangan. Seperti biaya server, keamanan, komponen atau hardware yang dibuat dan tampilan interface yang akan digunakan berbasis mobile atau web dekstop. Disini Thingsboard memberikan biaya server yang terjangkau, keamanan yang teruji, dan tampilan yang mudah dikonfigurasikan. Ini sangat cocok untuk memulai sebuah solusi IoT.</p>
+<p><img src="image2.png" alt="alt text"></p>
+<h3 id="thingsboard">Thingsboard</h3>
+<p>ThingsBoard adalah salah satu platform IoT open-source untuk mengumpulkan data, pemrosesan, visualisasi data, dan manajemen perangkat device. Thingsboard ini mempunyai dua fungsi utama yakni sebagai broker dalam terminologi IoT (core services) dan sebagai web presentation atau penyaji data (web UI).</p>
+<p><img src="image3.png" alt="alt text"></p>
+<h4 id="fitur-thingsboard">Fitur Thingsboard</h4>
+<p><strong>1. Data Telemetry</strong></p>
+<p>Thingsboard mampu mengumpulkan dan menyimpan data telemetri dengan cara yang handal, bertahan dari kegagalan jaringan dan perangkat keras. Akses data yang dikumpulkan menggunakan dashboard web yang dapat disesuaikan atau API sisi server.</p>
+<p><img src="image4.png" alt="alt text"></p>
+<p><strong>2. Multi Tenancy</strong></p>
+<p>Thingsboard Mendukung penginstalan multi-tenant. Multi-tenancy adalah arsitektur cloud yang memungkinkan setiap tenant dari suatu layanan cloud berbagi daya komputasi dengan tenant lainnya. Tenant dalam hal ini bisa disebut sebagai pengguna atau pihak yang menyewa suatu layanan cloud.</p>
+<p><img src="image5.png" alt="alt text"></p>
+<p><strong>3. Visualisasi Data</strong></p>
+<p>Thingsboard Menyediakan 30+ widget yang dapat dikonfigurasi out of the box dan kemampuan untuk membuat widget sendiri menggunakan editor bawaan.</p>
+<p><img src="image6.png" alt="alt text"></p>
+<p><strong>4. Skalibilitas Horizontal</strong></p>
+<p>Thingsboard Tidak ada downtime, restart server atau kesalahan aplikasi.</p>
+<p><img src="image7.png" alt="alt text"></p>
+<p><strong>5. IoT Rule Engine</strong></p>
+<p>Thingsboard dapat memproses data perangkat yang masuk dengan rantai aturan fleksibel berdasarkan atribut entitas atau konten pesan. Meneruskan data ke sistem eksternal atau memicu alarm menggunakan logika khusus. Konfigurasikan rantai pemberitahuan kompleks pada alarm. Perkaya fungsionalitas sisi server atau manipulasi perangkat Anda dengan aturan yang sangat dapat disesuaikan. Tentukan logika aplikasi Anda dengan desainer rantai aturan drag-n-drop.</p>
+<p><img src="image8.png" alt="alt text"></p>
+<p><strong>6. Fault Tolerance</strong></p>
+<p>Thingsboard meminimalisir Kegagalan node, kegagalan node akan secara otomatis terdeteksi. Kemudian Node yang gagal dapat diganti secara langsung tanpa waktu henti. Data yang ada akan direplikasi menggunakan database NoSQL yang andal.</p>
+<p><img src="image9.png" alt="alt text"></p>
+<p><strong>7. Device Management</strong></p>
+<p>Thingsboard memungkinkan untuk memantau sisi klien dan menyediakan atribut perangkat sisi server . Thingsboard juga menyediakan API untuk aplikasi sisi server yang berfungsi untuk mengirim perintah RPC ke perangkat dan sebaliknya.</p>
+<p><img src="image10.png" alt="alt text"></p>
+<p><strong>8. Security</strong></p>
+<p>Mendukung enkripsi transport untuk protokol MQTT dan HTTP. Selain itu Thingsboard juga mendukung otentikasi perangkat dan manajemen kredensial perangkat.</p>
+<p><img src="image11.png" alt="alt text"></p>
+<p><strong>9. Asset Management</strong></p>
+<p>Thingsboard memberikan kemampuan untuk mendaftar dan mengelola aset. Thingsboard memungkinkan untuk dapat menyediakan atribut aset sisi server dan memantau alarm. Thingsboard memilki kemampuan untuk membangun hierarki entitas dengan menggunakan relasi.</p>
+<p><img src="image12.png" alt="alt text"></p>
+<p><strong>10. Customization and Integration</strong></p>
+<p>Perluas fungsionalitas platform default menggunakanrantai aturan, widget, dan implementasi transport yang dapat disesuaikan. Selain dukungan MQTT, CoAP, dan HTTP, pengguna ThingsBoard dapat menggunakan implementasi transport mereka sendiri atau menyesuaikan perilaku protokol yang ada.</p>
+<p><img src="image13.png" alt="alt text"></p>
+<p><strong>11. Alarms Management</strong></p>
+<p>Memberikan kemampuan untuk membuat dan mengelola alarm yang terkait dengan entitas perangkat, aset, pelanggan, dll. Thingsboard dapat melakukan pemantauan alarm real time dan penyebaran alarm ke hierarki entitas terkait. Naikkan alarm saat perangkat terputus atau saat tidak ada aktivitas.</p>
+<p><img src="image14.png" alt="alt text"></p>
+<p><strong>12. 100% Open-source</strong></p>
+<p>ThingsBoard mempunyai lisensi di bawah Lisensi Apache 2.0, sehingga dapat digunakan dalam produk komersial secara gratis. Bahkan Thingsboard dapat menyimpannya sebagai solusi SaaS (Software as a Services) atau PaaS (Platform as a Services).</p>
+<p><img src="image15.png" alt="alt text"></p>
+<p><strong>13. Microservices or Monolithic</strong></p>
+<p>Memberikan kemampuan untuk meningkatkan ke layanan mikro untuk ketersediaan tinggi dan skalabilitas secara horizontal yang lebih luas.</p>
+<p><strong>14. SQL, NoSQL and Hybrid database</strong></p>
+<p>Mendukung berbagai opsi database dan kemampuan untuk memilih tempat menyimpan entitas utama dan tempat menyimpan data telemetri.</p>
+<p><img src="image16.png" alt="alt text"></p>
+<p><strong>15. Thingsboard Edge</strong></p>
+<p>ThingsBoard Edge adalah produk perangkat lunak untuk Cloud Computing. Ini memungkinkan melakukan analisis dan manajemen data pada saat yang sama.
+ThingsBoard Edge menyinkronkan dengan mulus dengan cloud ThingsBoard seperti ThingsBoard Cloud, Demo ThingsBoard, ThingsBoard PE atau ThingsBoard CE, semuanya dapat disesuaikan dengan kebutuhan.</p>
+<p><img src="image17.png" alt="alt text"></p>
+<h3 id="produk-thingsboard">Produk Thingsboard</h3>
+<p><strong>1. Thingsboard IoT Gateway</strong></p>
+<p>ThingsBoard IoT Gateway akan membantu untuk mengintegrasikan perangkat yang terhubung ke sistem lama dan sistem pihak ketiga dengan platform ThingsBoard IoT. Thingsboard adalah platform IoT yang sumbernya terbuka untuk pengumpulan data, pemrosesan, visualisasi, dan manajemen perangkat.</p>
+<p><img src="image18.png" alt="alt text"></p>
+<p><img src="image19.png" alt="alt text"></p>
+<p><strong>3. License Server</strong></p>
+<p>Server lisensi adalah perangkat lunak yang menyediakan akses ke token atau kunci akses ke komputer klien. Ini biasa disediakan di intranet organisasi atau melalui internet.
+Server Lisensi ThingsBoard adalah solusi penagihan eksklusif yang memungkinkan pelanggan ThingsBoard Professional Edition (TB PE) untuk dengan mudah membeli kunci lisensi secara online. Pemrosesan pembayaran online dijamin oleh Stripe , yang memungkinkan kartu kredit dan transfer kawat.</p>
+<p><img src="image20.png" alt="alt text"></p>
+<h3 id="implementasi-thingsboard">Implementasi ThingsBoard</h3>
+<p><strong>1. Smart Energy</strong></p>
+<p>Sistem energi terbarukan yang mengoptimalkan pemanfaatan semua komponen dalam sistem produksi energi untuk memaksimalkan efisiensi, mengurangi biaya, dan tetap mengutamakan keamanan dalam pemanfaatannya.</p>
+<p><img src="image21.png" alt="alt text"></p>
+<p><strong>2. Smart Metering</strong></p>
+<p>Adalah sebuah sistem Iot dalam bentuk software dan hardware yang memberikan kemudahan dalam pencatatan pemakaian air, listrik atau gas dengan memanfaatkan teknologi komunikasi yang beragam</p>
+<p><img src="image22.png" alt="alt text"></p>
+<p><strong>3. Smart Farming</strong></p>
+<p>Adalah sistem yang menggunakan teknologi informasi dalam proses pertanian yang telah dirancang dan ditetapkan. Proses penerapan smart farming memang tidak mudah sebab memerlukan data yang lebih kompleks dan akurat.</p>
+<p><img src="image23.png" alt="alt text"></p>
+<p><strong>4. Water Metering</strong></p>
+<p>Adalah alat yang digunakan untuk mengukur jumlah volume air yang dialirkan melalui saluran pipa yang dilengkapi juga dengan alat penghitung. Alat penghitung ini terdiri dari unit penghitung, unit sensor, dan unit indikator pengukur untuk mendukung cara kerja dari water meter tersebut.</p>
+<p><img src="image24.png" alt="alt text"></p>
+<p><strong>5. Water Metering</strong></p>
+<p>Smart office atau kantor pintar merupakan kolaborasi teknologi cerdas dan IoT (Internet of Things) yang diimplementasikan pada sebuah lingkungan kerja.</p>
+<p><img src="image25.png" alt="alt text"></p>
+<h2 id="praktik-visualisai-data-menggunakan-mqtt-dan-thingsboard">Praktik Visualisai Data Menggunakan MQTT dan Thingsboard</h2>
+<p><strong>1. Membuat Publisher</strong></p>
+<p>Buat project di wokwi dengan nama mqtt_publisher dengan rangkaian dan kode sebagai berikut</p>
+<p><img src="2024-08-14_043355.png" alt="alt text"></p>
+<pre><code class="lang-cpp"><span class="hljs-meta">#<span class="hljs-meta-keyword">include</span> <span class="hljs-meta-string">&lt;WiFi.h&gt;</span></span>
+<span class="hljs-meta">#<span class="hljs-meta-keyword">include</span> <span class="hljs-meta-string">&lt;PubSubClient.h&gt;</span></span>
+<span class="hljs-meta">#<span class="hljs-meta-keyword">include</span> <span class="hljs-meta-string">&lt;DHTesp.h&gt;</span></span>
+
+<span class="hljs-meta">#<span class="hljs-meta-keyword">define</span> dht22_pin 27</span>
+<span class="hljs-meta">#<span class="hljs-meta-keyword">define</span> led_pin 12</span>
+
+<span class="hljs-keyword">unsigned</span> <span class="hljs-keyword">long</span> lastMsg = <span class="hljs-number">0</span>;
+<span class="hljs-keyword">unsigned</span> <span class="hljs-keyword">long</span> now = <span class="hljs-number">0</span>;
+
+<span class="hljs-comment">//thingsboard</span>
+<span class="hljs-keyword">char</span> mqttServer[] = <span class="hljs-string">&quot;thingsboard.cloud&quot;</span>;
+
+<span class="hljs-keyword">char</span> ssid[] = <span class="hljs-string">&quot;Wokwi-GUEST&quot;</span>;
+<span class="hljs-keyword">char</span> pass[] = <span class="hljs-string">&quot;&quot;</span>;
+String tem=<span class="hljs-string">&quot;&quot;</span>, hum=<span class="hljs-string">&quot;&quot;</span>;
+
+DHTesp dht;
+TempAndHumidity dhtData;
+WiFiClient espClient;
+<span class="hljs-function">PubSubClient <span class="hljs-title">mqttClient</span><span class="hljs-params">(espClient)</span></span>; <span class="hljs-comment">//object client mqtt</span>
+
+<span class="hljs-comment">//koneksi ke wifi</span>
+<span class="hljs-function"><span class="hljs-keyword">void</span> <span class="hljs-title">wifiSetup</span><span class="hljs-params">()</span> </span>{
+  delay(<span class="hljs-number">10</span>);
+
+  Serial.println();
+  Serial.print(<span class="hljs-string">&quot;Connect to &quot;</span>);
+  Serial.println(ssid);
+
+  WiFi.mode(WIFI_STA);
+  WiFi.begin(ssid, pass);
+
+  <span class="hljs-keyword">while</span> (WiFi.status() != WL_CONNECTED) {
+    delay(<span class="hljs-number">500</span>);
+    Serial.print(<span class="hljs-string">&quot;.&quot;</span>);
+  }
+
+  Serial.println(<span class="hljs-string">&quot;WiFi connected&quot;</span>);
+  Serial.println(<span class="hljs-string">&quot;IP address: &quot;</span>);
+  Serial.println(WiFi.localIP());
+}
+
+<span class="hljs-comment">//koneksi ke broker</span>
+<span class="hljs-function"><span class="hljs-keyword">void</span> <span class="hljs-title">mqttConnect</span><span class="hljs-params">()</span></span>{
+  digitalWrite(led_pin, LOW);
+  <span class="hljs-keyword">while</span>(!mqttClient.connected()){
+    Serial.println(<span class="hljs-string">&quot;Mencoba menghubungi broker MQTT ...&quot;</span>);
+
+    <span class="hljs-comment">//mencoba koneksi ke broker thingsboard (cliend-id,user,pass)</span>
+    <span class="hljs-keyword">if</span>(!mqttClient.connect(<span class="hljs-string">&quot;tsa-vsga-123&quot;</span>,<span class="hljs-string">&quot;tsa-vsga-123&quot;</span>, <span class="hljs-string">&quot;tsa-vsga-123&quot;</span>)){
+      Serial.print(<span class="hljs-string">&quot;Gagal terhubung, status = &quot;</span>);
+      Serial.print(mqttClient.state());
+      Serial.println(<span class="hljs-string">&quot;Coba lagi dalam 5 detik ...&quot;</span>);
+      delay(<span class="hljs-number">5000</span>);
+    }
+  }
+  digitalWrite(led_pin, HIGH);
+  Serial.print(<span class="hljs-string">&quot;Terhubung ke server : &quot;</span>);
+  Serial.println(mqttServer);
+  mqttClient.publish(<span class="hljs-string">&quot;/tsa_vsga/2024&quot;</span>, <span class="hljs-string">&quot;connected&quot;</span>);
+}
+
+<span class="hljs-function"><span class="hljs-keyword">void</span> <span class="hljs-title">setup</span><span class="hljs-params">()</span> </span>{
+  Serial.begin(<span class="hljs-number">115200</span>);
+  pinMode(<span class="hljs-number">12</span>, OUTPUT);
+  dht.setup(dht22_pin, DHTesp::DHT22);
+  wifiSetup();
+  mqttClient.setServer(mqttServer,<span class="hljs-number">1883</span>);
+}
+
+<span class="hljs-function"><span class="hljs-keyword">void</span> <span class="hljs-title">loop</span><span class="hljs-params">()</span> </span>{
+  <span class="hljs-keyword">if</span>(!mqttClient.connected()){
+    mqttConnect();
+  }
+  mqttClient.loop();
+  now = millis();
+
+  <span class="hljs-comment">//mode publisher</span>
+  <span class="hljs-comment">//mengatur agar pengiriman data terjadi tiap 2 detik</span>
+  <span class="hljs-keyword">if</span>(now-lastMsg &gt; <span class="hljs-number">2000</span>){
+    lastMsg = now;
+    dhtData = dht.getTempAndHumidity();
+
+    <span class="hljs-comment">//tem = String(dhtData.temperature,2);</span>
+    tem = String(random(<span class="hljs-number">0</span>,<span class="hljs-number">100</span>));
+    <span class="hljs-comment">//hum = String(dhtData.humidity,2);</span>
+    hum = String(random(<span class="hljs-number">0</span>,<span class="hljs-number">100</span>));
+
+    <span class="hljs-comment">//publish ke thingsboard</span>
+    mqttClient.publish(<span class="hljs-string">&quot;v1/devices/me/telemetry&quot;</span>,
+      (<span class="hljs-string">&quot;{\&quot;temperature\&quot;:&quot;</span>+tem+<span class="hljs-string">&quot;}&quot;</span>).c_str());
+    mqttClient.publish(<span class="hljs-string">&quot;v1/devices/me/telemetry&quot;</span>,
+      (<span class="hljs-string">&quot;{\&quot;humidity\&quot;:&quot;</span>+hum+<span class="hljs-string">&quot;}&quot;</span>).c_str());
+
+    Serial.println(<span class="hljs-string">&quot;Data : suhu = &quot;</span>+tem+<span class="hljs-string">&quot;, kelembapan = &quot;</span>+hum);
+  }
+}
+</code></pre>
+<p><strong>2. Menyiapkan dashboard Thingsboard</strong></p>
+<ol>
+<li><p>Pastikan anda sudah memiliki account di Thingsbord dengan development board ESP32</p>
+<p> <img src="Screenshot 2024-08-15 122227.png" alt="alt text"></p>
+</li>
+<li><p>Pastikan credentials di ESP32 dan di Thingsboard sama</p>
+<p> <img src="2024-08-15_122817.png" alt="alt text"></p>
+</li>
+<li><p>Di dashboard Thingsboard, tambahkan widget tabel dan time series seperti berikut ini</p>
+<p> <img src="2024-08-15_123147.png" alt="alt text"></p>
+</li>
+<li><p>Untuk widget entitas tabel, tambahkan data keys seperti gambar berikut ini</p>
+<p> <img src="2024-08-15_123407.png" alt="alt text"></p>
+</li>
+<li><p>Untuk widget time series tambahkan series seperti gambar berikut ini</p>
+<p> <img src="2024-08-15_123631.png" alt="alt text"></p>
+</li>
+<li><p>Jalankan aplikasi IoT anda, pastikan data yang ditampilkan sama dengan yang di dashboard Thingsboard</p>
+<p> <img src="2024-08-15_124143.png" alt="alt text"></p>
+</li>
+</ol>
+<h2 id="tugas-kelompok">Tugas Kelompok</h2>
+<p>Buatlah arsitektur IoT yang dapat mengirimkan data telemetry ke Thingsboard menggunakan protokol MQTT berdasarkan dari proyek MQTT yang sudah kelompok kalian kembangkan sebelumnya.</p>
+
+                                
+                                </section>
+                            
+    </div>
+    <div class="search-results">
+        <div class="has-results">
+            
+            <h1 class="search-results-title"><span class='search-results-count'></span> hasil yang cocok "<span class='search-query'></span>"</h1>
+            <ul class="search-results-list"></ul>
+            
+        </div>
+        <div class="no-results">
+            
+            <h1 class="search-results-title">Tidak ada hasil yang cocok "<span class='search-query'></span>"</h1>
+            
+        </div>
+    </div>
+</div>
+
+                        </div>
+                    </div>
+                
+            </div>
+
+            
+                
+                <a href="../0s/Pertemuan_23.html" class="navigation navigation-prev navigation-unique" aria-label="Previous page: 19. Pengenalan dan Praktik MQTT">
+                    <i class="fa fa-angle-left"></i>
+                </a>
+                
+                
+            
+        
+    </div>
+
+    <script>
+        var gitbook = gitbook || [];
+        gitbook.push(function() {
+            gitbook.page.hasChanged({"page":{"title":"20. Konsep, Strategi, dan Implementasi IoT dengan ThingsBoard","level":"1.22","depth":1,"previous":{"title":"19. Pengenalan dan Praktik MQTT","level":"1.21","depth":1,"path":"0s/Pertemuan_23.md","ref":"0s/Pertemuan_23.md","articles":[]},"dir":"ltr"},"config":{"plugins":[],"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"pluginsConfig":{"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"theme":"default","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"language":"id","gitbook":"*"},"file":{"path":"0t/Pertemuan_24.md","mtime":"2024-08-15T05:50:01.316Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2024-08-15T05:50:51.367Z"},"basePath":"..","book":{"language":""}});
+        });
+    </script>
+</div>
+
+        
+    <script src="../gitbook/gitbook.js"></script>
+    <script src="../gitbook/theme.js"></script>
+    
+        
+        <script src="../gitbook/gitbook-plugin-search/search-engine.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-search/search.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-lunr/lunr.min.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-lunr/search-lunr.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-sharing/buttons.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-fontsettings/fontsettings.js"></script>
+        
+    
+
+    </body>
+</html>
+
