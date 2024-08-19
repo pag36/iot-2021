@@ -80,6 +80,5 @@ Anda telah menyelesaikan praktikum jika hasil berikut telah tercapai:
 - Data Real Time pada Lahan 1 dan Lahan 2 ![ref1]
 
 ![](Aspose.Words.56d72b02-e688-4143-bf4d-054550f6bc7c.007.jpeg)
-Panduan Praktikum Internet of Things  Copyright © 2022, JTI Polinema 
 
 [ref1]: Aspose.Words.56d72b02-e688-4143-bf4d-054550f6bc7c.002.png
