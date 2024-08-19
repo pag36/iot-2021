@@ -1,6 +1,5 @@
-﻿**Modul Praktikum : Konsep dan Penerapan Wireless Sensor Network ![](Aspose.Words.56d72b02-e688-4143-bf4d-054550f6bc7c.001.png)**
+# Pertemuan ke 24 :  Konsep dan Penerapan Wireless Sensor Network
 
-Selesaikan  langkah  praktikum  berikut  untuk  mempraktekkan  materi  yang  telah dipelajari pada modul.
 
 **Tujuan Praktikum** 
 
